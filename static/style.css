@@ -1,0 +1,74 @@
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* colors */
+.light-blue {
+  background-color: #d3e9f8;
+}
+
+.light-green {
+  background-color: #d7f4d7;
+}
+
+.light-orange {
+  background-color: #ffe4cc;
+}
+
+.light-purple {
+  background-color: #e6dcef;
+}
+
+.light-red {
+  background-color: #f7d4d4;
+}
+
+.light-grey {
+  background-color: #e6e6e6;
+}
+
+
+
+/* utils */
+.off {
+  display: none;
+}
+
+.fit-width {
+  margin: auto;
+  max-width: 1000px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+/* loading spinner */
+/* to use: .addClass('spinner')  (position=relative) */
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+   
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: rgb(0, 88, 221);
+    border-bottom-color: rgb(0, 88, 221);
+    animation: spinner .8s ease infinite;
+  }
