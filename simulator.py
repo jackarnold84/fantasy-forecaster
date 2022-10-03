@@ -177,7 +177,7 @@ class Simulator:
             g2_w, g2_l = get_result(standings[2], standings[5])
 
             g3_w, g3_l = get_result(standings[0], g1_w)
-            g4_w, g4_l = get_result(standings[2], g2_w)
+            g4_w, g4_l = get_result(standings[1], g2_w)
             g5_w, g5_l = get_result(g1_l, g2_l)
 
             g6_w, g6_l = get_result(g3_w, g4_w)
@@ -188,10 +188,10 @@ class Simulator:
 
             # consolation bracket
             # (incomplete)
-            final_standings += np.random.shuffle([standings[6], standings[7], standings[8]])
-            final_standings += np.random.shuffle([standings[9], standings[10], standings[11]])
-            final_standings += np.random.shuffle([standings[12], standings[13], standings[14], 
-                                                    standings[15]])
+            final_standings += list(np.random.permutation([standings[6], standings[7], standings[8]]))
+            final_standings += list(np.random.permutation([standings[9], standings[10], standings[11]]))
+            final_standings += list(np.random.permutation([standings[12], standings[13], standings[14], 
+                                                    standings[15]]))
 
         return final_standings
 
@@ -241,7 +241,7 @@ class Simulator:
 
         eliminated = {t: True for t in self.teams}
         clinched = {t: True for t in self.teams}
-        limits = {t: {}}
+        limits = {t: {} for t in self.teams}
         for t in self.teams:
             if any([x <= self.PLAYOFF_TEAMS for x in regular_standings[t]]):
                 eliminated[t] = False

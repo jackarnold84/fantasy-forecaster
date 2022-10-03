@@ -36,49 +36,14 @@
         <br>
 
         <ul class="w3-ul">
-            
-            <a href="reports/purdue-2022/current.html">
+            {% for l in league_links %}
+            <a href="{{ l['link'] }}">
                 <li class="w3-button w3-border w3-padding-16" style="width: 400px; margin-bottom: 8px;">
-                    Purdue Fantasy Football 2022
+                    {{ l['name'] }}
                 </li>
                 <br>
             </a>
-            
-            <a href="reports/morton-2022/current.html">
-                <li class="w3-button w3-border w3-padding-16" style="width: 400px; margin-bottom: 8px;">
-                    Morton Fantasy Football 2022
-                </li>
-                <br>
-            </a>
-            
-            <a href="reports/capitalone-2022/current.html">
-                <li class="w3-button w3-border w3-padding-16" style="width: 400px; margin-bottom: 8px;">
-                    Capital One Fantasy Football 2022
-                </li>
-                <br>
-            </a>
-            
-            <a href="reports/purdue-baseball-2022/current.html">
-                <li class="w3-button w3-border w3-padding-16" style="width: 400px; margin-bottom: 8px;">
-                    Purdue Fantasy Baseball 2022
-                </li>
-                <br>
-            </a>
-            
-            <a href="reports/purdue-2021/current.html">
-                <li class="w3-button w3-border w3-padding-16" style="width: 400px; margin-bottom: 8px;">
-                    Purdue Fantasy Football 2021
-                </li>
-                <br>
-            </a>
-            
-            <a href="reports/morton-2021/current.html">
-                <li class="w3-button w3-border w3-padding-16" style="width: 400px; margin-bottom: 8px;">
-                    Morton Fantasy Football 2021
-                </li>
-                <br>
-            </a>
-            
+            {% endfor %}
         </ul>
 
         <br><br><br><br>

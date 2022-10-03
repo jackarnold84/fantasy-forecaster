@@ -1,0 +1,71 @@
+week,away_team,away_score,home_team,home_score
+1,Jack B,115.82,Jaden,142.0
+1,Jack A,144.28,Kyle,138.56
+1,Moza,117.52,Big E,88.52
+1,Levi,99.9,Jake M,168.52
+1,Drew,83.26,Walt,106.58
+2,Jack A,105.78,Jack B,82.36
+2,Jaden,83.0,Moza,168.12
+2,Kyle,140.56,Levi,157.86
+2,Big E,110.48,Drew,128.34
+2,Jake M,134.92,Walt,171.5
+3,Jack B,141.4,Moza,95.8
+3,Levi,122.92,Jack A,104.6
+3,Drew,123.7,Jaden,121.48
+3,Walt,105.14,Kyle,94.48
+3,Jake M,151.92,Big E,99.76
+4,Levi,43.56,Jack B,122.78
+4,Moza,112.76,Drew,132.62
+4,Jack A,152.22,Walt,130.3
+4,Jaden,87.46,Jake M,127.86
+4,Kyle,117.6,Big E,104.4
+5,Jack B,,Drew,
+5,Walt,,Levi,
+5,Jake M,,Moza,
+5,Big E,,Jack A,
+5,Kyle,,Jaden,
+6,Walt,,Jack B,
+6,Drew,,Jake M,
+6,Levi,,Big E,
+6,Moza,,Kyle,
+6,Jack A,,Jaden,
+7,Jack B,,Jake M,
+7,Big E,,Walt,
+7,Kyle,,Drew,
+7,Jaden,,Levi,
+7,Jack A,,Moza,
+8,Big E,,Jack B,
+8,Jake M,,Kyle,
+8,Walt,,Jaden,
+8,Drew,,Jack A,
+8,Levi,,Moza,
+9,Jack B,,Kyle,
+9,Jaden,,Big E,
+9,Jack A,,Jake M,
+9,Moza,,Walt,
+9,Levi,,Drew,
+10,Jaden,,Jack B,
+10,Kyle,,Jack A,
+10,Big E,,Moza,
+10,Jake M,,Levi,
+10,Walt,,Drew,
+11,Jack B,,Jack A,
+11,Moza,,Jaden,
+11,Levi,,Kyle,
+11,Drew,,Big E,
+11,Walt,,Jake M,
+12,Moza,,Jack B,
+12,Jack A,,Levi,
+12,Jaden,,Drew,
+12,Kyle,,Walt,
+12,Big E,,Jake M,
+13,Jack B,,Levi,
+13,Drew,,Moza,
+13,Walt,,Jack A,
+13,Jake M,,Jaden,
+13,Big E,,Kyle,
+14,Drew,,Jack B,
+14,Levi,,Walt,
+14,Moza,,Jake M,
+14,Jack A,,Big E,
+14,Jaden,,Kyle,

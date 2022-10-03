@@ -8,14 +8,39 @@ import plotly
 import plotly.express as px
 from jinja2 import Template
 
+
+def build_homepage():
+    league_data = reader.config['leagues']
+
+    league_links = [{
+        'name': league_data[x]['name'],
+        'link': 'reports/%s/current.html' % x
+    } for x in league_data]
+
+    with open('templates/home.html', 'r') as file:
+        template_text = file.read()
+
+    template = Template(template_text)
+
+    html = template.render(
+        league_links=league_links
+    )
+
+    with open('index.html', "w") as html_file:
+        html_file.write(html)
+
+    print('Homepage built at index.html')
+
+        
+
 class Builder:
 
-    def __init__(self, league_id, current_week, n_sim=10000):
+    def __init__(self, league_id, week, n_sim=10000):
 
-        self.proc = processor.Processor(league_id, current_week, n_sim=n_sim)
+        self.proc = processor.Processor(league_id, week, n_sim=n_sim)
         self.league_id = league_id
         self.league_name = self.proc.simulator.league_name
-        self.week = current_week
+        self.week = week
         self.theme = {
             'blue': '#1F77B4',
             'orange': '#FF7F0E',
@@ -63,7 +88,7 @@ class Builder:
 
         data = [(t, points[t]/self.week, proj[t]) for t in teams]
         print(pd.DataFrame(data, columns=['Team', 'Avg', 'Proj']).round(1))
-        print('=================================')
+        print()
 
 
         # standings
@@ -256,7 +281,7 @@ class Builder:
         fig.update_layout(
             updatemenus=[{
                 'buttons': [{
-                    'label': '%s' % col,
+                    'label': '  %s  ' % col,
                     'method': 'update',
                     'args': [
                         {'visible': [True for c in df.columns]}
@@ -301,7 +326,7 @@ class Builder:
         fig.update_layout(
             updatemenus=[{
                 'buttons': [{
-                    'label': '%s' % col,
+                    'label': '  %s  ' % col,
                     'method': 'update',
                     'args': [
                         {'visible': [True for c in df.columns]}
@@ -346,7 +371,7 @@ class Builder:
         fig.update_layout(
             updatemenus=[{
                 'buttons': [{
-                    'label': '%s' % col,
+                    'label': '  %s  ' % col,
                     'method': 'update',
                     'args': [
                         {'visible': [True for c in df.columns]}
@@ -394,5 +419,8 @@ class Builder:
         os.makedirs(outdir, exist_ok=True) 
         with open(outfile, "w") as html_file:
             html_file.write(html)
+
+        print('Page built at %s' % outfile)
+        print('=====================================')
 
         

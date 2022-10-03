@@ -16,7 +16,7 @@ class Processor:
 
         self.sim_data = {}
         for w in range(1, current_week):
-            reg_stand, final_stand = self.simulator.sim_seasons(w, n_sim=n_sim//10)
+            reg_stand, final_stand = self.simulator.sim_seasons(w, n_sim=n_sim//5)
             self.sim_data[w] = {
                 'regular': reg_stand,
                 'final': final_stand
@@ -89,7 +89,7 @@ class Processor:
                 future[x['away_team']].append(proj[x['home_team']])
 
         current = {t: np.mean(current[t]) for t in current}
-        future = {t: np.mean(future[t]) for t in future}
+        future = {t: np.mean(future[t] if future[t] else 0) for t in future}
         return current, future
 
 

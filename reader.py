@@ -15,6 +15,13 @@ def read_league_data(league_id):
     out_file = 'processed_data/%s.csv' % league_id
     aliases = config['leagues'][league_id]['aliases']
 
+    def alias(name):
+        if name in aliases:
+            return aliases[name]
+        else:
+            parts = name.split(' ')
+            return parts[0] if len(parts[0]) <= 8 else parts[0][0:8]
+
     current_week = 0
     data = {'week': [], 'away_team': [], 'away_score': [], 'home_team': [], 'home_score': []}
 
@@ -37,8 +44,8 @@ def read_league_data(league_id):
             data['week'].append(current_week)
             data['away_score'].append(float(r[2]))
             data['home_score'].append(float(r[3]))
-            data['away_team'].append(aliases[str(r[1])] if str(r[1]) in aliases else str(r[1]))
-            data['home_team'].append(aliases[str(r[4])] if str(r[4]) in aliases else str(r[4]))
+            data['away_team'].append(alias(r[1]))
+            data['home_team'].append(alias(r[4]))
 
     result = pd.DataFrame(data)
     result.to_csv(out_file, index=False)

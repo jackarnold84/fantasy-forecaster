@@ -1,27 +1,5 @@
 {
     "leagues": {
-        
-        "purdue-2021": {
-            "name": "Purdue Fantasy Football 2021",
-            "aliases": {
-                "Josh K": "Josh",
-                "Jack Arnold": "Jack",
-                "Shiv Patel": "Shiv",
-                "Rohan Shahani": "Rohan",
-                "Kaiwen Shen": "Kevin",
-                "Nathan Ashta": "Nate",
-                "Joey Attardo": "Joey",
-                "Nicholas Rosenorn": "Nick",
-                "Tim Zhou": "Tim",
-                "CG Tanner": "Tanner"
-            },
-            "playoff_type": "10-team-4-playoff",
-            "playoff_teams": 4,
-            "playoff_weeks": 2,
-            "score_mean": 122,
-            "score_std": 23,
-            "team_std": 10
-        },
 
         "purdue-2022": {
             "name": "Purdue Fantasy Football 2022",
@@ -36,48 +14,6 @@
                 "Nicholas Rosenorn": "Nick",
                 "Tim Zhou": "Tim",
                 "CG Tanner": "Tanner"
-            },
-            "playoff_type": "10-team-4-playoff",
-            "playoff_teams": 4,
-            "playoff_weeks": 2,
-            "score_mean": 122,
-            "score_std": 23,
-            "team_std": 10
-        },
-
-        "purdue-baseball-2022": {
-            "name": "Purdue Fantasy Baseball 2022",
-            "aliases": {
-                "Josh K": "Josh",
-                "Jack Arnold": "Jack",
-                "Rohan Shahani": "Rohan",
-                "Mattie Neeble": "Mattie",
-                "Joey Attardo": "Joey",
-                "Nicholas Rosenorn": "Nick",
-                "Tim Zhou": "Tim",
-                "CG Tanner": "Tanner"
-            },
-            "playoff_type": "8-team-4-playoff",
-            "playoff_teams": 4,
-            "playoff_weeks": 2,
-            "score_mean": 214,
-            "score_std": 47,
-            "team_std": 22
-        },
-
-        "morton-2021": {
-            "name": "Morton Fantasy Football 2021",
-            "aliases": {
-                "Jack Brennan": "Jack B",
-                "Jack Arnold": "Jack A",
-                "Jacob Moza": "Moza",
-                "Levi Killion": "Levi",
-                "Drew Fuiten": "Drew",
-                "Jaden Glascock": "Jaden",
-                "Kyle Killion": "Kyle",
-                "Jake Martin": "Jake M",
-                "Jake Walters": "Walt",
-                "Ian Killion": "Big E"
             },
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
@@ -110,13 +46,78 @@
         },
 
         "capitalone-2022": {
-            "name": "Capital One Fantasy Football 2021",
-            "aliases": {}
+            "name": "Capital One Fantasy Football 2022",
+            "aliases": {},
+            "playoff_type": "16-team-6-playoff",
+            "playoff_teams": 4,
+            "playoff_weeks": 1,
+            "score_mean": 95,
+            "score_std": 21,
+            "team_std": 9
         },
-        "playoff_type": "16-team-6-playoff",
-        "playoff_weeks": 1,
-        "score_mean": 100,
-        "score_std": 20,
-        "team_std": 8
+
+        "purdue-baseball-2022": {
+            "name": "Purdue Fantasy Baseball 2022",
+            "aliases": {
+                "Josh K": "Josh",
+                "Jack Arnold": "Jack",
+                "Rohan Shahani": "Rohan",
+                "Mattie Neeble": "Mattie",
+                "Joey Attardo": "Joey",
+                "Nicholas Rosenorn": "Nick",
+                "Tim Zhou": "Tim",
+                "CG Tanner": "Tanner"
+            },
+            "playoff_type": "8-team-4-playoff",
+            "playoff_teams": 4,
+            "playoff_weeks": 2,
+            "score_mean": 214,
+            "score_std": 52,
+            "team_std": 20
+        },
+        
+        "purdue-2021": {
+            "name": "Purdue Fantasy Football 2021",
+            "aliases": {
+                "Josh K": "Josh",
+                "Jack Arnold": "Jack",
+                "Shiv Patel": "Shiv",
+                "Rohan Shahani": "Rohan",
+                "Kaiwen Shen": "Kevin",
+                "Nathan Ashta": "Nate",
+                "Joey Attardo": "Joey",
+                "Nicholas Rosenorn": "Nick",
+                "Tim Zhou": "Tim",
+                "CG Tanner": "Tanner"
+            },
+            "playoff_type": "10-team-4-playoff",
+            "playoff_teams": 4,
+            "playoff_weeks": 2,
+            "score_mean": 122,
+            "score_std": 23,
+            "team_std": 10
+        },
+
+        "morton-2021": {
+            "name": "Morton Fantasy Football 2021",
+            "aliases": {
+                "Jack Brennan": "Jack B",
+                "Jack Arnold": "Jack A",
+                "Jacob Moza": "Moza",
+                "Levi Killion": "Levi",
+                "Drew Fuiten": "Drew",
+                "Jaden Glascock": "Jaden",
+                "Kyle Killion": "Kyle",
+                "Jake Martin": "Jake M",
+                "Jake Walters": "Walt",
+                "Ian Killion": "Big E"
+            },
+            "playoff_type": "10-team-4-playoff",
+            "playoff_teams": 4,
+            "playoff_weeks": 2,
+            "score_mean": 122,
+            "score_std": 23,
+            "team_std": 10
+        }
     }
 }
