@@ -1,5 +1,5 @@
 # Fantasy Forecaster
 
-Predict ESPN fantasy leauge outcomes by simulation
+Predict ESPN fantasy league outcomes by simulation
 
 https://jackarnold84.github.io/fantasy-forecaster/
