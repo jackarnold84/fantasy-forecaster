@@ -35,10 +35,10 @@
         <h3>Leagues</h3>
         <br>
 
-        <ul class="w3-ul">
+        <ul class="w3-ul fit-width" style="max-width: 400px;">
             {% for l in league_links %}
-            <a href="{{ l['link'] }}">
-                <li class="w3-button w3-border w3-padding-16" style="width: 400px; margin-bottom: 8px;">
+            <a href="{{ l['link'] }}" style="text-decoration: none;">
+                <li class="w3-border w3-padding-16 fit-width button">
                     {{ l['name'] }}
                 </li>
                 <br>
@@ -46,7 +46,7 @@
             {% endfor %}
         </ul>
 
-        <br><br><br><br>
+        <br><br><br>
 
     </div>
 
