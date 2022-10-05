@@ -20,7 +20,7 @@
             "playoff_weeks": 2,
             "score_mean": 122,
             "score_std": 24,
-            "team_std": 8
+            "team_std": 9
         },
 
         "morton-2022": {
@@ -42,7 +42,7 @@
             "playoff_weeks": 2,
             "score_mean": 122,
             "score_std": 24,
-            "team_std": 8
+            "team_std": 9
         },
 
         "capitalone-2022": {
@@ -53,7 +53,7 @@
             "playoff_weeks": 1,
             "score_mean": 95,
             "score_std": 21,
-            "team_std": 7
+            "team_std": 6
         },
 
         "purdue-baseball-2022": {
@@ -95,7 +95,7 @@
             "playoff_weeks": 2,
             "score_mean": 122,
             "score_std": 24,
-            "team_std": 8
+            "team_std": 9
         },
 
         "morton-2021": {
@@ -117,7 +117,7 @@
             "playoff_weeks": 2,
             "score_mean": 122,
             "score_std": 24,
-            "team_std": 8
+            "team_std": 9
         }
     }
 }
