@@ -179,7 +179,8 @@ class Builder:
             height=350,
         )
         fig.update_layout(margin={'t': 10, 'b': 10, 'l': 10})
-        fig.update_xaxes(visible=False, showticklabels=False)
+        fig.update_xaxes(visible=False, showticklabels=False, fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
         fig.update_layout(showlegend=False)
         fig.update_traces(textfont_size=13, textangle=0, textposition="outside", cliponaxis=False)
         fig.update_layout(xaxis_ticksuffix = '%')
@@ -214,7 +215,8 @@ class Builder:
             height=350,
         )
         fig.update_layout(margin={'t': 10, 'b': 10, 'l': 10})
-        fig.update_xaxes(visible=False, showticklabels=False)
+        fig.update_xaxes(visible=False, showticklabels=False, fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
         fig.update_layout(showlegend=False)
         fig.update_traces(textfont_size=13, textangle=0, textposition="outside", cliponaxis=False)
         fig.update_layout(xaxis_ticksuffix = '%')
@@ -247,7 +249,8 @@ class Builder:
             height=350,
         )
         fig.update_layout(margin={'t': 10, 'b': 10, 'l': 10})
-        fig.update_xaxes(visible=False, showticklabels=False)
+        fig.update_xaxes(visible=False, showticklabels=False, fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
         fig.update_layout(showlegend=False)
         fig.update_traces(textfont_size=13, textangle=0, textposition="outside", cliponaxis=False)
         fig.update_layout(xaxis_ticksuffix = '%')
@@ -276,8 +279,8 @@ class Builder:
         fig.update_layout(margin={'t': 10, 'b': 10, 'l': 0, 'r': 20})
         fig.update_layout(yaxis_ticksuffix='%')
         fig.update_layout(legend={'orientation': 'h', 'y': -0.2, 'font': {'size': 14}, 'title': ''})
-        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)])
-        fig.update_yaxes(range=[-5, df.values.max()+9])
+        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)], fixedrange=True)
+        fig.update_yaxes(range=[-5, df.values.max()+9], fixedrange=True)
         fig.update_layout(
             updatemenus=[{
                 'buttons': [{
@@ -321,8 +324,8 @@ class Builder:
         fig.update_layout(margin={'t': 10, 'b': 10, 'l': 0, 'r': 20})
         fig.update_layout(yaxis_ticksuffix='%')
         fig.update_layout(legend={'orientation': 'h', 'y': -0.2, 'font': {'size': 14}, 'title': ''})
-        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)])
-        fig.update_yaxes(range=[-5, df.values.max()+9])
+        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)], fixedrange=True)
+        fig.update_yaxes(range=[-5, df.values.max()+9], fixedrange=True)
         fig.update_layout(
             updatemenus=[{
                 'buttons': [{
@@ -366,8 +369,8 @@ class Builder:
         fig.update_layout(margin={'t': 10, 'b': 10, 'l': 0, 'r': 20})
         fig.update_layout(yaxis_ticksuffix='%')
         fig.update_layout(legend={'orientation': 'h', 'y': -0.2, 'font': {'size': 14}, 'title': ''})
-        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)])
-        fig.update_yaxes(range=[-5, df.values.max()+9])
+        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)], fixedrange=True)
+        fig.update_yaxes(range=[-5, df.values.max()+9], fixedrange=True)
         fig.update_layout(
             updatemenus=[{
                 'buttons': [{
