@@ -19,16 +19,16 @@ week,away_team,away_score,home_team,home_score
 4,Jack A,152.22,Walt,130.3
 4,Jaden,87.46,Jake M,127.86
 4,Kyle,117.6,Big E,108.8
-5,Jack B,0.0,Drew,0.0
-5,Walt,0.0,Levi,0.0
-5,Jake M,0.0,Moza,0.0
-5,Big E,0.0,Jack A,0.0
-5,Kyle,0.0,Jaden,0.0
-6,Walt,,Jack B,
-6,Drew,,Jake M,
-6,Levi,,Big E,
-6,Moza,,Kyle,
-6,Jack A,,Jaden,
+5,Jack B,115.08,Drew,88.64
+5,Walt,136.34,Levi,126.54
+5,Jake M,142.28,Moza,104.16
+5,Big E,122.5,Jack A,164.46
+5,Kyle,115.32,Jaden,114.98
+6,Walt,0.0,Jack B,0.0
+6,Drew,0.0,Jake M,0.0
+6,Levi,0.0,Big E,0.0
+6,Moza,0.0,Kyle,0.0
+6,Jack A,0.0,Jaden,0.0
 7,Jack B,,Jake M,
 7,Big E,,Walt,
 7,Kyle,,Drew,
