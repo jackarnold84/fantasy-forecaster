@@ -169,6 +169,27 @@
         </div>
         <br><br>
 
+        <!-- Betting Lines -->
+        <h3 class="w3-center">Betting Lines</h3>
+        <div class="w3-container fit-width" style="max-width: 350px;">
+            <table class="w3-table w3-border">
+                <tbody>
+                    <tr class="w3-border-bottom light-orange">
+                        {% for h in betting_lines_table.columns %}
+                        <th class="w3-center">{{ h }}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for r in betting_lines_table.iloc %}
+                    <tr>
+                        {% for x in r %}
+                        <td class="w3-center w3-padding-small">{{ x }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br><br>
 
 
         <!-- Playoff Odds Over Time -->
