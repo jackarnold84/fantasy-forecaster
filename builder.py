@@ -261,6 +261,16 @@ class Builder:
         )
 
 
+        # betting lines table
+        playoff, champion = self.proc.sportsbook_odds(self.week)
+        true_champion = self.proc.champion_odds(self.week)
+        data = [(t, playoff[t], champion[t], true_champion[t]) for t in self.proc.teams]
+        df = pd.DataFrame(data, columns=['Team', 'Make Playoffs', 'Win League', 'True'])
+        df = df.sort_values('True', ascending=False).reset_index(drop=True)
+        df = df[['Team', 'Make Playoffs', 'Win League']]
+        betting_lines_table = df
+
+
         # playoff odds over time (with menu)
         data = [self.proc.playoff_odds(w) for w in range(1, self.week + 1)]
         df = pd.DataFrame(data)
@@ -409,6 +419,7 @@ class Builder:
             expected_wins_table=expected_wins_table,
             sos_table=sos_table,
             upcoming_games_table=upcoming_games_table,
+            betting_lines_table=betting_lines_table,
             playoff_odds_plot=playoff_odds_plot,
             championship_odds_plot=championship_odds_plot,
             punishment_odds_plot=punishment_odds_plot,

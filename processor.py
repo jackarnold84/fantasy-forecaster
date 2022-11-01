@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import reader
 import simulator
+import utils
 from tqdm import tqdm
 
 
@@ -92,4 +93,10 @@ class Processor:
         future = {t: np.mean(future[t] if future[t] else 0) for t in future}
         return current, future
 
+    def sportsbook_odds(self, week):        
+        playoff_odds = self.playoff_odds(week)
+        champion_odds = self.champion_odds(week)
 
+        playoff_odds = {t: utils.sportsbook_convert(playoff_odds[t]) for t in playoff_odds}
+        champion_odds = {t: utils.sportsbook_convert(champion_odds[t]) for t in champion_odds}
+        return playoff_odds, champion_odds
