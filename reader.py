@@ -29,11 +29,9 @@ def read_league_data(league_id):
     for r in df.iloc:
 
         if 'NFL Week' in str(r[0]):
-            parts = str(r[0]).split(' ')
-            current_week = int(parts[2])
+            current_week += 1
         elif 'Matchup' in str(r[0]):
-            parts = str(r[0]).split(' ')
-            current_week = int(parts[1])
+            current_week += 1
         
         elif str(r[1]) == 'nan':
             continue

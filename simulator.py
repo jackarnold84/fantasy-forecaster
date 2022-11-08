@@ -171,6 +171,30 @@ class Simulator:
 
             final_standings += [g7_w, g7_l, g8_w, g8_l]
 
+        elif self.PLAYOFF == '12-team-4-playoff':
+            # winners bracket
+            g1_w, g1_l = get_result(standings[0], standings[3])
+            g2_w, g2_l = get_result(standings[1], standings[2])
+
+            g3_w, g3_l = get_result(g1_w, g2_w)
+            g4_w, g4_l = get_result(g1_l, g2_l)
+
+            final_standings += [g3_w, g3_l, g4_w, g4_l]
+
+            # consolation bracket
+            g1_w, g1_l = get_result(standings[4], standings[5])
+            g2_w, g2_l = get_result(standings[6], standings[7])
+            g3_w, g3_l = get_result(standings[8], standings[9])
+            g4_w, g4_l = get_result(standings[10], standings[11])
+
+            g5_w, g5_l = get_result(g1_w, g2_w)
+            g6_w, g6_l = get_result(g1_l, g3_w)
+            g7_w, g7_l = get_result(g2_l, g4_w)
+            g8_w, g8_l = get_result(g3_l, g4_l)
+
+            final_standings += [g5_w, g5_l, g6_w, g6_l, g7_w, g7_l, g8_w, g8_l]
+
+
         elif self.PLAYOFF == '16-team-6-playoff':
             # winners bracket
             g1_w, g1_l = get_result(standings[3], standings[4])
