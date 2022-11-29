@@ -54,11 +54,11 @@ week,away_team,away_score,home_team,home_score
 11,Jack,103.78,Rohan,135.24
 11,Joey,137.76,Tony,156.46
 11,Nick,101.62,Tim,108.96
-12,Kevin,,Tanner,
-12,Shiv,,Jack,
-12,Josh,,Joey,
-12,Rohan,,Nick,
-12,Tony,,Tim,
+12,Kevin,122.24,Tanner,111.8
+12,Shiv,128.72,Jack,121.52
+12,Josh,85.46,Joey,144.42
+12,Rohan,131.8,Nick,101.4
+12,Tony,143.9,Tim,138.4
 13,Tanner,,Jack,
 13,Joey,,Kevin,
 13,Nick,,Shiv,
