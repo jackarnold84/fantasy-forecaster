@@ -100,6 +100,15 @@
         </div>
         <br>
 
+        <!-- Division Odds -->
+        {% if use_divisions %}
+        <h3 class="w3-center">Division Winner Odds</h3>
+        <div class="w3-container fit-width" style="max-width: 500px;">
+            {{ division_odds_plot | safe }}
+        </div>
+        <br>
+        {% endif %}
+
         <!-- Championship Odds -->
         <h3 class="w3-center">Championship Odds</h3>
         <div class="w3-container fit-width" style="max-width: 500px;">

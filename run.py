@@ -7,6 +7,8 @@ builder.Builder('morton-2022', week=14, n_sim=20000).build_report()
 
 builder.Builder('capitalone-2022', week=14, n_sim=10000).build_report()
 
+builder.Builder('capitalone-basketball-2022', week=9, n_sim=10000).build_report()
+
 # builder.Builder('purdue-baseball-2022', week=16, n_sim=20000).build_report()
 
 # builder.Builder('purdue-2021', week=14, n_sim=20000).build_report()
