@@ -39,6 +39,13 @@ class Processor:
             playoff_odds[t] = np.mean(counts)
         return playoff_odds
 
+    def division_odds(self, week):
+        division_odds = {}
+        for t in self.teams:
+            counts = [1 if x <= 2 else 0 for x in self.sim_data[week]['regular'][t]]
+            division_odds[t] = np.mean(counts)
+        return division_odds
+
     def champion_odds(self, week):
         champion_odds = {}
         for t in self.teams:

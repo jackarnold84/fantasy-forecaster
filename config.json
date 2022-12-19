@@ -15,6 +15,7 @@
                 "Tim Zhou": "Tim",
                 "CG Tanner": "Tanner"
             },
+            "use_divisions": false,
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
             "playoff_weeks_per_game": 2,
@@ -39,6 +40,7 @@
                 "Jake Walters": "Walt",
                 "Ian Killion": "Big E"
             },
+            "use_divisions": false,
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
             "playoff_weeks_per_game": 2,
@@ -51,6 +53,7 @@
         "capitalone-2022": {
             "name": "Capital One Fantasy Football 2022",
             "aliases": {},
+            "use_divisions": false,
             "playoff_type": "16-team-6-playoff",
             "playoff_teams": 6,
             "playoff_weeks_per_game": 1,
@@ -58,6 +61,36 @@
             "score_mean": 95,
             "score_std": 21,
             "team_std": 6
+        },
+
+        "capitalone-basketball-2022": {
+            "name": "Capital One Fantasy Basketball 2022",
+            "aliases": {
+                "Dhruv Singhania": "Dhruv",
+                "Sanjay Kalaga": "Sanjay",
+                "Caleb Chow": "Caleb",
+                "Shane Tobar": "Shane",
+                "Jack Arnold": "Jack",
+                "Michael Deng": "Michael D",
+                "Zachary Vero": "Zachary",
+                "Kevin Yahampath": "Kevin",
+                "Nick Manting": "Nick",
+                "Michael Vicente": "Michael V",
+                "Simon Theuer": "Simon",
+                "Ryan Brunner": "Ryan"
+            },
+            "use_divisions": true,
+            "divisions": {
+                "East": ["Dhruv", "Caleb", "Jack", "Zachary", "Nick", "Simon"],
+                "West": ["Sanjay", "Shane", "Michael D", "Kevin", "Michael V", "Ryan"]
+            },
+            "playoff_type": "12-team-4-playoff",
+            "playoff_teams": 4,
+            "playoff_weeks_per_game": 2,
+            "playoff_reports": false,
+            "score_mean": 995,
+            "score_std": 160,
+            "team_std": 80
         },
 
         "purdue-baseball-2022": {
@@ -72,6 +105,7 @@
                 "Tim Zhou": "Tim",
                 "CG Tanner": "Tanner"
             },
+            "use_divisions": false,
             "playoff_type": "8-team-4-playoff",
             "playoff_teams": 4,
             "playoff_weeks_per_game": 2,
@@ -95,6 +129,7 @@
                 "Tim Zhou": "Tim",
                 "CG Tanner": "Tanner"
             },
+            "use_divisions": false,
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
             "playoff_weeks_per_game": 2,
@@ -118,6 +153,7 @@
                 "Jake Walters": "Walt",
                 "Ian Killion": "Big E"
             },
+            "use_divisions": false,
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
             "playoff_weeks_per_game": 2,

@@ -33,6 +33,15 @@ class Simulator:
         self.PLAYOFF_TEAMS = reader.config['leagues'][league_id]['playoff_teams']
         self.league_name = reader.config['leagues'][league_id]['name']
 
+        # divisons
+        self.use_divisions = reader.config['leagues'][league_id]['use_divisions']
+        if self.use_divisions:
+            division_list = reader.config['leagues'][league_id]['divisions']
+            self.divisions = {}
+            for d in division_list:
+                for t in division_list[d]:
+                    self.divisions[t] = d
+
         # playoff reports
         use_playoff = reader.config['leagues'][league_id]['playoff_reports']
         self.playoff_report = False
@@ -119,6 +128,20 @@ class Simulator:
         values_sort = {k: v for k, v in sorted(values.items(), key=lambda item: item[1])}
         return list(reversed(values_sort.keys()))
 
+    # adjust standings based on division
+    def get_standings_order_with_divisions(self, standings_order):
+        new_standings = [standings_order[0]]
+        used_division = self.divisions[standings_order[0]]
+        for t in standings_order:
+            if self.divisions[t] != used_division:
+                new_standings.append(t)
+                break
+        for t in standings_order:
+            if t not in new_standings:
+                new_standings.append(t)
+        return new_standings
+
+
     # prefill for playoff report
     def get_playoff_result(self, p1, p2, projections, sd):
         for x in self.playoff_schedule:
@@ -181,6 +204,8 @@ class Simulator:
     # sim playoffs
     def playoff_sim(self, wins, points, projections, sd=None, prefill=False):
         standings = self.get_standings_order(wins, points)
+        if self.use_divisions:
+                standings = self.get_standings_order_with_divisions(standings)
         final_standings = []
 
         def get_result(p1, p2):
@@ -301,6 +326,8 @@ class Simulator:
             # regular season
             sim_wins, sim_points = self.season_sim(wins, points, projections, week)
             standings = self.get_standings_order(sim_wins, sim_points)
+            if self.use_divisions:
+                standings = self.get_standings_order_with_divisions(standings)
             for i, t in enumerate(standings):
                 regular_standings[t].append(i + 1)
 

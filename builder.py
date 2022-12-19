@@ -197,6 +197,37 @@ class Builder:
         )
 
 
+        # division odds
+        use_divisions = self.proc.simulator.use_divisions
+        odds = self.proc.division_odds(self.week)
+
+        df = pd.DataFrame(odds.items(), columns=['Team', 'Odds'])
+        df['Odds'] = (df['Odds'] * 100).round(1)
+        df = df.sort_values('Odds')
+
+        fig = px.bar(
+            df,
+            x='Odds', y='Team',
+            orientation='h',
+            text_auto=True,
+            template='simple_white',
+            labels={'Team': ''},
+            color_discrete_sequence=[self.theme['purple']],
+            height=350,
+        )
+        fig.update_layout(margin={'t': 10, 'b': 10, 'l': 10})
+        fig.update_xaxes(visible=False, showticklabels=False, fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
+        fig.update_layout(showlegend=False)
+        fig.update_traces(textfont_size=13, textangle=0, textposition="outside", cliponaxis=False)
+        fig.update_layout(xaxis_ticksuffix = '%')
+
+        division_odds_plot = plotly.offline.plot(
+            fig, include_plotlyjs=False, output_type='div', 
+            config= dict(displayModeBar = False)
+        )
+
+
         # championship odds
         odds = self.proc.champion_odds(self.week)
         eliminated, clinched, limits = self.proc.playoff_eligibility
@@ -421,6 +452,7 @@ class Builder:
         html = template.render(
             week=self.week,
             league_name=self.league_name,
+            use_divisions=use_divisions,
             standings_table=standings_table,
             expected_final_list=expected_final_list,
             expected_wins_table=expected_wins_table,
@@ -428,6 +460,7 @@ class Builder:
             upcoming_games_table=upcoming_games_table,
             betting_lines_table=betting_lines_table,
             playoff_odds_plot=playoff_odds_plot,
+            division_odds_plot=division_odds_plot,
             championship_odds_plot=championship_odds_plot,
             punishment_odds_plot=punishment_odds_plot,
             playoff_time_plot=playoff_time_plot,
