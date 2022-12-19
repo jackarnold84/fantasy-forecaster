@@ -39,7 +39,8 @@ class Simulator:
         if use_playoff:
             self.playoff_weeks = reader.config['leagues'][league_id]['playoff_weeks']
             self.playoff_report = current_week in self.playoff_weeks
-            self.setup_playoff_report()
+            if self.playoff_report:
+                self.setup_playoff_report()
             
 
     # playoff report
