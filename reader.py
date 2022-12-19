@@ -12,7 +12,6 @@ with open('config.json') as f:
 def read_league_data(league_id):
 
     in_file = 'data/%s.csv' % league_id
-    out_file = 'processed_data/%s.csv' % league_id
     aliases = config['leagues'][league_id]['aliases']
 
     def alias(name):
@@ -56,7 +55,4 @@ def read_league_data(league_id):
             data['home_team'].append(alias(r[4]))
 
     result = pd.DataFrame(data)
-    result.to_csv(out_file, index=False)
     return result
-    
-    

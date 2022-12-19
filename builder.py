@@ -3,7 +3,6 @@ import pandas as pd
 import os
 import reader
 import processor
-from tqdm import tqdm
 import plotly
 import plotly.express as px
 from jinja2 import Template
@@ -37,6 +36,8 @@ class Builder:
 
     def __init__(self, league_id, week, n_sim=10000):
 
+        print('========= %s =========' % league_id)
+        print('Week %d' % week)
         self.proc = processor.Processor(league_id, week, n_sim=n_sim)
         self.league_id = league_id
         self.league_name = self.proc.simulator.league_name
@@ -58,9 +59,7 @@ class Builder:
     def build_report(self):
 
         # print statistics
-        print('===== %s =====' % self.league_name)
-        print('Week %d' % self.week)
-
+        print('\nLeague Stats:')
         df = self.proc.simulator.schedule_df
         df = df[df['type'] == 'Regular Season']
         df = df[df['week'] <= self.week]
@@ -471,11 +470,11 @@ class Builder:
 
         outdir = 'reports/%s' % (self.league_id)
         outfile = 'reports/%s/current.html' % (self.league_id)
-        os.makedirs(outdir, exist_ok=True) 
+        data_outfile = 'reports/%s/schedule.csv' % (self.league_id)
+        os.makedirs(outdir, exist_ok=True)
+
+        self.proc.simulator.schedule_df.to_csv(data_outfile, index=False)
         with open(outfile, "w") as html_file:
             html_file.write(html)
 
-        print('Page built at %s' % outfile)
-        print('=====================================')
-
-        
+        print('Page built at %s\n' % outfile)

@@ -322,7 +322,7 @@ class Simulator:
         regular_standings = {t: [] for t in self.teams}
         final_standings = {t: [] for t in self.teams}
 
-        for _ in tqdm(range(n_sim)):
+        for _ in tqdm(range(n_sim), leave=False):
             # regular season
             sim_wins, sim_points = self.season_sim(wins, points, projections, week)
             standings = self.get_standings_order(sim_wins, sim_points)
@@ -349,7 +349,7 @@ class Simulator:
         regular_standings = {t: [] for t in self.teams}
         final_standings = {t: [] for t in self.teams}
         wins, points, projections = self.fill_standings(week)
-        for _ in tqdm(range(n_sim)):
+        for _ in tqdm(range(n_sim), leave=False):
             # regular season
             sim_wins, sim_points = self.season_sim(wins, points, projections, week, sd=1e6)
             standings = self.get_standings_order(sim_wins, sim_points)
@@ -388,7 +388,7 @@ class Simulator:
                 playoff_odds[t] = np.mean(counts)
             return playoff_odds
 
-        for i in range(len(games)):
+        for i in tqdm(range(len(games)), leave=False):
             g = games[i]
             sim = Simulator(self.league_id, week)
             for j in range(len(sim.schedule)):

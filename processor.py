@@ -10,13 +10,15 @@ class Processor:
 
     def __init__(self, league_id, current_week, n_sim=10000):
         
+        print('--> simulating remaining weeks')
         self.simulator = simulator.Simulator(league_id, current_week)
         self.regular_sim, self.final_sim = self.simulator.sim_seasons(current_week, n_sim=n_sim)
         self.playoff_teams = reader.config['leagues'][league_id]['playoff_teams']
         self.teams = self.simulator.teams
 
         self.sim_data = {}
-        for w in range(1, current_week):
+        print('--> simulating from previous weeks')
+        for w in tqdm(range(1, current_week), leave=False):
             reg_stand, final_stand = self.simulator.sim_seasons(w, n_sim=n_sim//5)
             self.sim_data[w] = {
                 'regular': reg_stand,
@@ -28,9 +30,11 @@ class Processor:
             'final': self.final_sim
         }
 
+        print('--> simulating playoff elligibility')
         self.playoff_eligibility = self.simulator.playoff_eligibility(current_week, n_sim)
-        self.game_importance = self.simulator.game_importance(current_week + 1, n_sim)
 
+        print('--> simulating game importance')
+        self.game_importance = self.simulator.game_importance(current_week + 1, n_sim // 2)
 
     def playoff_odds(self, week):
         playoff_odds = {}

@@ -1,0 +1,71 @@
+week,type,away_team,away_score,home_team,home_score
+1,Regular Season,Jack B,117.82,Jaden,127.42
+1,Regular Season,Jack A,145.96,Kyle,134.06
+1,Regular Season,Moza,172.24,Big E,127.4
+1,Regular Season,Levi,89.12,Jake M,143.04
+1,Regular Season,Drew,131.76,Walt,105.48
+2,Regular Season,Jack A,144.6,Jack B,93.94
+2,Regular Season,Jaden,105.28,Moza,133.02
+2,Regular Season,Kyle,133.72,Levi,102.7
+2,Regular Season,Big E,127.96,Drew,119.72
+2,Regular Season,Jake M,139.96,Walt,143.42
+3,Regular Season,Jack B,119.74,Moza,118.34
+3,Regular Season,Levi,106.34,Jack A,124.54
+3,Regular Season,Drew,94.22,Jaden,131.92
+3,Regular Season,Walt,106.5,Kyle,152.94
+3,Regular Season,Jake M,114.98,Big E,135.92
+4,Regular Season,Levi,95.32,Jack B,119.08
+4,Regular Season,Moza,87.8,Drew,120.76
+4,Regular Season,Jack A,123.02,Walt,118.22
+4,Regular Season,Jaden,153.22,Jake M,123.14
+4,Regular Season,Kyle,145.68,Big E,110.62
+5,Regular Season,Jack B,73.88,Drew,172.68
+5,Regular Season,Walt,173.98,Levi,159.76
+5,Regular Season,Jake M,140.68,Moza,95.0
+5,Regular Season,Big E,162.2,Jack A,142.76
+5,Regular Season,Kyle,180.12,Jaden,119.88
+6,Regular Season,Walt,139.98,Jack B,120.78
+6,Regular Season,Drew,128.86,Jake M,124.78
+6,Regular Season,Levi,119.0,Big E,114.52
+6,Regular Season,Moza,102.34,Kyle,122.0
+6,Regular Season,Jack A,176.76,Jaden,110.2
+7,Regular Season,Jack B,90.08,Jake M,99.88
+7,Regular Season,Big E,121.92,Walt,107.84
+7,Regular Season,Kyle,111.34,Drew,125.14
+7,Regular Season,Jaden,125.9,Levi,144.96
+7,Regular Season,Jack A,173.24,Moza,125.36
+8,Regular Season,Big E,122.46,Jack B,113.78
+8,Regular Season,Jake M,85.54,Kyle,98.42
+8,Regular Season,Walt,111.8,Jaden,111.6
+8,Regular Season,Drew,143.06,Jack A,105.86
+8,Regular Season,Levi,101.36,Moza,130.3
+9,Regular Season,Jack B,103.1,Kyle,98.78
+9,Regular Season,Jaden,118.72,Big E,152.56
+9,Regular Season,Jack A,129.16,Jake M,94.54
+9,Regular Season,Moza,126.16,Walt,117.64
+9,Regular Season,Levi,82.0,Drew,108.88
+10,Regular Season,Jaden,162.04,Jack B,121.12
+10,Regular Season,Kyle,110.8,Jack A,113.38
+10,Regular Season,Big E,120.94,Moza,102.92
+10,Regular Season,Jake M,98.72,Levi,72.54
+10,Regular Season,Walt,71.7,Drew,86.1
+11,Regular Season,Jack B,99.92,Jack A,110.56
+11,Regular Season,Moza,124.1,Jaden,154.44
+11,Regular Season,Levi,115.3,Kyle,140.38
+11,Regular Season,Drew,116.18,Big E,142.56
+11,Regular Season,Walt,59.5,Jake M,27.5
+12,Regular Season,Moza,,Jack B,
+12,Regular Season,Jack A,,Levi,
+12,Regular Season,Jaden,,Drew,
+12,Regular Season,Kyle,,Walt,
+12,Regular Season,Big E,,Jake M,
+13,Regular Season,Jack B,,Levi,
+13,Regular Season,Drew,,Moza,
+13,Regular Season,Walt,,Jack A,
+13,Regular Season,Jake M,,Jaden,
+13,Regular Season,Big E,,Kyle,
+14,Regular Season,Drew,,Jack B,
+14,Regular Season,Levi,,Walt,
+14,Regular Season,Moza,,Jake M,
+14,Regular Season,Jack A,,Big E,
+14,Regular Season,Jaden,,Kyle,
