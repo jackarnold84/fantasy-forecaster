@@ -17,7 +17,9 @@
             },
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
-            "playoff_weeks": 2,
+            "playoff_weeks_per_game": 2,
+            "playoff_reports": true,
+            "playoff_weeks": [15, 16, 17, 18],
             "score_mean": 122,
             "score_std": 24,
             "team_std": 9
@@ -39,7 +41,8 @@
             },
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
-            "playoff_weeks": 2,
+            "playoff_weeks_per_game": 2,
+            "playoff_reports": false,
             "score_mean": 122,
             "score_std": 24,
             "team_std": 9
@@ -50,7 +53,8 @@
             "aliases": {},
             "playoff_type": "16-team-6-playoff",
             "playoff_teams": 6,
-            "playoff_weeks": 1,
+            "playoff_weeks_per_game": 1,
+            "playoff_reports": false,
             "score_mean": 95,
             "score_std": 21,
             "team_std": 6
@@ -70,7 +74,8 @@
             },
             "playoff_type": "8-team-4-playoff",
             "playoff_teams": 4,
-            "playoff_weeks": 2,
+            "playoff_weeks_per_game": 2,
+            "playoff_reports": false,
             "score_mean": 214,
             "score_std": 52,
             "team_std": 20
@@ -92,7 +97,8 @@
             },
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
-            "playoff_weeks": 2,
+            "playoff_weeks_per_game": 2,
+            "playoff_reports": false,
             "score_mean": 122,
             "score_std": 24,
             "team_std": 9
@@ -114,7 +120,8 @@
             },
             "playoff_type": "10-team-4-playoff",
             "playoff_teams": 4,
-            "playoff_weeks": 2,
+            "playoff_weeks_per_game": 2,
+            "playoff_reports": false,
             "score_mean": 122,
             "score_std": 24,
             "team_std": 9

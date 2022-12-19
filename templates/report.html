@@ -80,9 +80,15 @@
                     {% endfor %}
                 </tbody>
             </table>
+            {% if playoff_report %}
+                <p>
+                    <em>Playoffs in progress</em>
+                </p>
+            {% else %}
             <p class="w3-small">
                 Importance is based on impact to playoff odds
             </p>
+            {% endif %}
         </div>
         <br><br>
 

@@ -62,6 +62,7 @@ class Builder:
         print('Week %d' % self.week)
 
         df = self.proc.simulator.schedule_df
+        df = df[df['type'] == 'Regular Season']
         df = df[df['week'] <= self.week]
         scores = np.array(list(df['away_score']) + list(df['home_score']))
         teams = self.proc.teams
@@ -86,14 +87,19 @@ class Builder:
         print(pd.DataFrame(data, columns=['', 'Used', 'Actual']).round(1))
         print()
 
-        data = [(t, points[t]/self.week, proj[t]) for t in teams]
+        data = [(t, points[t]/df['week'].max(), proj[t]) for t in teams]
         print(pd.DataFrame(data, columns=['Team', 'Avg', 'Proj']).round(1))
         print()
 
 
+        # playoff report
+        playoff_report = self.proc.simulator.playoff_report
+        if playoff_report:
+            print('Building in playoff report mode')
+
         # standings
         wins, points, proj = self.proc.simulator.fill_standings(self.week)
-        data = [[t, wins[t], points[t]/self.week] for t in self.proc.teams]
+        data = [[t, wins[t], points[t]/df['week'].max()] for t in self.proc.teams]
 
         df = pd.DataFrame(data, columns=['Team', 'Wins', 'Avg'])
         df = df.sort_values(['Wins', 'Avg'], ascending=False).reset_index(drop=True)
@@ -272,7 +278,8 @@ class Builder:
 
 
         # playoff odds over time (with menu)
-        data = [self.proc.playoff_odds(w) for w in range(1, self.week + 1)]
+        max_week = int(self.proc.simulator.schedule_df['week'].max())
+        data = [self.proc.playoff_odds(w) for w in range(1, min(self.week, max_week) + 1)]
         df = pd.DataFrame(data)
 
         df = df * 100
@@ -425,7 +432,8 @@ class Builder:
             punishment_odds_plot=punishment_odds_plot,
             playoff_time_plot=playoff_time_plot,
             championship_time_plot=championship_time_plot,
-            punishment_time_plot=punishment_time_plot
+            punishment_time_plot=punishment_time_plot,
+            playoff_report=playoff_report
         )
 
         outdir = 'reports/%s' % (self.league_id)

@@ -8,9 +8,11 @@ class Simulator:
     def __init__(self, league_id, current_week):
 
         self.league_id = league_id
-        self.schedule_df = reader.read_league_data(league_id)
-        self.schedule = self.schedule_df.to_dict('records')
-        self.teams = sorted(list(set(self.schedule_df['home_team'])))
+        df = reader.read_league_data(league_id)
+        self.schedule_df = df
+        self.schedule = df[df['type'] == 'Regular Season'].to_dict('records')
+        self.playoff_schedule = df[df['type'] != 'Regular Season'].to_dict('records')
+        self.teams = sorted(list(set(df['home_team'])))
         self.N_TEAMS = len(self.teams)
         self.player_scores = {t: [] for t in self.teams}
         for x in self.schedule:
@@ -18,7 +20,7 @@ class Simulator:
                 self.player_scores[x['home_team']].append(x['home_score'])
             if not np.isnan(x['away_score']):
                 self.player_scores[x['away_team']].append(x['away_score'])
-
+        
         for t in self.player_scores:
             self.player_scores[t] = list(self.player_scores[t])
 
@@ -27,9 +29,52 @@ class Simulator:
         self.STD = reader.config['leagues'][league_id]['score_std']
         self.T_STD = reader.config['leagues'][league_id]['team_std']
         self.PLAYOFF = reader.config['leagues'][league_id]['playoff_type']
-        self.PLAYOFF_WEEKS = reader.config['leagues'][league_id]['playoff_weeks']
+        self.PLAYOFF_WEEKS_PER_GAME = reader.config['leagues'][league_id]['playoff_weeks_per_game']
         self.PLAYOFF_TEAMS = reader.config['leagues'][league_id]['playoff_teams']
         self.league_name = reader.config['leagues'][league_id]['name']
+
+        # playoff reports
+        use_playoff = reader.config['leagues'][league_id]['playoff_reports']
+        self.playoff_report = False
+        if use_playoff:
+            self.playoff_weeks = reader.config['leagues'][league_id]['playoff_weeks']
+            self.playoff_report = current_week in self.playoff_weeks
+            self.setup_playoff_report()
+            
+
+    # playoff report
+    def setup_playoff_report(self):
+        self.playoff_scores = {t: [] for t in self.teams}
+        week_no = self.playoff_weeks.index(self.CURRENT_WEEK)
+        if self.PLAYOFF_WEEKS_PER_GAME == 2:
+            split_r1 = week_no > 0
+            split_r2 = week_no > 2
+            for i, x in enumerate(self.playoff_schedule):
+                if not np.isnan(x['home_score']):
+                    if (x['type'] == 'Playoff R1' and split_r1) or (x['type'] == 'Playoff R2' and split_r2):
+                        self.playoff_scores[x['home_team']].append(x['home_score'] / 2)
+                        self.playoff_scores[x['home_team']].append(x['home_score'] / 2)
+                        self.playoff_schedule[i]['status'] = 'complete'
+                    else:
+                        self.playoff_scores[x['home_team']].append(x['home_score'])
+                        self.playoff_schedule[i]['status'] = 'midway'
+                if not np.isnan(x['away_score']):
+                    if (x['type'] == 'Playoff R1' and split_r1) or (x['type'] == 'Playoff R2' and split_r2):
+                        self.playoff_scores[x['away_team']].append(x['away_score'] / 2)
+                        self.playoff_scores[x['away_team']].append(x['away_score'] / 2)
+                        self.playoff_schedule[i]['status'] = 'complete'
+                    else:
+                        self.playoff_scores[x['away_team']].append(x['away_score'])
+                        self.playoff_schedule[i]['status'] = 'midway'
+        else:
+            for x in self.playoff_schedule:
+                if not np.isnan(x['home_score']):
+                    self.playoff_scores[x['home_team']].append(x['home_score'])
+                if not np.isnan(x['away_score']):
+                    self.playoff_scores[x['away_team']].append(x['away_score'])
+
+        for t in self.player_scores:
+            self.player_scores[t] += self.playoff_scores[t]        
 
 
     # ==================
@@ -72,6 +117,19 @@ class Simulator:
         values = {t: wins[t]*1e12 + points[t] for t in self.teams}
         values_sort = {k: v for k, v in sorted(values.items(), key=lambda item: item[1])}
         return list(reversed(values_sort.keys()))
+
+    # prefill for playoff report
+    def get_playoff_result(self, p1, p2, projections, sd):
+        for x in self.playoff_schedule:
+            if x['home_team'] in [p1, p2] and x['away_team'] in [p1, p2]:
+                p1_score = x['home_score'] if x['home_team'] == p1 else x['away_score']
+                p2_score = x['home_score'] if x['home_team'] == p2 else x['away_score']
+                if self.PLAYOFF_WEEKS_PER_GAME == 2 and 'status' in x and x['status'] == 'midway':
+                    p1_add, p2_add = self.sim_game(projections[p1], projections[p2], sd)
+                    p1_score += p1_add
+                    p2_score += p2_add
+                return p1_score, p2_score
+        return None, None
 
 
     # =======================
@@ -120,12 +178,19 @@ class Simulator:
 
 
     # sim playoffs
-    def playoff_sim(self, wins, points, projections, sd=None):
+    def playoff_sim(self, wins, points, projections, sd=None, prefill=False):
         standings = self.get_standings_order(wins, points)
         final_standings = []
 
         def get_result(p1, p2):
-            if self.PLAYOFF_WEEKS == 2:
+            
+            # prefill if playoff report
+            if prefill:
+                p1_score, p2_score = self.get_playoff_result(p1, p2, projections, sd)
+                if p1_score is not None:
+                    return (p1, p2) if p1_score > p2_score else (p2, p1)
+
+            if self.PLAYOFF_WEEKS_PER_GAME == 2:
                 p1_score, p2_score = self.sim_2_week_game(projections[p1], projections[p2], sd)
             else:
                 p1_score, p2_score = self.sim_game(projections[p1], projections[p2], sd)
@@ -239,7 +304,11 @@ class Simulator:
                 regular_standings[t].append(i + 1)
 
             # playoffs
-            standings = self.playoff_sim(sim_wins, sim_points, projections)
+            if self.playoff_report and week in self.playoff_weeks:
+                # for playoff report
+                standings = self.playoff_sim(sim_wins, sim_points, projections, prefill=True)
+            else:
+                standings = self.playoff_sim(sim_wins, sim_points, projections)
             for i, t in enumerate(standings):
                 final_standings[t].append(i + 1)
 
