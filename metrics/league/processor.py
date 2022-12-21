@@ -1,6 +1,7 @@
-import reader
 import re
 import json
+import os
+import metrics.league.reader as reader
 
 
 def map_player_id(player_name, position):
@@ -13,16 +14,16 @@ def map_manager_id(manager_name):
     return manager_name
 
 
-class League:
+class Processor:
 
-    def __init__(self, league_id, week, draft_recap_week=1):
+    def __init__(self, league_id, week, draft_recap_week=1, total_weeks=18):
         self.teams = {}
         self.league_id = league_id
         self.week = week
-        self.total_weeks = 17
+        self.total_weeks = total_weeks
         self.draft_recap_week = draft_recap_week
         self.process_league_data()
-        self.write_to_file('%s.json' % league_id)
+        self.write_to_file()
 
     def create_team(self, manager_name):
         id = map_manager_id(manager_name)
@@ -40,8 +41,8 @@ class League:
 
         # weekly files
         for w in range(1, self.week + 1):
-            member_file = 'members/week%d.csv' % w
-            roster_file = 'rosters/week%d.csv' % w
+            member_file = 'data/leagues/%s/members/week%d.csv' % (self.league_id, w)
+            roster_file = 'data/leagues/%s/rosters/week%d.csv' % (self.league_id, w)
 
             member_data = reader.read_members(member_file)
             roster_data = reader.read_rosters(roster_file)
@@ -74,7 +75,7 @@ class League:
                 })
 
         # draft
-        draft_file = 'draft.csv'
+        draft_file = 'data/leagues/%s/draft.csv' % self.league_id
         draft_data = reader.read_draft_recap(draft_file)
 
         name_to_id = {}
@@ -93,9 +94,9 @@ class League:
                 })
 
 
-    def write_to_file(self, file_path):
-        with open(file_path, 'w', encoding='utf-8') as f:
+    def write_to_file(self):
+        outdir = 'reports/%s' % (self.league_id)
+        outfile = 'reports/%s/teams.json' % (self.league_id)
+        os.makedirs(outdir, exist_ok=True)
+        with open(outfile, 'w', encoding='utf-8') as f:
             json.dump(self.teams, f, ensure_ascii=False, indent=2)
-
-
-l = League(league_id='purdue-league-2022', week=15, draft_recap_week=13)

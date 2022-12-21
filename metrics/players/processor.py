@@ -1,8 +1,10 @@
-import reader
 import re
 import json
+import os
+import metrics.players.reader as reader
 
 
+# utils
 def map_player_id(player_name, position):
     player_name = re.sub(r'[^A-Za-z0-9 ]+', '', player_name).replace('  ', ' ').strip()
     player_name = player_name.replace(' ', '')
@@ -34,14 +36,15 @@ def approx_equal(x, y, buffer=1.0):
 
 
 
-class Players:
+class Processor:
 
-    def __init__(self, week):
+    def __init__(self, year, week, total_weeks=18):
         self.players = {}
+        self.year = year
         self.week = week
-        self.total_weeks = 17
+        self.total_weeks = total_weeks
         self.process_player_list()
-        self.write_to_file('players.json')
+        self.write_to_file()
 
 
     def create_player(self, player_name, position, team):
@@ -67,7 +70,7 @@ class Players:
     def process_player_list(self):
 
         # preseason
-        preseason_file = 'player-list/preseason.csv'
+        preseason_file = 'data/players/%d/player-list/preseason.csv' % self.year
         preseason_data = reader.read_player_list(preseason_file)
 
         for x in preseason_data:
@@ -82,8 +85,8 @@ class Players:
 
         # weekly files
         for w in range(1, self.week + 2):
-            list_file = 'player-list/week%d.csv' % w
-            stat_file = 'player-stats/week%d.csv' % w
+            list_file = 'data/players/%d/list/week%d.csv' % (self.year, w)
+            stat_file = 'data/players/%d/stats/week%d.csv' % (self.year, w)
 
             list_data = reader.read_player_list(list_file)
             if w <= self.week:
@@ -155,9 +158,9 @@ class Players:
                     self.players[p]['season_avg'][w] = round(avg, 2) if avg else 0
 
 
-    def write_to_file(self, file_path):
-        with open(file_path, 'w', encoding='utf-8') as f:
+    def write_to_file(self):
+        outdir = 'reports/players/%d' % (self.year)
+        outfile = 'reports/players/%d/players.json' % (self.year)
+        os.makedirs(outdir, exist_ok=True)
+        with open(outfile, 'w', encoding='utf-8') as f:
             json.dump(self.players, f, ensure_ascii=False, indent=2)
-
-
-p = Players(week=15)
