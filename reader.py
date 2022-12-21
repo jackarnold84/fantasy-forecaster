@@ -11,7 +11,7 @@ with open('config.json') as f:
 
 def read_league_data(league_id):
 
-    in_file = 'data/%s.csv' % league_id
+    in_file = 'data/leagues/%s/schedule.csv' % league_id
     aliases = config['leagues'][league_id]['aliases']
 
     def alias(name):
