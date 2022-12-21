@@ -1,5 +1,5 @@
 {
-  "Jack Arnold": {
+  "Jack": {
     "manager_name": "Jack Arnold",
     "team_number": "1",
     "division": "Purdue",
@@ -399,7 +399,7 @@
       }
     ]
   },
-  "Nicholas Rosenorn": {
+  "Nick": {
     "manager_name": "Nicholas Rosenorn",
     "team_number": "2",
     "division": "Purdue",
@@ -804,7 +804,7 @@
       }
     ]
   },
-  "Tim Zhou": {
+  "Tim": {
     "manager_name": "Tim Zhou",
     "team_number": "3",
     "division": "Purdue",
@@ -1209,7 +1209,7 @@
       }
     ]
   },
-  "Josh K": {
+  "Josh": {
     "manager_name": "Josh K",
     "team_number": "4",
     "division": "Purdue",
@@ -1599,7 +1599,7 @@
       }
     ]
   },
-  "Rohan Shahani": {
+  "Rohan": {
     "manager_name": "Rohan Shahani",
     "team_number": "5",
     "division": "Purdue",
@@ -1989,7 +1989,7 @@
       }
     ]
   },
-  "Shiv Patel": {
+  "Shiv": {
     "manager_name": "Shiv Patel",
     "team_number": "6",
     "division": "Purdue",
@@ -2394,7 +2394,7 @@
       }
     ]
   },
-  "Tony Choe": {
+  "Tony": {
     "manager_name": "Tony Choe",
     "team_number": "7",
     "division": "Purdue",
@@ -2774,7 +2774,7 @@
       }
     ]
   },
-  "Kaiwen Shen": {
+  "Kevin": {
     "manager_name": "Kaiwen Shen",
     "team_number": "8",
     "division": "Purdue",
@@ -3149,7 +3149,7 @@
       }
     ]
   },
-  "CG Tanner": {
+  "Tanner": {
     "manager_name": "CG Tanner",
     "team_number": "9",
     "division": "Purdue",
@@ -3544,7 +3544,7 @@
       }
     ]
   },
-  "Joey Attardo": {
+  "Joey": {
     "manager_name": "Joey Attardo",
     "team_number": "10",
     "division": "Purdue",

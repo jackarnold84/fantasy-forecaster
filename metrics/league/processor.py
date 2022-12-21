@@ -9,10 +9,6 @@ def map_player_id(player_name, position):
     player_name = player_name.replace(' ', '')
     return '%s-%s' % (player_name, position)
 
-def map_manager_id(manager_name):
-    # TODO: map aliases
-    return manager_name
-
 
 class Processor:
 
@@ -26,7 +22,7 @@ class Processor:
         self.write_to_file()
 
     def create_team(self, manager_name):
-        id = map_manager_id(manager_name)
+        id = self.map_manager_id(manager_name)
         self.teams[id] = {
             'manager_name': manager_name,
             'team_number': None,
@@ -36,6 +32,14 @@ class Processor:
             'roster': {w: [] for w in range(1, self.total_weeks + 1)},
             'draft': []
         }
+
+    def map_manager_id(self, manager_name):
+        aliases = reader.config['leagues'][self.league_id]['aliases']
+        if manager_name in aliases:
+                return aliases[manager_name]
+        else:
+            parts = manager_name.split(' ')
+            return parts[0] if len(parts[0]) <= 8 else parts[0][0:8]
 
     def process_league_data(self):
 
@@ -51,7 +55,7 @@ class Processor:
 
             # process member data
             for x in member_data:
-                id = map_manager_id(x['manager_name'])
+                id = self.map_manager_id(x['manager_name'])
                 if id not in self.teams:
                     self.create_team(x['manager_name'])
 

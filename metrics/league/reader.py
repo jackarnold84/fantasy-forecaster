@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import json
 
 # consts
 POSITIONS = ['QB', 'RB', 'WR', 'TE', 'K', 'D/ST']
@@ -73,6 +74,10 @@ def extract_opponent(opp_str):
         opponent = opp_str.strip()
     return opponent
 
+
+# config file
+with open('config.json') as f:
+    config = json.load(f)
 
 
 # read members file

@@ -13,9 +13,9 @@ def read_csv_file(file):
     try:
         df = pd.read_csv(file, header=None)
     except pd.errors.EmptyDataError:
-        print('--> Note: file is empty', file)
+        print('--> Note: file is empty (%s)' % file)
     except FileNotFoundError:
-        print('--> Note: file does not exist', file)
+        print('--> Note: file does not exist (%s)' % file)
     return df
 
 def parse_float(x):

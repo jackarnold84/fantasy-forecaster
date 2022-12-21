@@ -8,7 +8,7 @@ class Evaluator:
         self.teams = Processor(league_id, week, draft_recap_week).teams
         self.players = players
 
-        print(self.teams['Jack Arnold'])
-        print(self.players['JamesConner-RB'])
+        # print(self.teams['Jack'])
+        # print(self.players['JamesConner-RB'])
 
 

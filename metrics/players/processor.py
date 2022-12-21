@@ -70,7 +70,7 @@ class Processor:
     def process_player_list(self):
 
         # preseason
-        preseason_file = 'data/players/%d/player-list/preseason.csv' % self.year
+        preseason_file = 'data/players/%d/list/preseason.csv' % self.year
         preseason_data = reader.read_player_list(preseason_file)
 
         for x in preseason_data:
