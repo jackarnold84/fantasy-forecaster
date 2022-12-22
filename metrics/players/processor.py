@@ -35,6 +35,20 @@ def approx_equal(x, y, buffer=1.0):
     return abs(x - y) <= buffer
 
 
+def get_status(proj, score, health, opp):
+        if (proj and proj >= 1.0) or (score and score >= 1.0):
+            return 'active'
+        elif health and health == 'IR':
+            return 'injured'
+        elif opp and opp == 'BYE':
+            return 'bye'
+        elif health and health in ['O', 'Q', 'D']:
+            return 'unhealthy'
+        elif proj is not None or score is not None or opp is not None:
+            return 'inactive'
+        else:
+            return None
+
 
 class Processor:
 
@@ -56,14 +70,15 @@ class Processor:
             'projection': {w: None for w in range(1, self.total_weeks + 1)},
             'score': {w: None for w in range(1, self.total_weeks + 1)},
             'health': {w: None for w in range(1, self.total_weeks + 1)},
+            'status': {w: None for w in range(1, self.total_weeks + 1)},
             'opponent': {w: None for w in range(1, self.total_weeks + 1)},
             'rostered': {w: None for w in range(1, self.total_weeks + 1)},
             'started': {w: None for w in range(1, self.total_weeks + 1)},
             'games_played': {w: None for w in range(1, self.total_weeks + 1)},
             'season_total': {w: None for w in range(1, self.total_weeks + 1)},
             'season_avg': {w: None for w in range(1, self.total_weeks + 1)},
-            'proj_season_total': None,
-            'proj_season_avg': None,
+            'preseason_total': None,
+            'preseason_avg': None,
         }
 
 
@@ -79,8 +94,8 @@ class Processor:
                 self.create_player(x['player_name'], x['position'], x['team'])
 
             # projection, score
-            self.players[id]['proj_season_total'] = x['season_total']
-            self.players[id]['proj_season_avg'] = x['season_avg']
+            self.players[id]['preseason_total'] = x['season_total']
+            self.players[id]['preseason_avg'] = x['season_avg']
 
 
         # weekly files
@@ -156,6 +171,16 @@ class Processor:
                     self.players[p]['season_total'][w] = round(total, 2) if total else 0
                     self.players[p]['games_played'][w] = games_played if games_played else 0
                     self.players[p]['season_avg'][w] = round(avg, 2) if avg else 0
+
+        # fill in status
+        for w in range(1, self.week + 1):
+            for p in self.players:
+                self.players[p]['status'][w] = get_status(
+                    self.players[p]['projection'][w], 
+                    self.players[p]['score'][w], 
+                    self.players[p]['health'][w], 
+                    self.players[p]['opponent'][w]
+                )
 
 
     def write_to_file(self):
