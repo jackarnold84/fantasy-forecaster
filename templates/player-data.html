@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fantasy Forecaster</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../../static/images/icon.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../../../static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+    <script src="../../../static/utils.js"></script>
+</head>
+
+
+
+<body>
+
+    <!-- HEADER -->
+    <a href="../../../index.html">
+        <div class="w3-container w3-black w3-padding">
+            <div class="w3-center fit-width">
+                <h1 class="w3-xxlarge">Fantasy Forecaster</h1>
+            </div>
+        </div>
+    </a>
+
+
+    <!-- CONTENT -->
+    <div class="w3-container w3-center fit-width">
+
+        <br>
+        <h2 class="w3-center">Player Ratings</h2>
+        <br>
+
+        <div>Select Week:</div>
+        <select 
+            class="w3-select w3-border" id="week-select" 
+            onchange="handleChange(this)" style="max-width: 400px;"
+        >
+            {% for w in tables %}
+            <option class="w3-center" value="{{ w }}">{{ w }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        {% for w in tables %}
+        <div id="section-{{ w }}" class="off">
+
+            {% for p in tables[w] %}
+            <h4 class="w3-center">{{ p }}</h4>
+            <div class="w3-container fit-width" style="max-width: 450px;">
+                <table class="w3-table w3-border sortable">
+                    <tbody>
+                        <tr class="w3-border-bottom {{ color_map[p] }}">
+                            {% for h in tables[w][p].columns %}
+                            <th>{{ h }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for r in tables[w][p].iloc %}
+                        <tr>
+                            {% for x in r %}
+                            <td class="w3-padding-small">{{ x }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+            {% endfor %}
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="w3-center w3-container w3-small w3-black" style="margin-top: 64px;">
+        <p>
+            Created by Jack Arnold |
+            <a href="https://github.com/jackarnold84/fantasy-forecaster">GitHub</a>
+        </p>
+    </footer>
+
+
+</body>
+
+
+
+<!-- SCRIPTS -->
+<script>
+
+    var active = 'Preseason';
+
+    const showActiveSection = () => {
+        $(`#section-${active}`).show();
+    };
+
+    const hideActiveSection = () => {
+        $(`#section-${active}`).hide();
+    };
+
+    const handleChange = (obj) => {
+        const value = obj.value;
+        hideActiveSection();
+        active = value;
+        showActiveSection();
+    };
+
+    showActiveSection();
+
+</script>
+
+
+</html>

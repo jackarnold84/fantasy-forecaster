@@ -1,5 +1,6 @@
-import numpy as np
-import json
+import pandas as pd
+from jinja2 import Template
+import os
 from metrics.players.processor import Processor
 import metrics.players.utils as utils
 import metrics.players.weights as weights
@@ -8,12 +9,15 @@ import metrics.players.weights as weights
 class Evaluator:
 
     def __init__(self, year, week, total_weeks=18):
+        self.year = year
         self.max_week = week + 1
         self.total_weeks = total_weeks
         self.player_processor = Processor(year, week)
         self.players = self.player_processor.players
         self.players_calc = Processor(year, week).players
         self.evaluate()
+        self.player_processor.write_to_file()
+        self.build_ratings_report()
 
     # get player information
     def get_moving_avg(self, id, week, type=''):
@@ -189,7 +193,47 @@ class Evaluator:
             self.players[id]['sharp_rating'] = {w: None for w in range(1, self.total_weeks + 1)}
             for w in range(1, min(self.max_week, self.total_weeks - 1)):
                 self.players[id]['rating'][w] = utils.rnd(self.players_calc[id]['z']['rating'][w])
-                self.players[id]['sharp_rating'][w] = utils.rnd(self.players_calc[id]['z']['sharp_rating'][w])
+                self.players[id]['sharp_rating'][w] = utils.rnd(self.players_calc[id]['z']['sharp_rating'][w])        
 
-        # write ratings to player file
-        self.player_processor.write_to_file()
+
+    # build report that lists player ratings by week by position
+    def build_ratings_report(self):
+
+        tables = {w: {} for w in ['Preseason'] + list(range(1, self.max_week))}
+
+        for w in ['Preseason'] + list(range(1, self.max_week)):
+            if w == 'Preseason':
+                data = [
+                    [x['player_name'], x['position'], x['team'], x['preseason_rating'], '--']
+                    for x in self.players.values()
+                ]
+            else:
+                data = [
+                    [x['player_name'], x['position'], x['team'], x['rating'][w], x['sharp_rating'][w]]
+                    for x in self.players.values()
+                ]
+            df = pd.DataFrame(data, columns=['Name', 'Pos', 'Team', 'Rating', 'Live'])
+            
+            for p in utils.positions:
+                df_pos =  df[df['Pos'] == p]
+                df_pos = df_pos.sort_values('Rating', ascending=False).reset_index(drop=True)
+                df_pos = df_pos.iloc[0:utils.position_pool_size[p]]
+                tables[w][p] = df_pos
+
+        # write to html file
+        with open('templates/player-data.html', 'r') as file:
+            template_text = file.read()
+
+        template = Template(template_text)
+        html = template.render(
+            tables=tables,
+            color_map=utils.position_color_map
+        )
+
+        outdir = 'reports/players/%d/' % (self.year)
+        outfile = 'reports/players/%d/ratings.html' % (self.year)
+        os.makedirs(outdir, exist_ok=True)
+        with open(outfile, "w") as html_file:
+            html_file.write(html)
+
+        print('--> Player ratings page built (%s)' %  outfile)

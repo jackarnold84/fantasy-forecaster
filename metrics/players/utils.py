@@ -50,6 +50,15 @@ position_pool_size = {
     'D/ST': 15,
 }
 
+position_color_map = {
+    'QB': 'light-blue',
+    'RB': 'light-green',
+    'WR': 'light-orange',
+    'TE': 'light-purple',
+    'K': 'light-red',
+    'D/ST': 'light-grey',
+}
+
 status_correction = {
     'rating': {
         'active': 1.0,
