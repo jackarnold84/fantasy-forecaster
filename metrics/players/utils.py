@@ -2,12 +2,11 @@ import numpy as np
 
 # consts
 
-positions = ['QB', 'RB', 'WR', 'TE', 'K', 'D/ST']
-
 z_stats = [
     'projection',
     'moving_projection',
     'season_total',
+    'season_avg',
     'moving_avg',
     'sharp_moving_avg',
     'expected_rostered',
@@ -19,6 +18,7 @@ z_stats_thresholds = {
     'projection': 3.0,
     'moving_projection': 3.0,
     'season_total': 3.0,
+    'season_avg': 3.0,
     'moving_avg': 3.0,
     'sharp_moving_avg': 3.0,
     'expected_rostered': 0.05,
@@ -26,22 +26,93 @@ z_stats_thresholds = {
     'preseason_avg': 3.0,
 }
 
+z_stats_week_adj = {
+    'projection': 1,
+    'moving_projection': 1,
+    'season_total': 0,
+    'season_avg': 0,
+    'moving_avg': 0,
+    'sharp_moving_avg': 0,
+    'expected_rostered': 1,
+    'preseason_total': 0,
+    'preseason_avg': 0,
+}
+
+positions = ['QB', 'RB', 'WR', 'TE', 'K', 'D/ST']
+
+# approx this number will be given a positive rating
+position_pool_size = {
+    'QB': 20,
+    'RB': 50,
+    'WR': 50,
+    'TE': 20,
+    'K': 15,
+    'D/ST': 15,
+}
+
+status_correction = {
+    'rating': {
+        'active': 1.0,
+        'bye': 1.0,
+        'unhealthy': 0.9,
+        'injured': 0.8,
+        'inactive': 0.8,
+        None: 1.0,
+    },
+    'sharp_rating': {
+        'active': 1.0,
+        'bye': 0.8,
+        'unhealthy': 0.8,
+        'injured': 0.6,
+        'inactive': 0.6,
+        None: 0.8,
+    }
+}
+
+rating_mean = 5.0
+rating_sd = 2.40
+
 
 # functions
 
-def z_score(x, avg, sd, count):
+def z_score(x, avg, sd, count, new_avg=0, new_sd=1):
     if x is None or avg is None or sd is None or count is None:
         return None
-    if count < 10:
+    if count < 8:
         return None
-    return (x - avg) / sd if x is not None else None
+    z = (x - avg) / sd
+    return z*new_sd + new_avg
 
 
-def mean(arr):
-    return np.mean(arr) if arr else None
+def mean(arr, top=None):
+    if not arr:
+        return None
+    if top:
+        filt = sorted(arr, reverse=True)[0:top]
+        return np.mean(filt)
+    else:
+        return np.mean(arr)
 
-def std(arr):
-    return np.std(arr) if arr else None
+def std(arr, top=None):
+    if not arr:
+        return None
+    if top:
+        filt = sorted(arr, reverse=True)[0:top]
+        return np.std(filt)
+    else:
+        return np.std(arr)
+
+def rank(arr, rank):
+    if not arr:
+        return None
+    sorted_arr = sorted(arr, reverse=True)
+    if len(sorted_arr) >= rank - 1:
+        return sorted_arr[-1]
+    else:
+        return sorted_arr[rank - 1]
+
+def rnd(x, ndigits=1):
+    return round(x, ndigits) if x else None
 
 
 # custom weighted moving average

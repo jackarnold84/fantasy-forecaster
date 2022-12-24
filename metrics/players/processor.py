@@ -58,7 +58,6 @@ class Processor:
         self.week = week
         self.total_weeks = total_weeks
         self.process_player_list()
-        self.write_to_file()
 
 
     def create_player(self, player_name, position, team):
@@ -173,7 +172,8 @@ class Processor:
                     self.players[p]['season_avg'][w] = round(avg, 2) if avg else 0
 
         # fill in status
-        for w in range(1, self.week + 1):
+        for w in range(1, self.week + 2):
+            w = min(w, self.total_weeks)
             for p in self.players:
                 self.players[p]['status'][w] = get_status(
                     self.players[p]['projection'][w], 
