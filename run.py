@@ -2,8 +2,8 @@ import builder
 import metrics.players.evaluator as Player
 import metrics.league.evaluator as League
 
-p = Player.Evaluator(year=2022, week=15)
-# l = League.Evaluator('purdue-2022', week=15, players=p.players, draft_recap_week=13)
+p = Player.Evaluator(year=2022, week=16)
+l = League.Evaluator('purdue-2022', week=16, players=p.players, draft_recap_week=13)
 
 # builder.Builder('purdue-2022', week=15, n_sim=1000).build_report()
 

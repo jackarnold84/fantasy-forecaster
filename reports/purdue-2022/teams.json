@@ -19,7 +19,7 @@
       "13": "sell the franchise",
       "14": "nick supports rpists",
       "15": "golden eagles",
-      "16": null,
+      "16": "golden eagles",
       "17": null,
       "18": null
     },
@@ -39,7 +39,7 @@
       "13": "JACK",
       "14": "JACK",
       "15": "JACK",
-      "16": null,
+      "16": "JACK",
       "17": null,
       "18": null
     },
@@ -312,7 +312,93 @@
           "aquired": "Free Agency"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "JoshAllen-QB",
+          "position": "QB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JamesConner-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DavidMontgomery-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "JuJuSmithSchuster-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "TyreekHill-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "DarrenWaller-TE",
+          "position": "TE",
+          "aquired": "Trade"
+        },
+        {
+          "id": "CordarrellePatterson-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "RavensDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "BrettMaher-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "RaheemMostert-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "EaglesDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Trade"
+        },
+        {
+          "id": "JoshuaPalmer-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ZonovanKnight-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "JuwanJohnson-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ColeKmet-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "CourtlandSutton-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ChrisOlave-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -419,7 +505,7 @@
       "13": "please god not again",
       "14": "please god not again",
       "15": "please god not again",
-      "16": null,
+      "16": "team knullifiers",
       "17": null,
       "18": null
     },
@@ -439,7 +525,7 @@
       "13": "ROSE",
       "14": "ROSE",
       "15": "ROSE",
-      "16": null,
+      "16": "ROSE",
       "17": null,
       "18": null
     },
@@ -717,7 +803,93 @@
           "aquired": "Trade"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "JustinFields-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "TravisEtienneJr-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "TonyPollard-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JaMarrChase-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "DKMetcalf-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "MarkAndrews-TE",
+          "position": "TE",
+          "aquired": "Draft"
+        },
+        {
+          "id": "MarquiseBrown-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "49ersDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JustinTucker-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DaltonSchultz-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DeshaunWatson-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "OdellBeckhamJr-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "JaMycalHasty-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "RexBurkhead-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ChrisMoore-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "TylerAllgeier-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "KhalilHerbert-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -824,7 +996,7 @@
       "13": "am i fraud",
       "14": "josh jacobs",
       "15": "chubbwilliams idiot",
-      "16": null,
+      "16": "himquon barkley",
       "17": null,
       "18": null
     },
@@ -844,7 +1016,7 @@
       "13": "ZHOU",
       "14": "ZHOU",
       "15": "ZHOU",
-      "16": null,
+      "16": "ZHOU",
       "17": null,
       "18": null
     },
@@ -1122,7 +1294,93 @@
           "aquired": "Draft"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "AJDillon-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JustinJefferson-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "NickChubb-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "AJBrown-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JaylenWaddle-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DallasGoedert-TE",
+          "position": "TE",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JasonMyers-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "MikeWilliams-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "AustinEkeler-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "KareemHunt-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "CamAkers-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "JaredGoff-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "EvanEngram-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "BrownsDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ChargersDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "JoshuaKelley-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "LamarJackson-QB",
+          "position": "QB",
+          "aquired": "Draft"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -1229,7 +1487,7 @@
       "13": "knull to the toilet bowl",
       "14": "knull to the toilet bowl",
       "15": "lending tree bowl champs",
-      "16": null,
+      "16": "the freaking knullifiers",
       "17": null,
       "18": null
     },
@@ -1249,7 +1507,7 @@
       "13": "KNU",
       "14": "KNU",
       "15": "KNU",
-      "16": null,
+      "16": "KNU",
       "17": null,
       "18": null
     },
@@ -1512,7 +1770,88 @@
           "aquired": "Free Agency"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "TuaTagovailoa-QB",
+          "position": "QB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "AlvinKamara-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DOntaForeman-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DavanteAdams-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "ChristianKirk-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DawsonKnox-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "MilesSanders-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "CommandersDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "GrahamGano-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "JustinHerbert-QB",
+          "position": "QB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "BrandinCooks-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "TylerLockett-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "GarrettWilson-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "KirkCousins-QB",
+          "position": "QB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "PatriotsDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "JeffWilsonJr-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -1619,7 +1958,7 @@
       "13": "josh such a better ref",
       "14": "josh such a better ref",
       "15": "shiv is the better indian",
-      "16": null,
+      "16": "shiv is the better indian",
       "17": null,
       "18": null
     },
@@ -1639,7 +1978,7 @@
       "13": "SHAH",
       "14": "SHAH",
       "15": "SHAH",
-      "16": null,
+      "16": "SHAH",
       "17": null,
       "18": null
     },
@@ -1902,7 +2241,88 @@
           "aquired": "Free Agency"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "TrevorLawrence-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "AaronJones-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JoeMixon-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "AmariCooper-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "ChristianWatson-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DanielBellinger-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "RhamondreStevenson-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "BroncosDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "MichaelBadgley-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "YounghoeKoo-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DanielJones-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "GabeDavis-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "AntonioGibson-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "SamajePerine-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "MackHollins-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "NickFoles-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -2009,7 +2429,7 @@
       "13": "amonraw doggin",
       "14": "amonraw doggin",
       "15": "amonraw doggin",
-      "16": null,
+      "16": "amonraw doggin",
       "17": null,
       "18": null
     },
@@ -2029,7 +2449,7 @@
       "13": "RD",
       "14": "RD",
       "15": "RD",
-      "16": null,
+      "16": "RD",
       "17": null,
       "18": null
     },
@@ -2307,7 +2727,93 @@
           "aquired": "Trade"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "GenoSmith-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DalvinCook-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "EzekielElliott-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "StefonDiggs-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "AmonRaStBrown-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "GeorgeKittle-TE",
+          "position": "TE",
+          "aquired": "Draft"
+        },
+        {
+          "id": "MikeEvans-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "BuccaneersDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Draft"
+        },
+        {
+          "id": "TylerBass-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DakPrescott-QB",
+          "position": "QB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DamienHarris-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "BrandonAiyuk-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "AlexanderMattison-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "LataviusMurray-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "AdamThielen-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "SeahawksDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "CooperKupp-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -2414,7 +2920,7 @@
       "13": "is that another plane",
       "14": "is that another plane",
       "15": "nick folk is him",
-      "16": null,
+      "16": "nick folk is not him",
       "17": null,
       "18": null
     },
@@ -2434,7 +2940,7 @@
       "13": "CHOE",
       "14": "CHOE",
       "15": "CHOE",
-      "16": null,
+      "16": "CHOE",
       "17": null,
       "18": null
     },
@@ -2687,7 +3193,83 @@
           "aquired": "Free Agency"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "PatrickMahomes-QB",
+          "position": "QB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "NajeeHarris-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JoshJacobs-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DJMoore-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "CurtisSamuel-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "TaysomHill-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "TeeHiggins-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "CowboysDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Draft"
+        },
+        {
+          "id": "NickFolk-K",
+          "position": "K",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DeeboSamuel-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "ClydeEdwardsHelaire-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "TJHockenson-TE",
+          "position": "TE",
+          "aquired": "Draft"
+        },
+        {
+          "id": "TomBrady-QB",
+          "position": "QB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "TylerBoyd-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "RobbieGould-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -2794,7 +3376,7 @@
       "13": "bye week",
       "14": "4th place",
       "15": "missing acls",
-      "16": null,
+      "16": "team bum",
       "17": null,
       "18": null
     },
@@ -2814,7 +3396,7 @@
       "13": "KMUR",
       "14": "KMUR",
       "15": "KMUR",
-      "16": null,
+      "16": "KMUR",
       "17": null,
       "18": null
     },
@@ -3062,7 +3644,88 @@
           "aquired": "Trade"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "DerekCarr-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ChristianMcCaffrey-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "KennethWalkerIII-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "ZayJones-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DariusSlayton-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "TravisKelce-TE",
+          "position": "TE",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JerickMcKinnon-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "TitansDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "EvanMcPherson-K",
+          "position": "K",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "AllenLazard-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "MichaelCarter-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "DrakeLondon-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "TreylonBurks-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DonovanPeoplesJones-WR",
+          "position": "WR",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "BrockPurdy-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ElijahMitchell-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -3169,7 +3832,7 @@
       "13": "never losing again",
       "14": "never losing again",
       "15": "never losing again",
-      "16": null,
+      "16": "zack moss my savior",
       "17": null,
       "18": null
     },
@@ -3189,7 +3852,7 @@
       "13": "W",
       "14": "W",
       "15": "W",
-      "16": null,
+      "16": "W",
       "17": null,
       "18": null
     },
@@ -3457,7 +4120,88 @@
           "aquired": "Free Agency"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "JoeBurrow-QB",
+          "position": "QB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "JKDobbins-RB",
+          "position": "RB",
+          "aquired": "Trade"
+        },
+        {
+          "id": "IsiahPacheco-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "TerryMcLaurin-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "CeeDeeLamb-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "NoahFant-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ZackMoss-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "BillsDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Draft"
+        },
+        {
+          "id": "HarrisonButker-K",
+          "position": "K",
+          "aquired": "Trade"
+        },
+        {
+          "id": "LeonardFournette-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "KeenanAllen-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JerryJeudy-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DevinSingletary-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DeVontaSmith-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "RachaadWhite-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "GregDulcich-TE",
+          "position": "TE",
+          "aquired": "Free Agency"
+        }
+      ],
       "17": [],
       "18": []
     },
@@ -3564,7 +4308,7 @@
       "13": "espn is wrong again",
       "14": "espn is wrong again",
       "15": "espn is wrong again",
-      "16": null,
+      "16": "espn is wrong again",
       "17": null,
       "18": null
     },
@@ -3584,7 +4328,7 @@
       "13": "POOP",
       "14": "POOP",
       "15": "POOP",
-      "16": null,
+      "16": "POOP",
       "17": null,
       "18": null
     },
@@ -3857,7 +4601,93 @@
           "aquired": "Free Agency"
         }
       ],
-      "16": [],
+      "16": [
+        {
+          "id": "AaronRodgers-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DerrickHenry-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "SaquonBarkley-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "ChrisGodwin-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DeAndreHopkins-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "PatFreiermuth-TE",
+          "position": "TE",
+          "aquired": "Draft"
+        },
+        {
+          "id": "MichaelPittmanJr-WR",
+          "position": "WR",
+          "aquired": "Trade"
+        },
+        {
+          "id": "RamsDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DanielCarlson-K",
+          "position": "K",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DAndreSwift-RB",
+          "position": "RB",
+          "aquired": "Draft"
+        },
+        {
+          "id": "DiontaeJohnson-WR",
+          "position": "WR",
+          "aquired": "Draft"
+        },
+        {
+          "id": "JamaalWilliams-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "BrianRobinsonJr-RB",
+          "position": "RB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "DavidNjoku-TE",
+          "position": "TE",
+          "aquired": "Trade"
+        },
+        {
+          "id": "GardnerMinshew-QB",
+          "position": "QB",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "ChiefsDST-D/ST",
+          "position": "D/ST",
+          "aquired": "Free Agency"
+        },
+        {
+          "id": "JalenHurts-QB",
+          "position": "QB",
+          "aquired": "Draft"
+        }
+      ],
       "17": [],
       "18": []
     },
