@@ -4,20 +4,16 @@ import metrics.league.utils as utils
 
 class Evaluator:
 
-
-    def __init__(self, league_id, week, players, draft_recap_week=1):
+    def __init__(self, league_id, week, players, draft_recap_week=1, total_weeks=18):
         
-        self.teams = Processor(league_id, week, draft_recap_week).teams
+        self.team_processor = Processor(league_id, week, draft_recap_week)
+        self.teams = self.team_processor.teams
         self.players = players
         self.week = week
+        self.total_weeks = total_weeks
 
-        # evaluation dev:
-        print('Team Evaluation:')
-        week = 16
-        for t in self.teams:
-            team_rating = self.evaluate_team(self.teams[t]['roster'][week], week, position='QB', type='normal')
-            print(t, round(team_rating, 1))
-
+        self.add_team_ratings()
+        self.team_processor.write_to_file()
 
 
     def evaluate_team(self, players, week=None, position=None, type='normal', scale=True):
@@ -51,16 +47,21 @@ class Evaluator:
 
         # compute weighted rating
         rating = 0
+        count = 0
         for pos in players_by_position:
             for i, x in enumerate(players_by_position[pos]):
                 if position is None or position == pos:
                     rating += max(utils.position_weight(pos, i, type) * x['rating'], 0)
+                    count += 1
+        
+        if count == 0:
+            return 0.0
 
         # adjust rating to unified scale
         if scale:
             rating = self.scale_rating(rating, position, type)
 
-        return rating
+        return round(rating, 1)
 
 
     def scale_rating(self, rating, position=None, type='normal'):
@@ -97,3 +98,23 @@ class Evaluator:
                 utils.mean(ratings_list),
                 utils.std(ratings_list))
             )
+
+
+    # add rating stats to teams
+    def add_team_ratings(self):
+        for x in self.teams.values():
+            # create placeholders
+            x['preseason_rating'] = None
+            x['team_rating'] = {w: None for w in range(1, self.total_weeks + 1)}
+            x['sharp_team_rating'] = {w: None for w in range(1, self.total_weeks + 1)}
+            x['position_ratings'] = {}
+            for pos in ['QB', 'RB', 'WR', 'TE']:
+                x['position_ratings'][pos] = {w: None for w in range(1, self.total_weeks + 1)}
+
+            # compute
+            x['preseason_rating'] = self.evaluate_team(x['draft'], type='preseason')
+            for w in range(1, self.week + 1):
+                x['team_rating'][w] = self.evaluate_team(x['roster'][w], week=w, type='normal')
+                x['sharp_team_rating'][w] = self.evaluate_team(x['roster'][w], week=w, type='sharp')
+                for pos in ['QB', 'RB', 'WR', 'TE']:
+                    x['position_ratings'][pos][w] = self.evaluate_team(x['roster'][w], week=w, position=pos)

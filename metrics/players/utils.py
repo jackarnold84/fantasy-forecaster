@@ -70,11 +70,11 @@ status_correction = {
     },
     'sharp_rating': {
         'active': 1.0,
-        'bye': 0.8,
-        'unhealthy': 0.8,
-        'injured': 0.6,
-        'inactive': 0.6,
-        None: 0.8,
+        'bye': 0.7,
+        'unhealthy': 0.7,
+        'injured': 0.5,
+        'inactive': 0.5,
+        None: 0.7,
     }
 }
 
