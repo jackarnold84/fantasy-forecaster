@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fantasy Forecaster</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../static/images/icon.png">
+    <link rel="stylesheet" href="../../static/main.css">
+    <link rel="stylesheet" href="../../static/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+    <script src="../../static/utils.js"></script>
+</head>
+
+
+
+<body>
+
+    <!-- HEADER -->
+    <a href="../../index.html">
+        <div class="w3-container w3-black w3-padding w3-center">
+            <img src="../../static/images/arrow.png" id="header-img">
+            <span class="w3-xlarge semibold" id="header-span">Fantasy Forecaster</span>
+        </div>
+    </a>
+
+
+    <!-- CONTENT -->
+    <div class="w3-container w3-center fit-width">
+
+        <br>
+        <h3 class="w3-center semibold">{{ league_name }}</h3>
+
+        <p class="w3-center medium-weight">Week {{ week }} Report</p>
+        <br>
+
+        <!-- Tabs -->
+        <div class="tab-holder fit-width">
+            <span id="league-tab" class="tab medium-weight">League</span>
+            <span id="teams-tab" class="tab medium-weight">Teams</span>
+        </div>
+        <div class="nav-extension"></div>
+        <br>
+
+
+        <!-- League Tab Content -->
+        <div id="league-content">
+
+            <!-- Standings -->
+            <h4 class="w3-center">Standings</h4>
+            <div class="w3-container fit-width" style="max-width: 450px;">
+                <table class="w3-table bordered sortable">
+                    <tbody>
+                        <tr class="light-blue">
+                            {% for h in standings_table.columns %}
+                            <th>{{ h }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for r in standings_table.iloc %}
+                        <tr>
+                            {% for x in r %}
+                            <td class="w3-padding-small">{{ x }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+
+
+            <!-- Upcoming Games -->
+            <h4 class="w3-center">Upcoming Games</h4>
+            <div class="w3-container fit-width" style="max-width: 350px;">
+                <table class="w3-table bordered">
+                    <tbody>
+                        <tr class="light-green">
+                            {% for h in upcoming_games_table.columns %}
+                            <th class="w3-center">{{ h }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for r in upcoming_games_table.iloc %}
+                        <tr>
+                            {% for x in r %}
+                            <td class="w3-center w3-padding-small">{{ x }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% if playoff_report %}
+                    <p>
+                        <em>Playoffs in progress</em>
+                    </p>
+                {% else %}
+                <p class="w3-small">
+                    Importance is based on impact to playoff odds
+                </p>
+                {% endif %}
+            </div>
+            <br><br>
+
+
+            <!-- Playoff Odds -->
+            <h4 class="w3-center">Playoff Odds</h4>
+            <div class="w3-container fit-width" style="max-width: 500px;">
+                {{ playoff_odds_plot | safe }}
+            </div>
+            <br>
+
+            <!-- Division Odds -->
+            {% if use_divisions %}
+            <h4 class="w3-center">Division Winner Odds</h4>
+            <div class="w3-container fit-width" style="max-width: 500px;">
+                {{ division_odds_plot | safe }}
+            </div>
+            <br>
+            {% endif %}
+
+            <!-- Championship Odds -->
+            <h4 class="w3-center">Championship Odds</h4>
+            <div class="w3-container fit-width" style="max-width: 500px;">
+                {{ championship_odds_plot | safe }}
+            </div>
+            <br>
+
+            <!-- Punishment Odds -->
+            <h4 class="w3-center">Punishment Odds</h4>
+            <div class="w3-container fit-width" style="max-width: 500px;">
+                {{ punishment_odds_plot | safe }}
+            </div>
+            <br><br>
+
+            <!-- Expected Wins -->
+            <h4 class="w3-center">Expected vs Actual Wins</h4>
+            <div class="w3-container fit-width" style="max-width: 450px;">
+                <table class="w3-table bordered sortable">
+                    <tbody>
+                        <tr class="light-red">
+                            {% for h in expected_wins_table.columns %}
+                            <th>{{ h }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for r in expected_wins_table.iloc %}
+                        <tr>
+                            {% for x in r %}
+                            <td class="w3-padding-small">{{ x }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <p class="w3-small">Shows expected number of wins if the schedule was re-randomized</p>
+            </div>
+            <br><br>
+
+            <!-- Strengh of Schedule -->
+            <h4 class="w3-center">Strength of Schedule</h4>
+            <div class="w3-container fit-width" style="max-width: 450px;">
+                <table class="w3-table bordered sortable">
+                    <tbody>
+                        <tr class="light-purple">
+                            {% for h in sos_table.columns %}
+                            <th>{{ h }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for r in sos_table.iloc %}
+                        <tr>
+                            {% for x in r %}
+                            <td class="w3-padding-small">{{ x }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <p class="w3-small">
+                    Shows average points against and expected points against for the
+                    remainder of the season
+                </p>
+            </div>
+            <br><br>
+
+            <!-- Betting Lines -->
+            <h4 class="w3-center">Betting Lines</h4>
+            <div class="w3-container fit-width" style="max-width: 350px;">
+                <table class="w3-table bordered">
+                    <tbody>
+                        <tr class="light-orange">
+                            {% for h in betting_lines_table.columns %}
+                            <th class="w3-center">{{ h }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for r in betting_lines_table.iloc %}
+                        <tr>
+                            {% for x in r %}
+                            <td class="w3-center w3-padding-small">{{ x }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+
+
+            <!-- Playoff Odds Over Time -->
+            <h4 class="w3-center">Playoff Odds Over Time</h4>
+            <div class="w3-container fit-width" style="max-width: 700px;">
+                {{ playoff_time_plot | safe }}
+            </div>
+            <br><br>
+
+            <!-- Championship Odds Over Time -->
+            <h4 class="w3-center">Championship Odds Over Time</h4>
+            <div class="w3-container fit-width" style="max-width: 700px;">
+                {{ championship_time_plot | safe }}
+            </div>
+            <br><br>
+
+            <!-- Punishment Odds Over Time -->
+            <h4 class="w3-center">Punishment Odds Over Time</h4>
+            <div class="w3-container fit-width" style="max-width: 700px;">
+                {{ punishment_time_plot | safe }}
+            </div>
+            <br><br>
+        </div>
+
+
+        <div id="teams-content">
+            <!-- Projected Final Standings -->
+            <h4 class="w3-center">Projected Final Standings</h4>
+            <div class="w3-container fit-width" style="max-width: 200px;">
+                <ul class="w3-ul">
+                    {% for t in expected_final_list %}
+                    <li class="w3-padding-small">{{ t }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <br><br>
+        </div>
+
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="w3-center w3-container w3-small w3-black" style="margin-top: 64px;">
+        <p>
+            Created by Jack Arnold |
+            <a href="https://github.com/jackarnold84/fantasy-forecaster">GitHub</a>
+        </p>
+    </footer>
+
+
+</body>
+
+
+
+<!-- SCRIPTS -->
+<script>
+
+    // initial state
+    $('#league-tab').addClass('selected-tab')
+    $('#league-content').show();
+    $('#teams-content').hide();
+
+    // handle tab clicks
+    $('#league-tab').click(() => {
+        $('#teams-tab').removeClass('selected-tab');
+        $('#league-tab').addClass('selected-tab');
+        $('#teams-content').hide();
+        $('#league-content').fadeIn();
+    });
+
+    $('#teams-tab').click(() => {
+        $('#league-tab').removeClass('selected-tab');
+        $('#teams-tab').addClass('selected-tab');
+        $('#league-content').hide();
+        $('#teams-content').fadeIn();
+    });
+
+
+</script>
+
+
+</html>

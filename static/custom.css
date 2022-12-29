@@ -112,6 +112,45 @@ tr:last-of-type td:last-of-type {
   line-height: 50px;
 }
 
+/* nav tabs */
+.tab {
+  color: #525252;
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-bottom: 0px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 300px;
+  max-width: 40%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.tab:hover {
+  background-color: #d3d3d3;
+  border-color: #7e7e7e;
+  border-bottom-color: white;
+}
+
+.selected-tab {
+  color: black;
+  background-color: #e9e9e9;
+  border-color: #7e7e7e;
+  border-bottom: 1px solid white;
+  margin-bottom: -1px;
+}
+
+.tab-holder {
+  border-bottom: 1px solid #7e7e7e;
+}
+
+.nav-extension {
+  height: 8px;
+  border-left: 1px solid #7e7e7e;
+  border-right: 1px solid #7e7e7e;
+}
+
 
 /* loading spinner */
 /* to use: .addClass('spinner')  (position=relative) */
