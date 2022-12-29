@@ -3,9 +3,8 @@ import pandas as pd
 import os
 import reader
 import processor
-import plotly
-import plotly.express as px
 from jinja2 import Template
+import build.utils as utils
 
 
 def build_homepage():
@@ -55,10 +54,8 @@ class Builder:
             'cyan': '#17BECF'
         }
 
-    
-    def build_report(self):
 
-        # print statistics
+    def print_league_statistics(self):
         print('\nLeague Stats:')
         df = self.proc.simulator.schedule_df
         df = df[df['type'] == 'Regular Season']
@@ -76,7 +73,6 @@ class Builder:
         team_std = np.std(np.mean(team_scores, axis=1))
 
         wins, points, proj = self.proc.simulator.fill_standings(self.week)
-
         data = [
             ['Mean', self.proc.simulator.MEAN, overall_mean],
             ['Std', self.proc.simulator.STD, overall_std],
@@ -90,13 +86,13 @@ class Builder:
         print(pd.DataFrame(data, columns=['Team', 'Avg', 'Proj']).round(1))
         print()
 
+    
+    # plot and table generators
 
-        # playoff report
-        playoff_report = self.proc.simulator.playoff_report
-        if playoff_report:
-            print('Building in playoff report mode')
-
-        # standings
+    def get_standings_table(self):
+        df = self.proc.simulator.schedule_df
+        df = df[df['type'] == 'Regular Season']
+        df = df[df['week'] <= self.week]
         wins, points, proj = self.proc.simulator.fill_standings(self.week)
         data = [[t, wins[t], points[t]/df['week'].max()] for t in self.proc.teams]
 
@@ -107,9 +103,9 @@ class Builder:
         df = df[['', 'Team', 'Wins', 'Avg']]
 
         standings_table = df
+        return standings_table
 
-
-        # expected final standings
+    def get_expected_final_standings(self):
         efs = self.proc.expected_final_standings(self.week)
         df = pd.DataFrame(efs.items(), columns=['Team', 'EFS'])
         df = df.sort_values('EFS').reset_index(drop=True)
@@ -117,9 +113,10 @@ class Builder:
         df = df[['', 'Team']]
         expected_final_list = list(df['Team'])
         expected_final_list = ['%d. %s' % (i+1, x) for i, x in enumerate(expected_final_list)]
+        return expected_final_list
 
-
-        # expected vs actual wins
+    def get_expected_wins_table(self):
+        wins, points, proj = self.proc.simulator.fill_standings(self.week)
         expected = self.proc.expected_wins(self.week)
         actual = wins
         data = [(t, expected[t], actual[t]) for t in self.proc.teams]
@@ -130,9 +127,9 @@ class Builder:
         df['Difference'] = df['Difference'].round(1)
         df['Difference'] = ['+%.1f' % x if x > 0 else str(x) for x in df['Difference']]
         expected_wins_table = df
+        return expected_wins_table
 
-
-        # expected sos
+    def get_expected_sos(self):
         current, future = self.proc.expected_sos(self.week)
         data = [(t, current[t], future[t]) for t in self.proc.teams]
         df = pd.DataFrame(data, columns=['Team', 'Current', 'Future'])
@@ -140,9 +137,9 @@ class Builder:
         df['Current'] = df['Current'].round(1)
         df['Future'] = df['Future'].round(1)
         sos_table = df
+        return sos_table
 
-
-        # upcoming game importance
+    def get_upcoming_game_importance(self):
         if self.proc.game_importance:
             games = self.proc.game_importance
 
@@ -158,9 +155,9 @@ class Builder:
             upcoming_games_table = df
         else:
             upcoming_games_table = None
+        return upcoming_games_table
 
-
-        # playoff odds
+    def get_playoff_odds_plot(self):
         odds = self.proc.playoff_odds(self.week)
         eliminated, clinched, limits = self.proc.playoff_eligibility
         for t in odds:
@@ -173,61 +170,30 @@ class Builder:
         df['Odds'] = (df['Odds'] * 100).round(1)
         df = df.sort_values('Odds')
 
-        fig = px.bar(
+        playoff_odds_plot = utils.bar_plot(
             df,
             x='Odds', y='Team',
-            orientation='h',
-            text_auto=True,
-            template='simple_white',
+            color=self.theme['blue'],
             labels={'Team': ''},
-            color_discrete_sequence=[self.theme['blue']],
-            height=350,
         )
-        fig.update_layout(margin={'t': 10, 'b': 10, 'l': 10})
-        fig.update_xaxes(visible=False, showticklabels=False, fixedrange=True)
-        fig.update_yaxes(fixedrange=True)
-        fig.update_layout(showlegend=False)
-        fig.update_traces(textfont_size=13, textangle=0, textposition="outside", cliponaxis=False)
-        fig.update_layout(xaxis_ticksuffix = '%')
+        return playoff_odds_plot
 
-        playoff_odds_plot = plotly.offline.plot(
-            fig, include_plotlyjs=False, output_type='div', 
-            config= dict(displayModeBar = False)
-        )
-
-
-        # division odds
-        use_divisions = self.proc.simulator.use_divisions
+    def get_division_odds_plot(self):
         odds = self.proc.division_odds(self.week)
 
         df = pd.DataFrame(odds.items(), columns=['Team', 'Odds'])
         df['Odds'] = (df['Odds'] * 100).round(1)
         df = df.sort_values('Odds')
 
-        fig = px.bar(
+        division_odds_plot = utils.bar_plot(
             df,
             x='Odds', y='Team',
-            orientation='h',
-            text_auto=True,
-            template='simple_white',
+            color=self.theme['purple'],
             labels={'Team': ''},
-            color_discrete_sequence=[self.theme['purple']],
-            height=350,
         )
-        fig.update_layout(margin={'t': 10, 'b': 10, 'l': 10})
-        fig.update_xaxes(visible=False, showticklabels=False, fixedrange=True)
-        fig.update_yaxes(fixedrange=True)
-        fig.update_layout(showlegend=False)
-        fig.update_traces(textfont_size=13, textangle=0, textposition="outside", cliponaxis=False)
-        fig.update_layout(xaxis_ticksuffix = '%')
+        return division_odds_plot
 
-        division_odds_plot = plotly.offline.plot(
-            fig, include_plotlyjs=False, output_type='div', 
-            config= dict(displayModeBar = False)
-        )
-
-
-        # championship odds
+    def get_championship_odds_plot(self):
         odds = self.proc.champion_odds(self.week)
         eliminated, clinched, limits = self.proc.playoff_eligibility
         for t in odds:
@@ -240,30 +206,15 @@ class Builder:
         df = df.sort_values('Odds')
         df['Odds'] = (df['Odds'] * 100).round(1)
 
-        fig = px.bar(
+        championship_odds_plot = utils.bar_plot(
             df,
             x='Odds', y='Team',
-            orientation='h',
-            text_auto=True,
-            template='simple_white',
+            color=self.theme['green'],
             labels={'Team': ''},
-            color_discrete_sequence=[self.theme['green']],
-            height=350,
         )
-        fig.update_layout(margin={'t': 10, 'b': 10, 'l': 10})
-        fig.update_xaxes(visible=False, showticklabels=False, fixedrange=True)
-        fig.update_yaxes(fixedrange=True)
-        fig.update_layout(showlegend=False)
-        fig.update_traces(textfont_size=13, textangle=0, textposition="outside", cliponaxis=False)
-        fig.update_layout(xaxis_ticksuffix = '%')
+        return championship_odds_plot
 
-        championship_odds_plot = plotly.offline.plot(
-            fig, include_plotlyjs=False, output_type='div', 
-            config= dict(displayModeBar = False)
-        )
-
-
-        # punishment odds
+    def get_punishment_odds_plot(self):
         odds = self.proc.punishment_odds(self.week)
         eliminated, clinched, limits = self.proc.playoff_eligibility
         for t in odds:
@@ -274,30 +225,15 @@ class Builder:
         df['Odds'] = (df['Odds'] * 100).round(1)
         df = df.sort_values('Odds')
 
-        fig = px.bar(
+        punishment_odds_plot = utils.bar_plot(
             df,
             x='Odds', y='Team',
-            orientation='h',
-            text_auto=True,
-            template='simple_white',
+            color=self.theme['red'],
             labels={'Team': ''},
-            color_discrete_sequence=[self.theme['red']],
-            height=350,
         )
-        fig.update_layout(margin={'t': 10, 'b': 10, 'l': 10})
-        fig.update_xaxes(visible=False, showticklabels=False, fixedrange=True)
-        fig.update_yaxes(fixedrange=True)
-        fig.update_layout(showlegend=False)
-        fig.update_traces(textfont_size=13, textangle=0, textposition="outside", cliponaxis=False)
-        fig.update_layout(xaxis_ticksuffix = '%')
+        return punishment_odds_plot
 
-        punishment_odds_plot = plotly.offline.plot(
-            fig, include_plotlyjs=False, output_type='div', 
-            config= dict(displayModeBar = False)
-        )
-
-
-        # betting lines table
+    def get_betting_lines_table(self):
         playoff, champion = self.proc.sportsbook_odds(self.week)
         true_champion = self.proc.champion_odds(self.week)
         data = [(t, playoff[t], champion[t], true_champion[t]) for t in self.proc.teams]
@@ -305,9 +241,9 @@ class Builder:
         df = df.sort_values('True', ascending=False).reset_index(drop=True)
         df = df[['Team', 'Make Playoffs', 'Win League']]
         betting_lines_table = df
+        return betting_lines_table
 
-
-        # playoff odds over time (with menu)
+    def get_playoff_over_time_plot(self):
         max_week = int(self.proc.simulator.schedule_df['week'].max())
         data = [self.proc.playoff_odds(w) for w in range(1, min(self.week, max_week) + 1)]
         df = pd.DataFrame(data)
@@ -316,44 +252,13 @@ class Builder:
         df = df.round(1)
         df.index = df.index + 1
 
-        fig = px.line(
+        playoff_time_plot = utils.odds_over_time_plot(
             df,
-            markers=True,
-            template='simple_white',
             labels={'value': '', 'index': 'Week', 'variable': 'Team'},
-            height=500
         )
-        fig.update_layout(margin={'t': 10, 'b': 10, 'l': 0, 'r': 20})
-        fig.update_layout(yaxis_ticksuffix='%')
-        fig.update_layout(legend={'orientation': 'h', 'y': -0.2, 'font': {'size': 14}, 'title': ''})
-        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)], fixedrange=True)
-        fig.update_yaxes(range=[-5, df.values.max()+9], fixedrange=True)
-        fig.update_layout(
-            updatemenus=[{
-                'buttons': [{
-                    'label': '  %s  ' % col,
-                    'method': 'update',
-                    'args': [
-                        {'visible': [True for c in df.columns]}
-                        if col == 'All' else
-                        {'visible': [True if c == col else False for c in df.columns]}
-                    ]
-                } for col in ['All'] + list(df.columns)
-                ],
-                'x': 0.5, 'y': 1.2, 
-                'xanchor': 'center', 'yanchor': 'middle',
-                'pad': {'l': 10, 'r': 10, 'b': 10, 't': 10},
-                'font': {'size': 20}
-            }]
-        )
+        return playoff_time_plot
 
-        playoff_time_plot = plotly.offline.plot(
-            fig, include_plotlyjs=False, output_type='div', 
-            config= dict(displayModeBar = False)
-        )
-
-
-        # championship odds over time (with menu)
+    def get_championshipt_over_time_plot(self):
         data = [self.proc.champion_odds(w) for w in range(1, self.week + 1)]
         df = pd.DataFrame(data)
 
@@ -361,44 +266,13 @@ class Builder:
         df = df.round(1)
         df.index = df.index + 1
 
-        fig = px.line(
+        championship_time_plot = utils.odds_over_time_plot(
             df,
-            markers=True,
-            template='simple_white',
             labels={'value': '', 'index': 'Week', 'variable': 'Team'},
-            height=500
         )
-        fig.update_layout(margin={'t': 10, 'b': 10, 'l': 0, 'r': 20})
-        fig.update_layout(yaxis_ticksuffix='%')
-        fig.update_layout(legend={'orientation': 'h', 'y': -0.2, 'font': {'size': 14}, 'title': ''})
-        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)], fixedrange=True)
-        fig.update_yaxes(range=[-5, df.values.max()+9], fixedrange=True)
-        fig.update_layout(
-            updatemenus=[{
-                'buttons': [{
-                    'label': '  %s  ' % col,
-                    'method': 'update',
-                    'args': [
-                        {'visible': [True for c in df.columns]}
-                        if col == 'All' else
-                        {'visible': [True if c == col else False for c in df.columns]}
-                    ]
-                } for col in ['All'] + list(df.columns)
-                ],
-                'x': 0.5, 'y': 1.2, 
-                'xanchor': 'center', 'yanchor': 'middle',
-                'pad': {'l': 10, 'r': 10, 'b': 10, 't': 10},
-                'font': {'size': 20}
-            }]
-        )
+        return championship_time_plot
 
-        championship_time_plot = plotly.offline.plot(
-            fig, include_plotlyjs=False, output_type='div', 
-            config= dict(displayModeBar = False)
-        )
-
-
-        # punishment odds over time (with menu)
+    def get_punishment_over_time_plot(self):
         data = [self.proc.punishment_odds(w) for w in range(1, self.week + 1)]
         df = pd.DataFrame(data)
 
@@ -406,46 +280,42 @@ class Builder:
         df = df.round(1)
         df.index = df.index + 1
 
-        fig = px.line(
+        punishment_time_plot = utils.odds_over_time_plot(
             df,
-            markers=True,
-            template='simple_white',
             labels={'value': '', 'index': 'Week', 'variable': 'Team'},
-            height=500
         )
-        fig.update_layout(margin={'t': 10, 'b': 10, 'l': 0, 'r': 20})
-        fig.update_layout(yaxis_ticksuffix='%')
-        fig.update_layout(legend={'orientation': 'h', 'y': -0.2, 'font': {'size': 14}, 'title': ''})
-        fig.update_xaxes(range=[0.7, max(df.shape[0] + 0.3, 7)], fixedrange=True)
-        fig.update_yaxes(range=[-5, df.values.max()+9], fixedrange=True)
-        fig.update_layout(
-            updatemenus=[{
-                'buttons': [{
-                    'label': '  %s  ' % col,
-                    'method': 'update',
-                    'args': [
-                        {'visible': [True for c in df.columns]}
-                        if col == 'All' else
-                        {'visible': [True if c == col else False for c in df.columns]}
-                    ]
-                } for col in ['All'] + list(df.columns)
-                ],
-                'x': 0.5, 'y': 1.2, 
-                'xanchor': 'center', 'yanchor': 'middle',
-                'pad': {'l': 10, 'r': 10, 'b': 10, 't': 10},
-                'font': {'size': 20}
-            }]
-        )
+        return punishment_time_plot
 
-        punishment_time_plot = plotly.offline.plot(
-            fig, include_plotlyjs=False, output_type='div', 
-            config= dict(displayModeBar = False)
-        )
+    
+    def build_report(self):
 
+        # print statistics
+        self.print_league_statistics()
 
+        # report types
+        use_divisions = self.proc.simulator.use_divisions
+        playoff_report = self.proc.simulator.playoff_report
+        if playoff_report:
+            print('Building in playoff report mode')
+
+        # get plots and tables
+        standings_table = self.get_standings_table()
+        expected_final_list = self.get_expected_final_standings()
+        expected_wins_table = self.get_expected_wins_table()
+        sos_table = self.get_expected_sos()
+        upcoming_games_table = self.get_upcoming_game_importance()
+        playoff_odds_plot = self.get_playoff_odds_plot()
+        division_odds_plot = self.get_division_odds_plot()
+        championship_odds_plot = self.get_championship_odds_plot()
+        punishment_odds_plot = self.get_punishment_odds_plot()
+        betting_lines_table = self.get_betting_lines_table()
+        playoff_time_plot = self.get_playoff_over_time_plot()
+        championship_time_plot = self.get_championshipt_over_time_plot()
+        punishment_time_plot = self.get_punishment_over_time_plot()
+
+        # build using template
         with open('templates/report.html', 'r') as file:
             template_text = file.read()
-
         template = Template(template_text)
 
         html = template.render(
@@ -468,6 +338,7 @@ class Builder:
             playoff_report=playoff_report
         )
 
+        # write to file
         outdir = 'reports/%s' % (self.league_id)
         outfile = 'reports/%s/current.html' % (self.league_id)
         data_outfile = 'reports/%s/schedule.csv' % (self.league_id)
