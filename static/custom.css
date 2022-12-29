@@ -102,6 +102,16 @@ tr:last-of-type td:last-of-type {
   font-weight: 800;
 }
 
+/* header */
+#header-img {
+  height: 30px;
+  padding-right: 10px;
+}
+
+#header-span {
+  line-height: 50px;
+}
+
 
 /* loading spinner */
 /* to use: .addClass('spinner')  (position=relative) */
