@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="static/images/icon.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="static/custom.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
@@ -22,7 +22,7 @@
     <a href="">
         <div class="w3-container w3-black w3-padding">
             <div class="w3-center fit-width">
-                <h1 class="w3-xxlarge">Fantasy Forecaster</h1>
+                <h1 class="w3-xlarge semibold">Fantasy Forecaster</h1>
             </div>
         </div>
     </a>
@@ -32,19 +32,37 @@
     <div class="w3-container w3-center fit-width">
 
         <br>
-        <h3>Leagues</h3>
-        <br>
 
+        <!-- leagues -->
+        <h3>Leagues</h3>
         <ul class="w3-ul fit-width" style="max-width: 400px;">
             {% for l in league_links %}
             <a href="{{ l['link'] }}" style="text-decoration: none;">
-                <li class="w3-border w3-padding-16 fit-width button">
+                <li 
+                    class="w3-border w3-round-large w3-padding-8 
+                        fit-width button medium-weight w3-margin-bottom">
                     {{ l['name'] }}
                 </li>
-                <br>
             </a>
             {% endfor %}
         </ul>
+        <br>
+
+        <!-- Player Ratings -->
+        <h3>Player Ratings</h3>
+        <ul class="w3-ul fit-width" style="max-width: 400px;">
+            {% for l in player_rating_links %}
+            <a href="{{ l['link'] }}" style="text-decoration: none;">
+                <li 
+                    class="w3-border w3-round-large w3-padding-8 
+                        fit-width button medium-weight w3-margin-bottom">
+                    {{ l['name'] }}
+                </li>
+            </a>
+            {% endfor %}
+        </ul>
+        <br>
+
 
         <br><br><br>
 

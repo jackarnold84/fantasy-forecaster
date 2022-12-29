@@ -8,25 +8,32 @@ import build.utils as utils
 
 
 def build_homepage():
-    league_data = reader.config['leagues']
 
+    # leauges
+    league_data = reader.config['leagues']
     league_links = [{
         'name': league_data[x]['name'],
         'link': 'reports/%s/current.html' % x
     } for x in league_data]
 
+    # player ratings
+    years = os.listdir('reports/players')
+    player_rating_links = [{
+        'name': '%s Ratings' % y,
+        'link': 'reports/players/%s/ratings.html' % y
+    } for y in years]
+
     with open('templates/home.html', 'r') as file:
         template_text = file.read()
-
     template = Template(template_text)
 
     html = template.render(
-        league_links=league_links
+        league_links=league_links,
+        player_rating_links=player_rating_links,
     )
 
     with open('index.html', "w") as html_file:
         html_file.write(html)
-
     print('Homepage built at index.html')
 
         

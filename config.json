@@ -137,30 +137,6 @@
             "score_mean": 122,
             "score_std": 24,
             "team_std": 9
-        },
-
-        "morton-2021": {
-            "name": "Morton Fantasy Football 2021",
-            "aliases": {
-                "Jack Brennan": "Jack B",
-                "Jack Arnold": "Jack A",
-                "Jacob Moza": "Moza",
-                "Levi Killion": "Levi",
-                "Drew Fuiten": "Drew",
-                "Jaden Glascock": "Jaden",
-                "Kyle Killion": "Kyle",
-                "Jake Martin": "Jake M",
-                "Jake Walters": "Walt",
-                "Ian Killion": "Big E"
-            },
-            "use_divisions": false,
-            "playoff_type": "10-team-4-playoff",
-            "playoff_teams": 4,
-            "playoff_weeks_per_game": 2,
-            "playoff_reports": false,
-            "score_mean": 122,
-            "score_std": 24,
-            "team_std": 9
         }
     }
 }

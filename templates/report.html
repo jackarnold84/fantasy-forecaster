@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../static/images/icon.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="../../static/style.css">
+    <link rel="stylesheet" href="../../static/main.css">
+    <link rel="stylesheet" href="../../static/custom.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
@@ -22,7 +22,7 @@
     <a href="../../index.html">
         <div class="w3-container w3-black w3-padding">
             <div class="w3-center fit-width">
-                <h1 class="w3-xxlarge">Fantasy Forecaster</h1>
+                <h1 class="w3-xlarge semibold">Fantasy Forecaster</h1>
             </div>
         </div>
     </a>
@@ -32,18 +32,18 @@
     <div class="w3-container w3-center fit-width">
 
         <br>
-        <h2 class="w3-center">{{ league_name }}</h2>
+        <h3 class="w3-center semibold">{{ league_name }}</h3>
 
-        <p class="w3-center">Week {{ week }} Report</p>
+        <p class="w3-center medium-weight">Week {{ week }} Report</p>
         <br>
 
 
         <!-- Standings -->
-        <h3 class="w3-center">Standings</h3>
+        <h4 class="w3-center">Standings</h4>
         <div class="w3-container fit-width" style="max-width: 450px;">
-            <table class="w3-table w3-border sortable">
+            <table class="w3-table bordered sortable">
                 <tbody>
-                    <tr class="w3-border-bottom light-blue">
+                    <tr class="light-blue">
                         {% for h in standings_table.columns %}
                         <th>{{ h }}</th>
                         {% endfor %}
@@ -62,11 +62,11 @@
 
 
         <!-- Upcoming Games -->
-        <h3 class="w3-center">Upcoming Games</h3>
+        <h4 class="w3-center">Upcoming Games</h4>
         <div class="w3-container fit-width" style="max-width: 350px;">
-            <table class="w3-table w3-border">
+            <table class="w3-table bordered">
                 <tbody>
-                    <tr class="w3-border-bottom light-green">
+                    <tr class="light-green">
                         {% for h in upcoming_games_table.columns %}
                         <th class="w3-center">{{ h }}</th>
                         {% endfor %}
@@ -94,7 +94,7 @@
 
 
         <!-- Playoff Odds -->
-        <h3 class="w3-center">Playoff Odds</h3>
+        <h4 class="w3-center">Playoff Odds</h4>
         <div class="w3-container fit-width" style="max-width: 500px;">
             {{ playoff_odds_plot | safe }}
         </div>
@@ -102,7 +102,7 @@
 
         <!-- Division Odds -->
         {% if use_divisions %}
-        <h3 class="w3-center">Division Winner Odds</h3>
+        <h4 class="w3-center">Division Winner Odds</h4>
         <div class="w3-container fit-width" style="max-width: 500px;">
             {{ division_odds_plot | safe }}
         </div>
@@ -110,14 +110,14 @@
         {% endif %}
 
         <!-- Championship Odds -->
-        <h3 class="w3-center">Championship Odds</h3>
+        <h4 class="w3-center">Championship Odds</h4>
         <div class="w3-container fit-width" style="max-width: 500px;">
             {{ championship_odds_plot | safe }}
         </div>
         <br>
 
         <!-- Punishment Odds -->
-        <h3 class="w3-center">Punishment Odds</h3>
+        <h4 class="w3-center">Punishment Odds</h4>
         <div class="w3-container fit-width" style="max-width: 500px;">
             {{ punishment_odds_plot | safe }}
         </div>
@@ -125,7 +125,7 @@
 
 
         <!-- Projected Final Standings -->
-        <h3 class="w3-center">Projected Final Standings</h3>
+        <h4 class="w3-center">Projected Final Standings</h4>
         <div class="w3-container fit-width" style="max-width: 200px;">
             <ul class="w3-ul">
                 {% for t in expected_final_list %}
@@ -136,11 +136,11 @@
         <br><br>
 
         <!-- Expected Wins -->
-        <h3 class="w3-center">Expected vs Actual Wins</h3>
+        <h4 class="w3-center">Expected vs Actual Wins</h4>
         <div class="w3-container fit-width" style="max-width: 450px;">
-            <table class="w3-table w3-border sortable">
+            <table class="w3-table bordered sortable">
                 <tbody>
-                    <tr class="w3-border-bottom light-red">
+                    <tr class="light-red">
                         {% for h in expected_wins_table.columns %}
                         <th>{{ h }}</th>
                         {% endfor %}
@@ -159,11 +159,11 @@
         <br><br>
 
         <!-- Strengh of Schedule -->
-        <h3 class="w3-center">Strength of Schedule</h3>
+        <h4 class="w3-center">Strength of Schedule</h4>
         <div class="w3-container fit-width" style="max-width: 450px;">
-            <table class="w3-table w3-border sortable">
+            <table class="w3-table bordered sortable">
                 <tbody>
-                    <tr class="w3-border-bottom light-purple">
+                    <tr class="light-purple">
                         {% for h in sos_table.columns %}
                         <th>{{ h }}</th>
                         {% endfor %}
@@ -185,11 +185,11 @@
         <br><br>
 
         <!-- Betting Lines -->
-        <h3 class="w3-center">Betting Lines</h3>
+        <h4 class="w3-center">Betting Lines</h4>
         <div class="w3-container fit-width" style="max-width: 350px;">
-            <table class="w3-table w3-border">
+            <table class="w3-table bordered">
                 <tbody>
-                    <tr class="w3-border-bottom light-orange">
+                    <tr class="light-orange">
                         {% for h in betting_lines_table.columns %}
                         <th class="w3-center">{{ h }}</th>
                         {% endfor %}
@@ -208,21 +208,21 @@
 
 
         <!-- Playoff Odds Over Time -->
-        <h3 class="w3-center">Playoff Odds Over Time</h3>
+        <h4 class="w3-center">Playoff Odds Over Time</h4>
         <div class="w3-container fit-width" style="max-width: 700px;">
             {{ playoff_time_plot | safe }}
         </div>
         <br><br>
 
         <!-- Championship Odds Over Time -->
-        <h3 class="w3-center">Championship Odds Over Time</h3>
+        <h4 class="w3-center">Championship Odds Over Time</h4>
         <div class="w3-container fit-width" style="max-width: 700px;">
             {{ championship_time_plot | safe }}
         </div>
         <br><br>
 
         <!-- Punishment Odds Over Time -->
-        <h3 class="w3-center">Punishment Odds Over Time</h3>
+        <h4 class="w3-center">Punishment Odds Over Time</h4>
         <div class="w3-container fit-width" style="max-width: 700px;">
             {{ punishment_time_plot | safe }}
         </div>

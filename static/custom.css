@@ -1,10 +1,14 @@
 
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 
 body,h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
 }
 
 .button {
@@ -42,6 +46,29 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 
 
+/* tables */
+.bordered {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+th {
+  font-weight: 600;
+}
+
+th:first-of-type {
+  border-top-left-radius: 7px;
+}
+th:last-of-type {
+  border-top-right-radius: 7px;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 7px;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 7px;
+}
+
 
 /* utils */
 .off {
@@ -53,8 +80,26 @@ body,h1,h2,h3,h4,h5,h6 {
   max-width: 1000px;
 }
 
+
+/* font weights */
+.light {
+  font-weight: 300;
+}
+
+.medium-weight {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
 .bold {
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
 }
 
 
