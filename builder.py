@@ -354,7 +354,7 @@ class Builder:
 
 
         # championship odds over time (with menu)
-        data = [self.proc.champion_odds(w) for w in range(1, self.week + 1)]
+        data = [self.proc.champion_odds(w) for w in range(1, min(self.week, max_week) + 1)]
         df = pd.DataFrame(data)
 
         df = df * 100
@@ -399,7 +399,7 @@ class Builder:
 
 
         # punishment odds over time (with menu)
-        data = [self.proc.punishment_odds(w) for w in range(1, self.week + 1)]
+        data = [self.proc.punishment_odds(w) for w in range(1, min(self.week, max_week) + 1)]
         df = pd.DataFrame(data)
 
         df = df * 100
