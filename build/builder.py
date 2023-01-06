@@ -321,7 +321,7 @@ class Builder:
         punishment_time_plot = self.get_punishment_over_time_plot()
 
         # build using template
-        with open('templates/report.html', 'r') as file:
+        with open('templates/metrics-report.html', 'r') as file:
             template_text = file.read()
         template = Template(template_text)
 

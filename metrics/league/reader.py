@@ -143,7 +143,7 @@ def read_rosters(file):
 
         # current team
         if 'fantasy_team' in x:
-            team_name, _ = x['fantasy_team'][0].rsplit('(')
+            team_name, _ = x['fantasy_team'][0].rsplit('(', 1)
             team_name = name_clean(team_name, lower=True)
             current_team = team_name
             continue
@@ -190,7 +190,7 @@ def read_draft_recap(file):
 
         # current team
         if 'Round' in x[0]:
-            _, round_no = x[0].rsplit(' ')
+            _, round_no = x[0].rsplit(' ', 1)
             current_round = int(round_no)
             continue
         

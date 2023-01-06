@@ -73,7 +73,7 @@ class Evaluator:
                 self.players_calc[id]['moving_avg'][w] = self.get_moving_avg(id, w)
 
         # compute z score statistics
-        for w in range(1, min(self.max_week + 1, self.total_weeks)):
+        for w in range(1, min(self.max_week + 1, self.total_weeks + 1)):
             pos_population = {
                 p: {z: [] for z in utils.z_stats} for p in utils.positions
             }
@@ -118,7 +118,7 @@ class Evaluator:
             self.players_calc[id]['z']['sharp_rating'] = {}
 
             # weekly ratings, sharp ratings
-            for w in range(0, min(self.max_week, self.total_weeks - 1)):
+            for w in range(0, self.max_week):
                 tot = 0
                 tot_weight = 0
                 for stat in weights.normal_weights[w]:
@@ -143,7 +143,7 @@ class Evaluator:
 
 
         # compute z score based rating
-        for w in range(0, min(self.max_week, self.total_weeks - 1)):
+        for w in range(0, self.max_week):
             pos_population = {
                 p: {'rating': [], 'sharp_rating': []} for p in utils.positions
             }
@@ -191,7 +191,7 @@ class Evaluator:
             self.players[id]['preseason_rating'] = utils.rnd(self.players_calc[id]['z']['rating'][0])
             self.players[id]['rating'] = {w: None for w in range(1, self.total_weeks + 1)}
             self.players[id]['sharp_rating'] = {w: None for w in range(1, self.total_weeks + 1)}
-            for w in range(1, min(self.max_week, self.total_weeks - 1)):
+            for w in range(1, self.max_week):
                 self.players[id]['rating'][w] = utils.rnd(self.players_calc[id]['z']['rating'][w])
                 self.players[id]['sharp_rating'][w] = utils.rnd(self.players_calc[id]['z']['sharp_rating'][w])        
 

@@ -36,632 +36,647 @@
         <p class="w3-center medium-weight">Week 14 Report</p>
         <br>
 
-
-        <!-- Standings -->
-        <h4 class="w3-center">Standings</h4>
-        <div class="w3-container fit-width" style="max-width: 450px;">
-            <table class="w3-table bordered sortable">
-                <tbody>
-                    <tr class="light-blue">
-                        
-                        <th></th>
-                        
-                        <th>Team</th>
-                        
-                        <th>Wins</th>
-                        
-                        <th>Avg</th>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">1</td>
-                        
-                        <td class="w3-padding-small">Tim</td>
-                        
-                        <td class="w3-padding-small">9</td>
-                        
-                        <td class="w3-padding-small">136.9</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">2</td>
-                        
-                        <td class="w3-padding-small">Joey</td>
-                        
-                        <td class="w3-padding-small">9</td>
-                        
-                        <td class="w3-padding-small">126.1</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">3</td>
-                        
-                        <td class="w3-padding-small">Kevin</td>
-                        
-                        <td class="w3-padding-small">9</td>
-                        
-                        <td class="w3-padding-small">117.7</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">4</td>
-                        
-                        <td class="w3-padding-small">Tony</td>
-                        
-                        <td class="w3-padding-small">8</td>
-                        
-                        <td class="w3-padding-small">120.3</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">5</td>
-                        
-                        <td class="w3-padding-small">Shiv</td>
-                        
-                        <td class="w3-padding-small">7</td>
-                        
-                        <td class="w3-padding-small">117.9</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">6</td>
-                        
-                        <td class="w3-padding-small">Rohan</td>
-                        
-                        <td class="w3-padding-small">7</td>
-                        
-                        <td class="w3-padding-small">113.7</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">7</td>
-                        
-                        <td class="w3-padding-small">Nick</td>
-                        
-                        <td class="w3-padding-small">6</td>
-                        
-                        <td class="w3-padding-small">127.3</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">8</td>
-                        
-                        <td class="w3-padding-small">Tanner</td>
-                        
-                        <td class="w3-padding-small">6</td>
-                        
-                        <td class="w3-padding-small">112.7</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">9</td>
-                        
-                        <td class="w3-padding-small">Josh</td>
-                        
-                        <td class="w3-padding-small">5</td>
-                        
-                        <td class="w3-padding-small">111.9</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">10</td>
-                        
-                        <td class="w3-padding-small">Jack</td>
-                        
-                        <td class="w3-padding-small">4</td>
-                        
-                        <td class="w3-padding-small">115.4</td>
-                        
-                    </tr>
-                    
-                </tbody>
-            </table>
+        <!-- Tabs -->
+        <div class="tab-holder fit-width">
+            <span id="league-tab" class="tab medium-weight">League</span>
+            <span id="teams-tab" class="tab medium-weight">Teams</span>
         </div>
-        <br><br>
-
-
-        <!-- Upcoming Games -->
-        <h4 class="w3-center">Upcoming Games</h4>
-        <div class="w3-container fit-width" style="max-width: 350px;">
-            <table class="w3-table bordered">
-                <tbody>
-                    <tr class="light-green">
-                        
-                    </tr>
-                    
-                </tbody>
-            </table>
-            
-            <p class="w3-small">
-                Importance is based on impact to playoff odds
-            </p>
-            
-        </div>
-        <br><br>
-
-
-        <!-- Playoff Odds -->
-        <h4 class="w3-center">Playoff Odds</h4>
-        <div class="w3-container fit-width" style="max-width: 500px;">
-            <div>                            <div id="3f346342-2aec-4c0a-bded-7cee6281084f" class="plotly-graph-div" style="height:350px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("3f346342-2aec-4c0a-bded-7cee6281084f")) {                    Plotly.newPlot(                        "3f346342-2aec-4c0a-bded-7cee6281084f",                        [{"alignmentgroup":"True","cliponaxis":false,"hovertemplate":"Odds=%{x}<br>=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#1F77B4","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textangle":0,"textfont":{"size":13},"textposition":"outside","texttemplate":"%{x}","x":[0.0,0.0,0.0,0.0,0.0,0.0,100.0,100.0,100.0,100.0],"xaxis":"x","y":["Jack","Josh","Nick","Rohan","Shiv","Tanner","Joey","Kevin","Tim","Tony"],"yaxis":"y","type":"bar"}],                        {"barmode":"relative","height":350,"legend":{"tracegroupgap":0},"margin":{"b":10,"l":10,"t":10},"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"showticklabels":false,"ticksuffix":"%","title":{"text":"Odds"},"visible":false},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
-        </div>
+        <div class="nav-extension"></div>
         <br>
 
-        <!-- Division Odds -->
-        
 
-        <!-- Championship Odds -->
-        <h4 class="w3-center">Championship Odds</h4>
-        <div class="w3-container fit-width" style="max-width: 500px;">
-            <div>                            <div id="235a7886-200f-44a8-8e11-46bf56d2f1f2" class="plotly-graph-div" style="height:350px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("235a7886-200f-44a8-8e11-46bf56d2f1f2")) {                    Plotly.newPlot(                        "235a7886-200f-44a8-8e11-46bf56d2f1f2",                        [{"alignmentgroup":"True","cliponaxis":false,"hovertemplate":"Odds=%{x}<br>=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#2CA02C","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textangle":0,"textfont":{"size":13},"textposition":"outside","texttemplate":"%{x}","x":[0.0,0.0,0.0,0.0,0.0,0.0,14.4,15.4,26.0,44.1],"xaxis":"x","y":["Jack","Josh","Nick","Rohan","Shiv","Tanner","Kevin","Tony","Joey","Tim"],"yaxis":"y","type":"bar"}],                        {"barmode":"relative","height":350,"legend":{"tracegroupgap":0},"margin":{"b":10,"l":10,"t":10},"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"showticklabels":false,"ticksuffix":"%","title":{"text":"Odds"},"visible":false},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
+        <!-- League Tab Content -->
+        <div id="league-content">
+
+            <!-- Standings -->
+            <h4 class="w3-center">Standings</h4>
+            <div class="w3-container fit-width" style="max-width: 450px;">
+                <table class="w3-table bordered sortable">
+                    <tbody>
+                        <tr class="light-blue">
+                            
+                            <th></th>
+                            
+                            <th>Team</th>
+                            
+                            <th>Wins</th>
+                            
+                            <th>Avg</th>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">1</td>
+                            
+                            <td class="w3-padding-small">Tim</td>
+                            
+                            <td class="w3-padding-small">9</td>
+                            
+                            <td class="w3-padding-small">136.9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">2</td>
+                            
+                            <td class="w3-padding-small">Joey</td>
+                            
+                            <td class="w3-padding-small">9</td>
+                            
+                            <td class="w3-padding-small">126.1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">3</td>
+                            
+                            <td class="w3-padding-small">Kevin</td>
+                            
+                            <td class="w3-padding-small">9</td>
+                            
+                            <td class="w3-padding-small">117.7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">4</td>
+                            
+                            <td class="w3-padding-small">Tony</td>
+                            
+                            <td class="w3-padding-small">8</td>
+                            
+                            <td class="w3-padding-small">120.3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">5</td>
+                            
+                            <td class="w3-padding-small">Shiv</td>
+                            
+                            <td class="w3-padding-small">7</td>
+                            
+                            <td class="w3-padding-small">117.9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">6</td>
+                            
+                            <td class="w3-padding-small">Rohan</td>
+                            
+                            <td class="w3-padding-small">7</td>
+                            
+                            <td class="w3-padding-small">113.7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">7</td>
+                            
+                            <td class="w3-padding-small">Nick</td>
+                            
+                            <td class="w3-padding-small">6</td>
+                            
+                            <td class="w3-padding-small">127.3</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">8</td>
+                            
+                            <td class="w3-padding-small">Tanner</td>
+                            
+                            <td class="w3-padding-small">6</td>
+                            
+                            <td class="w3-padding-small">112.7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">9</td>
+                            
+                            <td class="w3-padding-small">Josh</td>
+                            
+                            <td class="w3-padding-small">5</td>
+                            
+                            <td class="w3-padding-small">111.9</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">10</td>
+                            
+                            <td class="w3-padding-small">Jack</td>
+                            
+                            <td class="w3-padding-small">4</td>
+                            
+                            <td class="w3-padding-small">115.4</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+
+
+            <!-- Upcoming Games -->
+            <h4 class="w3-center">Upcoming Games</h4>
+            <div class="w3-container fit-width" style="max-width: 350px;">
+                <table class="w3-table bordered">
+                    <tbody>
+                        <tr class="light-green">
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                <p class="w3-small">
+                    Importance is based on impact to playoff odds
+                </p>
+                
+            </div>
+            <br><br>
+
+
+            <!-- Playoff Odds -->
+            <h4 class="w3-center">Playoff Odds</h4>
+            <div class="w3-container fit-width" style="max-width: 500px;">
+                <div>                            <div id="b979b805-f04a-4c38-bf98-006df520dfc4" class="plotly-graph-div" style="height:350px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("b979b805-f04a-4c38-bf98-006df520dfc4")) {                    Plotly.newPlot(                        "b979b805-f04a-4c38-bf98-006df520dfc4",                        [{"alignmentgroup":"True","cliponaxis":false,"hovertemplate":"Odds=%{x}<br>=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#1F77B4","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textangle":0,"textfont":{"size":13},"textposition":"outside","texttemplate":"%{x}","x":[0.0,0.0,0.0,0.0,0.0,0.0,100.0,100.0,100.0,100.0],"xaxis":"x","y":["Jack","Josh","Nick","Rohan","Shiv","Tanner","Joey","Kevin","Tim","Tony"],"yaxis":"y","type":"bar"}],                        {"barmode":"relative","height":350,"legend":{"tracegroupgap":0},"margin":{"b":10,"l":10,"t":10},"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"showticklabels":false,"ticksuffix":"%","title":{"text":"Odds"},"visible":false},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
+            </div>
+            <br>
+
+            <!-- Division Odds -->
+            
+
+            <!-- Championship Odds -->
+            <h4 class="w3-center">Championship Odds</h4>
+            <div class="w3-container fit-width" style="max-width: 500px;">
+                <div>                            <div id="c2243f44-1659-4a72-8b91-7f33512076ae" class="plotly-graph-div" style="height:350px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("c2243f44-1659-4a72-8b91-7f33512076ae")) {                    Plotly.newPlot(                        "c2243f44-1659-4a72-8b91-7f33512076ae",                        [{"alignmentgroup":"True","cliponaxis":false,"hovertemplate":"Odds=%{x}<br>=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#2CA02C","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textangle":0,"textfont":{"size":13},"textposition":"outside","texttemplate":"%{x}","x":[0.0,0.0,0.0,0.0,0.0,0.0,14.3,17.0,32.0,36.7],"xaxis":"x","y":["Jack","Josh","Nick","Rohan","Shiv","Tanner","Kevin","Tony","Joey","Tim"],"yaxis":"y","type":"bar"}],                        {"barmode":"relative","height":350,"legend":{"tracegroupgap":0},"margin":{"b":10,"l":10,"t":10},"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"showticklabels":false,"ticksuffix":"%","title":{"text":"Odds"},"visible":false},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
+            </div>
+            <br>
+
+            <!-- Punishment Odds -->
+            <h4 class="w3-center">Punishment Odds</h4>
+            <div class="w3-container fit-width" style="max-width: 500px;">
+                <div>                            <div id="020ba679-0aec-477b-af0d-56fccacf9715" class="plotly-graph-div" style="height:350px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("020ba679-0aec-477b-af0d-56fccacf9715")) {                    Plotly.newPlot(                        "020ba679-0aec-477b-af0d-56fccacf9715",                        [{"alignmentgroup":"True","cliponaxis":false,"hovertemplate":"Odds=%{x}<br>=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#D62728","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textangle":0,"textfont":{"size":13},"textposition":"outside","texttemplate":"%{x}","x":[0.0,0.0,0.0,0.0,0.0,0.0,10.7,26.7,30.7,32.0],"xaxis":"x","y":["Joey","Kevin","Rohan","Shiv","Tim","Tony","Nick","Jack","Josh","Tanner"],"yaxis":"y","type":"bar"}],                        {"barmode":"relative","height":350,"legend":{"tracegroupgap":0},"margin":{"b":10,"l":10,"t":10},"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"showticklabels":false,"ticksuffix":"%","title":{"text":"Odds"},"visible":false},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
+            </div>
+            <br><br>
+
+            <!-- Expected Wins -->
+            <h4 class="w3-center">Expected vs Actual Wins</h4>
+            <div class="w3-container fit-width" style="max-width: 450px;">
+                <table class="w3-table bordered sortable">
+                    <tbody>
+                        <tr class="light-red">
+                            
+                            <th>Team</th>
+                            
+                            <th>Expected</th>
+                            
+                            <th>Actual</th>
+                            
+                            <th>Difference</th>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Tim</td>
+                            
+                            <td class="w3-padding-small">9.7</td>
+                            
+                            <td class="w3-padding-small">9</td>
+                            
+                            <td class="w3-padding-small">-0.7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Joey</td>
+                            
+                            <td class="w3-padding-small">9.2</td>
+                            
+                            <td class="w3-padding-small">9</td>
+                            
+                            <td class="w3-padding-small">-0.2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Nick</td>
+                            
+                            <td class="w3-padding-small">8.6</td>
+                            
+                            <td class="w3-padding-small">6</td>
+                            
+                            <td class="w3-padding-small">-2.6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Tony</td>
+                            
+                            <td class="w3-padding-small">7.3</td>
+                            
+                            <td class="w3-padding-small">8</td>
+                            
+                            <td class="w3-padding-small">+0.7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Shiv</td>
+                            
+                            <td class="w3-padding-small">6.9</td>
+                            
+                            <td class="w3-padding-small">7</td>
+                            
+                            <td class="w3-padding-small">+0.1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Kevin</td>
+                            
+                            <td class="w3-padding-small">6.8</td>
+                            
+                            <td class="w3-padding-small">9</td>
+                            
+                            <td class="w3-padding-small">+2.2</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Tanner</td>
+                            
+                            <td class="w3-padding-small">5.9</td>
+                            
+                            <td class="w3-padding-small">6</td>
+                            
+                            <td class="w3-padding-small">+0.1</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Jack</td>
+                            
+                            <td class="w3-padding-small">5.7</td>
+                            
+                            <td class="w3-padding-small">4</td>
+                            
+                            <td class="w3-padding-small">-1.7</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Rohan</td>
+                            
+                            <td class="w3-padding-small">5.4</td>
+                            
+                            <td class="w3-padding-small">7</td>
+                            
+                            <td class="w3-padding-small">+1.6</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Josh</td>
+                            
+                            <td class="w3-padding-small">4.6</td>
+                            
+                            <td class="w3-padding-small">5</td>
+                            
+                            <td class="w3-padding-small">+0.4</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <p class="w3-small">Shows expected number of wins if the schedule was re-randomized</p>
+            </div>
+            <br><br>
+
+            <!-- Strengh of Schedule -->
+            <h4 class="w3-center">Strength of Schedule</h4>
+            <div class="w3-container fit-width" style="max-width: 450px;">
+                <table class="w3-table bordered sortable">
+                    <tbody>
+                        <tr class="light-purple">
+                            
+                            <th>Team</th>
+                            
+                            <th>Current</th>
+                            
+                            <th>Future</th>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Nick</td>
+                            
+                            <td class="w3-padding-small">131.5</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Tanner</td>
+                            
+                            <td class="w3-padding-small">122.5</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Rohan</td>
+                            
+                            <td class="w3-padding-small">121.2</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Josh</td>
+                            
+                            <td class="w3-padding-small">120.8</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Jack</td>
+                            
+                            <td class="w3-padding-small">120.8</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Tony</td>
+                            
+                            <td class="w3-padding-small">119.7</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Shiv</td>
+                            
+                            <td class="w3-padding-small">116.8</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Tim</td>
+                            
+                            <td class="w3-padding-small">116.2</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Joey</td>
+                            
+                            <td class="w3-padding-small">115.9</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-padding-small">Kevin</td>
+                            
+                            <td class="w3-padding-small">114.4</td>
+                            
+                            <td class="w3-padding-small">0.0</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <p class="w3-small">
+                    Shows average points against and expected points against for the
+                    remainder of the season
+                </p>
+            </div>
+            <br><br>
+
+            <!-- Betting Lines -->
+            <h4 class="w3-center">Betting Lines</h4>
+            <div class="w3-container fit-width" style="max-width: 350px;">
+                <table class="w3-table bordered">
+                    <tbody>
+                        <tr class="light-orange">
+                            
+                            <th class="w3-center">Team</th>
+                            
+                            <th class="w3-center">Make Playoffs</th>
+                            
+                            <th class="w3-center">Win League</th>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Tim</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">+150</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Joey</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">+190</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Tony</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">+450</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Kevin</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">+550</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Jack</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Josh</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Nick</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Rohan</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Shiv</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td class="w3-center w3-padding-small">Tanner</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                            <td class="w3-center w3-padding-small">--</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+
+
+            <!-- Playoff Odds Over Time -->
+            <h4 class="w3-center">Playoff Odds Over Time</h4>
+            <div class="w3-container fit-width" style="max-width: 700px;">
+                <div>                            <div id="dafb3062-2b74-4398-8287-5bfdc329cd34" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("dafb3062-2b74-4398-8287-5bfdc329cd34")) {                    Plotly.newPlot(                        "dafb3062-2b74-4398-8287-5bfdc329cd34",                        [{"hovertemplate":"Team=Jack<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Jack","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Jack","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[31.7,20.0,23.3,18.3,10.0,8.3,11.7,15.0,21.7,8.3,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Joey<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Joey","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Joey","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[70.0,75.0,78.3,71.7,93.3,100.0,93.3,100.0,100.0,98.3,95.0,100.0,100.0,100.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Josh<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Josh","line":{"color":"#2CA02C","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Josh","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[25.0,3.3,1.7,3.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Kevin<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Kevin","line":{"color":"#D62728","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Kevin","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[60.0,68.3,70.0,71.7,73.3,85.0,95.0,95.0,98.3,95.0,100.0,100.0,100.0,100.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Nick<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Nick","line":{"color":"#9467BD","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Nick","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[20.0,18.3,40.0,61.7,73.3,53.3,30.0,26.7,46.7,75.0,28.3,3.3,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Rohan<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Rohan","line":{"color":"#8C564B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Rohan","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[23.3,21.7,11.7,5.0,11.7,5.0,10.0,6.7,16.7,1.7,5.0,6.7,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Shiv<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Shiv","line":{"color":"#E377C2","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Shiv","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[23.3,68.3,56.7,36.7,20.0,30.0,10.0,8.3,8.3,10.0,16.7,8.3,40.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tanner<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tanner","line":{"color":"#7F7F7F","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tanner","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[66.7,33.3,20.0,25.0,13.3,26.7,48.3,18.3,8.3,3.3,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tim<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tim","line":{"color":"#BCBD22","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tim","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[63.3,91.7,98.3,95.0,95.0,85.0,80.0,91.7,93.3,98.3,100.0,100.0,100.0,100.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tony<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tony","line":{"color":"#17BECF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tony","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[16.7,0.0,0.0,11.7,10.0,6.7,21.7,38.3,6.7,10.0,55.0,81.7,60.0,100.0],"yaxis":"y","type":"scatter"}],                        {"height":500,"legend":{"font":{"size":14},"orientation":"h","title":{"text":""},"tracegroupgap":0,"y":-0.2},"margin":{"b":10,"l":0,"r":20,"t":10},"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"updatemenus":[{"buttons":[{"args":[{"visible":[true,true,true,true,true,true,true,true,true,true]}],"label":"  All  ","method":"update"},{"args":[{"visible":[true,false,false,false,false,false,false,false,false,false]}],"label":"  Jack  ","method":"update"},{"args":[{"visible":[false,true,false,false,false,false,false,false,false,false]}],"label":"  Joey  ","method":"update"},{"args":[{"visible":[false,false,true,false,false,false,false,false,false,false]}],"label":"  Josh  ","method":"update"},{"args":[{"visible":[false,false,false,true,false,false,false,false,false,false]}],"label":"  Kevin  ","method":"update"},{"args":[{"visible":[false,false,false,false,true,false,false,false,false,false]}],"label":"  Nick  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,true,false,false,false,false]}],"label":"  Rohan  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,true,false,false,false]}],"label":"  Shiv  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,true,false,false]}],"label":"  Tanner  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,true,false]}],"label":"  Tim  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,true]}],"label":"  Tony  ","method":"update"}],"font":{"size":20},"pad":{"b":10,"l":10,"r":10,"t":10},"x":0.5,"xanchor":"center","y":1.2,"yanchor":"middle"}],"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"range":[0.7,14.3],"title":{"text":"Week"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"range":[-5,109.0],"ticksuffix":"%","title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
+            </div>
+            <br><br>
+
+            <!-- Championship Odds Over Time -->
+            <h4 class="w3-center">Championship Odds Over Time</h4>
+            <div class="w3-container fit-width" style="max-width: 700px;">
+                <div>                            <div id="578310ab-e457-4f81-8f55-99f4f7d45949" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("578310ab-e457-4f81-8f55-99f4f7d45949")) {                    Plotly.newPlot(                        "578310ab-e457-4f81-8f55-99f4f7d45949",                        [{"hovertemplate":"Team=Jack<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Jack","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Jack","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[8.3,5.0,3.3,1.7,1.7,3.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Joey<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Joey","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Joey","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[26.7,25.0,11.7,11.7,28.3,25.0,21.7,30.0,23.3,21.7,28.3,31.7,30.0,32.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Josh<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Josh","line":{"color":"#2CA02C","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Josh","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[3.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Kevin<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Kevin","line":{"color":"#D62728","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Kevin","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[10.0,6.7,15.0,6.7,11.7,33.3,26.7,13.3,11.7,23.3,18.3,23.3,16.7,14.3],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Nick<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Nick","line":{"color":"#9467BD","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Nick","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[3.3,0.0,13.3,23.3,11.7,11.7,6.7,8.3,16.7,15.0,5.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Rohan<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Rohan","line":{"color":"#8C564B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Rohan","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[5.0,6.7,0.0,0.0,3.3,0.0,5.0,0.0,3.3,0.0,0.0,1.7,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Shiv<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Shiv","line":{"color":"#E377C2","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Shiv","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[3.3,13.3,6.7,8.3,3.3,1.7,0.0,0.0,1.7,1.7,1.7,0.0,11.7,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tanner<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tanner","line":{"color":"#7F7F7F","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tanner","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[15.0,3.3,3.3,3.3,0.0,3.3,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tim<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tim","line":{"color":"#BCBD22","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tim","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[23.3,40.0,46.7,41.7,36.7,20.0,25.0,36.7,43.3,35.0,38.3,28.3,28.3,36.7],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tony<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tony","line":{"color":"#17BECF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tony","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[1.7,0.0,0.0,3.3,3.3,1.7,10.0,6.7,0.0,3.3,8.3,15.0,13.3,17.0],"yaxis":"y","type":"scatter"}],                        {"height":500,"legend":{"font":{"size":14},"orientation":"h","title":{"text":""},"tracegroupgap":0,"y":-0.2},"margin":{"b":10,"l":0,"r":20,"t":10},"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"updatemenus":[{"buttons":[{"args":[{"visible":[true,true,true,true,true,true,true,true,true,true]}],"label":"  All  ","method":"update"},{"args":[{"visible":[true,false,false,false,false,false,false,false,false,false]}],"label":"  Jack  ","method":"update"},{"args":[{"visible":[false,true,false,false,false,false,false,false,false,false]}],"label":"  Joey  ","method":"update"},{"args":[{"visible":[false,false,true,false,false,false,false,false,false,false]}],"label":"  Josh  ","method":"update"},{"args":[{"visible":[false,false,false,true,false,false,false,false,false,false]}],"label":"  Kevin  ","method":"update"},{"args":[{"visible":[false,false,false,false,true,false,false,false,false,false]}],"label":"  Nick  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,true,false,false,false,false]}],"label":"  Rohan  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,true,false,false,false]}],"label":"  Shiv  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,true,false,false]}],"label":"  Tanner  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,true,false]}],"label":"  Tim  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,true]}],"label":"  Tony  ","method":"update"}],"font":{"size":20},"pad":{"b":10,"l":10,"r":10,"t":10},"x":0.5,"xanchor":"center","y":1.2,"yanchor":"middle"}],"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"range":[0.7,14.3],"title":{"text":"Week"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"range":[-5,55.7],"ticksuffix":"%","title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
+            </div>
+            <br><br>
+
+            <!-- Punishment Odds Over Time -->
+            <h4 class="w3-center">Punishment Odds Over Time</h4>
+            <div class="w3-container fit-width" style="max-width: 700px;">
+                <div>                            <div id="c6b4fd77-eeb6-456a-8195-9c6792b09712" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("c6b4fd77-eeb6-456a-8195-9c6792b09712")) {                    Plotly.newPlot(                        "c6b4fd77-eeb6-456a-8195-9c6792b09712",                        [{"hovertemplate":"Team=Jack<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Jack","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Jack","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[15.0,3.3,6.7,15.0,15.0,15.0,11.7,13.3,6.7,13.3,16.7,16.7,20.0,26.7],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Joey<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Joey","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Joey","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[1.7,1.7,1.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Josh<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Josh","line":{"color":"#2CA02C","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Josh","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[11.7,21.7,11.7,30.0,20.0,30.0,36.7,21.7,26.7,21.7,18.3,23.3,26.7,30.7],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Kevin<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Kevin","line":{"color":"#D62728","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Kevin","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[3.3,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Nick<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Nick","line":{"color":"#9467BD","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Nick","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[10.0,10.0,1.7,0.0,0.0,5.0,6.7,5.0,0.0,3.3,6.7,8.3,18.3,10.7],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Rohan<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Rohan","line":{"color":"#8C564B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Rohan","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[20.0,16.7,23.3,25.0,13.3,26.7,15.0,21.7,10.0,26.7,16.7,10.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Shiv<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Shiv","line":{"color":"#E377C2","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Shiv","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[10.0,5.0,3.3,6.7,23.3,1.7,13.3,15.0,25.0,6.7,8.3,6.7,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tanner<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tanner","line":{"color":"#7F7F7F","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tanner","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[5.0,13.3,8.3,10.0,23.3,5.0,3.3,15.0,16.7,20.0,31.7,33.3,35.0,32.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tim<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tim","line":{"color":"#BCBD22","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tim","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[1.7,0.0,0.0,0.0,0.0,1.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tony<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tony","line":{"color":"#17BECF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tony","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[21.7,28.3,38.3,13.3,5.0,15.0,13.3,8.3,15.0,8.3,1.7,1.7,0.0,0.0],"yaxis":"y","type":"scatter"}],                        {"height":500,"legend":{"font":{"size":14},"orientation":"h","title":{"text":""},"tracegroupgap":0,"y":-0.2},"margin":{"b":10,"l":0,"r":20,"t":10},"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"updatemenus":[{"buttons":[{"args":[{"visible":[true,true,true,true,true,true,true,true,true,true]}],"label":"  All  ","method":"update"},{"args":[{"visible":[true,false,false,false,false,false,false,false,false,false]}],"label":"  Jack  ","method":"update"},{"args":[{"visible":[false,true,false,false,false,false,false,false,false,false]}],"label":"  Joey  ","method":"update"},{"args":[{"visible":[false,false,true,false,false,false,false,false,false,false]}],"label":"  Josh  ","method":"update"},{"args":[{"visible":[false,false,false,true,false,false,false,false,false,false]}],"label":"  Kevin  ","method":"update"},{"args":[{"visible":[false,false,false,false,true,false,false,false,false,false]}],"label":"  Nick  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,true,false,false,false,false]}],"label":"  Rohan  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,true,false,false,false]}],"label":"  Shiv  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,true,false,false]}],"label":"  Tanner  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,true,false]}],"label":"  Tim  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,true]}],"label":"  Tony  ","method":"update"}],"font":{"size":20},"pad":{"b":10,"l":10,"r":10,"t":10},"x":0.5,"xanchor":"center","y":1.2,"yanchor":"middle"}],"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"range":[0.7,14.3],"title":{"text":"Week"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"range":[-5,47.3],"ticksuffix":"%","title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
+            </div>
+            <br><br>
         </div>
-        <br>
 
-        <!-- Punishment Odds -->
-        <h4 class="w3-center">Punishment Odds</h4>
-        <div class="w3-container fit-width" style="max-width: 500px;">
-            <div>                            <div id="2ee43c36-d94f-4290-99ba-7f4f2c2ab44e" class="plotly-graph-div" style="height:350px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("2ee43c36-d94f-4290-99ba-7f4f2c2ab44e")) {                    Plotly.newPlot(                        "2ee43c36-d94f-4290-99ba-7f4f2c2ab44e",                        [{"alignmentgroup":"True","cliponaxis":false,"hovertemplate":"Odds=%{x}<br>=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#D62728","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textangle":0,"textfont":{"size":13},"textposition":"outside","texttemplate":"%{x}","x":[0.0,0.0,0.0,0.0,0.0,0.0,12.0,24.1,30.6,33.3],"xaxis":"x","y":["Joey","Kevin","Rohan","Shiv","Tim","Tony","Nick","Jack","Josh","Tanner"],"yaxis":"y","type":"bar"}],                        {"barmode":"relative","height":350,"legend":{"tracegroupgap":0},"margin":{"b":10,"l":10,"t":10},"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"showticklabels":false,"ticksuffix":"%","title":{"text":"Odds"},"visible":false},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
+
+        <div id="teams-content">
+            <!-- Projected Final Standings -->
+            <h4 class="w3-center">Projected Final Standings</h4>
+            <div class="w3-container fit-width" style="max-width: 200px;">
+                <ul class="w3-ul">
+                    
+                    <li class="w3-padding-small">1. Tim</li>
+                    
+                    <li class="w3-padding-small">2. Joey</li>
+                    
+                    <li class="w3-padding-small">3. Tony</li>
+                    
+                    <li class="w3-padding-small">4. Kevin</li>
+                    
+                    <li class="w3-padding-small">5. Rohan</li>
+                    
+                    <li class="w3-padding-small">6. Shiv</li>
+                    
+                    <li class="w3-padding-small">7. Nick</li>
+                    
+                    <li class="w3-padding-small">8. Tanner</li>
+                    
+                    <li class="w3-padding-small">9. Jack</li>
+                    
+                    <li class="w3-padding-small">10. Josh</li>
+                    
+                </ul>
+            </div>
+            <br><br>
         </div>
-        <br><br>
 
-
-        <!-- Projected Final Standings -->
-        <h4 class="w3-center">Projected Final Standings</h4>
-        <div class="w3-container fit-width" style="max-width: 200px;">
-            <ul class="w3-ul">
-                
-                <li class="w3-padding-small">1. Tim</li>
-                
-                <li class="w3-padding-small">2. Joey</li>
-                
-                <li class="w3-padding-small">3. Kevin</li>
-                
-                <li class="w3-padding-small">4. Tony</li>
-                
-                <li class="w3-padding-small">5. Shiv</li>
-                
-                <li class="w3-padding-small">6. Rohan</li>
-                
-                <li class="w3-padding-small">7. Nick</li>
-                
-                <li class="w3-padding-small">8. Tanner</li>
-                
-                <li class="w3-padding-small">9. Jack</li>
-                
-                <li class="w3-padding-small">10. Josh</li>
-                
-            </ul>
-        </div>
-        <br><br>
-
-        <!-- Expected Wins -->
-        <h4 class="w3-center">Expected vs Actual Wins</h4>
-        <div class="w3-container fit-width" style="max-width: 450px;">
-            <table class="w3-table bordered sortable">
-                <tbody>
-                    <tr class="light-red">
-                        
-                        <th>Team</th>
-                        
-                        <th>Expected</th>
-                        
-                        <th>Actual</th>
-                        
-                        <th>Difference</th>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Tim</td>
-                        
-                        <td class="w3-padding-small">9.7</td>
-                        
-                        <td class="w3-padding-small">9</td>
-                        
-                        <td class="w3-padding-small">-0.7</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Joey</td>
-                        
-                        <td class="w3-padding-small">9.2</td>
-                        
-                        <td class="w3-padding-small">9</td>
-                        
-                        <td class="w3-padding-small">-0.2</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Nick</td>
-                        
-                        <td class="w3-padding-small">8.6</td>
-                        
-                        <td class="w3-padding-small">6</td>
-                        
-                        <td class="w3-padding-small">-2.6</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Tony</td>
-                        
-                        <td class="w3-padding-small">7.3</td>
-                        
-                        <td class="w3-padding-small">8</td>
-                        
-                        <td class="w3-padding-small">+0.7</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Shiv</td>
-                        
-                        <td class="w3-padding-small">6.9</td>
-                        
-                        <td class="w3-padding-small">7</td>
-                        
-                        <td class="w3-padding-small">+0.1</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Kevin</td>
-                        
-                        <td class="w3-padding-small">6.8</td>
-                        
-                        <td class="w3-padding-small">9</td>
-                        
-                        <td class="w3-padding-small">+2.2</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Tanner</td>
-                        
-                        <td class="w3-padding-small">5.9</td>
-                        
-                        <td class="w3-padding-small">6</td>
-                        
-                        <td class="w3-padding-small">+0.1</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Jack</td>
-                        
-                        <td class="w3-padding-small">5.7</td>
-                        
-                        <td class="w3-padding-small">4</td>
-                        
-                        <td class="w3-padding-small">-1.7</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Rohan</td>
-                        
-                        <td class="w3-padding-small">5.4</td>
-                        
-                        <td class="w3-padding-small">7</td>
-                        
-                        <td class="w3-padding-small">+1.6</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Josh</td>
-                        
-                        <td class="w3-padding-small">4.6</td>
-                        
-                        <td class="w3-padding-small">5</td>
-                        
-                        <td class="w3-padding-small">+0.4</td>
-                        
-                    </tr>
-                    
-                </tbody>
-            </table>
-            <p class="w3-small">Shows expected number of wins if the schedule was re-randomized</p>
-        </div>
-        <br><br>
-
-        <!-- Strengh of Schedule -->
-        <h4 class="w3-center">Strength of Schedule</h4>
-        <div class="w3-container fit-width" style="max-width: 450px;">
-            <table class="w3-table bordered sortable">
-                <tbody>
-                    <tr class="light-purple">
-                        
-                        <th>Team</th>
-                        
-                        <th>Current</th>
-                        
-                        <th>Future</th>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Nick</td>
-                        
-                        <td class="w3-padding-small">131.5</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Tanner</td>
-                        
-                        <td class="w3-padding-small">122.5</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Rohan</td>
-                        
-                        <td class="w3-padding-small">121.2</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Josh</td>
-                        
-                        <td class="w3-padding-small">120.8</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Jack</td>
-                        
-                        <td class="w3-padding-small">120.8</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Tony</td>
-                        
-                        <td class="w3-padding-small">119.7</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Shiv</td>
-                        
-                        <td class="w3-padding-small">116.8</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Tim</td>
-                        
-                        <td class="w3-padding-small">116.2</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Joey</td>
-                        
-                        <td class="w3-padding-small">115.9</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-padding-small">Kevin</td>
-                        
-                        <td class="w3-padding-small">114.4</td>
-                        
-                        <td class="w3-padding-small">0.0</td>
-                        
-                    </tr>
-                    
-                </tbody>
-            </table>
-            <p class="w3-small">
-                Shows average points against and expected points against for the
-                remainder of the season
-            </p>
-        </div>
-        <br><br>
-
-        <!-- Betting Lines -->
-        <h4 class="w3-center">Betting Lines</h4>
-        <div class="w3-container fit-width" style="max-width: 350px;">
-            <table class="w3-table bordered">
-                <tbody>
-                    <tr class="light-orange">
-                        
-                        <th class="w3-center">Team</th>
-                        
-                        <th class="w3-center">Make Playoffs</th>
-                        
-                        <th class="w3-center">Win League</th>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Tim</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">+110</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Joey</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">+260</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Tony</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">+500</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Kevin</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">+550</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Jack</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Josh</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Nick</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Rohan</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Shiv</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td class="w3-center w3-padding-small">Tanner</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                        <td class="w3-center w3-padding-small">--</td>
-                        
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
-        <br><br>
-
-
-        <!-- Playoff Odds Over Time -->
-        <h4 class="w3-center">Playoff Odds Over Time</h4>
-        <div class="w3-container fit-width" style="max-width: 700px;">
-            <div>                            <div id="8ec21023-65ff-44d5-bce3-6d990adac8f1" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("8ec21023-65ff-44d5-bce3-6d990adac8f1")) {                    Plotly.newPlot(                        "8ec21023-65ff-44d5-bce3-6d990adac8f1",                        [{"hovertemplate":"Team=Jack<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Jack","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Jack","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[30.5,15.9,21.0,9.9,4.4,8.0,14.6,8.5,17.4,6.7,0.9,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Joey<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Joey","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Joey","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[66.2,71.0,81.8,87.7,92.2,96.2,94.2,99.0,97.6,96.4,94.6,100.0,100.0,100.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Josh<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Josh","line":{"color":"#2CA02C","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Josh","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[23.4,8.8,4.1,2.6,0.6,0.1,0.0,0.2,0.2,0.5,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Kevin<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Kevin","line":{"color":"#D62728","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Kevin","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[59.4,57.2,70.0,57.9,76.1,85.1,92.1,97.2,97.1,94.4,98.7,100.0,100.0,100.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Nick<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Nick","line":{"color":"#9467BD","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Nick","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[29.0,22.6,47.6,63.8,70.1,54.6,31.9,25.5,48.5,67.2,40.6,3.5,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Rohan<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Rohan","line":{"color":"#8C564B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Rohan","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[15.8,23.6,10.6,7.0,8.6,3.8,12.7,8.0,13.2,3.0,6.2,6.6,0.9,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Shiv<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Shiv","line":{"color":"#E377C2","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Shiv","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[35.5,71.2,48.4,35.7,23.1,28.2,12.7,9.8,3.7,7.0,12.1,11.5,46.7,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tanner<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tanner","line":{"color":"#7F7F7F","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tanner","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[52.1,31.6,18.6,23.4,12.9,27.3,46.5,28.3,10.1,3.0,0.1,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tim<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tim","line":{"color":"#BCBD22","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tim","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[72.2,92.1,93.9,96.5,92.3,86.9,75.7,92.4,97.3,99.1,99.9,100.0,100.0,100.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tony<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tony","line":{"color":"#17BECF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tony","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[15.9,5.9,4.0,15.6,19.8,9.7,19.5,31.1,14.9,22.7,47.0,78.5,52.5,100.0],"yaxis":"y","type":"scatter"}],                        {"height":500,"legend":{"font":{"size":14},"orientation":"h","title":{"text":""},"tracegroupgap":0,"y":-0.2},"margin":{"b":10,"l":0,"r":20,"t":10},"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"updatemenus":[{"buttons":[{"args":[{"visible":[true,true,true,true,true,true,true,true,true,true]}],"label":"  All  ","method":"update"},{"args":[{"visible":[true,false,false,false,false,false,false,false,false,false]}],"label":"  Jack  ","method":"update"},{"args":[{"visible":[false,true,false,false,false,false,false,false,false,false]}],"label":"  Joey  ","method":"update"},{"args":[{"visible":[false,false,true,false,false,false,false,false,false,false]}],"label":"  Josh  ","method":"update"},{"args":[{"visible":[false,false,false,true,false,false,false,false,false,false]}],"label":"  Kevin  ","method":"update"},{"args":[{"visible":[false,false,false,false,true,false,false,false,false,false]}],"label":"  Nick  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,true,false,false,false,false]}],"label":"  Rohan  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,true,false,false,false]}],"label":"  Shiv  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,true,false,false]}],"label":"  Tanner  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,true,false]}],"label":"  Tim  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,true]}],"label":"  Tony  ","method":"update"}],"font":{"size":20},"pad":{"b":10,"l":10,"r":10,"t":10},"x":0.5,"xanchor":"center","y":1.2,"yanchor":"middle"}],"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"range":[0.7,14.3],"title":{"text":"Week"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"range":[-5,109.0],"ticksuffix":"%","title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
-        </div>
-        <br><br>
-
-        <!-- Championship Odds Over Time -->
-        <h4 class="w3-center">Championship Odds Over Time</h4>
-        <div class="w3-container fit-width" style="max-width: 700px;">
-            <div>                            <div id="84416a27-2cdc-41aa-b2bf-a396701816d4" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("84416a27-2cdc-41aa-b2bf-a396701816d4")) {                    Plotly.newPlot(                        "84416a27-2cdc-41aa-b2bf-a396701816d4",                        [{"hovertemplate":"Team=Jack<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Jack","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Jack","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[6.5,2.6,3.3,1.2,0.5,1.4,2.6,1.3,2.2,0.7,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Joey<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Joey","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Joey","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[19.6,16.7,20.2,20.5,22.1,23.1,23.5,25.8,19.9,20.2,21.8,25.1,27.2,26.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Josh<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Josh","line":{"color":"#2CA02C","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Josh","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[4.9,1.2,0.3,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Kevin<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Kevin","line":{"color":"#D62728","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Kevin","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[16.0,11.0,13.4,10.4,15.7,19.5,22.2,19.8,19.4,16.2,19.1,19.6,16.8,14.4],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Nick<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Nick","line":{"color":"#9467BD","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Nick","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[6.0,4.1,12.7,16.8,18.4,14.4,7.9,6.2,12.1,18.0,10.7,0.7,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Rohan<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Rohan","line":{"color":"#8C564B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Rohan","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[2.3,2.7,1.0,0.8,0.8,0.4,2.0,1.0,1.4,0.2,0.6,0.9,0.2,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Shiv<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Shiv","line":{"color":"#E377C2","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Shiv","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[6.4,16.4,8.8,6.0,4.0,5.3,2.1,1.4,0.5,1.0,1.8,1.5,8.3,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tanner<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tanner","line":{"color":"#7F7F7F","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tanner","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[11.8,5.2,2.7,3.1,1.5,4.4,9.0,3.7,1.2,0.3,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tim<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tim","line":{"color":"#BCBD22","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tim","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[23.9,39.3,37.0,38.5,33.4,30.0,26.7,35.4,41.4,40.4,37.7,38.2,38.1,44.1],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tony<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tony","line":{"color":"#17BECF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tony","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[2.6,0.8,0.5,2.5,3.6,1.6,4.0,5.5,1.9,2.9,8.3,14.0,9.5,15.4],"yaxis":"y","type":"scatter"}],                        {"height":500,"legend":{"font":{"size":14},"orientation":"h","title":{"text":""},"tracegroupgap":0,"y":-0.2},"margin":{"b":10,"l":0,"r":20,"t":10},"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"updatemenus":[{"buttons":[{"args":[{"visible":[true,true,true,true,true,true,true,true,true,true]}],"label":"  All  ","method":"update"},{"args":[{"visible":[true,false,false,false,false,false,false,false,false,false]}],"label":"  Jack  ","method":"update"},{"args":[{"visible":[false,true,false,false,false,false,false,false,false,false]}],"label":"  Joey  ","method":"update"},{"args":[{"visible":[false,false,true,false,false,false,false,false,false,false]}],"label":"  Josh  ","method":"update"},{"args":[{"visible":[false,false,false,true,false,false,false,false,false,false]}],"label":"  Kevin  ","method":"update"},{"args":[{"visible":[false,false,false,false,true,false,false,false,false,false]}],"label":"  Nick  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,true,false,false,false,false]}],"label":"  Rohan  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,true,false,false,false]}],"label":"  Shiv  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,true,false,false]}],"label":"  Tanner  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,true,false]}],"label":"  Tim  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,true]}],"label":"  Tony  ","method":"update"}],"font":{"size":20},"pad":{"b":10,"l":10,"r":10,"t":10},"x":0.5,"xanchor":"center","y":1.2,"yanchor":"middle"}],"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"range":[0.7,14.3],"title":{"text":"Week"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"range":[-5,53.1],"ticksuffix":"%","title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
-        </div>
-        <br><br>
-
-        <!-- Punishment Odds Over Time -->
-        <h4 class="w3-center">Punishment Odds Over Time</h4>
-        <div class="w3-container fit-width" style="max-width: 700px;">
-            <div>                            <div id="9afd1263-f127-482c-833c-c08199146a1f" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("9afd1263-f127-482c-833c-c08199146a1f")) {                    Plotly.newPlot(                        "9afd1263-f127-482c-833c-c08199146a1f",                        [{"hovertemplate":"Team=Jack<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Jack","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Jack","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[10.7,13.6,10.6,16.7,19.5,15.9,12.3,16.0,10.2,13.5,20.7,24.0,24.7,24.1],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Joey<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Joey","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Joey","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[3.0,1.5,0.6,0.5,0.2,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Josh<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Josh","line":{"color":"#2CA02C","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Josh","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[13.0,19.9,23.8,26.0,29.5,31.3,37.1,28.0,24.9,20.9,23.4,29.0,29.9,30.6],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Kevin<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Kevin","line":{"color":"#D62728","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Kevin","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[3.8,4.0,1.3,3.4,0.9,0.4,0.2,0.1,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Nick<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Nick","line":{"color":"#9467BD","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Nick","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[11.0,10.5,3.3,1.8,1.0,2.1,5.4,4.8,1.8,0.6,1.6,5.4,13.0,12.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Rohan<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Rohan","line":{"color":"#8C564B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Rohan","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[20.6,14.2,19.6,22.5,18.7,23.8,14.8,20.2,14.7,22.4,16.6,7.8,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Shiv<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Shiv","line":{"color":"#E377C2","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Shiv","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[11.2,1.9,4.1,6.3,7.9,6.5,14.8,16.0,22.4,15.4,9.4,5.3,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tanner<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tanner","line":{"color":"#7F7F7F","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tanner","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[4.9,8.5,11.4,10.4,13.6,6.2,4.3,8.0,16.1,21.0,26.7,28.2,32.4,33.3],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tim<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tim","line":{"color":"#BCBD22","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tim","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[2.0,0.1,0.1,0.1,0.1,0.2,0.8,0.2,0.0,0.0,0.0,0.0,0.0,0.0],"yaxis":"y","type":"scatter"},{"hovertemplate":"Team=Tony<br>Week=%{x}<br>=%{y}<extra></extra>","legendgroup":"Tony","line":{"color":"#17BECF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"markers+lines","name":"Tony","orientation":"v","showlegend":true,"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"xaxis":"x","y":[19.8,25.8,25.2,12.3,8.6,13.5,10.1,6.8,10.0,6.2,1.6,0.2,0.0,0.0],"yaxis":"y","type":"scatter"}],                        {"height":500,"legend":{"font":{"size":14},"orientation":"h","title":{"text":""},"tracegroupgap":0,"y":-0.2},"margin":{"b":10,"l":0,"r":20,"t":10},"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"updatemenus":[{"buttons":[{"args":[{"visible":[true,true,true,true,true,true,true,true,true,true]}],"label":"  All  ","method":"update"},{"args":[{"visible":[true,false,false,false,false,false,false,false,false,false]}],"label":"  Jack  ","method":"update"},{"args":[{"visible":[false,true,false,false,false,false,false,false,false,false]}],"label":"  Joey  ","method":"update"},{"args":[{"visible":[false,false,true,false,false,false,false,false,false,false]}],"label":"  Josh  ","method":"update"},{"args":[{"visible":[false,false,false,true,false,false,false,false,false,false]}],"label":"  Kevin  ","method":"update"},{"args":[{"visible":[false,false,false,false,true,false,false,false,false,false]}],"label":"  Nick  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,true,false,false,false,false]}],"label":"  Rohan  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,true,false,false,false]}],"label":"  Shiv  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,true,false,false]}],"label":"  Tanner  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,true,false]}],"label":"  Tim  ","method":"update"},{"args":[{"visible":[false,false,false,false,false,false,false,false,false,true]}],"label":"  Tony  ","method":"update"}],"font":{"size":20},"pad":{"b":10,"l":10,"r":10,"t":10},"x":0.5,"xanchor":"center","y":1.2,"yanchor":"middle"}],"xaxis":{"anchor":"y","domain":[0.0,1.0],"fixedrange":true,"range":[0.7,14.3],"title":{"text":"Week"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"range":[-5,46.1],"ticksuffix":"%","title":{"text":""}}},                        {"displayModeBar": false, "responsive": true}                    )                };                            </script>        </div>
-        </div>
-        <br><br>
 
     </div>
 
@@ -681,6 +696,26 @@
 
 <!-- SCRIPTS -->
 <script>
+
+    // initial state
+    $('#league-tab').addClass('selected-tab')
+    $('#league-content').show();
+    $('#teams-content').hide();
+
+    // handle tab clicks
+    $('#league-tab').click(() => {
+        $('#teams-tab').removeClass('selected-tab');
+        $('#league-tab').addClass('selected-tab');
+        $('#teams-content').hide();
+        $('#league-content').fadeIn();
+    });
+
+    $('#teams-tab').click(() => {
+        $('#league-tab').removeClass('selected-tab');
+        $('#teams-tab').addClass('selected-tab');
+        $('#league-content').hide();
+        $('#teams-content').fadeIn();
+    });
 
 
 </script>
