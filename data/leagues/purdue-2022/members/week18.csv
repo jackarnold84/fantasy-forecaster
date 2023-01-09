@@ -1,1 +1,12 @@
-﻿
+﻿#,ABBRV,TEAM NAME,DIVISION,MANAGER NAME,EMAIL,STATUS,AUTO CONTROL,ACTION
+,,,,,,,A team set to Auto will continue to be active by making roster decisions and adding and dropping players. A team on Auto cannot propose or accept trades. A team is automatically removed from Auto when they complete a roster update on the fantasy website or mobile application.,
+1,JACK,Redeploying From Gulag,Purdue,Jack Arnold,Send Email,Joined,,ADD 2ND MANAGER
+2,ROSE,Team Knullifiers,Purdue,Nicholas Rosenorn,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
+3,ZHOU,Mickey Mouse Chip,Purdue,Tim Zhou,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
+4,KNU,The FREAKING Knullifiers,Purdue,Josh K,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
+5,SHAH,I own Jack,Purdue,Rohan Shahani,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
+6,TJ,Tanner's Team (IR),Purdue,Shiv Patel,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
+7,CHOE,All In Tee Higgins,Purdue,Tony Choe,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
+8,KMUR,In Brock We Trust,Purdue,Kaiwen Shen,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
+9,W,Consolation Champion🤴,Purdue,CG Tanner,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
+10,POOP,ESPN IS WRONG AGAIN,Purdue,Joey Attardo,Send Email,Joined,,ADD 2ND MANAGERREMOVE MANAGER
