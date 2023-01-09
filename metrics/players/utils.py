@@ -5,6 +5,8 @@ import numpy as np
 z_stats = [
     'projection',
     'moving_projection',
+    'avg_projection',
+    'total_projection',
     'season_total',
     'season_avg',
     'moving_avg',
@@ -17,6 +19,8 @@ z_stats = [
 z_stats_thresholds = {
     'projection': 3.0,
     'moving_projection': 3.0,
+    'avg_projection': 3.0,
+    'total_projection': 3.0,
     'season_total': 3.0,
     'season_avg': 3.0,
     'moving_avg': 3.0,
@@ -29,6 +33,8 @@ z_stats_thresholds = {
 z_stats_week_adj = {
     'projection': 1,
     'moving_projection': 1,
+    'avg_projection': 1,
+    'total_projection': 1,
     'season_total': 0,
     'season_avg': 0,
     'moving_avg': 0,

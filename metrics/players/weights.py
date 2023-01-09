@@ -199,15 +199,10 @@ normal_weights = {
         'preseason_avg': 2,
     },
     18: {
-        'projection': 34,
-        'moving_projection': 24,
-        'season_total': 4,
-        'season_avg': 6,
-        'moving_avg': 10,
-        'sharp_moving_avg': 0,
-        'expected_rostered': 20,
-        'preseason_total': 0,
-        'preseason_avg': 2,
+        'avg_projection': 15,
+        'total_projection': 35,
+        'season_total': 35,
+        'season_avg': 15,
     },
 }
 

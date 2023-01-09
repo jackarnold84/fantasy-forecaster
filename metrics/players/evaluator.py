@@ -31,6 +31,12 @@ class Evaluator:
         projs = [x if x is not None and x > 1.0 else None for x in projs]
         return utils.wma(projs, type)
 
+    def get_total_projection(self, id, week):
+        week = min(week, self.total_weeks - 1)
+        projs = [self.players_calc[id]['projection'][i] for i in range(1, week + 1)]
+        projs = [x for x in projs if x is not None]
+        return sum(projs)
+
     def get_expected_rostered(self, id, week):
         week = min(week, self.total_weeks - 1)
         rosts = [self.players_calc[id]['rostered'][i] for i in range(1, week + 1)]
@@ -69,6 +75,8 @@ class Evaluator:
                 self.players_calc[id]['moving_avg'][w] = self.get_moving_avg(id, w)
                 self.players_calc[id]['sharp_moving_avg'][w] = self.get_moving_avg(id, w, type='sharp')
                 self.players_calc[id]['moving_projection'][w] = self.get_moving_projection(id, w)
+                self.players_calc[id]['avg_projection'][w] = self.get_moving_projection(id, w, type='flat')
+                self.players_calc[id]['total_projection'][w] = self.get_total_projection(id, w)
                 self.players_calc[id]['expected_rostered'][w] = self.get_expected_rostered(id, w)
                 self.players_calc[id]['moving_avg'][w] = self.get_moving_avg(id, w)
 
