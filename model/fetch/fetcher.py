@@ -14,18 +14,19 @@ from model.fetch.utils import (
     get_urls, get_data_paths, parse_float, parse_int,
     clean_text, clean_symbol, get_player_id, get_primary_pos,
 )
+from model.config import leagues
 
 
 class DataFetcher:
 
-    def __init__(self, sport, year, week='', league_id='', league_tag=''):
-        self.sport = sport
-        self.year = str(year)
+    def __init__(self, sport_tag, league_tag, week):
+        league_config = leagues[sport_tag][league_tag]
+        self.sport, self.year = sport_tag.split('-')
         self.week = str(week)
-        self.league_id = str(league_id)
+        self.league_id = league_config['league_id']
         self.league_tag = league_tag
-        self.url = get_urls(sport, league_id)
-        self.path = get_data_paths(sport, year, league_tag)
+        self.url = get_urls(self.sport, self.league_id)
+        self.path = get_data_paths(self.sport, self.year, self.league_tag)
 
         # set up webdriver
         service = Service(executable_path=path_to_chromedriver)

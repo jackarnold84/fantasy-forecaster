@@ -1,11 +1,7 @@
 import sys
 import json
 from model.fetch.fetcher import DataFetcher
-
-# config
-config = {}
-with open('config.json') as f:
-    config = json.load(f)
+from model.config import leagues
 
 
 # read arguments
@@ -27,26 +23,20 @@ except:
     exit(1)
 
 
-# get league config
+# validate sport + league exists
+valid_leauges = [f'{x} {y}' for x in leagues for y in leagues[x]]
 if (
-    sport_tag not in config['leagues'] or
-    league_tag not in config['leagues'][sport_tag]
+    sport_tag not in leagues or
+    league_tag not in leagues[sport_tag]
 ):
-    valid_leauges = [
-        f'{x} {y}' for x in config['leagues'] for y in config['leagues'][x]
-    ]
     print('error: league not found')
     print('  leagues:', valid_leauges)
     exit(1)
 
-league_config = config['leagues'][sport_tag][league_tag]
-sport, year = league_config['sport'].split('-')
-league_tag = league_config['tag']
-league_id = league_config['league_id']
 
-
+# actions
 if action == 'fetch':
-    fetcher = DataFetcher(sport, year, week, league_id, league_tag)
+    fetcher = DataFetcher(sport_tag, league_tag, week)
     if '--draft' in flags:
         fetcher.fetch_draft()
     else:
