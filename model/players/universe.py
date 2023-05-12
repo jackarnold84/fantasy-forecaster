@@ -73,12 +73,13 @@ class PlayerUniverse:
                         for stat in stat_params:
                             value = p.get_stat(stat, week)
                             if value is not None:
-                                weights_sum += stat_params[stat]['weight']
+                                weight = stat_params[stat]['weight']
+                                weights_sum += weight
                                 value_sum += z_score(
                                     value,
                                     stat_params[stat]['mean'],
                                     stat_params[stat]['sd'],
-                                ) * stat_params[stat]['weight']
+                                ) * weight
                         raw_rating = value_sum / weights_sum if weights_sum else None
                         p.raw_rating[week] = raw_rating
 
@@ -93,7 +94,7 @@ class PlayerUniverse:
                         raw_rating = p.raw_rating[week]
                         if raw_rating:
                             rating = z_score(
-                                raw_rating, mean, sd, player_rating_mean, player_rating_sd
+                                raw_rating, mean, sd, player_rating_mean, player_rating_sd,
                             )
                             rating = bound(rating, -20, 20)
                             if rating_type == 'sharp':

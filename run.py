@@ -1,5 +1,4 @@
 import sys
-import json
 from model.fetch.fetcher import DataFetcher
 from model.config import leagues
 
