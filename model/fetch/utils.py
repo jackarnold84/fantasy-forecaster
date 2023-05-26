@@ -1,5 +1,6 @@
 import re
 
+
 def get_urls(sport, league_id):
     return {
         'schedule': f'https://fantasy.espn.com/{sport}/league/schedule?leagueId={league_id}',
@@ -67,3 +68,13 @@ def get_player_id(name, pos):
 
 def get_primary_pos(pos):
     return fix_spacing(pos.split(',')[0]).upper()
+
+
+# correcting positions
+def player_pos_mapper(pos):
+    mapper = {
+        'LF': 'OF',
+        'CF': 'OF',
+        'RF': 'OF',
+    }
+    return mapper.get(pos) or pos

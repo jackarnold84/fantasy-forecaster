@@ -9,13 +9,14 @@ leagues = {
             'teams': 8,
             'playoff_teams': 4,
             'divisions': False,
-            'playoff_weeks_per_matchup': 2,
+            'weeks_per_playoff_matchup': 2,
             'total_weeks': 20,
             'regular_season_weeks': 16,
+            'n_iter': 10000,
             'model_params': {
-                    'score_mean': 190,
-                    'score_sd': 25,
-                    'team_sd': 10
+                'score_mean': 220,
+                'score_sd': 40,
+                'team_sd': 14,
             }
         }
     }

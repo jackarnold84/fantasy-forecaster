@@ -13,6 +13,7 @@ from model.credentials import path_to_chromedriver
 from model.fetch.utils import (
     get_urls, get_data_paths, parse_float, parse_int,
     clean_text, clean_symbol, get_player_id, get_primary_pos,
+    player_pos_mapper,
 )
 from model.config import leagues
 
@@ -211,6 +212,7 @@ class DataFetcher:
                 player_info_holders = elements[1].select('span')
                 player_name = clean_text(player_info_holders[0].text)
                 player_pos = get_primary_pos(player_info_holders[2].text)
+                player_pos = player_pos_mapper(player_pos)
                 player_id = get_player_id(player_name, player_pos)
                 round_number = elements[2].text
 
@@ -230,7 +232,7 @@ class DataFetcher:
         print('--> draft written to %s' % path)
 
     # players
-    def fetch_players(self, position_idx=None):
+    def fetch_players(self):
         url = self.url['players']
         print('--> fetching players')
         self.driver_get(url, wait=10, wait_query=(

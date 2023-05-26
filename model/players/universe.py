@@ -12,8 +12,9 @@ from model.players.weights import (
 class PlayerUniverse:
 
     def __init__(self, sport_tag, week):
+        print('--> init player universe')
         self.sport, self.year = sport_tag.split('-')
-        self.week = week
+        self.week = int(week)
         self.players = {}
 
         # read data
@@ -32,12 +33,8 @@ class PlayerUniverse:
         # fill players
         for x in info_records:
             self.players[x['id']] = Player(
-                self.sport,
-                x['id'],
-                x['name'],
-                x['pos'],
-                x['team'],
-                x['img'],
+                self.sport, x['id'], x['name'],
+                x['pos'], x['team'], x['img'],
                 stat_records_by_id[x['id']],
             )
 
@@ -45,6 +42,7 @@ class PlayerUniverse:
         self.compute_player_ratings()
 
     def compute_player_ratings(self):
+        print('--> computing player ratings')
         positions = position_group_list[self.sport]
         for pos in positions:
             eval_group = [
