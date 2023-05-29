@@ -60,8 +60,8 @@ class Simulation:
             return np.random.normal(mean, sd)
 
     def sim_regular_season(self):
-        wins = {t: 0 for t in self.teams}
-        points = {t: 0 for t in self.teams}
+        wins = {t.name: 0 for t in self.teams}
+        points = {t.name: 0 for t in self.teams}
 
         for w in self.schedule:
             for x in self.schedule[w]:
@@ -81,7 +81,7 @@ class Simulation:
                 self.game_logs.append((w, home if home_win else away))
 
         order = sorted(
-            self.teams,
+            wins,
             key=lambda t: (wins[t], points[t]),
             reverse=True,
         )

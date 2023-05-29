@@ -1,12 +1,14 @@
 import numpy as np
+from model.players.universe import PlayerUniverse
 from model.league.utils import get_team_name
 
 
 class Team:
 
     def __init__(
-        self, id, manager_name, nickname, abbrev, division, img, week,
-        schedule_records, roster_records, draft_records, player_universe,
+        self, id, manager_name, nickname, abbrev, division, img, 
+        week, schedule_records, roster_records, draft_records,
+        player_universe: PlayerUniverse,
     ):
         self.id = str(id)
         self.name = get_team_name(manager_name)

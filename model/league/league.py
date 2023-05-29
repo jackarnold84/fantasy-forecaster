@@ -44,17 +44,15 @@ class League:
 
         # set up teams
         print('--> setting up teams')
-        self.teams = {}
-        for x in member_records:
-            team = Team(
+        self.teams = [
+            Team(
                 x['id'], x['manager'], x['team_name'], x['abbrev'],
                 x['division'], x['img'], self.week, schedule_records,
                 roster_records, draft_records, self.player_universe,
             )
-            self.teams[team.name] = team
-
-        self.teams_list = [*self.teams.keys()]
-        self.team_divisions = {t.name: t.division for t in self.teams.values()}
+            for x in member_records
+        ]
+        self.team_divisions = {t.name: t.division for t in self.teams}
 
         # set up schedule
         self.schedule = {
@@ -91,20 +89,20 @@ class League:
         score_sd = self.model_params['score_sd']
         team_sd = self.model_params['team_sd']
         projections = {
-            t.name: {} for t in self.teams.values()
+            t.name: {} for t in self.teams
         }
 
         # get population values
         team_ratings = [
-            t.get_team_rating(week) for t in self.teams.values()
+            t.get_team_rating(week) for t in self.teams
         ]
         sharp_team_ratings = [
-            t.get_team_rating(week, rating_type='sharp') for t in self.teams.values()
+            t.get_team_rating(week, rating_type='sharp') for t in self.teams
         ]
         valid_ratings = np.mean(team_ratings) > 0
 
         # compute proj types for each team
-        for t in self.teams.values():
+        for t in self.teams:
             avg = t.get_scoring_average(week) or score_mean
             mle_proj = get_mle_projection(
                 avg, week - 1, score_mean, score_sd, team_sd
