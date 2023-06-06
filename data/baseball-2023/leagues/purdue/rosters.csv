@@ -641,3 +641,131 @@ week,manager_id,slot_idx,player_id,aquired
 9,8,14,freddyperalta-SP,Free Agency
 9,8,15,haroldramirez-1B,Free Agency
 9,8,16,thairoestrada-2B,Free Agency
+10,1,2,paulgoldschmidt-1B,Draft
+10,1,3,marcussemien-2B,Draft
+10,1,4,mattchapman-3B,Free Agency
+10,1,5,tommyedman-2B,Free Agency
+10,1,6,juliorodriguez-OF,Draft
+10,1,7,corbincarroll-OF,Draft
+10,1,8,lourdesgurrieljr-OF,Free Agency
+10,1,9,jorgesoler-OF,Free Agency
+10,1,10,corbinburnes-SP,Draft
+10,1,11,emmanuelclase-RP,Draft
+10,1,12,ryanpressly-RP,Free Agency
+10,1,13,mitchkeller-SP,Free Agency
+10,1,14,tonygonsolin-SP,Free Agency
+10,1,15,sonnygray-SP,Free Agency
+10,1,16,merrillkelly-SP,Free Agency
+10,1,17,codybellinger-OF,Free Agency
+10,2,1,adleyrutschman-C,Draft
+10,2,2,vladimirguerrerojr-1B,Draft
+10,2,3,gleybertorres-2B,Free Agency
+10,2,4,alexbregman-3B,Draft
+10,2,5,dansbyswanson-SS,Free Agency
+10,2,6,fernandotatisjr-SS,Draft
+10,2,7,luisrobertjr-OF,Draft
+10,2,8,georgespringer-OF,Free Agency
+10,2,9,masatakayoshida-OF,Draft
+10,2,10,justinverlander-SP,Draft
+10,2,11,spencerstrider-SP,Draft
+10,2,12,zacgallen-SP,Draft
+10,2,13,frambervaldez-SP,Draft
+10,2,14,logangilbert-SP,Draft
+10,2,15,aaronjudge-OF,Draft
+10,3,1,willsmith-C,Draft
+10,3,2,joshbell-1B,Draft
+10,3,3,nicohoerner-SS,Free Agency
+10,3,4,maxmuncy-3B,Draft
+10,3,5,coreyseager-SS,Draft
+10,3,6,stevenkwan-OF,Draft
+10,3,7,brandonnimmo-OF,Draft
+10,3,8,alexverdugo-OF,Draft
+10,3,9,shoheiohtani-DH,Draft
+10,3,10,shanebieber-SP,Draft
+10,3,11,kevingausman-SP,Draft
+10,3,12,georgekirby-SP,Free Agency
+10,3,13,nathaneovaldi-SP,Free Agency
+10,3,14,brycemiller-SP,Free Agency
+10,3,15,jeffmcneil-2B,Draft
+10,3,16,jacobdegrom-SP,Draft
+10,3,17,juliourias-SP,Draft
+10,4,1,salvadorperez-C,Draft
+10,4,2,petealonso-1B,Draft
+10,4,3,djlemahieu-3B,Free Agency
+10,4,4,alecbohm-3B,Free Agency
+10,4,5,bobbywittjr-SS,Draft
+10,4,6,mookiebetts-OF,Draft
+10,4,7,bryanreynolds-OF,Draft
+10,4,8,joshlowe-OF,Free Agency
+10,4,9,wanderfranco-SS,Draft
+10,4,10,gerritcole-SP,Draft
+10,4,11,dylancease-SP,Draft
+10,4,12,joshhader-RP,Draft
+10,4,13,joeryan-SP,Free Agency
+10,4,14,eduardorodriguez-SP,Free Agency
+10,4,15,alekmanoah-SP,Draft
+10,4,16,josealtuve-2B,Draft
+10,5,1,seanmurphy-C,Draft
+10,5,2,freddiefreeman-1B,Draft
+10,5,3,jakecronenworth-2B,Draft
+10,5,4,nolanarenado-3B,Draft
+10,5,5,bobichette-SS,Draft
+10,5,6,christianyelich-OF,Draft
+10,5,7,nickcastellanos-OF,Draft
+10,5,8,byronbuxton-OF,Free Agency
+10,5,9,austinriley-3B,Draft
+10,5,10,maxscherzer-SP,Draft
+10,5,11,kenleyjansen-RP,Draft
+10,5,12,chrisbassitt-SP,Draft
+10,5,13,felixbautista-RP,Free Agency
+10,5,15,jtrealmuto-C,Draft
+10,5,16,timanderson-SS,Free Agency
+10,5,17,maxfried-SP,Draft
+10,6,1,daultonvarsho-C,Draft
+10,6,2,vinniepasquantino-1B,Free Agency
+10,6,3,ozziealbies-2B,Draft
+10,6,4,justinturner-3B,Free Agency
+10,6,5,franciscolindor-SS,Draft
+10,6,6,juansoto-OF,Draft
+10,6,7,kyletucker-OF,Draft
+10,6,8,adolisgarcia-OF,Free Agency
+10,6,9,bryceharper-DH,Free Agency
+10,6,10,aaronnola-SP,Draft
+10,6,11,shanemcclanahan-SP,Draft
+10,6,12,luiscastillo-SP,Draft
+10,6,13,cristianjavier-SP,Draft
+10,6,14,jordanromano-RP,Draft
+10,6,15,loganwebb-SP,Free Agency
+10,7,1,williamcontreras-C,Free Agency
+10,7,2,mattolson-1B,Draft
+10,7,3,nolangorman-2B,Free Agency
+10,7,4,yandydiaz-3B,Draft
+10,7,5,xanderbogaerts-SS,Draft
+10,7,6,yordanalvarez-OF,Draft
+10,7,7,kyleschwarber-OF,Draft
+10,7,8,randyarozarena-OF,Draft
+10,7,9,joseramirez-3B,Draft
+10,7,10,sandyalcantara-SP,Draft
+10,7,11,devinwilliams-RP,Draft
+10,7,12,zacheflin-SP,Free Agency
+10,7,13,bryceelder-SP,Free Agency
+10,7,14,davidbednar-RP,Free Agency
+10,7,15,tylerwells-SP,Free Agency
+10,7,16,carlosrodon-SP,Free Agency
+10,7,17,justinsteele-SP,Free Agency
+10,8,1,willsoncontreras-C,Free Agency
+10,8,2,nathaniellowe-1B,Free Agency
+10,8,3,ketelmarte-2B,Draft
+10,8,4,rafaeldevers-3B,Draft
+10,8,5,treaturner-SS,Draft
+10,8,6,ronaldacunajr-OF,Draft
+10,8,7,miketrout-OF,Draft
+10,8,8,haroldramirez-1B,Free Agency
+10,8,9,luisarraez-1B,Free Agency
+10,8,10,zackwheeler-SP,Draft
+10,8,11,yudarvish-SP,Draft
+10,8,12,pablolopez-SP,Draft
+10,8,13,claytonkershaw-SP,Free Agency
+10,8,14,marcusstroman-SP,Free Agency
+10,8,16,cedricmullins-OF,Draft
+10,8,17,thairoestrada-2B,Free Agency
