@@ -4,50 +4,54 @@ import numpy as np
 class Simulation:
 
     def __init__(
-        self, week, teams, schedule, projections, team_divisions,
+        self, week, teams, schedule, projections, team_divisions, divisions,
         n_regular_season_weeks, n_playoff_teams, n_weeks_per_playoff_matchup,
     ):
         self.week = week
         self.teams = teams
         self.schedule = schedule
         self.projections = projections
-        self.team_divisons = team_divisions
-        self.divisions = set(team_divisions.values())
+        self.team_divisions = team_divisions
+        self.divisions = divisions
         self.n_teams = len(teams)
         self.n_regular_season_weeks = n_regular_season_weeks
         self.n_playoff_teams = n_playoff_teams
         self.n_weeks_per_playoff_matchup = n_weeks_per_playoff_matchup
 
         # simulation results
-        self.regular_standings = []
-        self.divison_standings = {}
-        self.playoff_standings = []
-        self.final_standings = []
+        self.standings = {'normal': {}, 'shuffled': {}}
         self.game_logs = []
 
         # run simulation
         self.sim_regular_season()
         self.sim_playoffs()
+        self.sim_playoffs('shuffled')
 
     # get results
 
-    def made_playoffs(self, team):
-        return team in self.playoff_standings[0:self.n_playoff_teams]
+    def made_playoffs(self, team, order_type='normal'):
+        standings = self.standings[order_type]['playoff']
+        return team in standings[0:self.n_playoff_teams]
 
-    def won_division(self, team):
-        return any([team == d[0] for d in self.divison_standings.values()])
+    def won_division(self, team, order_type='normal'):
+        standings = self.standings[order_type]['division']
+        return any([team == d[0] for d in standings.values()])
 
-    def won_championship(self, team):
-        return team == self.final_standings[0]
+    def won_championship(self, team, order_type='normal'):
+        standings = self.standings[order_type]['final']
+        return team == standings[0]
 
-    def finished_last(self, team):
-        return team == self.final_standings[-1]
+    def finished_last(self, team, order_type='normal'):
+        standings = self.standings[order_type]['final']
+        return team == standings[-1]
 
-    def get_regular_standing(self, team):
-        return self.regular_standings.index(team) + 1
+    def get_regular_standing(self, team, order_type='normal'):
+        standings = self.standings[order_type]['regular']
+        return standings.index(team) + 1
 
-    def get_final_standing(self, team):
-        return self.final_standings.index(team) + 1
+    def get_final_standing(self, team, order_type='normal'):
+        standings = self.standings[order_type]['final']
+        return standings.index(team) + 1
 
     # simulation functions
 
@@ -80,25 +84,28 @@ class Simulation:
                 points[away] += away_score
                 self.game_logs.append((w, home if home_win else away))
 
-        order = sorted(
-            wins,
-            key=lambda t: (wins[t], points[t]),
-            reverse=True,
+        normal_order = sorted(
+            wins, key=lambda t: (wins[t], points[t]), reverse=True,
         )
-        division_order = {
-            d: [t for t in order if self.team_divisons[t] == d]
-            for d in self.divisions
-        }
-        division_winners = {division_order[d][0] for d in division_order}
-        playoff_order = (
-            [t for t in order if t in division_winners] +
-            [t for t in order if t not in division_winners]
+        shuffled_order = sorted(
+            wins, key=lambda t: (wins[t], np.random.random()), reverse=True,
         )
-        self.regular_standings = order
-        self.divison_standings = division_order
-        self.playoff_standings = playoff_order
+        for order_type in ['normal', 'shuffled']:
+            order = shuffled_order if order_type == 'shuffled' else normal_order
+            division_order = {
+                d: [t for t in order if self.team_divisions[t] == d]
+                for d in self.divisions
+            }
+            division_winners = {division_order[d][0] for d in division_order}
+            playoff_order = (
+                [t for t in order if t in division_winners] +
+                [t for t in order if t not in division_winners]
+            )
+            self.standings[order_type]['regular'] = order
+            self.standings[order_type]['division'] = division_order
+            self.standings[order_type]['playoff'] = playoff_order
 
-    def sim_playoffs(self):
+    def sim_playoffs(self, order_type='normal'):
 
         def get_result(home, away):
             w = self.n_regular_season_weeks + 1
@@ -107,7 +114,7 @@ class Simulation:
             away_score = self.sim_score(away, w, n)
             return [home, away] if home_score >= away_score else [away, home]
 
-        standings = self.playoff_standings
+        standings = self.standings[order_type]['playoff']
         final_standings = []
 
         if self.n_playoff_teams == 4:
@@ -153,4 +160,4 @@ class Simulation:
         else:
             assert False, 'playoff configuration not recognized'
 
-        self.final_standings = final_standings
+        self.standings[order_type]['final'] = final_standings

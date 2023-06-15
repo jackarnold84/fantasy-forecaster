@@ -1,5 +1,7 @@
 import sys
 from model.fetch.fetcher import DataFetcher
+from model.league.league import League
+from model.process.processor import Processor
 from model.config import leagues
 
 
@@ -7,7 +9,7 @@ from model.config import leagues
 args = [a.lower() for a in sys.argv]
 try:
     action = args[1]
-    assert action in ['fetch']
+    assert action in ['fetch', 'sim']
     sport_tag = args[2]
     league_tag = args[3]
     week = int(args[4])
@@ -45,3 +47,7 @@ if action == 'fetch':
             fetcher.fetch_rosters()
         if '--league-only' not in flags:
             fetcher.fetch_players()
+
+elif action == 'sim':
+    league = League(sport_tag, league_tag, week)
+    processor = Processor(league)

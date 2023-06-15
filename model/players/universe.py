@@ -113,7 +113,7 @@ class PlayerUniverse:
             ratings = sorted(ratings, reverse=True)
             for i, r in enumerate(ratings):
                 weight = get_team_position_weight(i, pos, self.sport)
-                rating_sum += r * weight
+                rating_sum += max(r, 0) * weight
 
         # scale rating
         rating = rating_sum
@@ -128,5 +128,5 @@ class PlayerUniverse:
             scaled_rating = z_score(
                 rating_sum, mean, sd, team_rating_mean, team_rating_sd
             )
-            rating = scaled_rating
+            rating = max(scaled_rating, 0)
         return rating

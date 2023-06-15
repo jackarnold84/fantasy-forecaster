@@ -53,6 +53,7 @@ class League:
             for x in member_records
         ]
         self.team_divisions = {t.name: t.division for t in self.teams}
+        self.divisions = set(self.team_divisions.values())
 
         # set up schedule
         self.schedule = {
@@ -70,18 +71,18 @@ class League:
         # run simulations
         print('--> running simulations')
         self.sims = {}
-        for w in range(0, self.week + 1):
+        for w in tqdm(range(0, self.week + 1), desc='week'):
             n_iter = self.n_iter // 5 if w < self.week else self.n_iter
             proj = self.get_projections(w)
             self.sims[w] = [
                 Simulation(
-                    self.week, self.teams, self.schedule,
-                    proj, self.team_divisions,
+                    w, self.teams, self.schedule,
+                    proj, self.team_divisions, self.divisions,
                     self.n_regular_season_weeks,
                     self.n_playoff_teams,
                     self.n_weeks_per_playoff_matchup,
                 )
-                for _ in tqdm(range(n_iter))
+                for _ in tqdm(range(n_iter), desc='sim ', leave=False)
             ]
 
     def get_projections(self, week):
