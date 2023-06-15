@@ -72,7 +72,7 @@ class League:
         print('--> running simulations')
         self.sims = {}
         for w in tqdm(range(0, self.week + 1), desc='week'):
-            n_iter = self.n_iter // 5 if w < self.week else self.n_iter
+            n_iter = self.n_iter // 4 if w < self.week else self.n_iter
             proj = self.get_projections(w)
             self.sims[w] = [
                 Simulation(
