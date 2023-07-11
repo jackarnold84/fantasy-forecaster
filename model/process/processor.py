@@ -3,6 +3,7 @@ import numpy as np
 from model.players.weights import position_group_list
 from model.league.league import League
 from model.league.sim import Simulation
+from model.config import leagues
 from model.process.utils import safe_round
 
 
@@ -34,6 +35,12 @@ class Processor:
         # write results
         outfile = 'data/output.json'
         data = {
+            'meta': {
+                'name': league.name,
+                'sport': league.sport,
+                'year': league.year,
+                'tag': f'{self.sport_tag}/{self.leauge_tag}'
+            },
             'teams': self.teams_output,
             'league': self.league_output,
             'players': self.players_output,

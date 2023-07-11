@@ -1,0 +1,30 @@
+{
+  "name": "fantasy-forecaster",
+  "version": "1.0.0",
+  "private": true,
+  "description": "fantasy-forecaster",
+  "author": "Jack Arnold",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^2.1.3",
+    "gatsby": "^5.11.0",
+    "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-styled-components": "^6.11.0",
+    "gh-pages": "^5.0.0",
+    "plotly.js": "^2.24.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-loadable": "^5.5.0",
+    "react-plotly.js": "^2.6.0",
+    "styled-components": "^6.0.3"
+  }
+}

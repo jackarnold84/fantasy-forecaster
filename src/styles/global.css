@@ -1,0 +1,474 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&display=swap');
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+th {
+  font-weight: 600;
+}
+
+
+
+/* CUSTOM STYLES */
+
+/* table */
+.x3-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.x3-table td,
+.x3-table th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top
+}
+
+.x3-table th:first-child,
+.x3-table td:first-child {
+    padding-left: 16px
+}
+
+.th-border {
+  border-bottom: 2px solid #0072BC !important;
+}
+
+/* tab buttons */
+.tab-btn {
+  border: 0;
+  background-color: white;
+  color: #0072BC;
+  font-size: 16px;
+  padding: 8px;
+  margin: 2px;
+  min-width: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tab-btn:hover {
+  background-color: #dedede;
+}
+
+.tab-btn-selected {
+  border: 0;
+  background-color: #0072BC;
+  color: white;
+  font-size: 16px;
+  padding: 8px;
+  margin: 2px;
+  min-width: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* nav table */
+.nav-table-row {
+  padding: 10px 16px;
+  border-bottom: 1px solid lightgray;
+}
+
+
+/* UTILS */
+.text,
+.medium {
+  font-size: 16px;
+}
+
+.off {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.fit {
+  width: 100%;
+}
+
+.auto {
+  margin: auto;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.medium-weight {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.heavy-bold {
+  font-weight: 900;
+}
+
+.black-text {
+  color: black;
+}
+
+.white-text {
+  color: white;
+}
+
+.plain {
+  text-decoration: none;
+}
+
+
+/* X3 STYLE CLASSES */
+
+/* containment */
+.x3-container {
+  padding: 24px;
+}
+
+.x3-row {
+  padding: 8px 0;
+}
+
+.x3-row-16 {
+  padding: 16px 0;
+}
+
+
+/* form and inputs */
+.x3-input {
+  font-size: 16px;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px dimgray;
+  width: 100%;
+}
+
+.x3-input:focus,
+.x3-input:hover {
+  box-shadow: 0 0 0 2px #4b4b4b;
+}
+
+.x3-label {
+  font-size: 14px;
+  display: block;
+  padding-bottom: 4px;
+}
+
+.x3-button {
+  border: 0;
+  background-color: #1287A8;
+  color: white;
+  font-size: 16px;
+  padding: 8px 32px;
+  margin: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.x3-button:hover {
+  background-color: #0E657E;
+}
+
+.x3-button:disabled {
+  background-color: #cacaca;
+  cursor: inherit;
+}
+
+.x3-select {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid dimgray;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.x3-select:focus,
+.x3-select:hover {
+  outline: 1px solid rgb(75, 75, 75);
+}
+
+.x3-check,
+.x3-radio {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+.x3-check-label,
+x3-radio-label {
+  font-size: 16px;
+  padding-left: 6px;
+  padding-right: 8px;
+}
+
+.x3-link {
+  color: #1287A8;
+  text-decoration: none;
+}
+
+.x3-link:hover {
+  text-decoration: underline;
+}
+
+.x3-link-plain {
+  color: black;
+  text-decoration: none;
+}
+
+.x3-link-plain:hover {
+  text-decoration: underline;
+}
+
+
+
+/* padding specs */
+
+/* --> top */
+.x3-t4 {
+  padding-top: 4px;
+}
+
+.x3-t8 {
+  padding-top: 8px;
+}
+
+.x3-t16 {
+  padding-top: 16px;
+}
+
+.x3-t24 {
+  padding-top: 24px;
+}
+
+.x3-t32 {
+  padding-top: 32px;
+}
+
+.x3-t48 {
+  padding-top: 48px;
+}
+
+/* --> bottom */
+.x3-b4 {
+  padding-bottom: 4px;
+}
+
+.x3-b8 {
+  padding-bottom: 8px;
+}
+
+.x3-b16 {
+  padding-bottom: 16px;
+}
+
+.x3-b24 {
+  padding-bottom: 24px;
+}
+
+.x3-b32 {
+  padding-bottom: 32px;
+}
+
+.x3-b48 {
+  padding-bottom: 48px;
+}
+
+/* --> left/right */
+.x3-l4 {
+  padding-left: 4px;
+}
+
+.x3-l8 {
+  padding-left: 8px;
+}
+
+.x3-l16 {
+  padding-left: 16px;
+}
+
+.x3-r4 {
+  padding-right: 4px;
+}
+
+.x3-r8 {
+  padding-right: 8px;
+}
+
+.x3-r16 {
+  padding-right: 16px;
+}
+
+
+
+/* COLORS */
+
+/* backgrounds */
+.x3-light-grey-bg {
+  background-color: #F4F4F4;
+}
+
+.x3-grey-bg {
+  background-color: #e5e5e5;
+}
+
+.x3-light-blue-bg {
+  background-color: #DDF4FB;
+}
+
+.x3-light-green-bg {
+  background-color: #E9EDDF;
+}
+
+.x3-light-red-bg {
+  background-color: #F7CEC9;
+}
+
+
+/* button palette */
+.x3-blue-btn {
+  color: white;
+  background-color: #1287A8;
+}
+
+.x3-blue-btn:hover {
+  background-color: #0E657E;
+}
+
+.x3-green-btn {
+  color: white;
+  background-color: #93A661;
+}
+
+.x3-green-btn:hover {
+  background-color: #6F7E47;
+}
+
+.x3-red-btn {
+  color: white;
+  background-color: #AD2A1A;
+}
+
+.x3-red-btn:hover {
+  background-color: #821F13;
+}
+
+.x3-orange-btn {
+  color: white;
+  background-color: #DA621E;
+}
+
+.x3-orange-btn:hover {
+  background-color: #A34A16;
+}
+
+.x3-indigo-btn {
+  color: white;
+  background-color: #44546A;
+}
+
+.x3-indigo-btn:hover {
+  background-color: #333F50;
+}
+
+.x3-grey-btn {
+  color: white;
+  background-color: #7F7F7F;
+}
+
+.x3-grey-btn:hover {
+  background-color: #595959;
+}
+
+
+/* modal */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #777;
+  width: 90%;
+  /* Could be more or less, depending on screen size */
+  max-width: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+/* loading spinner */
+/* to use: .addClass('spinner') */
+/* more available at: https://cssloaders.github.io/ */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #0E657E;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 16px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
