@@ -1,12 +1,11 @@
 import * as React from "react"
 import Container from "./elements/Container"
+import SectionTitle from "./elements/SectionTitle"
 
 const Standings = ({ standings, teamLabels }) => {
   return (
     <Container size={16}>
-      <Container top="0">
-        <h3 className="center">Standings</h3>
-      </Container>
+      <SectionTitle>Standings</SectionTitle>
 
       <Container>
         <table className="x3-table x3-bordered">

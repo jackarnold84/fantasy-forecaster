@@ -10,8 +10,8 @@ const WeekNav = ({ min, max, week, setWeek }) => {
       >
         <i className="bi bi-caret-left-fill" />
       </button>
-      <span>
-        Week {week}
+      <span style={{ display: 'inline-block', minWidth: '72px' }}>
+        {week === 0 ? 'Preseason' : `Week ${week}`}
       </span>
       <button
         className="nav-button"

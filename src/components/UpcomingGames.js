@@ -1,5 +1,6 @@
 import * as React from "react"
 import Container from "./elements/Container"
+import SectionTitle from "./elements/SectionTitle"
 import WeekNav from "./elements/WeekNav"
 
 const ColoredCell = ({ value }) => {
@@ -16,9 +17,7 @@ const UpcomingGames = ({ matchupImportance, teamLabels, week }) => {
 
   return (
     <Container size={24}>
-      <Container top="0">
-        <h3 className="center">Upcoming Games</h3>
-      </Container>
+      <SectionTitle>Upcoming Games</SectionTitle>
 
       <Container>
         <WeekNav

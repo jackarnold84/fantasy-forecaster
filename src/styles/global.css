@@ -59,13 +59,21 @@ th {
 }
 
 /* tab buttons */
+.tab-holder {
+  margin: auto;
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 0px 4px;
+}
+
 .tab-btn {
   border: 0;
   background-color: white;
   color: #0072BC;
   font-size: 16px;
-  padding: 8px;
-  margin: 2px;
+  padding: 10px 12px;
+  margin: 2px 2px;
   min-width: 50px;
   border-radius: 4px;
   cursor: pointer;
@@ -76,15 +84,12 @@ th {
 }
 
 .tab-btn-selected {
-  border: 0;
   background-color: #0072BC;
   color: white;
-  font-size: 16px;
-  padding: 8px;
-  margin: 2px;
-  min-width: 50px;
-  border-radius: 4px;
-  cursor: pointer;
+}
+
+.tab-btn-selected:hover {
+  background-color: #0072BC;
 }
 
 /* nav table */

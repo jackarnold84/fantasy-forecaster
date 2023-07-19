@@ -1,6 +1,7 @@
 import * as React from "react"
 import output from "../../data/output.json"
 import { capitalize } from "../utils/display"
+import Forecasts from "./Forecasts"
 import Standings from "./Standings"
 import UpcomingGames from "./UpcomingGames"
 import Container from "./elements/Container"
@@ -42,6 +43,11 @@ const Report = ({ sportTag, leagueTag }) => {
       <UpcomingGames
         matchupImportance={leageData.league.matchupImportance}
         teamLabels={teamLabels}
+        week={week}
+      />
+
+      <Forecasts
+        forecasts={leageData.league.forecasts}
         week={week}
       />
 
