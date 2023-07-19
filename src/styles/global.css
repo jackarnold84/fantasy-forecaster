@@ -24,30 +24,34 @@ th {
 }
 
 
-
 /* CUSTOM STYLES */
 
 /* table */
 .x3-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  font-size: 16px;
+  max-width: 500px;
+  margin: auto;
 }
 
 .x3-table td,
 .x3-table th {
-    padding: 8px 8px;
-    display: table-cell;
-    text-align: left;
-    vertical-align: top
+  padding: 8px 8px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top
 }
 
 .x3-table th:first-child,
 .x3-table td:first-child {
-    padding-left: 16px
+  padding-left: 16px
+}
+
+.x3-bordered tr {
+  border-bottom: 1px solid #ddd;
 }
 
 .th-border {
@@ -88,6 +92,35 @@ th {
   padding: 10px 16px;
   border-bottom: 1px solid lightgray;
 }
+
+
+/* nav buttons */
+
+.nav-button {
+  border: 0;
+  background-color: white;
+  color: #0072BC;
+  font-size: 16px;
+  padding: 8px 8px;
+  margin: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.nav-button:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-button:disabled {
+  color: #bebebe;
+}
+
+.nav-button:disabled:hover {
+  background-color: white;
+  /* cursor: inherit; */
+}
+
 
 
 /* UTILS */

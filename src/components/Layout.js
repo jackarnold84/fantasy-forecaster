@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import * as React from "react"
 import '../styles/global.css'
 import '../styles/icons.css'
+import Container from "./elements/Container"
 
 const Layout = ({ children }) => {
   return (
@@ -14,9 +15,12 @@ const Layout = ({ children }) => {
         </Link>
       </div>
 
-      <div className="x3-container auto" style={{maxWidth: '600px'}}>
-        {children}
+      <div className="auto" style={{ maxWidth: '600px' }}>
+        <Container size={32}>
+          {children}
+        </Container>
       </div>
+
     </div>
   )
 }
