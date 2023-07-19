@@ -125,14 +125,14 @@ class DataFetcher:
         tbody = members_table.select_one('tbody')
         for row in tbody.select('tr'):
             entries = row.select('td')
-            team_logo = row.select_one(
-                '.team-logo').select_one('img').attrs['src']
+            team_logo_holder = row.select_one('.team-logo')
+            team_logo = team_logo_holder.select_one('img').attrs['src']
             members_data.append({
                 'id': int(entries[0].text),
-                'manager': clean_text(entries[4].text),
+                'manager': clean_text(entries[3].text),
                 'team_name': clean_text(entries[2].text),
                 'abbrev': entries[1].text,
-                'division': clean_text(entries[3].text),
+                'division': 'USA',  # temporary fix
                 'img': team_logo,
             })
 

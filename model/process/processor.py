@@ -3,7 +3,6 @@ import numpy as np
 from model.players.weights import position_group_list
 from model.league.league import League
 from model.league.sim import Simulation
-from model.config import leagues
 from model.process.utils import safe_round
 
 
@@ -39,7 +38,8 @@ class Processor:
                 'name': league.name,
                 'sport': league.sport,
                 'year': league.year,
-                'tag': f'{self.sport_tag}/{self.leauge_tag}'
+                'tag': f'{self.sport_tag}/{self.leauge_tag}',
+                'week': self.week,
             },
             'teams': self.teams_output,
             'league': self.league_output,
