@@ -87,9 +87,9 @@ class DataFetcher:
 
         schedule_data = []
         matchup_tables = soup.select('.matchup--table')
-        playoff_tables = soup.select('.playoff-table')
-        for i, table in enumerate(matchup_tables + playoff_tables):
+        for i, table in enumerate(matchup_tables):
             tbody = table.select_one('tbody')
+            table_caption = table.select_one('.table-caption')
             if 'Matchups to be determined' in tbody.text:
                 break
             for j, row in enumerate(tbody.select('tr')):
@@ -97,7 +97,7 @@ class DataFetcher:
                 schedule_data.append({
                     'week': i + 1,
                     'matchup_idx': j + 1,
-                    'playoff': i >= len(matchup_tables),
+                    'playoff': 'playoff' in table_caption.text.lower(),
                     'home': clean_text(entries[4].text),
                     'home_score': parse_float(entries[3].text),
                     'away': clean_text(entries[1].text),

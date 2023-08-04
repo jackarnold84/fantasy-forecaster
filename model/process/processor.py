@@ -298,7 +298,7 @@ class Processor:
 
     def get_game_importance(self):
         importance_by_week = [[]]
-        for w in range(1, self.week + 1):
+        for w in range(1, min(self.week, self.league.n_regular_season_weeks) + 1):
             importance_by_matchup = []
             matchups = self.league.schedule[w]
             for x in matchups:
