@@ -3,6 +3,7 @@ import output from "../../data/output.json"
 import { capitalize } from "../utils/display"
 import Forecasts from "./Forecasts"
 import Standings from "./Standings"
+import TeamRatings from "./TeamRatings"
 import UpcomingGames from "./UpcomingGames"
 import Container from "./elements/Container"
 import TeamLabel from "./elements/TeamLabel"
@@ -48,6 +49,11 @@ const Report = ({ sportTag, leagueTag }) => {
 
       <Forecasts
         forecasts={leageData.league.forecasts}
+        week={week}
+      />
+
+      <TeamRatings
+        ratings={leageData.teams.ratings}
         week={week}
       />
 
