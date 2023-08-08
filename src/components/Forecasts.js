@@ -5,21 +5,21 @@ import SectionTitle from "./elements/SectionTitle"
 import TabNav from "./elements/TabNav"
 import WeekNav from "./elements/WeekNav"
 
+const colorMap = {
+  playoffs: '#1287A8',
+  championship: '#6F7E47',
+  punishment: '#AD2A1A',
+}
+
+const titleMap = {
+  playoffs: 'Make Playoffs',
+  championship: 'Win Championship',
+  punishment: 'League Punishment',
+}
+
 const Forecasts = ({ forecasts, week }) => {
   const [selectedWeek, setSelectedWeek] = React.useState(week)
   const [selectedForecast, setSelectedForecast] = React.useState('playoffs')
-
-  const colorMap = {
-    playoffs: '#1287A8',
-    championship: '#6F7E47',
-    punishment: '#AD2A1A',
-  }
-
-  const titleMap = {
-    playoffs: 'Make Playoffs',
-    championship: 'Win Championship',
-    punishment: 'League Punishment',
-  }
 
   const x = forecasts[selectedForecast][selectedWeek].map(x => x.prob * 100).reverse()
   const y = forecasts[selectedForecast][selectedWeek].map(y => y.team).reverse()

@@ -1,9 +1,12 @@
 import * as React from "react"
 import output from "../../data/output.json"
 import { capitalize } from "../utils/display"
+import Betting from "./Betting"
 import Forecasts from "./Forecasts"
+import ScheduleStrength from "./ScheduleStrength"
 import Standings from "./Standings"
 import TeamRatings from "./TeamRatings"
+import TimeForecasts from "./TimeForecasts"
 import UpcomingGames from "./UpcomingGames"
 import Container from "./elements/Container"
 import TeamLabel from "./elements/TeamLabel"
@@ -55,6 +58,23 @@ const Report = ({ sportTag, leagueTag }) => {
       <TeamRatings
         ratings={leageData.teams.ratings}
         week={week}
+      />
+
+      <Betting
+        forecasts={leageData.league.forecasts}
+        week={week}
+        teamLabels={teamLabels}
+      />
+
+      <ScheduleStrength
+        expectedWins={leageData.league.expectedWins}
+        sos={leageData.league.sos}
+        teamLabels={teamLabels}
+      />
+
+      <TimeForecasts
+        forecasts={leageData.league.forecasts}
+        teamLabels={teamLabels}
       />
 
     </Container>

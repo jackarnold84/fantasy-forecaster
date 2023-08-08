@@ -26,6 +26,10 @@ th {
 
 /* CUSTOM STYLES */
 
+.subtext {
+  font-size: 13px;
+}
+
 /* table */
 .x3-table {
   border-collapse: collapse;

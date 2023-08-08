@@ -8,6 +8,7 @@ const TabNav = ({ options, selected, setSelected }) => {
           <button
             className={`tab-btn ${x.value === selected && 'tab-btn-selected'}`}
             onClick={() => setSelected(x.value)}
+            key={x.value}
           >
             {x.display}
           </button>
