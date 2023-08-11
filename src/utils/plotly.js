@@ -401,7 +401,9 @@ const plotlySimpleWhiteTemplate = {
         },
         "colorway": ["#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#8C564B", "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF"],
         "font": {
-            "color": "rgb(36,36,36)"
+            "family": "Source Sans Pro",
+            "color": "rgb(36,36,36)",
+            "size": "16"
         },
         "geo": {
             "bgcolor": "white",

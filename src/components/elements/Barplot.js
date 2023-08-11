@@ -19,7 +19,6 @@ const Barplot = ({ data, height, xaxis = {}, yaxis = {} }) => {
           orientation: 'h',
           texttemplate: '%{x}',
           textposition: 'outside',
-          outsidetextfont: { size: '12' },
           name: '',
           hovertemplate: '%{y}<br> %{x}',
           ...data,

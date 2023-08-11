@@ -23,8 +23,8 @@ const LinePlot = ({ data, height, xaxis = {}, yaxis = {} }) => {
       layout={
         {
           height,
-          xaxis: { fixedrange: true, ...xaxis, label: 'week' },
-          yaxis: { fixedrange: true, ...yaxis },
+          xaxis: { fixedrange: true, ...xaxis, tickfont: { size: 14 } },
+          yaxis: { fixedrange: true, ...yaxis, tickfont: { size: 14 } },
           legend: { orientation: 'h', y: -0.2 },
           ...plotlyLayout,
         }

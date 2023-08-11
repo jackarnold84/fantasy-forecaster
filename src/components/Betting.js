@@ -40,7 +40,11 @@ const Betting = ({ forecasts, week, teamLabels }) => {
         </table>
         {
           validOdds.length === 0 && (
-            <div className="center">No bets available</div>
+            <Container size={32}>
+              <div className="center">
+                <i>No bets available</i>
+              </div>
+            </Container>
           )
         }
       </Container>

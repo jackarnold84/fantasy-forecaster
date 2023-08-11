@@ -59,7 +59,7 @@ th {
 }
 
 .th-border {
-  border-bottom: 2px solid #0072BC !important;
+  border-bottom: 2px solid #0066CC !important;
 }
 
 /* tab buttons */
@@ -72,9 +72,10 @@ th {
 }
 
 .tab-btn {
+  font-family: 'Source Sans Pro', sans-serif;
   border: 0;
   background-color: white;
-  color: #0072BC;
+  color: #0066CC;
   font-size: 16px;
   padding: 10px 12px;
   margin: 2px 2px;
@@ -88,12 +89,12 @@ th {
 }
 
 .tab-btn-selected {
-  background-color: #0072BC;
+  background-color: #0066CC;
   color: white;
 }
 
 .tab-btn-selected:hover {
-  background-color: #0072BC;
+  background-color: #0066CC;
 }
 
 /* nav table */
@@ -108,8 +109,7 @@ th {
 .nav-button {
   border: 0;
   background-color: white;
-  color: #0072BC;
-  font-size: 16px;
+  color: #0066CC;
   padding: 8px 8px;
   margin: 2px 4px;
   border-radius: 4px;
@@ -245,6 +245,7 @@ th {
 }
 
 .x3-select {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   padding: 8px;
   border: 1px solid dimgray;

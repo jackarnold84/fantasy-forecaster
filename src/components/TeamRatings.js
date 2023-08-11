@@ -1,5 +1,6 @@
 import * as React from "react"
 import { positionDisplay, round } from "../utils/display"
+import { positionPalette } from "../utils/palette"
 import Barplot from "./elements/Barplot"
 import Container from "./elements/Container"
 import SectionTitle from "./elements/SectionTitle"
@@ -45,7 +46,10 @@ const TeamRatings = ({ ratings, week }) => {
         <div className="center">{positionDisplay(selectedPosition)}</div>
 
         <Barplot
-          data={{ x, y }}
+          data={{
+            x, y,
+            marker: { color: positionPalette[selectedPosition] }
+          }}
           height={300}
           xaxis={{ range: [baseline, xMax * 1.1] }}
         />

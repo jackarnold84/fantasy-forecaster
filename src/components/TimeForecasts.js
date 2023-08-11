@@ -1,4 +1,5 @@
 import * as React from "react"
+import { plotPalette } from "../utils/palette"
 import Container from "./elements/Container"
 import LinePlot from "./elements/Lineplot"
 import SectionTitle from "./elements/SectionTitle"
@@ -16,12 +17,13 @@ const TimeForecasts = ({ forecasts, teamLabels }) => {
 
   const teams = Object.keys(teamLabels).sort()
   const allForecasts = forecasts[selectedForecast].flat()
-  const forecastByTeam = teams.map(t => {
+  const forecastByTeam = teams.map((t, i) => {
     const filtered = allForecasts.filter(x => x.team === t)
     return {
+      name: t,
       x: filtered.map(x => x.week),
       y: filtered.map(x => x.prob * 100),
-      name: t,
+      marker: { color: plotPalette[i] },
       visible: selectedTeam === 'all' || selectedTeam === t || 'legendonly',
     }
   })

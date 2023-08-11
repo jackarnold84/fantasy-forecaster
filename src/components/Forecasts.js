@@ -4,11 +4,12 @@ import Container from "./elements/Container"
 import SectionTitle from "./elements/SectionTitle"
 import TabNav from "./elements/TabNav"
 import WeekNav from "./elements/WeekNav"
+import { palette } from "../utils/palette"
 
 const colorMap = {
-  playoffs: '#1287A8',
-  championship: '#6F7E47',
-  punishment: '#AD2A1A',
+  playoffs: palette.orange,
+  championship: palette.green,
+  punishment: palette.red,
 }
 
 const titleMap = {

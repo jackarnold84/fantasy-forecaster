@@ -14,7 +14,7 @@ module.exports = {
         name: "Fantasy Forecaster",
         short_name: "Fantasy Forecaster",
         start_url: "/",
-        background_color: "#ffffff",
+        background_color: "#0D830F",
         theme_color: "#000000",
         display: "standalone",
         icon: "src/images/icon.png",

@@ -6,7 +6,7 @@ import WeekNav from "./elements/WeekNav"
 const ColoredCell = ({ value }) => {
   const opacity = (value / 90).toFixed(2)
   return (
-    <td style={{ backgroundColor: `rgb(83, 185, 255, ${opacity})` }}>
+    <td style={{ backgroundColor: `rgb(81, 157, 233, ${opacity})` }}>
       {value}
     </td>
   )
@@ -31,7 +31,11 @@ const UpcomingGames = ({ matchupImportance, teamLabels, week }) => {
 
       <Container>
         {isPlayoffs ? (
-          <div className="center">Playoffs In Progress</div>
+          <Container size={32}>
+            <div className="center">
+              <i>Playoffs In Progress</i>
+            </div>
+          </Container>
         ) : (
           <table className="x3-table x3-bordered" style={{ maxWidth: '400px', tableLayout: 'fixed' }}>
             <tbody>
