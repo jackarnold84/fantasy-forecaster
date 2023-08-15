@@ -29,15 +29,20 @@ const Report = ({ sportTag, leagueTag }) => {
   )
 
   return (
-    <Container>
-      <Container top="0">
-        <h2 className="center">
-          {leagueName} Fantasy {sport} ({year})
-        </h2>
-        <p className="center">
-          Week {week} Report
-        </p>
-      </Container>
+    <Container top={2}>
+      <div className="center">
+        <Container top={2}>
+          <h4 className="medium-weight x3-b4">{year}</h4>
+          <h2>
+            {leagueName} Fantasy {sport}
+          </h2>
+        </Container>
+        <Container size={24}>
+          <h4>
+            Week {week} Report
+          </h4>
+        </Container>
+      </div>
 
       <Standings
         standings={leageData.league.standings}

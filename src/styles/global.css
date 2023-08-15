@@ -68,7 +68,7 @@ th {
   display: inline-block;
   border: 1px solid #999;
   border-radius: 4px;
-  padding: 0px 4px;
+  background-color: #F8F8F8;
 }
 
 .tab-btn {
@@ -82,10 +82,11 @@ th {
   min-width: 50px;
   border-radius: 4px;
   cursor: pointer;
+  background-color: #F8F8F8
 }
 
 .tab-btn:hover {
-  background-color: #dedede;
+  background-color: #d0d0d0;
 }
 
 .tab-btn-selected {
@@ -248,14 +249,14 @@ th {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   padding: 8px;
-  border: 1px solid dimgray;
+  border: 1px solid #999;
   border-radius: 4px;
   width: 100%;
 }
 
 .x3-select:focus,
 .x3-select:hover {
-  outline: 1px solid rgb(75, 75, 75);
+  outline: 1px solid #4b4b4b;
 }
 
 .x3-check,
@@ -290,6 +291,15 @@ x3-radio-label {
 }
 
 .x3-link-plain:hover {
+  text-decoration: underline;
+}
+
+.x3-link-plain-white {
+  color: white;
+  text-decoration: none;
+}
+
+.x3-link-plain-white:hover {
   text-decoration: underline;
 }
 
@@ -495,9 +505,9 @@ x3-radio-label {
 /* to use: .addClass('spinner') */
 /* more available at: https://cssloaders.github.io/ */
 .loader {
-  width: 48px;
-  height: 48px;
-  border: 5px solid #0E657E;
+  width: 32px;
+  height: 32px;
+  border: 4px solid #0066CC;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;

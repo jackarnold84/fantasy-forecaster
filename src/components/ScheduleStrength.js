@@ -1,11 +1,12 @@
 import * as React from "react"
+import { palette } from "../utils/palette"
 import Container from "./elements/Container"
 import SectionTitle from "./elements/SectionTitle"
 import Subtext from "./elements/Subtext"
 import TabNav from "./elements/TabNav"
 
 const ColoredText = ({ value }) => {
-  const color = value >= 1.0 ? 'green' : value <= -1.0 ? 'red' : 'black'
+  const color = value >= 1.0 ? palette.green : value <= -1.0 ? palette.red : 'black'
   return (
     <td style={{ color }}>
       {value >= 0 ? `+${value}` : value}
@@ -46,9 +47,9 @@ const ScheduleStrength = ({ expectedWins, sos, teamLabels }) => {
                 expectedWins.map(x => (
                   <tr key={x.team}>
                     <td>{teamLabels[x.team]}</td>
-                    <td>{x.expected}</td>
+                    <td>{x.expected.toFixed(1)}</td>
                     <td>{x.actual}</td>
-                    <ColoredText value={x.diff} />
+                    <ColoredText value={x.diff.toFixed(1)} />
                   </tr>
                 ))
               }
@@ -73,8 +74,8 @@ const ScheduleStrength = ({ expectedWins, sos, teamLabels }) => {
                 sos.map(x => (
                   <tr key={x.team}>
                     <td>{teamLabels[x.team]}</td>
-                    <td>{x.current}</td>
-                    <td>{x.future}</td>
+                    <td>{x.current.toFixed(1)}</td>
+                    <td>{x > 0 ? x.future.toFixed(1) : '--'}</td>
                   </tr>
                 ))
               }

@@ -7,7 +7,11 @@ const LinePlot = ({ data, height, xaxis = {}, yaxis = {} }) => {
   const Plot = Loadable({
     loader: () => import('react-plotly.js'),
     loading() {
-      return <div>Loading...</div>;
+      return (
+        <div style={{ height, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div className="loader" />
+        </div>
+      );
     },
   });
 

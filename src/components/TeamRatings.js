@@ -1,5 +1,5 @@
 import * as React from "react"
-import { positionDisplay, round } from "../utils/display"
+import { positionDisplay } from "../utils/display"
 import { positionPalette } from "../utils/palette"
 import Barplot from "./elements/Barplot"
 import Container from "./elements/Container"
@@ -15,7 +15,7 @@ const TeamRatings = ({ ratings, week }) => {
     { display: p, value: p }
   ))
 
-  const x = ratings[selectedWeek][selectedPosition].map(x => round(x.rating)).reverse()
+  const x = ratings[selectedWeek][selectedPosition].map(x => x.rating).reverse()
   const y = ratings[selectedWeek][selectedPosition].map(y => y.team).reverse()
   const xMax = Math.max(...x)
   const xMin = Math.min(...x)
@@ -48,7 +48,9 @@ const TeamRatings = ({ ratings, week }) => {
         <Barplot
           data={{
             x, y,
-            marker: { color: positionPalette[selectedPosition] }
+            marker: { color: positionPalette[selectedPosition] },
+            texttemplate: '%{x:.0f}',
+            hovertemplate: '%{y}<br> %{x:.1f}',
           }}
           height={300}
           xaxis={{ range: [baseline, xMax * 1.1] }}

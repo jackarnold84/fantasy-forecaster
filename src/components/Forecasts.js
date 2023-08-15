@@ -1,10 +1,10 @@
 import * as React from "react"
+import { palette } from "../utils/palette"
 import Barplot from "./elements/Barplot"
 import Container from "./elements/Container"
 import SectionTitle from "./elements/SectionTitle"
 import TabNav from "./elements/TabNav"
 import WeekNav from "./elements/WeekNav"
-import { palette } from "../utils/palette"
 
 const colorMap = {
   playoffs: palette.orange,
@@ -58,6 +58,7 @@ const Forecasts = ({ forecasts, week }) => {
           data={{
             x, y,
             marker: { color: colorMap[selectedForecast] },
+            hovertemplate: '%{y}<br> %{x:.1f}%',
           }}
           height={350}
           xaxis={{ ticksuffix: '%', range: [0, xMax * 1.2] }}

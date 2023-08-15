@@ -24,7 +24,7 @@ const Standings = ({ standings, teamLabels }) => {
                   <td />
                   <td>{teamLabels[x.team]}</td>
                   <td>{x.wins}</td>
-                  <td>{x.avg}</td>
+                  <td>{x.avg.toFixed(1)}</td>
                 </tr>
               ))
             }
