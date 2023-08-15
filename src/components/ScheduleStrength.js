@@ -75,7 +75,7 @@ const ScheduleStrength = ({ expectedWins, sos, teamLabels }) => {
                   <tr key={x.team}>
                     <td>{teamLabels[x.team]}</td>
                     <td>{x.current.toFixed(1)}</td>
-                    <td>{x > 0 ? x.future.toFixed(1) : '--'}</td>
+                    <td>{x.future > 0 ? x.future.toFixed(1) : '--'}</td>
                   </tr>
                 ))
               }

@@ -32,7 +32,7 @@ const Betting = ({ forecasts, week, teamLabels }) => {
               validOdds.map(x => (
                 <tr key={x.team}>
                   <td>{teamLabels[x.team]}</td>
-                  <td>{americanOdds(x.prob)}</td>
+                  <td style={{ textAlign: 'center' }}>{americanOdds(x.prob)}</td>
                 </tr>
               ))
             }
