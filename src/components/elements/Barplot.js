@@ -16,29 +16,31 @@ const Barplot = ({ data, height, xaxis = {}, yaxis = {} }) => {
   });
 
   return (
-    <Plot
-      data={[
-        {
-          type: 'bar',
-          orientation: 'h',
-          texttemplate: '%{x}',
-          textposition: 'outside',
-          name: '',
-          hovertemplate: '%{y}<br> %{x}',
-          ...data,
-        },
-      ]}
-      layout={
-        {
-          height,
-          xaxis: { visible: false, fixedrange: true, ...xaxis },
-          yaxis: { fixedrange: true, ...yaxis },
-          ...plotlyLayout,
+    <div style={{ minHeight: height }}>
+      <Plot
+        data={[
+          {
+            type: 'bar',
+            orientation: 'h',
+            texttemplate: '%{x}',
+            textposition: 'outside',
+            name: '',
+            hovertemplate: '%{y}<br> %{x}',
+            ...data,
+          },
+        ]}
+        layout={
+          {
+            height,
+            xaxis: { visible: false, fixedrange: true, ...xaxis },
+            yaxis: { fixedrange: true, ...yaxis },
+            ...plotlyLayout,
+          }
         }
-      }
-      config={plotlyConfig}
-      {...plotlyProps}
-    />
+        config={plotlyConfig}
+        {...plotlyProps}
+      />
+    </div>
   )
 }
 

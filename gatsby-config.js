@@ -4,8 +4,9 @@
 module.exports = {
   siteMetadata: {
     title: `Fantasy Forecaster`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://jackarnold84.github.io/fantasy-forecaster/`
   },
+  pathPrefix: "/fantasy-forecaster",
   plugins: [
     "gatsby-plugin-styled-components",
     {
@@ -15,7 +16,7 @@ module.exports = {
         short_name: "Fantasy Forecaster",
         start_url: "/",
         background_color: "#0D830F",
-        theme_color: "#000000",
+        theme_color: "#0D830F",
         display: "standalone",
         icon: "src/images/icon.png",
       },

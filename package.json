@@ -11,8 +11,9 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "serve": "gatsby serve -H 0.0.0.0",
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.3",

@@ -16,26 +16,29 @@ const LinePlot = ({ data, height, xaxis = {}, yaxis = {} }) => {
   });
 
   return (
-    <Plot
-      data={data.map(d => (
-        {
-          type: 'scatter',
-          hovertemplate: 'Week %{x}<br> %{y}',
-          ...d,
+    <div style={{ minHeight: height }}>
+      <Plot
+        data={data.map(d => (
+          {
+            type: 'scatter',
+            hovertemplate: 'Week %{x}<br> %{y}',
+            ...d,
+          }
+        ))}
+        layout={
+          {
+            height,
+            xaxis: { fixedrange: true, ...xaxis, tickfont: { size: 14 } },
+            yaxis: { fixedrange: true, ...yaxis, tickfont: { size: 14 } },
+            legend: { orientation: 'h', y: -0.2 },
+            ...plotlyLayout,
+          }
         }
-      ))}
-      layout={
-        {
-          height,
-          xaxis: { fixedrange: true, ...xaxis, tickfont: { size: 14 } },
-          yaxis: { fixedrange: true, ...yaxis, tickfont: { size: 14 } },
-          legend: { orientation: 'h', y: -0.2 },
-          ...plotlyLayout,
-        }
-      }
-      config={plotlyConfig}
-      {...plotlyProps}
-    />
+        config={plotlyConfig}
+        {...plotlyProps}
+      />
+    </div>
+
   )
 }
 

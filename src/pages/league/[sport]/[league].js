@@ -1,16 +1,20 @@
-import { navigate } from "gatsby"
 import * as React from "react"
 import output from '../../../../data/output.json'
 import Layout from "../../../components/Layout"
 import Report from "../../../components/Report"
+import NotFoundPage from "../../404"
 
 const LeaguePage = (props) => {
   const sportTag = props.params.sport;
   const leagueTag = props.params.league;
+  const isValid = sportTag in output && leagueTag in output[sportTag];
+  const [isReady, setIsReady] = React.useState(null)
+  React.useEffect(() => { setIsReady(true) }, [])
 
-  // return home if league does not exist
-  if (!(sportTag in output) || !(leagueTag in output[sportTag])) {
-    navigate('/')
+  if (!isReady) {
+    return <Layout />
+  } else if (!isValid) {
+    return <NotFoundPage />
   }
 
   return (
