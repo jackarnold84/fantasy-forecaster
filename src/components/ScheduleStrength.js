@@ -1,4 +1,5 @@
 import * as React from "react"
+import { ordinal_suffix } from "../utils/display"
 import { palette } from "../utils/palette"
 import Container from "./elements/Container"
 import SectionTitle from "./elements/SectionTitle"
@@ -10,6 +11,16 @@ const ColoredText = ({ value }) => {
   return (
     <td style={{ color }}>
       {value >= 0 ? `+${value}` : value}
+    </td>
+  )
+}
+
+const OrdinalText = ({ value, max }) => {
+  const color = value === max ? palette.green : value === 1 ? palette.red : 'black'
+  const text = value > 0 ? ordinal_suffix(value) : '--'
+  return (
+    <td style={{ color }}>
+      {text}
     </td>
   )
 }
@@ -68,22 +79,22 @@ const ScheduleStrength = ({ expectedWins, sos, teamLabels }) => {
               <tr className="th-border">
                 <th>Team</th>
                 <th>Current</th>
-                <th>Future</th>
+                <th>Future SOS</th>
               </tr>
               {
                 sos.map(x => (
                   <tr key={x.team}>
                     <td>{teamLabels[x.team]}</td>
                     <td>{x.current.toFixed(1)}</td>
-                    <td>{x.future > 0 ? x.future.toFixed(1) : '--'}</td>
+                    <OrdinalText value={x.future} max={sos.length} />
                   </tr>
                 ))
               }
             </tbody>
           </table>
           <Subtext>
-            Shows average points against and expected points against
-            for the remainder of the season
+            Shows average points against and strength of schedule rank
+            for the remainder of the season (1st is hardest)
           </Subtext>
         </Container>
       }

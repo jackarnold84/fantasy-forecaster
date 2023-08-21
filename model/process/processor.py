@@ -273,6 +273,13 @@ class Processor:
                     future_against[x['home']] += proj[x['away']][w]['mean']
                     future_against[x['away']] += proj[x['home']][w]['mean']
 
+        ranked_future_against = sorted(
+            self.teams,
+            key=lambda x: (future_against[x], against[x]),
+            reverse=True,
+        )
+        is_playoffs = self.week > self.league.n_regular_season_weeks
+
         games_played = max(self.week - 1, 1)
         games_remaining = self.league.n_regular_season_weeks - self.week + 1
         for t in self.teams:
@@ -285,7 +292,7 @@ class Processor:
             {
                 'team': t,
                 'current': against[t],
-                'future': future_against[t],
+                'future': 0 if is_playoffs else ranked_future_against.index(t) + 1,
             }
             for t in self.teams
         ]
