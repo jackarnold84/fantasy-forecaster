@@ -62,6 +62,8 @@ const Report = ({ sportTag, leagueTag }) => {
 
       <TeamRatings
         ratings={leageData.teams.ratings}
+        rosters={leageData.teams.roster.players}
+        players={leageData.players}
         week={week}
       />
 

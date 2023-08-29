@@ -25,7 +25,6 @@ const Betting = ({ forecasts, week, teamLabels }) => {
       </Container>
 
       <Container>
-        {/* <div className="center">{titleMap[selectedBet]}</div> */}
         <table className="x3-table" style={{ maxWidth: '200px' }}>
           <tbody>
             {

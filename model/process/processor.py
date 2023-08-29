@@ -166,8 +166,22 @@ class Processor:
             for t in self.league.teams
         }
 
+        roster_players = [
+            {
+                t.name: sorted(
+                    t.get_roster(w),
+                    key=lambda x: self.player_universe.players[x].
+                    rating.get(w) or 0,
+                    reverse=True,
+                )
+                for t in self.league.teams
+            }
+            for w in range(0, self.week + 1)
+        ]
+
         self.teams_output['metadata'] = metadata
         self.teams_output['roster'] = {}
+        self.teams_output['roster']['players'] = roster_players
         self.teams_output['roster']['aquisitions'] = roster_aquisitions
 
     def get_team_ratings(self):

@@ -4,7 +4,20 @@ export const palette = {
   red: '#C10001',
   orange: '#EF6622',
   lightGrey: '#F8F8F8',
+  purple: '#562C87',
 }
+
+export const scalePalette = [
+  '#C10001', // red
+  '#FF0D0D', // bright red
+  '#FF4E11', // orange red
+  '#FF8A12', // orange
+  '#FAB733', // yellow
+  '#ABB334', // green yellow
+  '#69B34C', // light green
+  '#0D830F', // green
+  '#7030A0', // violet
+]
 
 export const plotPalette = [
   '#2458A8', // blue

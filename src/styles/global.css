@@ -62,6 +62,14 @@ th {
   border-bottom: 2px solid #0066CC !important;
 }
 
+.tight-table td {
+  padding: 4px 4px;
+}
+
+.x3-tvert td {
+  vertical-align: middle;
+}
+
 /* tab buttons */
 .tab-holder {
   margin: auto;
@@ -133,6 +141,17 @@ th {
 .nav-button:disabled:hover {
   background-color: white;
   /* cursor: inherit; */
+}
+
+.rating-circle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 5px solid black;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 
@@ -528,4 +547,49 @@ x3-radio-label {
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+/* tooltip */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #F8F8F8;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  margin-top: -36px;
+  border: 1px solid #555;
+  color: #333;
+  font-size: 14px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* arrow */
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
