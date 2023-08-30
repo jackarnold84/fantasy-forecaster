@@ -8,13 +8,9 @@ const LeaguePage = (props) => {
   const sportTag = props.params.sport;
   const leagueTag = props.params.league;
   const isValid = sportTag in output && leagueTag in output[sportTag];
-  const [isReady, setIsReady] = React.useState(null)
-  React.useEffect(() => {
-    setTimeout(() => { setIsReady(true) }, 1000)
-  }, [])
 
   if (!isValid) {
-    return isReady ? <NotFoundPage /> : <Layout />
+    return <NotFoundPage />
   }
 
   return (

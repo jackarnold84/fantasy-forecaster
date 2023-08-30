@@ -300,12 +300,11 @@ x3-radio-label {
 }
 
 .x3-link {
-  color: #1287A8;
-  text-decoration: none;
+  color: #000000;
 }
 
 .x3-link:hover {
-  text-decoration: underline;
+  color: #7e7e7e;
 }
 
 .x3-link-plain {
