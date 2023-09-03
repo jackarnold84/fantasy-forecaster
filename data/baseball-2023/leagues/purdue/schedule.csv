@@ -63,7 +63,11 @@ week,matchup_idx,playoff,home,home_score,away,away_score
 16,2,False,Kaiwen Shen,170.0,Jake Martin,178.0
 16,3,False,Nicholas Rosenorn,187.0,Tim Zhou,148.0
 16,4,False,Joey Attardo,225.0,Jack Arnold,167.0
-17,1,True,Kaiwen Shen,135.0,Jack Arnold,112.0
-17,2,True,Tim Zhou,144.0,Joey Attardo,132.0
-17,3,True,Jake Martin,93.0,CG Tanner,67.0
-17,4,True,Rohan Shahani,129.0,Nicholas Rosenorn,92.0
+17,1,True,Kaiwen Shen,443.0,Jack Arnold,364.0
+17,2,True,Tim Zhou,506.0,Joey Attardo,420.0
+17,3,True,Jake Martin,408.0,CG Tanner,379.0
+17,4,True,Rohan Shahani,448.0,Nicholas Rosenorn,429.0
+18,1,True,Kaiwen Shen,525.0,Tim Zhou,449.0
+18,2,True,Joey Attardo,467.0,Jack Arnold,553.0
+18,3,True,Jake Martin,393.0,Rohan Shahani,260.0
+18,4,True,CG Tanner,466.0,Nicholas Rosenorn,365.0
