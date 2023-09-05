@@ -100,12 +100,12 @@ class PlayerUniverse:
                             else:
                                 p.rating[week] = rating
 
-    def get_team_rating(self, players, week, position=None, rating_type='normal', scale=True):
+    def get_team_rating(self, players, week, position=None, rating_type='normal', scale=True, n_teams=10):
         positions = [position] if position else position_group_list[self.sport]
         rating_sum = 0
         for pos in positions:
             eval_group = [
-                p for p in players if self.players[p].pos_group == pos
+                p for p in players if p in self.players and self.players[p].pos_group == pos
             ]
             ratings = [
                 self.players[p].get_rating(week, rating_type) for p in eval_group
@@ -128,5 +128,6 @@ class PlayerUniverse:
             scaled_rating = z_score(
                 rating_sum, mean, sd, team_rating_mean, team_rating_sd
             )
+            scaled_rating += 5 * (n_teams - 10)
             rating = max(scaled_rating, 0)
         return rating

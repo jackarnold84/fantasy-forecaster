@@ -77,12 +77,16 @@ const Report = ({ sportTag, leagueTag }) => {
         expectedWins={leageData.league.expectedWins}
         sos={leageData.league.sos}
         teamLabels={teamLabels}
+        isPreseason={week <= 1}
       />
 
-      <TimeForecasts
-        forecasts={leageData.league.forecasts}
-        teamLabels={teamLabels}
-      />
+      {
+        week > 1 &&
+        <TimeForecasts
+          forecasts={leageData.league.forecasts}
+          teamLabels={teamLabels}
+        />
+      }
 
     </Container>
   )

@@ -16,7 +16,7 @@ const Barplot = ({ data, height, xaxis = {}, yaxis = {} }) => {
   });
 
   return (
-    <div style={{ minHeight: height }}>
+    <div style={{ minHeight: height, padding: '0px 8px' }}>
       <Plot
         data={[
           {

@@ -7,7 +7,7 @@ class Team:
 
     def __init__(
         self, id, manager_name, nickname, abbrev, division, img, 
-        week, schedule_records, roster_records, draft_records,
+        week, schedule_records, roster_records, draft_records, n_teams,
         player_universe: PlayerUniverse,
     ):
         self.id = str(id)
@@ -17,6 +17,7 @@ class Team:
         self.division = division
         self.img = img
         self.week = int(week)
+        self.n_teams = n_teams
         self.player_universe = player_universe
 
         self.scores = {}
@@ -30,6 +31,8 @@ class Team:
                 self.scores[x['week']] = x['away_score']
 
         for x in roster_records:
+            if x['week'] == 0:
+                continue
             if str(x['manager_id']) == self.id:
                 self.roster[x['week']].append({
                     'id': x['player_id'],
@@ -55,7 +58,7 @@ class Team:
 
     def get_team_rating(self, week, position=None, rating_type='normal'):
         players = self.get_roster(week)
-        return self.player_universe.get_team_rating(players, week, position, rating_type)
+        return self.player_universe.get_team_rating(players, week, position, rating_type, n_teams=self.n_teams)
     
     def get_scoring_average(self, week):
         scores = [self.scores[w] for w in self.scores if w < week]

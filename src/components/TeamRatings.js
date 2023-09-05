@@ -1,10 +1,10 @@
 import * as React from "react"
 import { scalePalette } from "../utils/palette"
 import Container from "./elements/Container"
+import PlayerImage from "./elements/PlayerImage"
 import SectionTitle from "./elements/SectionTitle"
 import TabNav from "./elements/TabNav"
 import WeekNav from "./elements/WeekNav"
-import PlayerImage from "./elements/PlayerImage"
 
 const RatingCircle = ({ value }) => {
   const v = parseFloat(value.toFixed(0))
@@ -30,8 +30,9 @@ const TeamRatings = ({ ratings, rosters, players, week }) => {
 
   const positionOptions = Object.keys(ratings[0]).map(p => (
     { display: p, value: p }
+  )).filter(p => (
+    !['K', 'DST'].includes(p.value)
   ))
-
   const selectedRatings = ratings[selectedWeek][selectedPosition]
   const selectedRosters = rosters[selectedWeek]
 
@@ -62,7 +63,7 @@ const TeamRatings = ({ ratings, rosters, players, week }) => {
             {selectedRatings.map(x => {
               const fullRoster = selectedRosters[x.team]
               const filteredRoster = fullRoster.filter(
-                x => selectedPosition === 'OVR' || players[x].group === selectedPosition
+                x => selectedPosition === 'OVR' || players[x]?.group === selectedPosition
               )
 
               return (

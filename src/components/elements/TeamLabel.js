@@ -5,9 +5,10 @@ const TeamLabel = ({ meta }) => {
     <span>
       <img
         src={meta.img}
+        width={18}
         height={18}
         alt={meta.team}
-        style={{ verticalAlign: 'top', paddingRight: '10px' }}
+        style={{ verticalAlign: 'bottom', paddingRight: '10px' }}
       />
       {meta.name}
     </span>

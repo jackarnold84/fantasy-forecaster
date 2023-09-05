@@ -166,12 +166,24 @@ class Processor:
             for t in self.league.teams
         }
 
+        def get_rating_sorter(p, w):
+            player = self.player_universe.players.get(p)
+            if not player:
+                return 0
+            pos = player.pos
+            rating = player.rating.get(w) or 0
+            if pos in ['TE', 'RP']:
+                return rating * 0.9
+            elif pos in ['DST', 'K']:
+                return rating * 0.6
+            else:
+                return rating
+            
         roster_players = [
             {
                 t.name: sorted(
                     t.get_roster(w),
-                    key=lambda x: self.player_universe.players[x].
-                    rating.get(w) or 0,
+                    key=lambda x: get_rating_sorter(x, w),
                     reverse=True,
                 )
                 for t in self.league.teams
@@ -219,14 +231,16 @@ class Processor:
                 {
                     'week': w,
                     'team': t.name,
-                    'future': round(proj[t.name][n_weeks]['mean'], 1),
-                    'current': round(proj[t.name][w]['mean'], 1),
+                    'proj': [
+                        round(proj[t.name][w + i]['mean'], 1)
+                        for i in range(min(5, n_weeks - w))
+                    ],
                 }
                 for t in self.league.teams
             ]
             projections = sorted(
                 projections,
-                key=lambda x: (x['future'], x['current']),
+                key=lambda x: x['proj'],
                 reverse=True,
             )
             projections_by_week.append(projections)
@@ -312,7 +326,7 @@ class Processor:
         ]
         sos = sorted(
             sos,
-            key=lambda x: (x['current'], x['future']),
+            key=lambda x: (x['current'], -x['future']),
             reverse=True,
         )
         self.league_output['sos'] = sos

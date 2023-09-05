@@ -67,7 +67,7 @@ def get_player_id(name, pos):
 
 
 def get_primary_pos(pos):
-    return fix_spacing(pos.split(',')[0]).upper()
+    return fix_spacing(alphanumeric(pos).split(',')[0]).upper()
 
 
 # correcting positions

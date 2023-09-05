@@ -1,9 +1,9 @@
 # weights used for player rating algorithm
 
 player_rating_mean = 5.0
-player_rating_sd = 2.5
-team_rating_mean = 60
-team_rating_sd = 10
+player_rating_sd = 3.0
+team_rating_mean = 65
+team_rating_sd = 12
 
 stat_list = [
     'proj',
@@ -41,12 +41,11 @@ sharp_weights = {
 }
 
 position_group_list = {
-    'football': ['QB', 'RB', 'WR', 'TE', 'K', 'D/ST'],
+    'football': ['QB', 'RB', 'WR', 'TE', 'K', 'DST'],
     'baseball': ['SP', 'RP', 'B'],
 }
 
 position_group_map = {
-    'football': {},
     'baseball': {
         'SP': 'SP',
         'RP': 'RP',
@@ -61,7 +60,7 @@ position_pool_size = {
         'WR':   50,
         'TE':   20,
         'K':    15,
-        'D/ST': 15,
+        'DST':  15,
     },
     'baseball': {
         'SP':   60,
@@ -72,12 +71,12 @@ position_pool_size = {
 
 team_position_weights = {
     'football': {
-        'QB':   [1.0, 0.3],
-        'RB':   [1.0, 1.0, 0.8, 0.5, 0.3],
-        'WR':   [1.0, 1.0, 0.8, 0.5, 0.3],
-        'TE':   [1.0, 0.3],
+        'QB':   [1.3, 0.3],
+        'RB':   [1.0, 1.0, 0.8, 0.5, 0.2],
+        'WR':   [1.0, 1.0, 0.8, 0.5, 0.2],
+        'TE':   [0.7, 0.2],
         'K':    [0.2],
-        'D/ST': [0.3, 0.2],
+        'DST':  [0.3, 0.1],
     },
     'baseball': {
         'SP':   [1.0, 1.0, 1.0, 0.7, 0.4, 0.2],
@@ -90,10 +89,10 @@ team_position_weights = {
 # get information from above tables
 
 def get_position_group(sport, pos):
-    groups = position_group_map[sport]
-    pos_group = groups.get(pos)
-    default = groups.get('default')
-    return pos_group or default
+    groups = position_group_map.get(sport)
+    if not groups:
+        return pos
+    return groups.get(pos) or groups.get('default')
 
 def get_stat_weight(stat, week, rating_type='normal'):
     weights = sharp_weights if rating_type == 'sharp' else normal_weights

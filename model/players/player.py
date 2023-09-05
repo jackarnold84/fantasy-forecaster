@@ -95,9 +95,9 @@ class Player:
         if rating is None:
             return None
         elif status == 'injured':
-            return rating * 0.6
+            return rating * 0.7
         elif status == 'unhealthy':
-            return rating * 0.8
+            return rating * 0.9
         elif status == 'bye' and rating_type == 'sharp':
             return rating * 0.7
         else:

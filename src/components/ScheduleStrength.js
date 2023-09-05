@@ -25,8 +25,8 @@ const OrdinalText = ({ value, max }) => {
   )
 }
 
-const ScheduleStrength = ({ expectedWins, sos, teamLabels }) => {
-  const [selectedView, setSelectedView] = React.useState('wins')
+const ScheduleStrength = ({ expectedWins, sos, teamLabels, isPreseason }) => {
+  const [selectedView, setSelectedView] = React.useState(isPreseason ? 'points' : 'wins')
   const viewOptions = [
     { display: 'Expected Wins', value: 'wins' },
     { display: 'Points Against', value: 'points' },

@@ -2,7 +2,7 @@ import * as React from "react"
 
 const PlayerImage = ({ name, pos, img }) => {
   return (
-    <span className="tooltip">
+    <span className="tooltip" style={{ minWidth: '46px' }}>
       <img
         src={img}
         height={30}

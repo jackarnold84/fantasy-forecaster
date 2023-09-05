@@ -289,12 +289,17 @@ class DataFetcher:
 
         for soup in soup_pages:
             joined_tables = soup.select('.Table')
-            player_table_rows = joined_tables[0].select_one(
-                'tbody').select('tr')
-            stats_table_rows = joined_tables[1].select_one(
-                'tbody').select('tr')
-            points_table_rows = joined_tables[2].select_one(
-                'tbody').select('tr')
+            joined_tbodies = [t.select_one('tbody') for t in joined_tables]
+            if len(joined_tbodies) > 1:
+                # separate tables
+                player_table_rows = joined_tbodies[0].select('tr')
+                stats_table_rows = joined_tbodies[1].select('tr')
+                points_table_rows = joined_tbodies[2].select('tr')
+            else:
+                # singular tables
+                player_table_rows = joined_tbodies[0].select('tr')
+                stats_table_rows = player_table_rows
+                points_table_rows = player_table_rows
 
             for i in range(len(player_table_rows)):
                 player_row = player_table_rows[i]
@@ -317,13 +322,16 @@ class DataFetcher:
                     injury_holder.text
                 ) if injury_holder else None
 
-                # TODO: update class for score, projections (football specific)
-                prev_score_holder = points_row.select_one('.todo-prev-score')
-                prev_score = parse_float(
-                    prev_score_holder.text
-                ) if prev_score_holder else None
-                proj_holder = points_row.select_one('.todo-proj')
-                proj = parse_float(proj_holder.text) if proj_holder else None
+                # score, projections (football specific)
+                prev_score = None
+                proj = None
+                if self.sport == 'football':
+                    game_status = points_row.select_one('.game-status-inline') \
+                        or points_row.select_one('.game-status')
+                    proj_holder = game_status.find_next('div')
+                    prev_score_holder = proj_holder.find_next('div')
+                    proj = parse_float(proj_holder.text)
+                    prev_score = parse_float(prev_score_holder.text)
 
                 roster = parse_float(stats_row.select_one('.own').text, 0)
                 roster_change = parse_float(

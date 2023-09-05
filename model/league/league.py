@@ -48,7 +48,7 @@ class League:
             Team(
                 x['id'], x['manager'], x['team_name'], x['abbrev'],
                 x['division'], x['img'], self.week, schedule_records,
-                roster_records, draft_records, self.player_universe,
+                roster_records, draft_records, self.n_teams, self.player_universe,
             )
             for x in member_records
         ]
@@ -123,17 +123,18 @@ class League:
 
             # compute mixed ratings
             if valid_ratings:
-                r1 = np.mean([mle_proj, sharp_rating_proj])
-                r2 = np.mean(
-                    [mle_proj, np.mean([sharp_rating_proj, rating_proj])]
-                )
-                r3 = np.mean([mle_proj, rating_proj])
-                projections[t.name][week] = {'mean': r1, 'sd': score_sd}
-                projections[t.name][week + 1] = {'mean': r2, 'sd': score_sd}
-                for w in range(week + 2, self.n_total_weeks + 1):
-                    projections[t.name][w] = {'mean': r3, 'sd': score_sd}
+                for i in range(0, self.n_total_weeks - week + 1):
+                    w = week + i
+                    r = sharp_rating_proj if i == 0 else rating_proj
+                    mixed_proj = 0.5 * (0.95**i) * mle_proj + \
+                        0.5 * (0.85**i) * r + \
+                        (1 - 0.5*0.95**i - 0.5*0.85**i) * score_mean
+                    projections[t.name][w] = {'mean': mixed_proj, 'sd': score_sd}
             else:
-                for w in range(week, self.n_total_weeks + 1):
-                    projections[t.name][w] = {'mean': mle_proj, 'sd': score_sd}
+                for i in range(0, self.n_total_weeks - week + 1):
+                    w = week + i
+                    mixed_proj = 0.5 * (0.9**i) * mle_proj + \
+                        (1 - 0.5*0.9**i) * score_mean
+                    projections[t.name][w] = {'mean': mixed_proj, 'sd': score_sd}
 
         return projections
