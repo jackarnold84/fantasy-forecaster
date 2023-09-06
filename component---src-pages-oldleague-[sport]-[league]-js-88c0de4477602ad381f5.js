@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfantasy_forecaster=self.webpackChunkfantasy_forecaster||[]).push([[214],{7966:function(e,t,a){a.r(t),a.d(t,{Head:function(){return c}});var n=a(7294),r=a(1728),l=a(2437),s=a(3354),u=a(429);t.default=e=>{const t=e.params.sport,a=e.params.league;return t in r&&a in r[t]?n.createElement(l.Z,null,n.createElement(s.Z,{sportTag:t,leagueTag:a})):n.createElement(u.default,null)};const c=()=>n.createElement("title",null,"Fantasy Forecaster")}}]);
+//# sourceMappingURL=component---src-pages-oldleague-[sport]-[league]-js-88c0de4477602ad381f5.js.map
