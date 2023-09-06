@@ -38,7 +38,7 @@ class Processor:
                 'name': league.name,
                 'sport': league.sport,
                 'year': league.year,
-                'tag': f'{self.sport_tag}/{self.leauge_tag}',
+                'tag': self.leauge_tag,
                 'week': self.week,
             },
             'teams': self.teams_output,
@@ -178,7 +178,7 @@ class Processor:
                 return rating * 0.6
             else:
                 return rating
-            
+
         roster_players = [
             {
                 t.name: sorted(

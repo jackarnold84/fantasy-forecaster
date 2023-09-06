@@ -3,6 +3,7 @@ import leagueArchive from "../../data/leagueArchive.json"
 import output from "../../data/output.json"
 import Layout from "../components/Layout"
 import Container from "../components/elements/Container"
+import archive from "../images/sports/archive.png"
 import baseball from "../images/sports/baseball.png"
 import basketball from "../images/sports/basketball.png"
 import football from "../images/sports/football.png"
@@ -12,6 +13,7 @@ const iconMap = {
   baseball,
   football,
   basketball,
+  archive,
 }
 
 const NavRow = ({ text, sport, path }) => (
@@ -39,8 +41,8 @@ const IndexPage = () => {
             <NavRow
               text={`${league.name} Fantasy ${capitalize(league.sport)} (${league.year})`}
               sport={league.sport}
-              path={`league/${league.tag}`}
-              key={league.tag}
+              path={`league/?sport=${league.sport}-${league.year}&tag=${league.tag}`}
+              key={`${league.sport}-${league.year}-${league.tag}`}
             />
           ))}
         </div>
@@ -54,7 +56,7 @@ const IndexPage = () => {
           {leagueArchive.leagues.map(league => (
             <NavRow
               text={league.name}
-              sport={league.sport}
+              sport="archive"
               path={league.link}
               key={league.name}
             />
