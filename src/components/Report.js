@@ -47,6 +47,7 @@ const Report = ({ sportTag, leagueTag }) => {
       <Standings
         standings={leageData.league.standings}
         teamLabels={teamLabels}
+        isPreseason={week <= 1}
       />
 
       <UpcomingGames

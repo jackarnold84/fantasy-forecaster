@@ -119,7 +119,7 @@ class Processor:
                     points[home] += home_score
                     points[away] += away_score
         league_order = sorted(
-            wins, key=lambda t: (wins[t], points[t]), reverse=True,
+            wins, key=lambda t: (wins[t], points[t], t), reverse=True,
         )
         division_order = {
             d: [t for t in league_order if self.league.team_divisions[t] == d]

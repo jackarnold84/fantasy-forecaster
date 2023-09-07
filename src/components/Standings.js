@@ -2,7 +2,7 @@ import * as React from "react"
 import Container from "./elements/Container"
 import SectionTitle from "./elements/SectionTitle"
 
-const Standings = ({ standings, teamLabels }) => {
+const Standings = ({ standings, teamLabels, isPreseason }) => {
   return (
     <Container size={16}>
       <SectionTitle>Standings</SectionTitle>
@@ -20,7 +20,7 @@ const Standings = ({ standings, teamLabels }) => {
             {
               standings.league.map(x => (
                 <tr key={x.rank}>
-                  <td>{x.rank}</td>
+                  <td>{isPreseason ? 1 : x.rank}</td>
                   <td />
                   <td>{teamLabels[x.team]}</td>
                   <td>{x.wins}</td>
