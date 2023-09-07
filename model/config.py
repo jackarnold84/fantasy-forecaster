@@ -18,6 +18,25 @@ leagues = {
                 'score_sd': 24,
                 'team_sd': 9,
             }
+        },
+        'mfl': {
+            'name': 'MFL',
+            'league_tag': 'mfl',
+            'sport_tag': 'football-2023',
+            'league_id': '522384933',
+            'player_metrics': True,
+            'teams': 10,
+            'playoff_teams': 4,
+            'divisions': False,
+            'weeks_per_playoff_matchup': 2,
+            'total_weeks': 18,
+            'regular_season_weeks': 14,
+            'n_iter': 20000,
+            'model_params': {
+                'score_mean': 121,
+                'score_sd': 24,
+                'team_sd': 10,
+            }
         }
     },
     'baseball-2023': {

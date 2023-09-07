@@ -174,9 +174,9 @@ week,manager_id,slot_idx,player_id,aquired
 1,1,11,davidmontgomery-RB,Draft
 1,1,12,georgepickens-WR,Draft
 1,1,13,skyymoore-WR,Draft
-1,1,14,allenlazard-WR,Draft
-1,1,15,kadariustoney-WR,Draft
-1,1,16,anthonyrichardson-QB,Free Agency
+1,1,14,kadariustoney-WR,Draft
+1,1,15,anthonyrichardson-QB,Free Agency
+1,1,16,chigoziemokonkwo-TE,Free Agency
 1,2,1,joshallen-QB,Draft
 1,2,2,bijanrobinson-RB,Draft
 1,2,3,jamescook-RB,Draft
@@ -215,17 +215,17 @@ week,manager_id,slot_idx,player_id,aquired
 1,4,3,rachaadwhite-RB,Draft
 1,4,4,amonrastbrown-WR,Draft
 1,4,5,keenanallen-WR,Draft
-1,4,6,traviskelce-TE,Draft
+1,4,6,noahgray-TE,Free Agency
 1,4,7,alexandermattison-RB,Draft
 1,4,8,dolphinsdst-DST,Draft
 1,4,9,danielcarlson-K,Draft
-1,4,10,tylerlockett-WR,Draft
-1,4,11,brandonaiyuk-WR,Draft
-1,4,12,jakobimeyers-WR,Draft
-1,4,13,antoniogibson-RB,Draft
-1,4,14,tuatagovailoa-QB,Draft
-1,4,15,samajeperine-RB,Draft
-1,4,16,juwanjohnson-TE,Free Agency
+1,4,10,traviskelce-TE,Draft
+1,4,11,tylerlockett-WR,Draft
+1,4,12,brandonaiyuk-WR,Draft
+1,4,13,jakobimeyers-WR,Draft
+1,4,14,antoniogibson-RB,Draft
+1,4,15,tuatagovailoa-QB,Draft
+1,4,16,samajeperine-RB,Draft
 1,5,1,deshaunwatson-QB,Draft
 1,5,2,derrickhenry-RB,Draft
 1,5,3,aaronjones-RB,Draft
@@ -274,22 +274,22 @@ week,manager_id,slot_idx,player_id,aquired
 1,7,14,adamthielen-WR,Draft
 1,7,15,tylerhigbee-TE,Draft
 1,7,16,devinsingletary-RB,Draft
-1,8,1,justinherbert-QB,Draft
+1,8,1,russellwilson-QB,Draft
 1,8,2,nickchubb-RB,Draft
 1,8,3,jahmyrgibbs-RB,Draft
-1,8,4,cooperkupp-WR,Draft
-1,8,5,devontasmith-WR,Draft
+1,8,4,devontasmith-WR,Draft
+1,8,5,drakelondon-WR,Draft
 1,8,6,dallasgoedert-TE,Draft
 1,8,7,dameonpierce-RB,Draft
 1,8,8,cowboysdst-DST,Draft
 1,8,9,jakeelliott-K,Draft
-1,8,10,drakelondon-WR,Draft
+1,8,10,justinherbert-QB,Draft
 1,8,11,jahandotson-WR,Draft
 1,8,12,brianrobinsonjr-RB,Draft
 1,8,13,treylonburks-WR,Draft
 1,8,14,jerickmckinnon-RB,Draft
-1,8,15,russellwilson-QB,Draft
-1,8,16,elijahmoore-WR,Draft
+1,8,15,elijahmoore-WR,Draft
+1,8,17,cooperkupp-WR,Draft
 1,9,1,joeburrow-QB,Draft
 1,9,2,saquonbarkley-RB,Draft
 1,9,3,travisetiennejr-RB,Draft

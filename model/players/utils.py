@@ -24,7 +24,7 @@ def bound(x, min_val, max_val):
 def z_score(x, mean, sd, new_mean=0, new_sd=1):
     if x is None or mean is None or sd is None:
         return None
-    z = (x - mean) / sd
+    z = (x - mean) / max(sd, 0.001)
     return z*new_sd + new_mean
 
 

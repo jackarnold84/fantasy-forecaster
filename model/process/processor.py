@@ -378,7 +378,7 @@ class Processor:
                 'team': p.team,
                 'img': p.img,
                 'status': p.get_status(self.week),
-                'ratings': [safe_round(p.get_rating(w), 2) for w in range(0, self.week)],
+                'ratings': [safe_round(p.get_rating(w), 2) for w in range(0, self.week + 1)],
             }
             for p in self.player_universe.players.values()
         }

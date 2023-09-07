@@ -9,7 +9,7 @@ def get_team_name(manager_name, use_alias=True):
     first_name = split[0][0:10]
     last_name = split[1] if len(split) > 1 else ''
     if last_name:
-        return f'{first_name.capitalize()} {last_name[1].upper()}'
+        return f'{first_name.capitalize()} {last_name[0].upper()}'
     else:
         return f'{first_name.capitalize()}'
 
