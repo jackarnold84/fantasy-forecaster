@@ -1,14 +1,14 @@
 week,matchup_idx,playoff,home,home_score,away,away_score
-1,1,False,Tim Zhou,0.0,Josh K,0.0
-1,2,False,Joey Attardo,0.0,Tony Choe,0.0
-1,3,False,Nicholas Rosenorn,0.0,CG Tanner,0.0
-1,4,False,Shiv Patel,0.0,Kaiwen Shen,0.0
-1,5,False,Rohan Shahani,0.0,Jack Arnold,0.0
-2,1,False,Josh K,,Tony Choe,
-2,2,False,CG Tanner,,Tim Zhou,
-2,3,False,Kaiwen Shen,,Joey Attardo,
-2,4,False,Jack Arnold,,Nicholas Rosenorn,
-2,5,False,Rohan Shahani,,Shiv Patel,
+1,1,False,Tim Zhou,92.4,Josh K,102.54
+1,2,False,Joey Attardo,119.24,Tony Choe,66.16
+1,3,False,Nicholas Rosenorn,77.94,CG Tanner,137.38
+1,4,False,Shiv Patel,128.14,Kaiwen Shen,117.28
+1,5,False,Rohan Shahani,123.86,Jack Arnold,105.96
+2,1,False,Josh K,0.0,Tony Choe,0.0
+2,2,False,CG Tanner,0.0,Tim Zhou,0.0
+2,3,False,Kaiwen Shen,0.0,Joey Attardo,0.0
+2,4,False,Jack Arnold,0.0,Nicholas Rosenorn,0.0
+2,5,False,Rohan Shahani,0.0,Shiv Patel,0.0
 3,1,False,CG Tanner,,Josh K,
 3,2,False,Tony Choe,,Kaiwen Shen,
 3,3,False,Tim Zhou,,Jack Arnold,

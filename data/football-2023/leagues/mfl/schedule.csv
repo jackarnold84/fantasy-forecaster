@@ -1,14 +1,14 @@
 week,matchup_idx,playoff,home,home_score,away,away_score
-1,1,False,Ian Killion,0.0,Jack Arnold,0.0
-1,2,False,Jacob Moza,0.0,Jack Brennan,0.0
-1,3,False,Kyle Killion,0.0,Levi Killion,0.0
-1,4,False,Jake Walters,0.0,Jaden Glascock,0.0
-1,5,False,Jake Martin,0.0,Drew Fuiten,0.0
-2,1,False,Jack Arnold,,Jack Brennan,
-2,2,False,Levi Killion,,Ian Killion,
-2,3,False,Jaden Glascock,,Jacob Moza,
-2,4,False,Drew Fuiten,,Kyle Killion,
-2,5,False,Jake Martin,,Jake Walters,
+1,1,False,Ian Killion,108.34,Jack Arnold,111.96
+1,2,False,Jacob Moza,116.64,Jack Brennan,116.68
+1,3,False,Kyle Killion,101.26,Levi Killion,105.5
+1,4,False,Jake Walters,89.94,Jaden Glascock,133.02
+1,5,False,Jake Martin,91.6,Drew Fuiten,101.68
+2,1,False,Jack Arnold,0.0,Jack Brennan,0.0
+2,2,False,Levi Killion,0.0,Ian Killion,0.0
+2,3,False,Jaden Glascock,0.0,Jacob Moza,0.0
+2,4,False,Drew Fuiten,0.0,Kyle Killion,0.0
+2,5,False,Jake Martin,0.0,Jake Walters,0.0
 3,1,False,Levi Killion,,Jack Arnold,
 3,2,False,Jack Brennan,,Jaden Glascock,
 3,3,False,Ian Killion,,Drew Fuiten,
