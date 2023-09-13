@@ -44,8 +44,10 @@ class Player:
                 self.injury[week] = parse_value(x['injury'])
                 self.opp[week] = parse_value(x['opp'])  # TODO: bye weeks
                 if prev_week:
-                    self.score[prev_week] = parse_value(x['prev_score'], float)
-                self.proj[week] = parse_value(x['proj'], float)
+                    prev_score = parse_value(x['prev_score'], float) or 0
+                    self.score[prev_week] = prev_score if prev_score > 0 else None
+                proj = parse_value(x['proj'], float) or 0
+                self.proj[week] = proj if proj > 0 else None
                 self.roster[week] = parse_value(x['roster'], float)
                 self.roster_change[week] = parse_value(
                     x['roster_change'], float
@@ -95,7 +97,7 @@ class Player:
         if rating is None:
             return None
         elif status == 'injured':
-            return rating * 0.7
+            return rating * 0.8
         elif status == 'unhealthy':
             return rating * 0.9
         elif status == 'bye' and rating_type == 'sharp':

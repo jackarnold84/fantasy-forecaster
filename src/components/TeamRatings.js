@@ -63,7 +63,7 @@ const TeamRatings = ({ ratings, rosters, players, week }) => {
             {selectedRatings.map(x => {
               const fullRoster = selectedRosters[x.team]
               const filteredRoster = fullRoster.filter(
-                x => selectedPosition === 'OVR' || players[x]?.group === selectedPosition
+                p => players[p] && (selectedPosition === 'OVR' || players[p]?.group === selectedPosition)
               )
 
               return (

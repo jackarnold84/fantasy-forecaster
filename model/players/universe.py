@@ -32,6 +32,8 @@ class PlayerUniverse:
 
         # fill players
         for x in info_records:
+            if x['id'] not in stat_records_by_id:
+                continue
             self.players[x['id']] = Player(
                 self.sport, x['id'], x['name'],
                 x['pos'], x['team'], x['img'],
@@ -108,7 +110,7 @@ class PlayerUniverse:
                 p for p in players if p in self.players and self.players[p].pos_group == pos
             ]
             ratings = [
-                self.players[p].get_rating(week, rating_type) for p in eval_group
+                self.players[p].get_rating(week, rating_type) or 0 for p in eval_group
             ]
             ratings = sorted(ratings, reverse=True)
             for i, r in enumerate(ratings):

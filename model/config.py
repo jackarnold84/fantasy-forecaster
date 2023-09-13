@@ -15,7 +15,7 @@ leagues = {
             'n_iter': 20000,
             'model_params': {
                 'score_mean': 122,
-                'score_sd': 24,
+                'score_sd': 25,
                 'team_sd': 9,
             }
         },

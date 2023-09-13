@@ -131,7 +131,7 @@ class Processor:
                 'team': t,
                 'rank': i + 1,
                 'wins': wins[t],
-                'avg': round(points[t] / (self.week or 1), 1)
+                'avg': round(points[t] / (self.week - 1), 1)
             }
             for i, t in enumerate(league_order)
         ]
