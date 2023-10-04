@@ -1,53 +1,75 @@
-import sys
+import time
+from model.config import leagues
 from model.fetch.fetcher import DataFetcher
 from model.league.league import League
 from model.process.processor import Processor
-from model.config import leagues
 
 
-# read arguments
-args = [a.lower() for a in sys.argv]
+def input_selection(options):
+    for i, l in enumerate(options):
+        print(f'({i + 1}) {l}')
+
+    while True:
+        sel = input('enter number: ')
+        if sel.lower() == 'q':
+            exit(1)
+        try:
+            idx = int(sel) - 1
+            choice = options[idx]
+            print()
+            return choice
+        except:
+            print('--> invalid choice (enter q to quit)')
+
+
+print('--- select a sport ---')
+sport_options = list(leagues.keys())
+sport_tag = input_selection(sport_options)
+
+print('--- select a league ---')
+league_options = list(leagues[sport_tag].keys())
+league_tag = input_selection(league_options)
+
+print('--- upcoming week ---')
+week = input('enter week: ')
 try:
-    action = args[1]
-    assert action in ['fetch', 'sim']
-    sport_tag = args[2]
-    league_tag = args[3]
-    week = int(args[4])
-    flags = args[5:]
+    week = int(week)
+    assert week >= 0
+    print()
 except:
-    print('error: invalid arguments')
-    print('  run.py fetch <sport> <league> <week>    # fetch data from ESPN')
-    print('    [--league-only]')
-    print('    [--players-only]')
-    print('    [--draft]')
-    print('  run.py sim <sport> <league> <week>      # run model simulation')
+    print('--> invalid week recieved')
     exit(1)
 
+fetcher = DataFetcher(sport_tag, league_tag, week)
+print('--> initialized')
+print()
 
-# validate sport + league exists
-valid_leauges = [f'{x} {y}' for x in leagues for y in leagues[x]]
-if (
-    sport_tag not in leagues or
-    league_tag not in leagues[sport_tag]
-):
-    print('error: league not found')
-    print('  leagues:', valid_leauges)
-    exit(1)
+while True:
+    print(f'{sport_tag} {league_tag} week={week}')
+    print('--- select an action ---')
+    action_options = [
+        'sim',
+        'fetch league data',
+        'fetch player data',
+        'fetch draft data',
+        'quit',
+    ]
+    action = input_selection(action_options)
 
-
-# actions
-if action == 'fetch':
-    fetcher = DataFetcher(sport_tag, league_tag, week)
-    if '--draft' in flags:
+    if action == 'sim':
+        league = League(sport_tag, league_tag, week)
+        processor = Processor(league)
+    elif action == 'fetch league data':
+        fetcher.fetch_schedule()
+        fetcher.fetch_members()
+        fetcher.fetch_rosters()
+    elif action == 'fetch player data':
+        fetcher.fetch_players()
+    elif action == 'fetch draft data':
+        fetcher.fetch_players()
         fetcher.fetch_draft()
     else:
-        if '--players-only' not in flags:
-            fetcher.fetch_schedule()
-            fetcher.fetch_members()
-            fetcher.fetch_rosters()
-        if '--league-only' not in flags:
-            fetcher.fetch_players()
-
-elif action == 'sim':
-    league = League(sport_tag, league_tag, week)
-    processor = Processor(league)
+        print('--> exiting')
+        exit(0)
+    print('done.\n')
+    time.sleep(0.5)
