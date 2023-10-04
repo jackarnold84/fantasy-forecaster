@@ -126,9 +126,9 @@ class League:
                 for i in range(0, self.n_total_weeks - week + 1):
                     w = week + i
                     r = sharp_rating_proj if i == 0 else rating_proj
-                    mixed_proj = 0.5 * (0.85**i) * mle_proj + \
+                    mixed_proj = 0.5 * (0.8**i) * mle_proj + \
                         0.5 * (0.85**i) * r + \
-                        (1 - 0.5*0.85**i - 0.5*0.85**i) * score_mean
+                        (1 - 0.5*0.8**i - 0.5*0.85**i) * score_mean
                     projections[t.name][w] = {'mean': mixed_proj, 'sd': score_sd}
             else:
                 for i in range(0, self.n_total_weeks - week + 1):
