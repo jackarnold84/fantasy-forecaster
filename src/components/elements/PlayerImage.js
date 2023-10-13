@@ -6,7 +6,7 @@ const PlayerImage = ({ name, pos, img }) => {
       <img
         src={img}
         height={30}
-        alt={name}
+        alt={''}
         style={{ verticalAlign: 'top', padding: '0px 2px' }}
       />
       <div className="tooltiptext">

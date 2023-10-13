@@ -13,14 +13,14 @@ import TeamLabel from "./elements/TeamLabel"
 
 const Report = ({ sportTag, leagueTag }) => {
 
-  const leageData = output[sportTag][leagueTag]
-  const leagueName = leageData.meta.name
-  const sport = capitalize(leageData.meta.sport)
-  const year = leageData.meta.year
-  const week = parseInt(leageData.meta.week)
+  const leagueData = output[sportTag][leagueTag]
+  const leagueName = leagueData.meta.name
+  const sport = capitalize(leagueData.meta.sport)
+  const year = leagueData.meta.year
+  const week = parseInt(leagueData.meta.week)
 
   const teamLabels = Object.fromEntries(
-    Object.values(leageData.teams.metadata).map(meta => (
+    Object.values(leagueData.teams.metadata).map(meta => (
       [
         meta.name,
         <TeamLabel meta={meta} />
@@ -45,38 +45,38 @@ const Report = ({ sportTag, leagueTag }) => {
       </div>
 
       <Standings
-        standings={leageData.league.standings}
+        standings={leagueData.league.standings}
         teamLabels={teamLabels}
         isPreseason={week <= 1}
       />
 
       <UpcomingGames
-        matchupImportance={leageData.league.matchupImportance}
+        matchupImportance={leagueData.league.matchupImportance}
         teamLabels={teamLabels}
         week={week}
       />
 
       <Forecasts
-        forecasts={leageData.league.forecasts}
+        forecasts={leagueData.league.forecasts}
         week={week}
       />
 
       <TeamRatings
-        ratings={leageData.teams.ratings}
-        rosters={leageData.teams.roster.players}
-        players={leageData.players}
+        ratings={leagueData.teams.ratings}
+        rosters={leagueData.teams.roster.players}
+        players={leagueData.players}
         week={week}
       />
 
       <Betting
-        forecasts={leageData.league.forecasts}
+        forecasts={leagueData.league.forecasts}
         week={week}
         teamLabels={teamLabels}
       />
 
       <ScheduleStrength
-        expectedWins={leageData.league.expectedWins}
-        sos={leageData.league.sos}
+        expectedWins={leagueData.league.expectedWins}
+        sos={leagueData.league.sos}
         teamLabels={teamLabels}
         isPreseason={week <= 1}
       />
@@ -84,7 +84,7 @@ const Report = ({ sportTag, leagueTag }) => {
       {
         week > 1 &&
         <TimeForecasts
-          forecasts={leageData.league.forecasts}
+          forecasts={leagueData.league.forecasts}
           teamLabels={teamLabels}
         />
       }
