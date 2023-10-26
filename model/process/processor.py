@@ -106,6 +106,8 @@ class Processor:
     def get_standings(self):
         wins = {t: 0 for t in self.teams}
         points = {t: 0 for t in self.teams}
+        h2h = {t1: {t2: 0 for t2 in self.teams} for t1 in self.teams}
+        h2h_breaker = {t: 0 for t in self.teams}
         for w in self.league.schedule:
             for x in self.league.schedule[w]:
                 home = x['home']
@@ -113,13 +115,27 @@ class Processor:
                 if w < self.week:
                     home_score = x['home_score']
                     away_score = x['away_score']
-                    home_win = home_score >= away_score
-                    wins[home] += 1 if home_win else 0
-                    wins[away] += 0 if home_win else 1
+                    home_win = home_score > away_score
+                    away_win = away_score > home_score
+                    home_result = 1 if home_win else 0 if away_win else 0.5
+                    away_result = 0 if home_win else 1 if away_win else 0.5
+                    wins[home] += home_result
+                    wins[away] += away_result
+                    h2h[home][away] += home_result
+                    h2h[away][home] += away_result
                     points[home] += home_score
                     points[away] += away_score
+
+        if self.league.use_h2h:
+            buckets = {}
+            for t in wins:
+                buckets[wins[t]] = buckets.get(wins[t], []) + [t]
+            for teams in buckets.values():
+                for t in teams:
+                    h2h_breaker[t] = sum([h2h[t][o] for o in teams])
+
         league_order = sorted(
-            wins, key=lambda t: (wins[t], points[t], t), reverse=True,
+            wins, key=lambda t: (wins[t], h2h_breaker[t], points[t]), reverse=True,
         )
         division_order = {
             d: [t for t in league_order if self.league.team_divisions[t] == d]

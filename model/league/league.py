@@ -19,6 +19,7 @@ class League:
         self.league_tag = league_tag
         self.name = league_config['name']
         self.use_divisions = league_config['divisions']
+        self.use_h2h = league_config['tiebreaker'] == 'h2h'
         self.n_teams = league_config['teams']
         self.n_playoff_teams = league_config['playoff_teams']
         self.n_weeks_per_playoff_matchup = league_config['weeks_per_playoff_matchup']
@@ -78,6 +79,7 @@ class League:
                 Simulation(
                     w, self.teams, self.schedule,
                     proj, self.team_divisions, self.divisions,
+                    self.use_h2h,
                     self.n_regular_season_weeks,
                     self.n_playoff_teams,
                     self.n_weeks_per_playoff_matchup,

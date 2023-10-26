@@ -5,13 +5,8 @@ from model.config import aliases
 def get_team_name(manager_name, use_alias=True):
     if use_alias and manager_name in aliases:
         return aliases[manager_name]
-    split = manager_name.split(' ', 1)
-    first_name = split[0][0:10]
-    last_name = split[1] if len(split) > 1 else ''
-    if last_name:
-        return f'{first_name.capitalize()} {last_name[0].upper()}'
-    else:
-        return f'{first_name.capitalize()}'
+    first_name = manager_name.split(' ')[0][0:10]
+    return first_name.lower().capitalize()
 
 
 # z score

@@ -42,6 +42,16 @@ def parse_float(x, default=None):
         return default
 
 
+def parse_score(x, default=None):
+    if '-' in x:
+        w, _, t = x.split('-')
+        try:
+            return parse_float(w) + (parse_float(t) * 0.5)
+        except:
+            pass
+    return parse_float(x, default)
+
+
 def parse_int(x, default=None):
     try:
         return int(x)
@@ -67,7 +77,7 @@ def get_player_id(name, pos):
 
 
 def get_primary_pos(pos):
-    return fix_spacing(alphanumeric(pos).split(',')[0]).upper()
+    return fix_spacing(alphanumeric(pos.split(',')[0])).upper()
 
 
 # correcting positions

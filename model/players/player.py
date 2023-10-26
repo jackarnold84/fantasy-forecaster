@@ -48,12 +48,10 @@ class Player:
                     self.score[prev_week] = prev_score if prev_score > 0 else None
                 proj = parse_value(x['proj'], float) or 0
                 self.proj[week] = proj if proj > 0 else None
-                self.roster[week] = parse_value(x['roster'], float)
-                self.roster_change[week] = parse_value(
-                    x['roster_change'], float
-                )
                 self.total[week] = parse_value(x['total_pts'], float)
                 self.avg[week] = parse_value(x['avg_pts'], float)
+            self.roster[week] = parse_value(x['roster'], float)
+            self.roster_change[week] = parse_value(x['roster_change'], float)
 
         # fill missing season stats
         max_week = max([x['week'] for x in stat_records])

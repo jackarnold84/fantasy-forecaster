@@ -11,7 +11,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from model.credentials import path_to_chromedriver
 from model.fetch.utils import (
-    get_urls, get_data_paths, parse_float, parse_int,
+    get_urls, get_data_paths, parse_float, parse_score, parse_int,
     clean_text, clean_symbol, get_player_id, get_primary_pos,
     player_pos_mapper,
 )
@@ -99,9 +99,9 @@ class DataFetcher:
                     'matchup_idx': j + 1,
                     'playoff': 'playoff' in table_caption.text.lower(),
                     'home': clean_text(entries[4].text),
-                    'home_score': parse_float(entries[3].text),
+                    'home_score': parse_score(entries[3].text),
                     'away': clean_text(entries[1].text),
-                    'away_score': parse_float(entries[2].text),
+                    'away_score': parse_score(entries[2].text),
                 })
 
         path = self.path['schedule']
@@ -125,6 +125,8 @@ class DataFetcher:
         tbody = members_table.select_one('tbody')
         for row in tbody.select('tr'):
             entries = row.select('td')
+            if not entries[0].text:
+                continue
             team_logo_holder = row.select_one('.team-logo')
             team_logo = team_logo_holder.select_one('img').attrs['src']
             members_data.append({
@@ -290,13 +292,15 @@ class DataFetcher:
         for soup in soup_pages:
             joined_tables = soup.select('.Table')
             joined_tbodies = [t.select_one('tbody') for t in joined_tables]
-            if len(joined_tbodies) > 1:
-                # separate tables
+            if len(joined_tbodies) == 3:
                 player_table_rows = joined_tbodies[0].select('tr')
                 stats_table_rows = joined_tbodies[1].select('tr')
                 points_table_rows = joined_tbodies[2].select('tr')
+            elif len(joined_tables) == 2:
+                player_table_rows = joined_tbodies[0].select('tr')
+                stats_table_rows = joined_tbodies[1].select('tr')
+                points_table_rows = stats_table_rows
             else:
-                # singular tables
                 player_table_rows = joined_tbodies[0].select('tr')
                 stats_table_rows = player_table_rows
                 points_table_rows = player_table_rows
@@ -338,10 +342,13 @@ class DataFetcher:
                     stats_row.select_one('.poc').text, 0
                 )
 
-                total_pts = parse_float(
-                    points_row.select_one('.total').text, 0
-                )
-                avg_pts = parse_float(points_row.select_one('.avg').text, 0)
+                total_pts = None
+                avg_pts = None
+                total_pts_holder = points_row.select_one('.total')
+                avg_pts_holder = points_row.select_one('.avg')
+                if total_pts_holder and avg_pts_holder:
+                    total_pts = parse_float(total_pts_holder.text, 0)
+                    avg_pts = parse_float(avg_pts_holder.text, 0)
 
                 # fill data
                 player_id = get_player_id(name, pos)

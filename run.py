@@ -15,6 +15,7 @@ def input_selection(options):
             exit(1)
         try:
             idx = int(sel) - 1
+            assert idx >= 0
             choice = options[idx]
             print()
             return choice
@@ -66,7 +67,6 @@ while True:
     elif action == 'fetch player data':
         fetcher.fetch_players()
     elif action == 'fetch draft data':
-        fetcher.fetch_players()
         fetcher.fetch_draft()
     else:
         print('--> exiting')
