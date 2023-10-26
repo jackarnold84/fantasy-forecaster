@@ -1125,3 +1125,333 @@ week,manager_id,slot_idx,player_id,aquired
 6,10,14,treylonburks-WR,Draft
 6,10,15,danieljones-QB,Draft
 6,10,16,tylerhigbee-TE,Draft
+7,1,1,jalenhurts-QB,Draft
+7,1,2,joshjacobs-RB,Draft
+7,1,3,dandreswift-RB,Draft
+7,1,4,chrisgodwin-WR,Draft
+7,1,5,brandonaiyuk-WR,Draft
+7,1,6,darrenwaller-TE,Draft
+7,1,7,jerryjeudy-WR,Draft
+7,1,8,billsdst-DST,Draft
+7,1,9,evanmcpherson-K,Draft
+7,1,10,jamarrchase-WR,Draft
+7,1,11,breecehall-RB,Draft
+7,1,12,jaredgoff-QB,Draft
+7,1,13,allenlazard-WR,Draft
+7,1,14,joshuakelley-RB,Free Agency
+7,1,15,adamthielen-WR,Free Agency
+7,1,16,romeodoubs-WR,Free Agency
+7,2,1,matthewstafford-QB,Free Agency
+7,2,2,austinekeler-RB,Draft
+7,2,3,zackmoss-RB,Free Agency
+7,2,4,garrettwilson-WR,Draft
+7,2,5,ajbrown-WR,Draft
+7,2,6,markandrews-TE,Draft
+7,2,7,deandrehopkins-WR,Draft
+7,2,8,eaglesdst-DST,Draft
+7,2,9,tylerbass-K,Draft
+7,2,10,jamescook-RB,Draft
+7,2,11,dalvincook-RB,Draft
+7,2,12,michaelthomas-WR,Draft
+7,2,13,darnellmooney-WR,Draft
+7,2,14,zachcharbonnet-RB,Draft
+7,2,15,genosmith-QB,Draft
+7,2,16,justicehill-RB,Free Agency
+7,2,17,jamesconner-RB,Draft
+7,3,1,brockpurdy-QB,Free Agency
+7,3,2,saquonbarkley-RB,Draft
+7,3,3,isiahpacheco-RB,Draft
+7,3,4,cooperkupp-WR,Draft
+7,3,5,djmoore-WR,Draft
+7,3,6,samlaporta-TE,Free Agency
+7,3,7,calvinridley-WR,Draft
+7,3,8,ravensdst-DST,Free Agency
+7,3,9,jakemoody-K,Free Agency
+7,3,10,jahmyrgibbs-RB,Draft
+7,3,11,christianwatson-WR,Draft
+7,3,12,khalilherbert-RB,Draft
+7,3,13,cowboysdst-DST,Draft
+7,3,14,daltonkincaid-TE,Draft
+7,3,15,cjstroud-QB,Free Agency
+7,3,16,camakers-RB,Free Agency
+7,3,17,devonachane-RB,Free Agency
+7,4,1,joshallen-QB,Draft
+7,4,2,brianrobinsonjr-RB,Draft
+7,4,3,tyjaespears-RB,Free Agency
+7,4,4,keenanallen-WR,Draft
+7,4,5,kjosborn-WR,Free Agency
+7,4,6,tjhockenson-TE,Draft
+7,4,7,davidmontgomery-RB,Draft
+7,4,8,49ersdst-DST,Draft
+7,4,9,harrisonbutker-K,Draft
+7,4,10,colekmet-TE,Draft
+7,4,11,djcharkjr-WR,Draft
+7,4,12,jordanlove-QB,Free Agency
+7,4,13,gusedwards-RB,Free Agency
+7,4,14,jaleelmclaughlin-RB,Free Agency
+7,4,15,elijahmoore-WR,Free Agency
+7,4,16,joshdowns-WR,Free Agency
+7,4,17,justinjefferson-WR,Draft
+7,5,1,patrickmahomes-QB,Draft
+7,5,2,rhamondrestevenson-RB,Draft
+7,5,3,alexandermattison-RB,Draft
+7,5,4,stefondiggs-WR,Draft
+7,5,5,jakobimeyers-WR,Draft
+7,5,6,georgekittle-TE,Draft
+7,5,7,pukanacua-WR,Free Agency
+7,5,8,vikingsdst-DST,Free Agency
+7,5,9,justintucker-K,Draft
+7,5,10,teehiggins-WR,Draft
+7,5,11,tylerlockett-WR,Draft
+7,5,12,tuatagovailoa-QB,Draft
+7,5,13,steelersdst-DST,Draft
+7,5,14,joshuapalmer-WR,Free Agency
+7,5,15,emaridemercado-RB,Free Agency
+7,5,16,najeeharris-RB,Free Agency
+7,6,1,joeburrow-QB,Draft
+7,6,2,alvinkamara-RB,Draft
+7,6,3,kyrenwilliams-RB,Free Agency
+7,6,4,deebosamuel-WR,Draft
+7,6,5,zayflowers-WR,Draft
+7,6,6,traviskelce-TE,Draft
+7,6,7,amonrastbrown-WR,Draft
+7,6,8,chiefsdst-DST,Free Agency
+7,6,9,jakeelliott-K,Draft
+7,6,10,javontewilliams-RB,Draft
+7,6,11,jahandotson-WR,Draft
+7,6,12,gabedavis-WR,Draft
+7,6,13,samajeperine-RB,Draft
+7,6,14,anthonyrichardson-QB,Draft
+7,6,15,tutuatwell-WR,Free Agency
+7,6,16,kareemhunt-RB,Free Agency
+7,7,1,lamarjackson-QB,Draft
+7,7,2,christianmccaffrey-RB,Draft
+7,7,3,joemixon-RB,Draft
+7,7,4,jaylenwaddle-WR,Draft
+7,7,5,nicocollins-WR,Draft
+7,7,6,kylepitts-TE,Free Agency
+7,7,7,mikeevans-WR,Draft
+7,7,8,falconsdst-DST,Free Agency
+7,7,9,danielcarlson-K,Draft
+7,7,10,amaricooper-WR,Draft
+7,7,11,milessanders-RB,Draft
+7,7,12,christiankirk-WR,Draft
+7,7,13,georgepickens-WR,Draft
+7,7,14,davidnjoku-TE,Draft
+7,7,15,brownsdst-DST,Draft
+7,7,16,tylerallgeier-RB,Free Agency
+7,8,1,trevorlawrence-QB,Free Agency
+7,8,2,bijanrobinson-RB,Draft
+7,8,3,derrickhenry-RB,Draft
+7,8,4,devontasmith-WR,Draft
+7,8,5,marquisebrown-WR,Draft
+7,8,6,jakeferguson-TE,Free Agency
+7,8,7,raheemmostert-RB,Draft
+7,8,8,dolphinsdst-DST,Draft
+7,8,9,cairosantos-K,Draft
+7,8,10,chrisolave-WR,Draft
+7,8,11,rachaadwhite-RB,Draft
+7,8,12,deshaunwatson-QB,Draft
+7,8,13,courtlandsutton-WR,Draft
+7,8,14,zachertz-TE,Free Agency
+7,8,15,jeromeford-RB,Free Agency
+7,8,16,jaylenwarren-RB,Free Agency
+7,8,17,diontaejohnson-WR,Draft
+7,9,1,justinfields-QB,Draft
+7,9,2,travisetiennejr-RB,Draft
+7,9,3,kennethwalkeriii-RB,Draft
+7,9,4,davanteadams-WR,Draft
+7,9,5,ceedeelamb-WR,Draft
+7,9,6,dallasgoedert-TE,Draft
+7,9,7,jordanaddison-WR,Draft
+7,9,8,lionsdst-DST,Free Agency
+7,9,9,jasonsanders-K,Free Agency
+7,9,10,drakelondon-WR,Draft
+7,9,11,jaxonsmithnjigba-WR,Draft
+7,9,12,quentinjohnston-WR,Draft
+7,9,13,rondalemoore-WR,Draft
+7,9,14,elijahmitchell-RB,Draft
+7,9,15,ezekielelliott-RB,Draft
+7,9,16,jeffwilsonjr-RB,Free Agency
+7,9,17,aaronjones-RB,Draft
+7,10,1,kirkcousins-QB,Draft
+7,10,2,tonypollard-RB,Draft
+7,10,3,dameonpierce-RB,Draft
+7,10,4,tyreekhill-WR,Draft
+7,10,5,skyymoore-WR,Draft
+7,10,6,evanengram-TE,Draft
+7,10,7,michaelpittmanjr-WR,Draft
+7,10,8,saintsdst-DST,Draft
+7,10,9,grahamgano-K,Draft
+7,10,10,dkmetcalf-WR,Draft
+7,10,11,justinherbert-QB,Draft
+7,10,12,terrymclaurin-WR,Draft
+7,10,13,jonathantaylor-RB,Draft
+7,10,14,treylonburks-WR,Draft
+7,10,15,danieljones-QB,Draft
+7,10,16,tylerhigbee-TE,Draft
+8,1,1,jalenhurts-QB,Draft
+8,1,2,joshjacobs-RB,Draft
+8,1,3,dandreswift-RB,Draft
+8,1,4,jamarrchase-WR,Draft
+8,1,5,cooperkupp-WR,Trade
+8,1,6,darrenwaller-TE,Draft
+8,1,7,brandonaiyuk-WR,Draft
+8,1,8,billsdst-DST,Draft
+8,1,9,brettmaher-K,Free Agency
+8,1,10,chrisgodwin-WR,Draft
+8,1,11,jerryjeudy-WR,Draft
+8,1,12,allenlazard-WR,Draft
+8,1,13,romeodoubs-WR,Free Agency
+8,1,14,curtissamuel-WR,Free Agency
+8,1,15,jonnusmith-TE,Free Agency
+8,2,1,genosmith-QB,Draft
+8,2,2,austinekeler-RB,Draft
+8,2,3,zackmoss-RB,Free Agency
+8,2,4,ajbrown-WR,Draft
+8,2,5,wandalerobinson-WR,Free Agency
+8,2,6,markandrews-TE,Draft
+8,2,7,jamescook-RB,Draft
+8,2,8,eaglesdst-DST,Draft
+8,2,9,tylerbass-K,Draft
+8,2,10,garrettwilson-WR,Draft
+8,2,11,deandrehopkins-WR,Draft
+8,2,12,dalvincook-RB,Draft
+8,2,13,michaelthomas-WR,Draft
+8,2,14,darnellmooney-WR,Draft
+8,2,15,justicehill-RB,Free Agency
+8,2,16,matthewstafford-QB,Free Agency
+8,2,17,jamesconner-RB,Draft
+8,3,1,brockpurdy-QB,Free Agency
+8,3,2,saquonbarkley-RB,Draft
+8,3,3,isiahpacheco-RB,Draft
+8,3,4,calvinridley-WR,Draft
+8,3,5,djmoore-WR,Draft
+8,3,6,samlaporta-TE,Free Agency
+8,3,7,jahmyrgibbs-RB,Draft
+8,3,8,buccaneersdst-DST,Free Agency
+8,3,9,jakemoody-K,Free Agency
+8,3,10,cowboysdst-DST,Draft
+8,3,11,daltonkincaid-TE,Draft
+8,3,12,kendrickbourne-WR,Free Agency
+8,3,13,breecehall-RB,Trade
+8,3,14,adamthielen-WR,Trade
+8,3,15,jaredgoff-QB,Trade
+8,3,16,rasheerice-WR,Free Agency
+8,3,17,devonachane-RB,Free Agency
+8,4,1,joshallen-QB,Draft
+8,4,2,brianrobinsonjr-RB,Draft
+8,4,3,gusedwards-RB,Free Agency
+8,4,4,joshdowns-WR,Free Agency
+8,4,5,keenanallen-WR,Trade
+8,4,6,tjhockenson-TE,Draft
+8,4,7,christianwatson-WR,Free Agency
+8,4,8,49ersdst-DST,Draft
+8,4,9,jasonmyers-K,Free Agency
+8,4,10,davidmontgomery-RB,Draft
+8,4,11,colekmet-TE,Draft
+8,4,12,jaleelmclaughlin-RB,Free Agency
+8,4,13,kjosborn-WR,Free Agency
+8,4,14,chubahubbard-RB,Free Agency
+8,4,15,zachevans-RB,Free Agency
+8,4,16,russellwilson-QB,Free Agency
+8,4,17,justinjefferson-WR,Draft
+8,5,1,patrickmahomes-QB,Draft
+8,5,2,rhamondrestevenson-RB,Draft
+8,5,3,alexandermattison-RB,Draft
+8,5,4,stefondiggs-WR,Draft
+8,5,5,jakobimeyers-WR,Draft
+8,5,6,georgekittle-TE,Draft
+8,5,7,pukanacua-WR,Free Agency
+8,5,8,raidersdst-DST,Free Agency
+8,5,9,justintucker-K,Draft
+8,5,10,teehiggins-WR,Draft
+8,5,11,tylerlockett-WR,Draft
+8,5,12,tuatagovailoa-QB,Draft
+8,5,13,steelersdst-DST,Draft
+8,5,14,joshuapalmer-WR,Free Agency
+8,5,15,najeeharris-RB,Free Agency
+8,5,16,dontaforeman-RB,Free Agency
+8,6,1,jordanlove-QB,Free Agency
+8,6,2,alvinkamara-RB,Draft
+8,6,3,javontewilliams-RB,Draft
+8,6,4,amonrastbrown-WR,Draft
+8,6,5,zayflowers-WR,Draft
+8,6,6,traviskelce-TE,Draft
+8,6,7,gabedavis-WR,Draft
+8,6,8,commandersdst-DST,Free Agency
+8,6,9,jakeelliott-K,Draft
+8,6,10,deebosamuel-WR,Draft
+8,6,11,joeburrow-QB,Draft
+8,6,12,jahandotson-WR,Draft
+8,6,13,kyrenwilliams-RB,Free Agency
+8,6,14,tutuatwell-WR,Free Agency
+8,6,15,kareemhunt-RB,Free Agency
+8,6,16,roschonjohnson-RB,Free Agency
+8,6,17,anthonyrichardson-QB,Draft
+8,7,1,lamarjackson-QB,Draft
+8,7,2,christianmccaffrey-RB,Draft
+8,7,3,tylerallgeier-RB,Free Agency
+8,7,4,jaylenwaddle-WR,Draft
+8,7,5,amaricooper-WR,Draft
+8,7,6,kylepitts-TE,Free Agency
+8,7,7,mikeevans-WR,Draft
+8,7,8,brownsdst-DST,Draft
+8,7,9,danielcarlson-K,Draft
+8,7,10,joemixon-RB,Draft
+8,7,11,milessanders-RB,Draft
+8,7,12,christiankirk-WR,Draft
+8,7,13,georgepickens-WR,Draft
+8,7,14,davidnjoku-TE,Draft
+8,7,15,nicocollins-WR,Draft
+8,7,16,falconsdst-DST,Free Agency
+8,8,1,trevorlawrence-QB,Free Agency
+8,8,2,bijanrobinson-RB,Draft
+8,8,3,jeromeford-RB,Free Agency
+8,8,4,devontasmith-WR,Draft
+8,8,5,marquisebrown-WR,Draft
+8,8,6,loganthomas-TE,Free Agency
+8,8,7,raheemmostert-RB,Draft
+8,8,8,dolphinsdst-DST,Draft
+8,8,9,cairosantos-K,Draft
+8,8,10,derrickhenry-RB,Draft
+8,8,11,chrisolave-WR,Draft
+8,8,12,rachaadwhite-RB,Draft
+8,8,13,deshaunwatson-QB,Draft
+8,8,14,courtlandsutton-WR,Draft
+8,8,15,jaylenwarren-RB,Free Agency
+8,8,16,harrisonbutker-K,Trade
+8,8,17,diontaejohnson-WR,Draft
+8,9,1,samhowell-QB,Free Agency
+8,9,2,travisetiennejr-RB,Draft
+8,9,3,kennethwalkeriii-RB,Draft
+8,9,4,davanteadams-WR,Draft
+8,9,5,ceedeelamb-WR,Draft
+8,9,6,dallasgoedert-TE,Draft
+8,9,7,aaronjones-RB,Draft
+8,9,8,lionsdst-DST,Free Agency
+8,9,9,jasonsanders-K,Free Agency
+8,9,10,justinfields-QB,Draft
+8,9,11,drakelondon-WR,Draft
+8,9,12,jordanaddison-WR,Draft
+8,9,13,jaxonsmithnjigba-WR,Draft
+8,9,14,rondalemoore-WR,Draft
+8,9,15,ezekielelliott-RB,Draft
+8,9,16,ajdillon-RB,Free Agency
+8,9,17,jeffwilsonjr-RB,Free Agency
+8,10,1,justinherbert-QB,Draft
+8,10,2,jonathantaylor-RB,Draft
+8,10,4,tyreekhill-WR,Draft
+8,10,5,terrymclaurin-WR,Draft
+8,10,6,evanengram-TE,Draft
+8,10,7,michaelpittmanjr-WR,Draft
+8,10,8,saintsdst-DST,Draft
+8,10,9,grahamgano-K,Draft
+8,10,10,tonypollard-RB,Draft
+8,10,11,dkmetcalf-WR,Draft
+8,10,12,dameonpierce-RB,Draft
+8,10,13,skyymoore-WR,Draft
+8,10,14,treylonburks-WR,Draft
+8,10,15,kirkcousins-QB,Draft
+8,10,16,danieljones-QB,Draft
+8,10,17,tylerhigbee-TE,Draft
