@@ -191,7 +191,7 @@ class Processor:
             if pos in ['TE', 'RP']:
                 return rating * 0.9
             elif pos in ['DST', 'K']:
-                return rating * 0.6
+                return rating * 0.4
             else:
                 return rating
 
