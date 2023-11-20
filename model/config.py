@@ -13,7 +13,7 @@ leagues = {
             'weeks_per_playoff_matchup': 2,
             'total_weeks': 18,
             'regular_season_weeks': 14,
-            'n_iter': 20000,
+            'n_iter': 30000,
             'model_params': {
                 'score_mean': 122,
                 'score_sd': 25,

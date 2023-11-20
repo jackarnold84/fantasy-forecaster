@@ -9,16 +9,16 @@ week,matchup_idx,playoff,home,home_score,away,away_score
 2,3,False,Alexi Bloom,4.0,Cameron Fortune,5.0
 2,4,False,Jalen Radke,4.0,James Bargmann,5.0
 2,5,False,Thomas Rozycki,5.0,Dario Zullo,4.0
-3,1,False,Tom Ko Tom Ko,5.0,Devin Weeks,4.0
-3,2,False,Jack Kelley,5.5,Alexi Bloom,3.5
-3,3,False,Dario Zullo,2.0,Jack Arnold,7.0
-3,4,False,Cameron Fortune,4.5,Thomas Rozycki,4.5
-3,5,False,James Bargmann,3.0,Jalen Radke,6.0
-4,1,False,Devin Weeks,,Alexi Bloom,
-4,2,False,Jack Arnold,,Tom Ko Tom Ko,
-4,3,False,Thomas Rozycki,,Jack Kelley,
-4,4,False,Jalen Radke,,Dario Zullo,
-4,5,False,James Bargmann,,Cameron Fortune,
+3,1,False,Tom Ko Tom Ko,4.0,Devin Weeks,5.0
+3,2,False,Jack Kelley,5.0,Alexi Bloom,4.0
+3,3,False,Dario Zullo,3.0,Jack Arnold,6.0
+3,4,False,Cameron Fortune,4.0,Thomas Rozycki,5.0
+3,5,False,James Bargmann,5.0,Jalen Radke,4.0
+4,1,False,Devin Weeks,4.5,Alexi Bloom,4.5
+4,2,False,Jack Arnold,4.5,Tom Ko Tom Ko,4.5
+4,3,False,Thomas Rozycki,4.5,Jack Kelley,4.5
+4,4,False,Jalen Radke,4.5,Dario Zullo,4.5
+4,5,False,James Bargmann,4.5,Cameron Fortune,4.5
 5,1,False,Jack Arnold,,Devin Weeks,
 5,2,False,Alexi Bloom,,Thomas Rozycki,
 5,3,False,Tom Ko Tom Ko,,Jalen Radke,
