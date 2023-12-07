@@ -373,7 +373,7 @@ class Processor:
                     'week': w,
                     'home': x['home'],
                     'away': x['away'],
-                    'importance': round(diff * 100)
+                    'importance': min(round(diff * 100), 99)
                 })
             importance_by_matchup = sorted(
                 importance_by_matchup,
