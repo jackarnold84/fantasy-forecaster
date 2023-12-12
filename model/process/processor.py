@@ -88,6 +88,8 @@ class Processor:
                     for t in self.teams
                 }
                 for t in self.teams:
+                    if w > self.league.n_regular_season_weeks:
+                        break
                     if not eliminated[t]:
                         forecast[t] = max(forecast[t], 0.001)
                     if not clinched[t]:
