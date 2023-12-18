@@ -1081,3 +1081,141 @@ week,manager_id,slot_idx,player_id,aquired
 7,10,13,aarongordon-PF,Draft
 7,10,14,kellyolynyk-C,Draft
 7,10,15,anferneesimons-SG,Draft
+8,1,1,lukadoncic-PG,Draft
+8,1,2,jaylenbrown-SG,Draft
+8,1,3,jimmybutler-SF,Draft
+8,1,4,karlanthonytowns-C,Draft
+8,1,5,nicclaxton-C,Draft
+8,1,6,deaaronfox-PG,Trade
+8,1,7,brandoningram-SF,Draft
+8,1,8,brandonmiller-SG,Free Agency
+8,1,9,tobiasharris-SF,Draft
+8,1,10,russellwestbrook-PG,Draft
+8,1,11,jaimejaquezjr-SF,Free Agency
+8,1,12,derecklivelyii-C,Free Agency
+8,1,13,calebmartin-SG,Free Agency
+8,1,14,jalenduren-C,Draft
+8,2,1,jordanpoole-SG,Draft
+8,2,3,michaelporterjr-SF,Draft
+8,2,5,nikolajokic-C,Draft
+8,2,6,derrickwhite-PG,Free Agency
+8,2,7,victorwembanyama-C,Draft
+8,2,8,anthonydavis-PF,Draft
+8,2,9,zionwilliamson-PF,Draft
+8,2,10,jamorant-PG,Draft
+8,2,11,bradleybeal-SG,Draft
+8,2,12,andrewwiggins-SF,Draft
+8,2,13,keeganmurray-PF,Draft
+8,2,14,kevinhuerter-SG,Free Agency
+8,2,15,malikmonk-SG,Free Agency
+8,2,16,bensimmons-PG,Draft
+8,3,1,dejountemurray-PG,Draft
+8,3,2,devinbooker-SG,Draft
+8,3,3,mikalbridges-SF,Draft
+8,3,4,kristapsporzingis-C,Draft
+8,3,5,joelembiid-C,Draft
+8,3,6,tyresemaxey-SG,Draft
+8,3,7,draymondgreen-PF,Draft
+8,3,8,deandreayton-C,Draft
+8,3,9,tyusjones-PG,Draft
+8,3,10,jeramigrant-PF,Draft
+8,3,11,pjwashington-PF,Draft
+8,3,12,mikeconley-PG,Free Agency
+8,3,13,bobbyportis-PF,Free Agency
+8,4,1,traeyoung-PG,Draft
+8,4,2,jalenbrunson-PG,Draft
+8,4,3,paulgeorge-SF,Draft
+8,4,4,juliusrandle-PF,Draft
+8,4,5,giannisantetokounmpo-PF,Draft
+8,4,6,desmondbane-SG,Draft
+8,4,9,jalengreen-SG,Draft
+8,4,10,klaythompson-SG,Draft
+8,4,11,jonasvalanciunas-C,Draft
+8,4,12,rjbarrett-SF,Draft
+8,4,13,maxstrus-SG,Free Agency
+8,4,14,bogdanbogdanovic-SG,Free Agency
+8,4,15,danielgafford-C,Free Agency
+8,4,16,jalenjohnson-SF,Free Agency
+8,5,1,stephencurry-PG,Trade
+8,5,2,demarderozan-SF,Draft
+8,5,3,kevindurant-SF,Draft
+8,5,4,jarenjacksonjr-PF,Draft
+8,5,5,rudygobert-C,Draft
+8,5,6,jalenwilliams-SG,Draft
+8,5,7,milesbridges-PF,Draft
+8,5,8,jamalmurray-PG,Draft
+8,5,9,oganunoby-SF,Draft
+8,5,10,devinvassell-SF,Draft
+8,5,11,dangelorussell-PG,Draft
+8,5,12,markwilliams-C,Draft
+8,5,13,dennisschroder-PG,Free Agency
+8,5,14,malcolmbrogdon-PG,Free Agency
+8,6,1,fredvanvleet-PG,Draft
+8,6,2,shaigilgeousalexander-SG,Draft
+8,6,3,franzwagner-SF,Draft
+8,6,4,kylekuzma-PF,Draft
+8,6,5,nikolavucevic-C,Draft
+8,6,6,jamesharden-SG,Draft
+8,6,7,kentaviouscaldwellpope-SG,Free Agency
+8,6,8,jakobpoeltl-C,Draft
+8,6,9,kyrieirving-PG,Draft
+8,6,10,dariusgarland-PG,Draft
+8,6,11,khrismiddleton-SF,Draft
+8,6,12,jusufnurkic-C,Draft
+8,6,13,clintcapela-C,Free Agency
+8,6,14,chrispaul-PG,Draft
+8,7,1,cjmccollum-SG,Draft
+8,7,2,donovanmitchell-SG,Draft
+8,7,3,jaysontatum-SF,Draft
+8,7,4,kawhileonard-SF,Draft
+8,7,5,mylesturner-C,Draft
+8,7,6,timhardawayjr-SG,Free Agency
+8,7,7,herbertjones-PF,Free Agency
+8,7,8,jrueholiday-PG,Draft
+8,7,9,laurimarkkanen-PF,Draft
+8,7,10,tylerherro-SG,Draft
+8,7,11,brooklopez-C,Draft
+8,7,12,keldonjohnson-SF,Draft
+8,7,13,alexcaruso-PG,Free Agency
+8,7,14,marcussmart-SG,Draft
+8,8,1,damianlillard-PG,Draft
+8,8,2,terryrozier-SG,Draft
+8,8,3,paolobanchero-PF,Draft
+8,8,4,domantassabonis-PF,Draft
+8,8,5,alperensengun-C,Draft
+8,8,6,cobywhite-PG,Free Agency
+8,8,7,shaedonsharpe-SG,Draft
+8,8,8,cadecunningham-PG,Draft
+8,8,9,pascalsiakam-PF,Draft
+8,8,10,austinreaves-SG,Draft
+8,8,11,jabarismithjr-PF,Free Agency
+8,8,12,bojanbogdanovic-PF,Free Agency
+8,8,13,treymurphyiii-SG,Free Agency
+8,8,14,zachlavine-SG,Draft
+8,9,1,joshgiddey-PG,Draft
+8,9,3,scottiebarnes-PF,Draft
+8,9,5,jarrettallen-C,Draft
+8,9,6,spencerdinwiddie-SG,Free Agency
+8,9,7,gordonhayward-SF,Free Agency
+8,9,8,ivicazubac-C,Free Agency
+8,9,9,anthonyedwards-SG,Draft
+8,9,10,bamadebayo-C,Draft
+8,9,11,walkerkessler-C,Draft
+8,9,12,johncollins-PF,Trade
+8,9,13,evanmobley-PF,Trade
+8,9,14,jalensuggs-PG,Free Agency
+8,9,15,santialdama-PF,Free Agency
+8,9,16,lameloball-PG,Trade
+8,10,1,anferneesimons-SG,Draft
+8,10,2,tyresehaliburton-PG,Draft
+8,10,3,ausarthompson-SF,Draft
+8,10,4,cameronjohnson-SF,Draft
+8,10,5,nazreid-C,Draft
+8,10,6,camthomas-SG,Free Agency
+8,10,7,chetholmgren-PF,Draft
+8,10,8,aarongordon-PF,Draft
+8,10,9,buddyhield-SG,Draft
+8,10,10,lebronjames-SF,Draft
+8,10,11,obitoppin-PF,Draft
+8,10,12,bennedictmathurin-SF,Draft
+8,10,13,immanuelquickley-PG,Free Agency
