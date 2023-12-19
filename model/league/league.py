@@ -38,6 +38,7 @@ class League:
 
         member_records = pd.read_csv(league_members_path).to_dict('records')
         schedule_records = pd.read_csv(league_schedule_path).to_dict('records')
+        playoff_schedule_records = [x for x in schedule_records if x['playoff']]
         schedule_records = [x for x in schedule_records if not x['playoff']]
         roster_records = pd.read_csv(league_rosters_path).to_dict('records')
         roster_records = [x for x in roster_records if x['week'] <= week]
@@ -69,6 +70,16 @@ class League:
                 'complete': x['week'] < self.week,
             })
 
+        # playoffs
+        self.playoff_live_scores = {}
+        if self.week > self.n_regular_season_weeks + 1:
+            for x in playoff_schedule_records:
+                home = get_team_name(x['home'])
+                away = get_team_name(x['away'])
+                diff = x['home_score'] - x['away_score']
+                thru = min(self.week - x['week'], self.n_weeks_per_playoff_matchup)
+                self.playoff_live_scores[(home, away)] = {'diff': diff, 'thru': thru}
+
         # run simulations
         print('--> running simulations')
         self.sims = {}
@@ -79,7 +90,7 @@ class League:
                 Simulation(
                     w, self.teams, self.schedule,
                     proj, self.team_divisions, self.divisions,
-                    self.use_h2h,
+                    self.use_h2h, self.playoff_live_scores,
                     self.n_regular_season_weeks,
                     self.n_playoff_teams,
                     self.n_weeks_per_playoff_matchup,

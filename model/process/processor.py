@@ -144,12 +144,13 @@ class Processor:
             for d in self.league.divisions
         }
         self.league_output['standings'] = {}
+        week_div = max(min(self.week, self.league.n_regular_season_weeks), 1)
         self.league_output['standings']['league'] = [
             {
                 'team': t,
                 'rank': i + 1,
                 'wins': wins[t],
-                'avg': round(points[t] / ((self.week - 1) or 1), 1)
+                'avg': round(points[t] / week_div, 1)
             }
             for i, t in enumerate(league_order)
         ]
@@ -159,7 +160,7 @@ class Processor:
                     'team': t,
                     'rank': i + 1,
                     'wins': wins[t],
-                    'avg': round(points[t] / ((self.week - 1) or 1), 1)
+                    'avg': round(points[t] / week_div, 1)
                 }
                 for i, t in enumerate(division_order[d])
             ]

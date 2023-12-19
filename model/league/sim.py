@@ -5,7 +5,7 @@ class Simulation:
 
     def __init__(
         self, week, teams, schedule, projections, team_divisions, divisions,
-        use_h2h, n_regular_season_weeks, n_playoff_teams,
+        use_h2h, playoff_live_scores, n_regular_season_weeks, n_playoff_teams,
         n_weeks_per_playoff_matchup,
     ):
         self.week = week
@@ -15,6 +15,8 @@ class Simulation:
         self.team_divisions = team_divisions
         self.divisions = divisions
         self.use_h2h = use_h2h
+        self.playoff_live_scores = playoff_live_scores
+        self.in_playoffs = week > n_regular_season_weeks + 1 and len(playoff_live_scores) > 0
         self.n_teams = len(teams)
         self.n_regular_season_weeks = n_regular_season_weeks
         self.n_playoff_teams = n_playoff_teams
@@ -60,7 +62,7 @@ class Simulation:
     def sim_score(self, team, week, n_weeks=1):
         mean = self.projections[team][week]['mean']
         sd = self.projections[team][week]['sd']
-        if n_weeks > 1:
+        if n_weeks != 1:
             return sum([np.random.normal(mean, sd) for _ in range(n_weeks)])
         else:
             return np.random.normal(mean, sd)
@@ -125,10 +127,17 @@ class Simulation:
     def sim_playoffs(self, order_type='normal'):
 
         def get_result(home, away):
-            w = self.n_regular_season_weeks + 1
+            w = max(self.n_regular_season_weeks + 1, self.week)
             n = self.n_weeks_per_playoff_matchup
-            home_score = self.sim_score(home, w, n)
-            away_score = self.sim_score(away, w, n)
+            home_score = 0
+            away_score = 0
+            if self.in_playoffs and (home, away) in self.playoff_live_scores:
+                live = self.playoff_live_scores[(home, away)]
+                n -= live['thru']
+                home_score += live['diff']
+                away_score -= live['diff']
+            home_score += self.sim_score(home, w, n)
+            away_score += self.sim_score(away, w, n)
             return [home, away] if home_score >= away_score else [away, home]
 
         standings = self.standings[order_type]['playoff']
