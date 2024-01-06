@@ -327,7 +327,7 @@ class Processor:
         )
         is_playoffs = self.week > self.league.n_regular_season_weeks
 
-        games_played = max(self.week - 1, 1)
+        games_played = min(max(self.week - 1, 1), self.league.n_regular_season_weeks)
         games_remaining = self.league.n_regular_season_weeks - self.week + 1
         for t in self.teams:
             against[t] = round(against[t] / games_played, 1)
