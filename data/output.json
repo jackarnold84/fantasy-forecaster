@@ -1,4 +1,4356 @@
 {
+    "football-2024": {
+        "purdue": {
+            "meta": {
+                "name": "Practice Squad",
+                "sport": "football",
+                "year": "2024",
+                "tag": "purdue",
+                "week": 0
+            },
+            "teams": {
+                "metadata": {
+                    "Jack": {
+                        "id": "1",
+                        "name": "Jack",
+                        "nickname": "Team Astroworld",
+                        "abbrev": "JACK",
+                        "division": "USA",
+                        "img": "https://jda-cloud.s3.us-east-2.amazonaws.com/astroworld.png"
+                    },
+                    "Nick": {
+                        "id": "2",
+                        "name": "Nick",
+                        "nickname": "Gibby",
+                        "abbrev": "ROSE",
+                        "division": "USA",
+                        "img": "https://g.espncdn.com/lm-static/logo-packs/core/OldTimeMickeyAndFriends/Golf_Mickey.svg"
+                    },
+                    "Tim": {
+                        "id": "3",
+                        "name": "Tim",
+                        "nickname": "Brawn",
+                        "abbrev": "BRON",
+                        "division": "USA",
+                        "img": "https://i.pinimg.com/736x/d0/1e/23/d01e23ae5a54b390ddd28f058ed78796--the-cavs-nba-funny.jpg"
+                    },
+                    "Josh": {
+                        "id": "4",
+                        "name": "Josh",
+                        "nickname": "Knull and Seven",
+                        "abbrev": "KNU",
+                        "division": "USA",
+                        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Empty_set_symbol.svg/640px-Empty_set_symbol.svg.png"
+                    },
+                    "Rohan": {
+                        "id": "5",
+                        "name": "Rohan",
+                        "nickname": "Women belong in the kitchen",
+                        "abbrev": "SHAH",
+                        "division": "USA",
+                        "img": "https://g.espncdn.com/lm-static/logo-packs/core/StadiumFoods-ESPN/stadium-foods_cookie.svg"
+                    },
+                    "Shiv": {
+                        "id": "6",
+                        "name": "Shiv",
+                        "nickname": "Future 999 Victim",
+                        "abbrev": "NEIN",
+                        "division": "USA",
+                        "img": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_10.svg"
+                    },
+                    "Tony": {
+                        "id": "7",
+                        "name": "Tony",
+                        "nickname": "Hee Tiggins",
+                        "abbrev": "CHOE",
+                        "division": "USA",
+                        "img": "https://i.pinimg.com/originals/c5/e9/9b/c5e99b8c6492280fd03db4036f6eb69b.jpg"
+                    },
+                    "Kevin": {
+                        "id": "8",
+                        "name": "Kevin",
+                        "nickname": "For all the dogs",
+                        "abbrev": "KS",
+                        "division": "USA",
+                        "img": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_10.svg"
+                    },
+                    "Tanner": {
+                        "id": "9",
+                        "name": "Tanner",
+                        "nickname": "whatre you doing step burrow",
+                        "abbrev": "PAIN",
+                        "division": "USA",
+                        "img": "https://g.espncdn.com/lm-static/logo-packs/core/BobsBurgers/Tina.svg"
+                    },
+                    "Joey": {
+                        "id": "10",
+                        "name": "Joey",
+                        "nickname": "CM C How A White Man Runs",
+                        "abbrev": "WITE",
+                        "division": "USA",
+                        "img": "https://g.espncdn.com/lm-static/logo-packs/ffl/8bitHeros-JoeyEllis/8bit_football-12.svg"
+                    }
+                },
+                "roster": {
+                    "players": [
+                        {
+                            "Jack": [
+                                "amonrastbrown-WR",
+                                "lamarjackson-QB",
+                                "pukanacua-WR",
+                                "alvinkamara-RB",
+                                "jamescook-RB",
+                                "daltonkincaid-TE",
+                                "calvinridley-WR",
+                                "tyjaespears-RB",
+                                "tonypollard-RB",
+                                "jaydendaniels-QB",
+                                "zackmoss-RB",
+                                "terrymclaurin-WR",
+                                "patfreiermuth-TE",
+                                "jakemoody-K",
+                                "saintsdst-DST",
+                                "tylerlockett-WR"
+                            ],
+                            "Nick": [
+                                "jamarrchase-WR",
+                                "jahmyrgibbs-RB",
+                                "treymcbride-TE",
+                                "devonachane-RB",
+                                "nicocollins-WR",
+                                "kylermurray-QB",
+                                "rasheerice-WR",
+                                "jordanlove-QB",
+                                "brownsdst-DST",
+                                "jonathonbrooks-RB",
+                                "chasebrown-RB",
+                                "jaxonsmithnjigba-WR",
+                                "kaimifairbairn-K",
+                                "romeodunze-WR",
+                                "treybenson-RB",
+                                "xavierlegette-WR"
+                            ],
+                            "Tim": [
+                                "justinjefferson-WR",
+                                "patrickmahomes-QB",
+                                "saquonbarkley-RB",
+                                "markandrews-TE",
+                                "rachaadwhite-RB",
+                                "stefondiggs-WR",
+                                "tankdell-WR",
+                                "ezekielelliott-RB",
+                                "christiankirk-WR",
+                                "jakeelliott-K",
+                                "jaydenreed-WR",
+                                "bengalsdst-DST",
+                                "mikewilliams-WR",
+                                "blakecorum-RB",
+                                "adamthielen-WR",
+                                "jamesonwilliams-WR"
+                            ],
+                            "Josh": [
+                                "jonathantaylor-RB",
+                                "samlaporta-TE",
+                                "garrettwilson-WR",
+                                "cjstroud-QB",
+                                "jaylenwaddle-WR",
+                                "teehiggins-WR",
+                                "davidmontgomery-RB",
+                                "austinekeler-RB",
+                                "brockpurdy-QB",
+                                "diontaejohnson-WR",
+                                "brandonaubrey-K",
+                                "daltonschultz-TE",
+                                "jordanaddison-WR",
+                                "dolphinsdst-DST",
+                                "chubahubbard-RB",
+                                "demariodouglas-WR"
+                            ],
+                            "Rohan": [
+                                "tyreekhill-WR",
+                                "isiahpacheco-RB",
+                                "joshjacobs-RB",
+                                "mikeevans-WR",
+                                "georgekittle-TE",
+                                "brandonaiyuk-WR",
+                                "aaronjones-RB",
+                                "najeeharris-RB",
+                                "aaronrodgers-QB",
+                                "harrisonbutker-K",
+                                "ravensdst-DST",
+                                "christianwatson-WR",
+                                "tylerallgeier-RB",
+                                "antoniogibson-RB",
+                                "deandrehopkins-WR",
+                                "jerryjeudy-WR"
+                            ],
+                            "Shiv": [
+                                "traviskelce-TE",
+                                "ajbrown-WR",
+                                "kyrenwilliams-RB",
+                                "dakprescott-QB",
+                                "michaelpittmanjr-WR",
+                                "rhamondrestevenson-RB",
+                                "zayflowers-WR",
+                                "dandreswift-RB",
+                                "jaylenwarren-RB",
+                                "brockbowers-TE",
+                                "younghoekoo-K",
+                                "tychandler-RB",
+                                "chiefsdst-DST",
+                                "keoncoleman-WR",
+                                "gabedavis-WR",
+                                "marquisebrown-WR"
+                            ],
+                            "Tony": [
+                                "bijanrobinson-RB",
+                                "jalenhurts-QB",
+                                "chrisolave-WR",
+                                "joemixon-RB",
+                                "evanengram-TE",
+                                "djmoore-WR",
+                                "georgepickens-WR",
+                                "keenanallen-WR",
+                                "raheemmostert-RB",
+                                "dallasgoedert-TE",
+                                "calebwilliams-QB",
+                                "49ersdst-DST",
+                                "justintucker-K",
+                                "xavierworthy-WR",
+                                "jaleelmclaughlin-RB",
+                                "curtissamuel-WR"
+                            ],
+                            "Kevin": [
+                                "breecehall-RB",
+                                "joshallen-QB",
+                                "davanteadams-WR",
+                                "dkmetcalf-WR",
+                                "davidnjoku-TE",
+                                "drakelondon-WR",
+                                "jamesconner-RB",
+                                "javontewilliams-RB",
+                                "amaricooper-WR",
+                                "steelersdst-DST",
+                                "courtlandsutton-WR",
+                                "gusedwards-RB",
+                                "evanmcpherson-K",
+                                "brianthomasjr-WR",
+                                "khalilshakir-WR",
+                                "joshuapalmer-WR"
+                            ],
+                            "Tanner": [
+                                "ceedeelamb-WR",
+                                "travisetiennejr-RB",
+                                "kennethwalkeriii-RB",
+                                "joeburrow-QB",
+                                "marvinharrisonjr-WR",
+                                "devontasmith-WR",
+                                "kylepitts-TE",
+                                "zamirwhite-RB",
+                                "brianrobinsonjr-RB",
+                                "jetsdst-DST",
+                                "zachcharbonnet-RB",
+                                "jakebates-K",
+                                "laddmcconkey-WR",
+                                "jakobimeyers-WR",
+                                "darnellmooney-WR",
+                                "rashidshaheed-WR"
+                            ],
+                            "Joey": [
+                                "christianmccaffrey-RB",
+                                "derrickhenry-RB",
+                                "anthonyrichardson-QB",
+                                "deebosamuelsr-WR",
+                                "maliknabers-WR",
+                                "jakeferguson-TE",
+                                "cooperkupp-WR",
+                                "tjhockenson-TE",
+                                "chrisgodwin-WR",
+                                "nickchubb-RB",
+                                "devinsingletary-RB",
+                                "jkdobbins-RB",
+                                "cowboysdst-DST",
+                                "jeromeford-RB",
+                                "camerondicker-K",
+                                "jalynnpolk-WR"
+                            ]
+                        }
+                    ],
+                    "aquisitions": {
+                        "Jack": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Nick": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Tim": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Josh": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Rohan": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Shiv": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Tony": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Kevin": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Tanner": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        },
+                        "Joey": {
+                            "draft": 0,
+                            "free_agency": 0,
+                            "trade": 0
+                        }
+                    }
+                },
+                "ratings": [
+                    {
+                        "OVR": [
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Jack",
+                                "rating": 87.91
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Tony",
+                                "rating": 85.83
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Tim",
+                                "rating": 83.71
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Kevin",
+                                "rating": 81.03
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Joey",
+                                "rating": 80.44
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Rohan",
+                                "rating": 80.24
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Tanner",
+                                "rating": 79.74
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Nick",
+                                "rating": 77.91
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Josh",
+                                "rating": 74.91
+                            },
+                            {
+                                "week": 0,
+                                "pos": "OVR",
+                                "team": "Shiv",
+                                "rating": 72.67
+                            }
+                        ],
+                        "QB": [
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Tony",
+                                "rating": 84.43
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Kevin",
+                                "rating": 81.57
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Jack",
+                                "rating": 80.69
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Tim",
+                                "rating": 78.92
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Josh",
+                                "rating": 69.12
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Tanner",
+                                "rating": 66.46
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Joey",
+                                "rating": 65.11
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Shiv",
+                                "rating": 65.04
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Nick",
+                                "rating": 63.77
+                            },
+                            {
+                                "week": 0,
+                                "pos": "QB",
+                                "team": "Rohan",
+                                "rating": 58.66
+                            }
+                        ],
+                        "RB": [
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Joey",
+                                "rating": 87.85
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Tony",
+                                "rating": 75.74
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Rohan",
+                                "rating": 75.38
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Jack",
+                                "rating": 74.04
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Kevin",
+                                "rating": 73.7
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Tanner",
+                                "rating": 72.42
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Tim",
+                                "rating": 70.89
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Shiv",
+                                "rating": 70.62
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Nick",
+                                "rating": 70.49
+                            },
+                            {
+                                "week": 0,
+                                "pos": "RB",
+                                "team": "Josh",
+                                "rating": 66.59
+                            }
+                        ],
+                        "WR": [
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Jack",
+                                "rating": 81.76
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Tanner",
+                                "rating": 81.29
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Rohan",
+                                "rating": 80.69
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Nick",
+                                "rating": 77.31
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Tim",
+                                "rating": 75.87
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Kevin",
+                                "rating": 69.73
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Josh",
+                                "rating": 69.67
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Shiv",
+                                "rating": 68.56
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Tony",
+                                "rating": 68.31
+                            },
+                            {
+                                "week": 0,
+                                "pos": "WR",
+                                "team": "Joey",
+                                "rating": 65.78
+                            }
+                        ],
+                        "TE": [
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Shiv",
+                                "rating": 82.21
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Josh",
+                                "rating": 81.34
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Tony",
+                                "rating": 74.36
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Tim",
+                                "rating": 74.22
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Nick",
+                                "rating": 69.31
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Jack",
+                                "rating": 69.23
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Joey",
+                                "rating": 69.0
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Rohan",
+                                "rating": 66.9
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Kevin",
+                                "rating": 64.98
+                            },
+                            {
+                                "week": 0,
+                                "pos": "TE",
+                                "team": "Tanner",
+                                "rating": 63.89
+                            }
+                        ],
+                        "K": [
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Rohan",
+                                "rating": 88.16
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Tim",
+                                "rating": 79.22
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Josh",
+                                "rating": 77.17
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Tony",
+                                "rating": 74.69
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Nick",
+                                "rating": 71.92
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Kevin",
+                                "rating": 67.02
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Jack",
+                                "rating": 65.26
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Shiv",
+                                "rating": 60.88
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Joey",
+                                "rating": 60.8
+                            },
+                            {
+                                "week": 0,
+                                "pos": "K",
+                                "team": "Tanner",
+                                "rating": 58.86
+                            }
+                        ],
+                        "DST": [
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Nick",
+                                "rating": 77.21
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Tanner",
+                                "rating": 71.29
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Joey",
+                                "rating": 70.79
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Rohan",
+                                "rating": 70.49
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Tony",
+                                "rating": 69.16
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Kevin",
+                                "rating": 67.32
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Josh",
+                                "rating": 58.76
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Jack",
+                                "rating": 58.07
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Tim",
+                                "rating": 55.91
+                            },
+                            {
+                                "week": 0,
+                                "pos": "DST",
+                                "team": "Shiv",
+                                "rating": 48.01
+                            }
+                        ]
+                    }
+                ],
+                "proj": [
+                    [
+                        {
+                            "week": 0,
+                            "team": "Jack",
+                            "proj": [
+                                129.6,
+                                128.5,
+                                127.5,
+                                126.7,
+                                126.0
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Tony",
+                            "proj": [
+                                127.5,
+                                126.7,
+                                126.0,
+                                125.4,
+                                124.9
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Tim",
+                            "proj": [
+                                125.3,
+                                124.8,
+                                124.4,
+                                124.1,
+                                123.7
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Kevin",
+                            "proj": [
+                                122.6,
+                                122.5,
+                                122.4,
+                                122.4,
+                                122.3
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Joey",
+                            "proj": [
+                                122.0,
+                                122.0,
+                                122.0,
+                                122.0,
+                                122.0
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Rohan",
+                            "proj": [
+                                121.8,
+                                121.8,
+                                121.9,
+                                121.9,
+                                121.9
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Tanner",
+                            "proj": [
+                                121.3,
+                                121.4,
+                                121.5,
+                                121.6,
+                                121.6
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Nick",
+                            "proj": [
+                                119.4,
+                                119.8,
+                                120.1,
+                                120.4,
+                                120.7
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Josh",
+                            "proj": [
+                                116.3,
+                                117.2,
+                                117.9,
+                                118.5,
+                                119.1
+                            ]
+                        },
+                        {
+                            "week": 0,
+                            "team": "Shiv",
+                            "proj": [
+                                114.1,
+                                115.2,
+                                116.3,
+                                117.1,
+                                117.9
+                            ]
+                        }
+                    ]
+                ]
+            },
+            "league": {
+                "forecasts": {
+                    "playoffs": [
+                        [
+                            {
+                                "week": 0,
+                                "team": "Jack",
+                                "prob": 0.505
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tony",
+                                "prob": 0.468
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tim",
+                                "prob": 0.457
+                            },
+                            {
+                                "week": 0,
+                                "team": "Kevin",
+                                "prob": 0.405
+                            },
+                            {
+                                "week": 0,
+                                "team": "Joey",
+                                "prob": 0.4
+                            },
+                            {
+                                "week": 0,
+                                "team": "Rohan",
+                                "prob": 0.392
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tanner",
+                                "prob": 0.389
+                            },
+                            {
+                                "week": 0,
+                                "team": "Nick",
+                                "prob": 0.372
+                            },
+                            {
+                                "week": 0,
+                                "team": "Josh",
+                                "prob": 0.325
+                            },
+                            {
+                                "week": 0,
+                                "team": "Shiv",
+                                "prob": 0.288
+                            }
+                        ]
+                    ],
+                    "division": [
+                        [
+                            {
+                                "week": 0,
+                                "team": "Jack",
+                                "prob": 0.149
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tony",
+                                "prob": 0.129
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tim",
+                                "prob": 0.124
+                            },
+                            {
+                                "week": 0,
+                                "team": "Kevin",
+                                "prob": 0.101
+                            },
+                            {
+                                "week": 0,
+                                "team": "Joey",
+                                "prob": 0.098
+                            },
+                            {
+                                "week": 0,
+                                "team": "Rohan",
+                                "prob": 0.095
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tanner",
+                                "prob": 0.094
+                            },
+                            {
+                                "week": 0,
+                                "team": "Nick",
+                                "prob": 0.086
+                            },
+                            {
+                                "week": 0,
+                                "team": "Josh",
+                                "prob": 0.07
+                            },
+                            {
+                                "week": 0,
+                                "team": "Shiv",
+                                "prob": 0.054
+                            }
+                        ]
+                    ],
+                    "championship": [
+                        [
+                            {
+                                "week": 0,
+                                "team": "Jack",
+                                "prob": 0.132
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tony",
+                                "prob": 0.118
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tim",
+                                "prob": 0.116
+                            },
+                            {
+                                "week": 0,
+                                "team": "Kevin",
+                                "prob": 0.101
+                            },
+                            {
+                                "week": 0,
+                                "team": "Joey",
+                                "prob": 0.1
+                            },
+                            {
+                                "week": 0,
+                                "team": "Rohan",
+                                "prob": 0.098
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tanner",
+                                "prob": 0.096
+                            },
+                            {
+                                "week": 0,
+                                "team": "Nick",
+                                "prob": 0.093
+                            },
+                            {
+                                "week": 0,
+                                "team": "Josh",
+                                "prob": 0.077
+                            },
+                            {
+                                "week": 0,
+                                "team": "Shiv",
+                                "prob": 0.068
+                            }
+                        ]
+                    ],
+                    "punishment": [
+                        [
+                            {
+                                "week": 0,
+                                "team": "Shiv",
+                                "prob": 0.138
+                            },
+                            {
+                                "week": 0,
+                                "team": "Josh",
+                                "prob": 0.124
+                            },
+                            {
+                                "week": 0,
+                                "team": "Nick",
+                                "prob": 0.105
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tanner",
+                                "prob": 0.102
+                            },
+                            {
+                                "week": 0,
+                                "team": "Rohan",
+                                "prob": 0.101
+                            },
+                            {
+                                "week": 0,
+                                "team": "Joey",
+                                "prob": 0.099
+                            },
+                            {
+                                "week": 0,
+                                "team": "Kevin",
+                                "prob": 0.097
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tim",
+                                "prob": 0.085
+                            },
+                            {
+                                "week": 0,
+                                "team": "Tony",
+                                "prob": 0.079
+                            },
+                            {
+                                "week": 0,
+                                "team": "Jack",
+                                "prob": 0.07
+                            }
+                        ]
+                    ]
+                },
+                "standings": {
+                    "league": [
+                        {
+                            "team": "Jack",
+                            "rank": 1,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Nick",
+                            "rank": 2,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Tim",
+                            "rank": 3,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Josh",
+                            "rank": 4,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Rohan",
+                            "rank": 5,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Shiv",
+                            "rank": 6,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Tony",
+                            "rank": 7,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Kevin",
+                            "rank": 8,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Tanner",
+                            "rank": 9,
+                            "wins": 0,
+                            "avg": 0.0
+                        },
+                        {
+                            "team": "Joey",
+                            "rank": 10,
+                            "wins": 0,
+                            "avg": 0.0
+                        }
+                    ],
+                    "divisions": {
+                        "USA": [
+                            {
+                                "team": "Jack",
+                                "rank": 1,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Nick",
+                                "rank": 2,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Tim",
+                                "rank": 3,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Josh",
+                                "rank": 4,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Rohan",
+                                "rank": 5,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Shiv",
+                                "rank": 6,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Tony",
+                                "rank": 7,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Kevin",
+                                "rank": 8,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Tanner",
+                                "rank": 9,
+                                "wins": 0,
+                                "avg": 0.0
+                            },
+                            {
+                                "team": "Joey",
+                                "rank": 10,
+                                "wins": 0,
+                                "avg": 0.0
+                            }
+                        ]
+                    }
+                },
+                "expectedWins": [
+                    {
+                        "team": "Jack",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Nick",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Tim",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Josh",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Rohan",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Shiv",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Tony",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Kevin",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Tanner",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    },
+                    {
+                        "team": "Joey",
+                        "expected": 0.0,
+                        "actual": 0,
+                        "diff": 0.0
+                    }
+                ],
+                "sos": [
+                    {
+                        "team": "Tony",
+                        "current": 0.0,
+                        "future": 1
+                    },
+                    {
+                        "team": "Shiv",
+                        "current": 0.0,
+                        "future": 2
+                    },
+                    {
+                        "team": "Kevin",
+                        "current": 0.0,
+                        "future": 3
+                    },
+                    {
+                        "team": "Rohan",
+                        "current": 0.0,
+                        "future": 4
+                    },
+                    {
+                        "team": "Tanner",
+                        "current": 0.0,
+                        "future": 5
+                    },
+                    {
+                        "team": "Josh",
+                        "current": 0.0,
+                        "future": 6
+                    },
+                    {
+                        "team": "Joey",
+                        "current": 0.0,
+                        "future": 7
+                    },
+                    {
+                        "team": "Jack",
+                        "current": 0.0,
+                        "future": 8
+                    },
+                    {
+                        "team": "Nick",
+                        "current": 0.0,
+                        "future": 9
+                    },
+                    {
+                        "team": "Tim",
+                        "current": 0.0,
+                        "future": 10
+                    }
+                ],
+                "matchupImportance": [
+                    []
+                ]
+            },
+            "players": {
+                "49ersdst-DST": {
+                    "id": "49ersdst-DST",
+                    "name": "49ers DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/sf.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.76
+                    ]
+                },
+                "aaronjones-RB": {
+                    "id": "aaronjones-RB",
+                    "name": "Aaron Jones",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "MIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3042519.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.38
+                    ]
+                },
+                "aaronrodgers-QB": {
+                    "id": "aaronrodgers-QB",
+                    "name": "Aaron Rodgers",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "NYJ",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/8439.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.53
+                    ]
+                },
+                "adamthielen-WR": {
+                    "id": "adamthielen-WR",
+                    "name": "Adam Thielen",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/16460.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.12
+                    ]
+                },
+                "adonaimitchell-WR": {
+                    "id": "adonaimitchell-WR",
+                    "name": "Adonai Mitchell",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "IND",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4597500.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.0
+                    ]
+                },
+                "ajbrown-WR": {
+                    "id": "ajbrown-WR",
+                    "name": "AJ Brown",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "PHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4047646.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.56
+                    ]
+                },
+                "alexandermattison-RB": {
+                    "id": "alexandermattison-RB",
+                    "name": "Alexander Mattison",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "LV",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4048244.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.11
+                    ]
+                },
+                "alvinkamara-RB": {
+                    "id": "alvinkamara-RB",
+                    "name": "Alvin Kamara",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NO",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3054850.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.76
+                    ]
+                },
+                "amaricooper-WR": {
+                    "id": "amaricooper-WR",
+                    "name": "Amari Cooper",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CLE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2976499.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.32
+                    ]
+                },
+                "amonrastbrown-WR": {
+                    "id": "amonrastbrown-WR",
+                    "name": "AmonRa St Brown",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "DET",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4374302.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        10.54
+                    ]
+                },
+                "anthonyrichardson-QB": {
+                    "id": "anthonyrichardson-QB",
+                    "name": "Anthony Richardson",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "IND",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429084.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.18
+                    ]
+                },
+                "antoniogibson-RB": {
+                    "id": "antoniogibson-RB",
+                    "name": "Antonio Gibson",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360294.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.43
+                    ]
+                },
+                "austinekeler-RB": {
+                    "id": "austinekeler-RB",
+                    "name": "Austin Ekeler",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "WSH",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3068267.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.34
+                    ]
+                },
+                "bakermayfield-QB": {
+                    "id": "bakermayfield-QB",
+                    "name": "Baker Mayfield",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "TB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3052587.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.49
+                    ]
+                },
+                "bearsdst-DST": {
+                    "id": "bearsdst-DST",
+                    "name": "Bears DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/chi.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.42
+                    ]
+                },
+                "bengalsdst-DST": {
+                    "id": "bengalsdst-DST",
+                    "name": "Bengals DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "CIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/cin.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.27
+                    ]
+                },
+                "bensinnott-TE": {
+                    "id": "bensinnott-TE",
+                    "name": "Ben Sinnott",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "WSH",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4690923.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.58
+                    ]
+                },
+                "bijanrobinson-RB": {
+                    "id": "bijanrobinson-RB",
+                    "name": "Bijan Robinson",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "ATL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4430807.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        11.15
+                    ]
+                },
+                "billsdst-DST": {
+                    "id": "billsdst-DST",
+                    "name": "Bills DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/buf.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.59
+                    ]
+                },
+                "blakecorum-RB": {
+                    "id": "blakecorum-RB",
+                    "name": "Blake Corum",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "LAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429096.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.58
+                    ]
+                },
+                "bonix-QB": {
+                    "id": "bonix-QB",
+                    "name": "Bo Nix",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "DEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426338.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -5.02
+                    ]
+                },
+                "braelonallen-RB": {
+                    "id": "braelonallen-RB",
+                    "name": "Braelon Allen",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NYJ",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4685247.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.14
+                    ]
+                },
+                "brandincooks-WR": {
+                    "id": "brandincooks-WR",
+                    "name": "Brandin Cooks",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/16731.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.0
+                    ]
+                },
+                "brandonaiyuk-WR": {
+                    "id": "brandonaiyuk-WR",
+                    "name": "Brandon Aiyuk",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360438.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.46
+                    ]
+                },
+                "brandonaubrey-K": {
+                    "id": "brandonaubrey-K",
+                    "name": "Brandon Aubrey",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3953687.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.04
+                    ]
+                },
+                "breecehall-RB": {
+                    "id": "breecehall-RB",
+                    "name": "Breece Hall",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NYJ",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4427366.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        10.99
+                    ]
+                },
+                "brianrobinsonjr-RB": {
+                    "id": "brianrobinsonjr-RB",
+                    "name": "Brian Robinson Jr",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "WSH",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241474.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.65
+                    ]
+                },
+                "brianthomasjr-WR": {
+                    "id": "brianthomasjr-WR",
+                    "name": "Brian Thomas Jr",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "JAX",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4432773.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.66
+                    ]
+                },
+                "brockbowers-TE": {
+                    "id": "brockbowers-TE",
+                    "name": "Brock Bowers",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "LV",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4432665.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.99
+                    ]
+                },
+                "brockpurdy-QB": {
+                    "id": "brockpurdy-QB",
+                    "name": "Brock Purdy",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361741.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.15
+                    ]
+                },
+                "brownsdst-DST": {
+                    "id": "brownsdst-DST",
+                    "name": "Browns DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "CLE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/cle.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        9.88
+                    ]
+                },
+                "bryceyoung-QB": {
+                    "id": "bryceyoung-QB",
+                    "name": "Bryce Young",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "CAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4685720.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.54
+                    ]
+                },
+                "buccaneersdst-DST": {
+                    "id": "buccaneersdst-DST",
+                    "name": "Buccaneers DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "TB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/tb.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -5.1
+                    ]
+                },
+                "buckyirving-RB": {
+                    "id": "buckyirving-RB",
+                    "name": "Bucky Irving",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "TB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4596448.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.99
+                    ]
+                },
+                "cadeotton-TE": {
+                    "id": "cadeotton-TE",
+                    "name": "Cade Otton",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "TB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4243331.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.63
+                    ]
+                },
+                "cairosantos-K": {
+                    "id": "cairosantos-K",
+                    "name": "Cairo Santos",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/17427.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.14
+                    ]
+                },
+                "calebwilliams-QB": {
+                    "id": "calebwilliams-QB",
+                    "name": "Caleb Williams",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4431611.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.13
+                    ]
+                },
+                "calvinridley-WR": {
+                    "id": "calvinridley-WR",
+                    "name": "Calvin Ridley",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "TEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3925357.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.12
+                    ]
+                },
+                "camerondicker-K": {
+                    "id": "camerondicker-K",
+                    "name": "Cameron Dicker",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4362081.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.95
+                    ]
+                },
+                "ceedeelamb-WR": {
+                    "id": "ceedeelamb-WR",
+                    "name": "CeeDee Lamb",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241389.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        13.23
+                    ]
+                },
+                "chargersdst-DST": {
+                    "id": "chargersdst-DST",
+                    "name": "Chargers DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lac.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.9
+                    ]
+                },
+                "chasebrown-RB": {
+                    "id": "chasebrown-RB",
+                    "name": "Chase Brown",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4362238.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.62
+                    ]
+                },
+                "chasemclaughlin-K": {
+                    "id": "chasemclaughlin-K",
+                    "name": "Chase McLaughlin",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "TB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3150744.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.07
+                    ]
+                },
+                "chiefsdst-DST": {
+                    "id": "chiefsdst-DST",
+                    "name": "Chiefs DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/kc.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.19
+                    ]
+                },
+                "chigoziemokonkwo-TE": {
+                    "id": "chigoziemokonkwo-TE",
+                    "name": "Chigoziem Okonkwo",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "TEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360635.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.36
+                    ]
+                },
+                "chrisgodwin-WR": {
+                    "id": "chrisgodwin-WR",
+                    "name": "Chris Godwin",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "TB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3116165.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.57
+                    ]
+                },
+                "chrisolave-WR": {
+                    "id": "chrisolave-WR",
+                    "name": "Chris Olave",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NO",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361370.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.43
+                    ]
+                },
+                "christiankirk-WR": {
+                    "id": "christiankirk-WR",
+                    "name": "Christian Kirk",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "JAX",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3895856.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.82
+                    ]
+                },
+                "christianmccaffrey-RB": {
+                    "id": "christianmccaffrey-RB",
+                    "name": "Christian McCaffrey",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3117251.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        13.51
+                    ]
+                },
+                "christianwatson-WR": {
+                    "id": "christianwatson-WR",
+                    "name": "Christian Watson",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4248528.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.55
+                    ]
+                },
+                "chubahubbard-RB": {
+                    "id": "chubahubbard-RB",
+                    "name": "Chuba Hubbard",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241416.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.6
+                    ]
+                },
+                "cjstroud-QB": {
+                    "id": "cjstroud-QB",
+                    "name": "CJ Stroud",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "HOU",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4432577.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.25
+                    ]
+                },
+                "clydeedwardshelaire-RB": {
+                    "id": "clydeedwardshelaire-RB",
+                    "name": "Clyde EdwardsHelaire",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4242214.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.23
+                    ]
+                },
+                "colekmet-TE": {
+                    "id": "colekmet-TE",
+                    "name": "Cole Kmet",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4258595.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.55
+                    ]
+                },
+                "coltsdst-DST": {
+                    "id": "coltsdst-DST",
+                    "name": "Colts DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "IND",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ind.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.91
+                    ]
+                },
+                "cooperkupp-WR": {
+                    "id": "cooperkupp-WR",
+                    "name": "Cooper Kupp",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2977187.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.09
+                    ]
+                },
+                "courtlandsutton-WR": {
+                    "id": "courtlandsutton-WR",
+                    "name": "Courtland Sutton",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "DEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3128429.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.39
+                    ]
+                },
+                "cowboysdst-DST": {
+                    "id": "cowboysdst-DST",
+                    "name": "Cowboys DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/dal.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.19
+                    ]
+                },
+                "curtissamuel-WR": {
+                    "id": "curtissamuel-WR",
+                    "name": "Curtis Samuel",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3121427.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.32
+                    ]
+                },
+                "dakprescott-QB": {
+                    "id": "dakprescott-QB",
+                    "name": "Dak Prescott",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2577417.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.16
+                    ]
+                },
+                "dallasgoedert-TE": {
+                    "id": "dallasgoedert-TE",
+                    "name": "Dallas Goedert",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "PHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3121023.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.6
+                    ]
+                },
+                "daltonkincaid-TE": {
+                    "id": "daltonkincaid-TE",
+                    "name": "Dalton Kincaid",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4385690.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.63
+                    ]
+                },
+                "daltonschultz-TE": {
+                    "id": "daltonschultz-TE",
+                    "name": "Dalton Schultz",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "HOU",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3117256.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.84
+                    ]
+                },
+                "dalvincook-RB": {
+                    "id": "dalvincook-RB",
+                    "name": "Dalvin Cook",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3116593.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -7.12
+                    ]
+                },
+                "dandreswift-RB": {
+                    "id": "dandreswift-RB",
+                    "name": "DAndre Swift",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4259545.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.89
+                    ]
+                },
+                "danielcarlson-K": {
+                    "id": "danielcarlson-K",
+                    "name": "Daniel Carlson",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "LV",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3051909.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.63
+                    ]
+                },
+                "danieljones-QB": {
+                    "id": "danieljones-QB",
+                    "name": "Daniel Jones",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "NYG",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3917792.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.58
+                    ]
+                },
+                "darnellmooney-WR": {
+                    "id": "darnellmooney-WR",
+                    "name": "Darnell Mooney",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "ATL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4040655.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.51
+                    ]
+                },
+                "davanteadams-WR": {
+                    "id": "davanteadams-WR",
+                    "name": "Davante Adams",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LV",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/16800.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.43
+                    ]
+                },
+                "davidmontgomery-RB": {
+                    "id": "davidmontgomery-RB",
+                    "name": "David Montgomery",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "DET",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4035538.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.7
+                    ]
+                },
+                "davidnjoku-TE": {
+                    "id": "davidnjoku-TE",
+                    "name": "David Njoku",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "CLE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3123076.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.42
+                    ]
+                },
+                "deandrehopkins-WR": {
+                    "id": "deandrehopkins-WR",
+                    "name": "DeAndre Hopkins",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "TEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15795.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.36
+                    ]
+                },
+                "deebosamuelsr-WR": {
+                    "id": "deebosamuelsr-WR",
+                    "name": "Deebo Samuel Sr",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3126486.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.04
+                    ]
+                },
+                "demarcusrobinson-WR": {
+                    "id": "demarcusrobinson-WR",
+                    "name": "Demarcus Robinson",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3043116.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.74
+                    ]
+                },
+                "demariodouglas-WR": {
+                    "id": "demariodouglas-WR",
+                    "name": "DeMario Douglas",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4427095.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.94
+                    ]
+                },
+                "derrickhenry-RB": {
+                    "id": "derrickhenry-RB",
+                    "name": "Derrick Henry",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3043078.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.75
+                    ]
+                },
+                "deshaunwatson-QB": {
+                    "id": "deshaunwatson-QB",
+                    "name": "Deshaun Watson",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "CLE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3122840.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.39
+                    ]
+                },
+                "devinsingletary-RB": {
+                    "id": "devinsingletary-RB",
+                    "name": "Devin Singletary",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NYG",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4040761.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.86
+                    ]
+                },
+                "devonachane-RB": {
+                    "id": "devonachane-RB",
+                    "name": "DeVon Achane",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429160.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.65
+                    ]
+                },
+                "devontasmith-WR": {
+                    "id": "devontasmith-WR",
+                    "name": "DeVonta Smith",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "PHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241478.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.69
+                    ]
+                },
+                "diontaejohnson-WR": {
+                    "id": "diontaejohnson-WR",
+                    "name": "Diontae Johnson",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3932905.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.08
+                    ]
+                },
+                "djcharkjr-WR": {
+                    "id": "djcharkjr-WR",
+                    "name": "DJ Chark Jr",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3115394.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.57
+                    ]
+                },
+                "djmoore-WR": {
+                    "id": "djmoore-WR",
+                    "name": "DJ Moore",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3915416.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.57
+                    ]
+                },
+                "dkmetcalf-WR": {
+                    "id": "dkmetcalf-WR",
+                    "name": "DK Metcalf",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4047650.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.85
+                    ]
+                },
+                "dolphinsdst-DST": {
+                    "id": "dolphinsdst-DST",
+                    "name": "Dolphins DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/mia.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.02
+                    ]
+                },
+                "dontayvionwicks-WR": {
+                    "id": "dontayvionwicks-WR",
+                    "name": "Dontayvion Wicks",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4428850.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.63
+                    ]
+                },
+                "drakelondon-WR": {
+                    "id": "drakelondon-WR",
+                    "name": "Drake London",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "ATL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426502.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.72
+                    ]
+                },
+                "dustinhopkins-K": {
+                    "id": "dustinhopkins-K",
+                    "name": "Dustin Hopkins",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "CLE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15965.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.64
+                    ]
+                },
+                "eaglesdst-DST": {
+                    "id": "eaglesdst-DST",
+                    "name": "Eagles DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "PHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/phi.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.38
+                    ]
+                },
+                "elijahmitchell-RB": {
+                    "id": "elijahmitchell-RB",
+                    "name": "Elijah Mitchell",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241555.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -7.35
+                    ]
+                },
+                "evanengram-TE": {
+                    "id": "evanengram-TE",
+                    "name": "Evan Engram",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "JAX",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3051876.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.55
+                    ]
+                },
+                "evanmcpherson-K": {
+                    "id": "evanmcpherson-K",
+                    "name": "Evan McPherson",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "CIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360234.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.51
+                    ]
+                },
+                "ezekielelliott-RB": {
+                    "id": "ezekielelliott-RB",
+                    "name": "Ezekiel Elliott",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3051392.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.19
+                    ]
+                },
+                "falconsdst-DST": {
+                    "id": "falconsdst-DST",
+                    "name": "Falcons DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "ATL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/atl.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.29
+                    ]
+                },
+                "gabedavis-WR": {
+                    "id": "gabedavis-WR",
+                    "name": "Gabe Davis",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "JAX",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4243537.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.21
+                    ]
+                },
+                "garrettwilson-WR": {
+                    "id": "garrettwilson-WR",
+                    "name": "Garrett Wilson",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NYJ",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4569618.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.92
+                    ]
+                },
+                "genosmith-QB": {
+                    "id": "genosmith-QB",
+                    "name": "Geno Smith",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15864.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.05
+                    ]
+                },
+                "georgekittle-TE": {
+                    "id": "georgekittle-TE",
+                    "name": "George Kittle",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3040151.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.92
+                    ]
+                },
+                "georgepickens-WR": {
+                    "id": "georgepickens-WR",
+                    "name": "George Pickens",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "PIT",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426354.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.38
+                    ]
+                },
+                "giantsdst-DST": {
+                    "id": "giantsdst-DST",
+                    "name": "Giants DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "NYG",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nyg.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -6.9
+                    ]
+                },
+                "gregzuerlein-K": {
+                    "id": "gregzuerlein-K",
+                    "name": "Greg Zuerlein",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "NYJ",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14993.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.67
+                    ]
+                },
+                "gusedwards-RB": {
+                    "id": "gusedwards-RB",
+                    "name": "Gus Edwards",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3051926.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.32
+                    ]
+                },
+                "harrisonbutker-K": {
+                    "id": "harrisonbutker-K",
+                    "name": "Harrison Butker",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3055899.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        10.79
+                    ]
+                },
+                "hunterhenry-TE": {
+                    "id": "hunterhenry-TE",
+                    "name": "Hunter Henry",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "NE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3046439.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.42
+                    ]
+                },
+                "isaiahlikely-TE": {
+                    "id": "isaiahlikely-TE",
+                    "name": "Isaiah Likely",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361050.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.24
+                    ]
+                },
+                "isiahpacheco-RB": {
+                    "id": "isiahpacheco-RB",
+                    "name": "Isiah Pacheco",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361529.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.85
+                    ]
+                },
+                "jaguarsdst-DST": {
+                    "id": "jaguarsdst-DST",
+                    "name": "Jaguars DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "JAX",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/jax.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.17
+                    ]
+                },
+                "jahandotson-WR": {
+                    "id": "jahandotson-WR",
+                    "name": "Jahan Dotson",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "PHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361409.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -9.34
+                    ]
+                },
+                "jahmyrgibbs-RB": {
+                    "id": "jahmyrgibbs-RB",
+                    "name": "Jahmyr Gibbs",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "DET",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429795.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.16
+                    ]
+                },
+                "jakebates-K": {
+                    "id": "jakebates-K",
+                    "name": "Jake Bates",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "DET",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4689936.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.47
+                    ]
+                },
+                "jakeelliott-K": {
+                    "id": "jakeelliott-K",
+                    "name": "Jake Elliott",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "PHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3050478.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.56
+                    ]
+                },
+                "jakeferguson-TE": {
+                    "id": "jakeferguson-TE",
+                    "name": "Jake Ferguson",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4242355.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.93
+                    ]
+                },
+                "jakemoody-K": {
+                    "id": "jakemoody-K",
+                    "name": "Jake Moody",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4372066.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.06
+                    ]
+                },
+                "jakobimeyers-WR": {
+                    "id": "jakobimeyers-WR",
+                    "name": "Jakobi Meyers",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LV",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916433.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.77
+                    ]
+                },
+                "jaleelmclaughlin-RB": {
+                    "id": "jaleelmclaughlin-RB",
+                    "name": "Jaleel McLaughlin",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "DEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4722893.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.0
+                    ]
+                },
+                "jalenhurts-QB": {
+                    "id": "jalenhurts-QB",
+                    "name": "Jalen Hurts",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "PHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4040715.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        10.42
+                    ]
+                },
+                "jalentolbert-WR": {
+                    "id": "jalentolbert-WR",
+                    "name": "Jalen Tolbert",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4249417.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -5.53
+                    ]
+                },
+                "jalinhyatt-WR": {
+                    "id": "jalinhyatt-WR",
+                    "name": "Jalin Hyatt",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NYG",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4692590.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.35
+                    ]
+                },
+                "jalynnpolk-WR": {
+                    "id": "jalynnpolk-WR",
+                    "name": "JaLynn Polk",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4430637.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.17
+                    ]
+                },
+                "jamaalwilliams-RB": {
+                    "id": "jamaalwilliams-RB",
+                    "name": "Jamaal Williams",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NO",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2980453.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.16
+                    ]
+                },
+                "jamarrchase-WR": {
+                    "id": "jamarrchase-WR",
+                    "name": "JaMarr Chase",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4362628.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        11.23
+                    ]
+                },
+                "jamesconner-RB": {
+                    "id": "jamesconner-RB",
+                    "name": "James Conner",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "ARI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3045147.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.09
+                    ]
+                },
+                "jamescook-RB": {
+                    "id": "jamescook-RB",
+                    "name": "James Cook",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4379399.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.28
+                    ]
+                },
+                "jamesonwilliams-WR": {
+                    "id": "jamesonwilliams-WR",
+                    "name": "Jameson Williams",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "DET",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426388.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.32
+                    ]
+                },
+                "jaredgoff-QB": {
+                    "id": "jaredgoff-QB",
+                    "name": "Jared Goff",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "DET",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3046779.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.33
+                    ]
+                },
+                "jasonmyers-K": {
+                    "id": "jasonmyers-K",
+                    "name": "Jason Myers",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2473037.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.24
+                    ]
+                },
+                "jasonsanders-K": {
+                    "id": "jasonsanders-K",
+                    "name": "Jason Sanders",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3124679.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.93
+                    ]
+                },
+                "javontewilliams-RB": {
+                    "id": "javontewilliams-RB",
+                    "name": "Javonte Williams",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "DEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361579.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.98
+                    ]
+                },
+                "jaxonsmithnjigba-WR": {
+                    "id": "jaxonsmithnjigba-WR",
+                    "name": "Jaxon SmithNjigba",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4430878.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.72
+                    ]
+                },
+                "jaydendaniels-QB": {
+                    "id": "jaydendaniels-QB",
+                    "name": "Jayden Daniels",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "WSH",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426348.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.54
+                    ]
+                },
+                "jaydenreed-WR": {
+                    "id": "jaydenreed-WR",
+                    "name": "Jayden Reed",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4362249.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.86
+                    ]
+                },
+                "jaylenwaddle-WR": {
+                    "id": "jaylenwaddle-WR",
+                    "name": "Jaylen Waddle",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4372016.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.18
+                    ]
+                },
+                "jaylenwarren-RB": {
+                    "id": "jaylenwarren-RB",
+                    "name": "Jaylen Warren",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "PIT",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4569987.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.63
+                    ]
+                },
+                "jaylenwright-RB": {
+                    "id": "jaylenwright-RB",
+                    "name": "Jaylen Wright",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4682745.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.8
+                    ]
+                },
+                "jeromeford-RB": {
+                    "id": "jeromeford-RB",
+                    "name": "Jerome Ford",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CLE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4372019.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.42
+                    ]
+                },
+                "jerryjeudy-WR": {
+                    "id": "jerryjeudy-WR",
+                    "name": "Jerry Jeudy",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CLE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241463.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.99
+                    ]
+                },
+                "jetsdst-DST": {
+                    "id": "jetsdst-DST",
+                    "name": "Jets DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "NYJ",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nyj.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.32
+                    ]
+                },
+                "jkdobbins-RB": {
+                    "id": "jkdobbins-RB",
+                    "name": "JK Dobbins",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241985.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.41
+                    ]
+                },
+                "joeburrow-QB": {
+                    "id": "joeburrow-QB",
+                    "name": "Joe Burrow",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "CIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3915511.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.53
+                    ]
+                },
+                "joemixon-RB": {
+                    "id": "joemixon-RB",
+                    "name": "Joe Mixon",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "HOU",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3116385.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.07
+                    ]
+                },
+                "jonathantaylor-RB": {
+                    "id": "jonathantaylor-RB",
+                    "name": "Jonathan Taylor",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "IND",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4242335.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        9.21
+                    ]
+                },
+                "jonathonbrooks-RB": {
+                    "id": "jonathonbrooks-RB",
+                    "name": "Jonathon Brooks",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4678008.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.78
+                    ]
+                },
+                "jordanaddison-WR": {
+                    "id": "jordanaddison-WR",
+                    "name": "Jordan Addison",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "MIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429205.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.3
+                    ]
+                },
+                "jordanlove-QB": {
+                    "id": "jordanlove-QB",
+                    "name": "Jordan Love",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4036378.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.32
+                    ]
+                },
+                "jordanmason-RB": {
+                    "id": "jordanmason-RB",
+                    "name": "Jordan Mason",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360569.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.39
+                    ]
+                },
+                "joshallen-QB": {
+                    "id": "joshallen-QB",
+                    "name": "Josh Allen",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3918298.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        10.4
+                    ]
+                },
+                "joshdowns-WR": {
+                    "id": "joshdowns-WR",
+                    "name": "Josh Downs",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "IND",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4688813.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -5.29
+                    ]
+                },
+                "joshjacobs-RB": {
+                    "id": "joshjacobs-RB",
+                    "name": "Josh Jacobs",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4047365.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.06
+                    ]
+                },
+                "joshuapalmer-WR": {
+                    "id": "joshuapalmer-WR",
+                    "name": "Joshua Palmer",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4242433.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.6
+                    ]
+                },
+                "justinfields-QB": {
+                    "id": "justinfields-QB",
+                    "name": "Justin Fields",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "PIT",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4362887.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -19.95
+                    ]
+                },
+                "justinherbert-QB": {
+                    "id": "justinherbert-QB",
+                    "name": "Justin Herbert",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4038941.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.35
+                    ]
+                },
+                "justinjefferson-WR": {
+                    "id": "justinjefferson-WR",
+                    "name": "Justin Jefferson",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "MIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4262921.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        10.41
+                    ]
+                },
+                "justintucker-K": {
+                    "id": "justintucker-K",
+                    "name": "Justin Tucker",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15683.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.42
+                    ]
+                },
+                "juwanjohnson-TE": {
+                    "id": "juwanjohnson-TE",
+                    "name": "Juwan Johnson",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "NO",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3929645.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.39
+                    ]
+                },
+                "kaimifairbairn-K": {
+                    "id": "kaimifairbairn-K",
+                    "name": "Kaimi Fairbairn",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "HOU",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2971573.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.73
+                    ]
+                },
+                "keatonmitchell-RB": {
+                    "id": "keatonmitchell-RB",
+                    "name": "Keaton Mitchell",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4596334.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.74
+                    ]
+                },
+                "keenanallen-WR": {
+                    "id": "keenanallen-WR",
+                    "name": "Keenan Allen",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15818.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.24
+                    ]
+                },
+                "kendremiller-RB": {
+                    "id": "kendremiller-RB",
+                    "name": "Kendre Miller",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NO",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4599739.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.9
+                    ]
+                },
+                "kendrickbourne-WR": {
+                    "id": "kendrickbourne-WR",
+                    "name": "Kendrick Bourne",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3045523.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -6.17
+                    ]
+                },
+                "kennethwalkeriii-RB": {
+                    "id": "kennethwalkeriii-RB",
+                    "name": "Kenneth Walker III",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4567048.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.66
+                    ]
+                },
+                "keoncoleman-WR": {
+                    "id": "keoncoleman-WR",
+                    "name": "Keon Coleman",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4635008.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.86
+                    ]
+                },
+                "khalilherbert-RB": {
+                    "id": "khalilherbert-RB",
+                    "name": "Khalil Herbert",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4035886.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.27
+                    ]
+                },
+                "khalilshakir-WR": {
+                    "id": "khalilshakir-WR",
+                    "name": "Khalil Shakir",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4373678.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.58
+                    ]
+                },
+                "kimanividal-RB": {
+                    "id": "kimanividal-RB",
+                    "name": "Kimani Vidal",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4430968.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -5.35
+                    ]
+                },
+                "kirkcousins-QB": {
+                    "id": "kirkcousins-QB",
+                    "name": "Kirk Cousins",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "ATL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14880.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.21
+                    ]
+                },
+                "kylepitts-TE": {
+                    "id": "kylepitts-TE",
+                    "name": "Kyle Pitts",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "ATL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360248.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.14
+                    ]
+                },
+                "kylermurray-QB": {
+                    "id": "kylermurray-QB",
+                    "name": "Kyler Murray",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "ARI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3917315.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.84
+                    ]
+                },
+                "kyrenwilliams-RB": {
+                    "id": "kyrenwilliams-RB",
+                    "name": "Kyren Williams",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "LAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4430737.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.91
+                    ]
+                },
+                "laddmcconkey-WR": {
+                    "id": "laddmcconkey-WR",
+                    "name": "Ladd McConkey",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4612826.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.09
+                    ]
+                },
+                "lamarjackson-QB": {
+                    "id": "lamarjackson-QB",
+                    "name": "Lamar Jackson",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916387.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        9.36
+                    ]
+                },
+                "lionsdst-DST": {
+                    "id": "lionsdst-DST",
+                    "name": "Lions DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "DET",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/det.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        2.71
+                    ]
+                },
+                "lukemccaffrey-WR": {
+                    "id": "lukemccaffrey-WR",
+                    "name": "Luke McCaffrey",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "WSH",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426948.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -9.34
+                    ]
+                },
+                "lukemusgrave-TE": {
+                    "id": "lukemusgrave-TE",
+                    "name": "Luke Musgrave",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4428085.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.04
+                    ]
+                },
+                "maliknabers-WR": {
+                    "id": "maliknabers-WR",
+                    "name": "Malik Nabers",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NYG",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4595348.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.43
+                    ]
+                },
+                "markandrews-TE": {
+                    "id": "markandrews-TE",
+                    "name": "Mark Andrews",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3116365.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.83
+                    ]
+                },
+                "marquisebrown-WR": {
+                    "id": "marquisebrown-WR",
+                    "name": "Marquise Brown",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241372.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.49
+                    ]
+                },
+                "marshawnlloyd-RB": {
+                    "id": "marshawnlloyd-RB",
+                    "name": "MarShawn Lloyd",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429023.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.47
+                    ]
+                },
+                "marvinharrisonjr-WR": {
+                    "id": "marvinharrisonjr-WR",
+                    "name": "Marvin Harrison Jr",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "ARI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4432708.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.97
+                    ]
+                },
+                "marvinmimsjr-WR": {
+                    "id": "marvinmimsjr-WR",
+                    "name": "Marvin Mims Jr",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "DEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4686472.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -5.99
+                    ]
+                },
+                "mattgay-K": {
+                    "id": "mattgay-K",
+                    "name": "Matt Gay",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "IND",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4249087.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.13
+                    ]
+                },
+                "matthewstafford-QB": {
+                    "id": "matthewstafford-QB",
+                    "name": "Matthew Stafford",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "LAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/12483.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.11
+                    ]
+                },
+                "michaelpittmanjr-WR": {
+                    "id": "michaelpittmanjr-WR",
+                    "name": "Michael Pittman Jr",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "IND",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4035687.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.1
+                    ]
+                },
+                "michaelwilson-WR": {
+                    "id": "michaelwilson-WR",
+                    "name": "Michael Wilson",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "ARI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360761.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.53
+                    ]
+                },
+                "mikeevans-WR": {
+                    "id": "mikeevans-WR",
+                    "name": "Mike Evans",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "TB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/16737.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.48
+                    ]
+                },
+                "mikewilliams-WR": {
+                    "id": "mikewilliams-WR",
+                    "name": "Mike Williams",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NYJ",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3045138.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.68
+                    ]
+                },
+                "milessanders-RB": {
+                    "id": "milessanders-RB",
+                    "name": "Miles Sanders",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4045163.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.38
+                    ]
+                },
+                "najeeharris-RB": {
+                    "id": "najeeharris-RB",
+                    "name": "Najee Harris",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "PIT",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241457.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.57
+                    ]
+                },
+                "nickchubb-RB": {
+                    "id": "nickchubb-RB",
+                    "name": "Nick Chubb",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CLE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3128720.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.11
+                    ]
+                },
+                "nicocollins-WR": {
+                    "id": "nicocollins-WR",
+                    "name": "Nico Collins",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "HOU",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4258173.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        6.07
+                    ]
+                },
+                "noahfant-TE": {
+                    "id": "noahfant-TE",
+                    "name": "Noah Fant",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4036131.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.13
+                    ]
+                },
+                "odellbeckhamjr-WR": {
+                    "id": "odellbeckhamjr-WR",
+                    "name": "Odell Beckham Jr",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/16733.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -7.78
+                    ]
+                },
+                "packersdst-DST": {
+                    "id": "packersdst-DST",
+                    "name": "Packers DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/gb.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.55
+                    ]
+                },
+                "patfreiermuth-TE": {
+                    "id": "patfreiermuth-TE",
+                    "name": "Pat Freiermuth",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "PIT",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361411.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.14
+                    ]
+                },
+                "patrickmahomes-QB": {
+                    "id": "patrickmahomes-QB",
+                    "name": "Patrick Mahomes",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3139477.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        9.72
+                    ]
+                },
+                "pukanacua-WR": {
+                    "id": "pukanacua-WR",
+                    "name": "Puka Nacua",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426515.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.43
+                    ]
+                },
+                "quentinjohnston-WR": {
+                    "id": "quentinjohnston-WR",
+                    "name": "Quentin Johnston",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LAC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429025.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -7.24
+                    ]
+                },
+                "rachaadwhite-RB": {
+                    "id": "rachaadwhite-RB",
+                    "name": "Rachaad White",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "TB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4697815.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.45
+                    ]
+                },
+                "raheemmostert-RB": {
+                    "id": "raheemmostert-RB",
+                    "name": "Raheem Mostert",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2576414.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.22
+                    ]
+                },
+                "raidersdst-DST": {
+                    "id": "raidersdst-DST",
+                    "name": "Raiders DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "LV",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lv.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.02
+                    ]
+                },
+                "rasheerice-WR": {
+                    "id": "rasheerice-WR",
+                    "name": "Rashee Rice",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4428331.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.83
+                    ]
+                },
+                "rashidshaheed-WR": {
+                    "id": "rashidshaheed-WR",
+                    "name": "Rashid Shaheed",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NO",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4032473.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.22
+                    ]
+                },
+                "rashodbateman-WR": {
+                    "id": "rashodbateman-WR",
+                    "name": "Rashod Bateman",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360939.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -5.54
+                    ]
+                },
+                "ravensdst-DST": {
+                    "id": "ravensdst-DST",
+                    "name": "Ravens DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/bal.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.11
+                    ]
+                },
+                "raydavis-RB": {
+                    "id": "raydavis-RB",
+                    "name": "Ray Davis",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429501.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.0
+                    ]
+                },
+                "rhamondrestevenson-RB": {
+                    "id": "rhamondrestevenson-RB",
+                    "name": "Rhamondre Stevenson",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NE",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4569173.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.5
+                    ]
+                },
+                "rickypearsall-WR": {
+                    "id": "rickypearsall-WR",
+                    "name": "Ricky Pearsall",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "SF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4428209.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -8.89
+                    ]
+                },
+                "ricodowdle-RB": {
+                    "id": "ricodowdle-RB",
+                    "name": "Rico Dowdle",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "DAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4038815.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.16
+                    ]
+                },
+                "romeodoubs-WR": {
+                    "id": "romeodoubs-WR",
+                    "name": "Romeo Doubs",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "GB",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361432.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.39
+                    ]
+                },
+                "romeodunze-WR": {
+                    "id": "romeodunze-WR",
+                    "name": "Rome Odunze",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4431299.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.22
+                    ]
+                },
+                "russellwilson-QB": {
+                    "id": "russellwilson-QB",
+                    "name": "Russell Wilson",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "PIT",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14881.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.64
+                    ]
+                },
+                "saintsdst-DST": {
+                    "id": "saintsdst-DST",
+                    "name": "Saints DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "NO",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/no.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.84
+                    ]
+                },
+                "samlaporta-TE": {
+                    "id": "samlaporta-TE",
+                    "name": "Sam LaPorta",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "DET",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4430027.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        9.86
+                    ]
+                },
+                "saquonbarkley-RB": {
+                    "id": "saquonbarkley-RB",
+                    "name": "Saquon Barkley",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "PHI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3929630.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        8.93
+                    ]
+                },
+                "seahawksdst-DST": {
+                    "id": "seahawksdst-DST",
+                    "name": "Seahawks DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/sea.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -0.47
+                    ]
+                },
+                "steelersdst-DST": {
+                    "id": "steelersdst-DST",
+                    "name": "Steelers DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "PIT",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/pit.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.28
+                    ]
+                },
+                "stefondiggs-WR": {
+                    "id": "stefondiggs-WR",
+                    "name": "Stefon Diggs",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "HOU",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2976212.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.84
+                    ]
+                },
+                "tankbigsby-RB": {
+                    "id": "tankbigsby-RB",
+                    "name": "Tank Bigsby",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "JAX",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429013.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.31
+                    ]
+                },
+                "tankdell-WR": {
+                    "id": "tankdell-WR",
+                    "name": "Tank Dell",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "HOU",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4366031.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.49
+                    ]
+                },
+                "taysomhill-TE": {
+                    "id": "taysomhill-TE",
+                    "name": "Taysom Hill",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "NO",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2468609.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.51
+                    ]
+                },
+                "teehiggins-WR": {
+                    "id": "teehiggins-WR",
+                    "name": "Tee Higgins",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4239993.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.87
+                    ]
+                },
+                "terrymclaurin-WR": {
+                    "id": "terrymclaurin-WR",
+                    "name": "Terry McLaurin",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "WSH",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3121422.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.01
+                    ]
+                },
+                "texansdst-DST": {
+                    "id": "texansdst-DST",
+                    "name": "Texans DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "HOU",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/hou.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.06
+                    ]
+                },
+                "tjhockenson-TE": {
+                    "id": "tjhockenson-TE",
+                    "name": "TJ Hockenson",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "MIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4036133.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        5.38
+                    ]
+                },
+                "tonypollard-RB": {
+                    "id": "tonypollard-RB",
+                    "name": "Tony Pollard",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "TEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916148.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.29
+                    ]
+                },
+                "travisetiennejr-RB": {
+                    "id": "travisetiennejr-RB",
+                    "name": "Travis Etienne Jr",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "JAX",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4239996.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.45
+                    ]
+                },
+                "traviskelce-TE": {
+                    "id": "traviskelce-TE",
+                    "name": "Travis Kelce",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15847.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        9.76
+                    ]
+                },
+                "tretucker-WR": {
+                    "id": "tretucker-WR",
+                    "name": "Tre Tucker",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "LV",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4428718.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -5.04
+                    ]
+                },
+                "trevorlawrence-QB": {
+                    "id": "trevorlawrence-QB",
+                    "name": "Trevor Lawrence",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "JAX",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360310.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.7
+                    ]
+                },
+                "treybenson-RB": {
+                    "id": "treybenson-RB",
+                    "name": "Trey Benson",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "ARI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429275.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.98
+                    ]
+                },
+                "treymcbride-TE": {
+                    "id": "treymcbride-TE",
+                    "name": "Trey McBride",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "ARI",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361307.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        7.55
+                    ]
+                },
+                "tuatagovailoa-QB": {
+                    "id": "tuatagovailoa-QB",
+                    "name": "Tua Tagovailoa",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241479.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.32
+                    ]
+                },
+                "tychandler-RB": {
+                    "id": "tychandler-RB",
+                    "name": "Ty Chandler",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "MIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4242431.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.32
+                    ]
+                },
+                "tyjaespears-RB": {
+                    "id": "tyjaespears-RB",
+                    "name": "Tyjae Spears",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "TEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4428557.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.44
+                    ]
+                },
+                "tylerallgeier-RB": {
+                    "id": "tylerallgeier-RB",
+                    "name": "Tyler Allgeier",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "ATL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4373626.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.87
+                    ]
+                },
+                "tylerbass-K": {
+                    "id": "tylerbass-K",
+                    "name": "Tyler Bass",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "BUF",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3917232.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.14
+                    ]
+                },
+                "tylerboyd-WR": {
+                    "id": "tylerboyd-WR",
+                    "name": "Tyler Boyd",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "TEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3045144.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.65
+                    ]
+                },
+                "tylerconklin-TE": {
+                    "id": "tylerconklin-TE",
+                    "name": "Tyler Conklin",
+                    "pos": "TE",
+                    "group": "TE",
+                    "team": "NYJ",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3915486.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.65
+                    ]
+                },
+                "tylerlockett-WR": {
+                    "id": "tylerlockett-WR",
+                    "name": "Tyler Lockett",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2577327.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        0.49
+                    ]
+                },
+                "tyreekhill-WR": {
+                    "id": "tyreekhill-WR",
+                    "name": "Tyreek Hill",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "MIA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3116406.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        11.77
+                    ]
+                },
+                "tyronetracyjr-RB": {
+                    "id": "tyronetracyjr-RB",
+                    "name": "Tyrone Tracy Jr",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "NYG",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360516.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.65
+                    ]
+                },
+                "vikingsdst-DST": {
+                    "id": "vikingsdst-DST",
+                    "name": "Vikings DST",
+                    "pos": "DST",
+                    "group": "DST",
+                    "team": "MIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/min.png&h=188&w=188&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -2.16
+                    ]
+                },
+                "wandalerobinson-WR": {
+                    "id": "wandalerobinson-WR",
+                    "name": "WanDale Robinson",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "NYG",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4569587.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -4.53
+                    ]
+                },
+                "willlevis-QB": {
+                    "id": "willlevis-QB",
+                    "name": "Will Levis",
+                    "pos": "QB",
+                    "group": "QB",
+                    "team": "TEN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361418.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -1.97
+                    ]
+                },
+                "xavierlegette-WR": {
+                    "id": "xavierlegette-WR",
+                    "name": "Xavier Legette",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "CAR",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4430034.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        -3.87
+                    ]
+                },
+                "xavierworthy-WR": {
+                    "id": "xavierworthy-WR",
+                    "name": "Xavier Worthy",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "KC",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4683062.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.48
+                    ]
+                },
+                "younghoekoo-K": {
+                    "id": "younghoekoo-K",
+                    "name": "Younghoe Koo",
+                    "pos": "K",
+                    "group": "K",
+                    "team": "ATL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3049899.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.97
+                    ]
+                },
+                "zachcharbonnet-RB": {
+                    "id": "zachcharbonnet-RB",
+                    "name": "Zach Charbonnet",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "SEA",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426385.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        1.79
+                    ]
+                },
+                "zackmoss-RB": {
+                    "id": "zackmoss-RB",
+                    "name": "Zack Moss",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "CIN",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4035676.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        3.16
+                    ]
+                },
+                "zamirwhite-RB": {
+                    "id": "zamirwhite-RB",
+                    "name": "Zamir White",
+                    "pos": "RB",
+                    "group": "RB",
+                    "team": "LV",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4361777.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.85
+                    ]
+                },
+                "zayflowers-WR": {
+                    "id": "zayflowers-WR",
+                    "name": "Zay Flowers",
+                    "pos": "WR",
+                    "group": "WR",
+                    "team": "BAL",
+                    "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4429615.png&w=96&h=70&cb=1",
+                    "status": null,
+                    "ratings": [
+                        4.92
+                    ]
+                }
+            }
+        }
+    },
     "football-2023": {
         "purdue": {
             "meta": {
