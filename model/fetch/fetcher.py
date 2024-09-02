@@ -1,21 +1,22 @@
+import pathlib
+import time
+
 import pandas as pd
 from bs4 import BeautifulSoup
-import time
-import pathlib
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from model.credentials import path_to_chromedriver
-from model.fetch.utils import (
-    get_urls, get_data_paths, parse_float, parse_score, parse_int,
-    clean_text, clean_symbol, get_player_id, get_primary_pos,
-    player_pos_mapper,
-)
+
 from model.config import leagues
+from model.credentials import path_to_chromedriver
+from model.fetch.utils import (clean_symbol, clean_text, get_data_paths,
+                               get_player_id, get_primary_pos, get_urls,
+                               parse_float, parse_int, parse_score,
+                               player_pos_mapper)
 
 
 class DataFetcher:
@@ -252,6 +253,10 @@ class DataFetcher:
             select = Select(stat_filter)
             select.select_by_value('projections')
             time.sleep(2)
+        else:
+            stat_filter = self.driver.find_element(By.ID, 'filterStat')
+            select = Select(stat_filter)
+            select.select_by_value('currSeason')
 
         # read pages
         soup_pages = []
@@ -344,11 +349,10 @@ class DataFetcher:
 
                 total_pts = None
                 avg_pts = None
-                total_pts_holder = points_row.select_one('.total')
-                avg_pts_holder = points_row.select_one('.avg')
-                if total_pts_holder and avg_pts_holder:
-                    total_pts = parse_float(total_pts_holder.text, 0)
-                    avg_pts = parse_float(avg_pts_holder.text, 0)
+                table_entries = points_row.select('.table--cell')
+                if len(table_entries) >= 3:
+                    total_pts = parse_float(table_entries[-3].text, 0)
+                    avg_pts = parse_float(table_entries[-2].text, 0)
 
                 # fill data
                 player_id = get_player_id(name, pos)
