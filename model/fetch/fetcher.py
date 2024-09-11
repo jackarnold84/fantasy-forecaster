@@ -1,22 +1,18 @@
-import pathlib
 import time
+from tempfile import mkdtemp
 
 import pandas as pd
 from bs4 import BeautifulSoup
+from config import leagues
+from db.db import read_s3, write_s3
+from fetch.utils import (clean_symbol, clean_text, get_data_paths,
+                         get_player_id, get_primary_pos, get_urls, parse_float,
+                         parse_int, parse_score, player_pos_mapper)
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
-
-from model.config import leagues
-from model.credentials import path_to_chromedriver
-from model.fetch.utils import (clean_symbol, clean_text, get_data_paths,
-                               get_player_id, get_primary_pos, get_urls,
-                               parse_float, parse_int, parse_score,
-                               player_pos_mapper)
 
 
 class DataFetcher:
@@ -31,11 +27,22 @@ class DataFetcher:
         self.path = get_data_paths(self.sport, self.year, self.league_tag)
 
         # set up webdriver
-        service = Service(executable_path=path_to_chromedriver)
-        options = Options()
-        options.add_argument('--headless')
-        options.add_argument('log-level=3')
-        self.driver = webdriver.Chrome(service=service, options=options)
+        options = webdriver.ChromeOptions()
+        service = webdriver.ChromeService("/opt/chromedriver")
+        options.binary_location = '/opt/chrome/chrome'
+        options.add_argument("--headless=new")
+        options.add_argument('--no-sandbox')
+        options.add_argument("--disable-gpu")
+        options.add_argument("--window-size=1280x1696")
+        options.add_argument("--single-process")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-dev-tools")
+        options.add_argument("--no-zygote")
+        options.add_argument(f"--user-data-dir={mkdtemp()}")
+        options.add_argument(f"--data-path={mkdtemp()}")
+        options.add_argument(f"--disk-cache-dir={mkdtemp()}")
+        options.add_argument("--remote-debugging-port=9222")
+        self.driver = webdriver.Chrome(options=options, service=service)
 
     def driver_get(self, url, wait=10, wait_query=None):
         self.driver.get(url)
@@ -54,17 +61,15 @@ class DataFetcher:
         self.driver.quit()
 
     def read_data(self, path):
-        if not pathlib.Path(path).is_file():
+        df = read_s3(path)
+        if df is None:
             return []
-        df = pd.read_csv(path)
         return df.to_dict('records')
 
     def write_data(self, data, path, sort):
         data = sorted(data, key=sort)
         df = pd.DataFrame(data)
-        dir = path.rsplit('/', 1)[0]
-        pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
-        df.to_csv(path, index=False)
+        write_s3(df, path)
 
     def update_data(self, data, path, sort, filter):
         current_data = self.read_data(path)

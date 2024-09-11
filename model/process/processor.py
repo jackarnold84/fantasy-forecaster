@@ -1,9 +1,11 @@
-import json
+import time
+
 import numpy as np
-from model.players.weights import position_group_list
-from model.league.league import League
-from model.league.sim import Simulation
-from model.process.utils import safe_round
+from db.db import write_dynamo
+from league.league import League
+from league.sim import Simulation
+from players.weights import position_group_list
+from process.utils import safe_round
 
 
 class Processor:
@@ -32,7 +34,6 @@ class Processor:
         self.get_player_info()
 
         # write results
-        outfile = 'data/output.json'
         data = {
             'meta': {
                 'name': league.name,
@@ -40,26 +41,16 @@ class Processor:
                 'year': league.year,
                 'tag': self.leauge_tag,
                 'week': self.week,
+                'updated': int(time.time()),
             },
             'teams': self.teams_output,
             'league': self.league_output,
             'players': self.players_output,
         }
-        with open(outfile, 'r') as f:
-            try:
-                output = json.load(f)
-            except Exception as e:
-                print('warning: error reading existing output')
-                output = {}
-
-        if self.sport_tag not in output:
-            output[self.sport_tag] = {}
-        output[self.sport_tag][self.leauge_tag] = data
-
-        with open(outfile, 'w') as f:
-            json.dump(output, f, indent=4)
-
-        print(f'--> results written to {outfile}')
+        
+        db_id = f'{self.sport_tag}-{self.leauge_tag}'
+        write_dynamo(db_id, data)
+        print(f'--> results written to db with key {db_id}')
 
     def get_forecasts(self):
         forecast_options = [

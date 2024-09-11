@@ -1,7 +1,5 @@
-from model.players.utils import (
-    bound, get_sequence, parse_value, wma,
-)
-from model.players.weights import get_position_group
+from players.utils import bound, get_sequence, parse_value, wma
+from players.weights import get_position_group
 
 
 class Player:
