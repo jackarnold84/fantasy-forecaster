@@ -1,8 +1,10 @@
 import json
+
 import numpy as np
-from model.players.weights import position_group_list
+
 from model.league.league import League
 from model.league.sim import Simulation
+from model.players.weights import position_group_list
 from model.process.utils import safe_round
 
 
@@ -144,7 +146,7 @@ class Processor:
             for d in self.league.divisions
         }
         self.league_output['standings'] = {}
-        week_div = max(min(self.week, self.league.n_regular_season_weeks), 1)
+        week_div = max(min(self.week - 1, self.league.n_regular_season_weeks), 1)
         self.league_output['standings']['league'] = [
             {
                 'team': t,
