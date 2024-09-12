@@ -135,7 +135,7 @@ class Processor:
             for d in self.league.divisions
         }
         self.league_output['standings'] = {}
-        week_div = max(min(self.week, self.league.n_regular_season_weeks), 1)
+        week_div = max(min(self.week - 1, self.league.n_regular_season_weeks), 1)
         self.league_output['standings']['league'] = [
             {
                 'team': t,
