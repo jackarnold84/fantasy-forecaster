@@ -6,3 +6,4 @@ node_modules/
 public
 package-lock.json
 .aws-sam/
+samconfig.toml

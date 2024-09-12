@@ -14,7 +14,7 @@ def handler(event, _):
     action = payload.get('action', '')
     sport_tag = payload.get('sport', '')
     league_tag = payload.get('league', '')
-    week = payload.get('week', '')
+    week = payload.get('week', None)
     iters = payload.get('iter', None)
 
     # validate
@@ -23,12 +23,12 @@ def handler(event, _):
     if sport_tag not in leagues or league_tag not in leagues[sport_tag]:
         raise Exception('provided sport/league not found in config')
     
-    if not week:
+    if week is None:
         week = get_current_week(sport_tag)
     else:
         week = int(week)
 
-    if iters:
+    if iters is not None:
         iters = int(iters)   
     
     # perform action

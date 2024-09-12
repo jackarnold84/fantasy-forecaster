@@ -10,6 +10,7 @@ Resources:
       DockerContext: model/
       DockerTag: latest
     Properties:
+      FunctionName: FantasyForecasterModel
       PackageType: Image
       ImageUri: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/fantasy-forecaster:latest"
       MemorySize: 1024
@@ -24,20 +25,49 @@ Resources:
               Action:
                 - s3:GetObject
                 - s3:PutObject
-              Resource: !Sub "arn:aws:s3:::fantasy-forecast-data/*"
+              Resource: !Sub "arn:aws:s3:::fantasy-forecaster-data/*"
       Events:
         ScheduledEvent:
           Type: 'Schedule'
           Properties:
             Schedule: 'rate(30 minutes)'  # Adjust the schedule as needed
             Input: '{}'
+            Enabled: False
+
+  FantasyForecasterApi:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: FantasyForecasterApi
+      Handler: handler.lambda_handler
+      Runtime: python3.12
+      MemorySize: 128
+      Timeout: 5
+      CodeUri: api/
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:GetItem
+              Resource: !GetAtt FantasyForecasterTable.Arn
+      Events:
+        CatchAll:
+          Type: Api
+          Properties:
+            Path: /fantasy-forecaster/data
+            Method: GET
 
   FantasyForecasterTable:
     Type: 'AWS::Serverless::SimpleTable'
     Properties:
+      TableName: FantasyForecasterTable
       PrimaryKey:
         Name: id
         Type: String
       ProvisionedThroughput:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
+
+Outputs:
+  ApiGatewayUrl:
+    Description: "URL of the API Gateway"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/fantasy-forecaster/data"

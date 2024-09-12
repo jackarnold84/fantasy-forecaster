@@ -1,0 +1,11 @@
+{
+    "path": "/fantasy-forecaster/data",
+    "httpMethod": "GET",
+    "headers": {
+        "Accept": "application/json"
+    },
+    "queryStringParameters": {
+        "sport": "football-2024",
+        "tag": "purdue"
+    }
+}
