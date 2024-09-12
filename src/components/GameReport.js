@@ -1,14 +1,11 @@
 import * as React from "react"
-import output from "../../data/output.json"
 import UpcomingGames from "./UpcomingGames"
 import Container from "./elements/Container"
 import SectionTitle from "./elements/SectionTitle"
 import TeamLabel from "./elements/TeamLabel"
 import WeekNav from "./elements/WeekNav"
 
-const GameReport = ({ sportTag, leagueTag }) => {
-
-  const leagueData = output[sportTag][leagueTag]
+const GameReport = ({ leagueData }) => {
   const week = parseInt(leagueData.meta.week)
 
   const teamLabels = Object.fromEntries(

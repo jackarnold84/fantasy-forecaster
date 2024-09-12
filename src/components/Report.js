@@ -1,19 +1,16 @@
-import * as React from "react"
-import output from "../../data/output.json"
-import { capitalize } from "../utils/display"
-import Betting from "./Betting"
-import Forecasts from "./Forecasts"
-import ScheduleStrength from "./ScheduleStrength"
-import Standings from "./Standings"
-import TeamRatings from "./TeamRatings"
-import TimeForecasts from "./TimeForecasts"
-import UpcomingGames from "./UpcomingGames"
-import Container from "./elements/Container"
-import TeamLabel from "./elements/TeamLabel"
+import * as React from "react";
+import { capitalize } from "../utils/display";
+import Betting from "./Betting";
+import Forecasts from "./Forecasts";
+import ScheduleStrength from "./ScheduleStrength";
+import Standings from "./Standings";
+import TeamRatings from "./TeamRatings";
+import TimeForecasts from "./TimeForecasts";
+import UpcomingGames from "./UpcomingGames";
+import Container from "./elements/Container";
+import TeamLabel from "./elements/TeamLabel";
 
-const Report = ({ sportTag, leagueTag }) => {
-
-  const leagueData = output[sportTag][leagueTag]
+const Report = ({ leagueData }) => {
   const leagueName = leagueData.meta.name
   const sport = capitalize(leagueData.meta.sport)
   const year = leagueData.meta.year

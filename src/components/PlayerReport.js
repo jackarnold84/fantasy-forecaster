@@ -1,14 +1,11 @@
 import * as React from "react"
-import output from "../../data/output.json"
 import { capitalize } from "../utils/display"
 import Container from "./elements/Container"
 import PlayerImage from "./elements/PlayerImage"
 import TabNav from "./elements/TabNav"
 import WeekNav from "./elements/WeekNav"
 
-const PlayerReport = ({ sportTag, leagueTag }) => {
-
-  const leagueData = output[sportTag][leagueTag]
+const PlayerReport = ({ leagueData }) => {
   const sport = capitalize(leagueData.meta.sport)
   const week = parseInt(leagueData.meta.week)
   const players = leagueData.players
