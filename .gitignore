@@ -1,4 +1,4 @@
-dev/
+.dev/
 __pycache__/
 credentials.*
 node_modules/

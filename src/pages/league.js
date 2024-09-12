@@ -9,6 +9,8 @@ import Layout from "../components/Layout"
 import PlayerReport from "../components/PlayerReport"
 import Report from "../components/Report"
 
+const API_ENDPOINT = 'https://xjnwsfwba3.execute-api.us-east-2.amazonaws.com/Prod/fantasy-forecaster/data';
+
 const spin = keyframes`
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -41,7 +43,7 @@ const LeaguePage = ({ location }) => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = `https://xjnwsfwba3.execute-api.us-east-2.amazonaws.com/Prod/fantasy-forecaster/data?sport=${sportTag}&tag=${leagueTag}`;
+        const url = `${API_ENDPOINT}?sport=${sportTag}&tag=${leagueTag}`;
         console.log("fetching data from:", url);
         const response = await fetch(url);
         if (!response.ok) {

@@ -7,6 +7,7 @@ https://jackarnold84.github.io/fantasy-forecaster/
 
 ## UI
 
+### Commands
 - develop locally
   - `npm start`
 - build locally
@@ -15,7 +16,11 @@ https://jackarnold84.github.io/fantasy-forecaster/
   - `npm run serve` 
 - deploy to github pages
   - `npm run deploy`
-  - see gatsby-config.js for options
+  - see [gatsby-config.js](gatsby-config.js) for options
+
+### Configure
+- modify [config.json](src/config.json) to list available leauges
+- set `API_ENDPOINT` in [league.js](src/pages/league.js)
 
 ## Simulation Model
 
