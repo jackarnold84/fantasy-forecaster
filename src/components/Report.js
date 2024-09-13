@@ -1,5 +1,5 @@
 import * as React from "react";
-import { capitalize } from "../utils/display";
+import { capitalize, timeSince } from "../utils/display";
 import Betting from "./Betting";
 import Forecasts from "./Forecasts";
 import ScheduleStrength from "./ScheduleStrength";
@@ -15,6 +15,7 @@ const Report = ({ leagueData }) => {
   const sport = capitalize(leagueData.meta.sport)
   const year = leagueData.meta.year
   const week = parseInt(leagueData.meta.week)
+  const updated = leagueData.meta.updated
 
   const teamLabels = Object.fromEntries(
     Object.values(leagueData.teams.metadata).map(meta => (
@@ -34,11 +35,16 @@ const Report = ({ leagueData }) => {
             {leagueName} Fantasy {sport}
           </h2>
         </Container>
-        <Container size={24}>
-          <h4>
+
+        <Container top={24} bottom={2}>
+          <h3>
             Week {week} Report
-          </h4>
+          </h3>
         </Container>
+        <Container bottom={16}>
+          {updated && <div style={{ fontSize: "12px" }}>Updated {timeSince(updated)} ago</div>}
+        </Container>
+
       </div>
 
       <Standings

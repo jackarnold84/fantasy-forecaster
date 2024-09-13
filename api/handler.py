@@ -24,6 +24,7 @@ def lambda_handler(event, _):
     query_params = event.get('queryStringParameters') or {}
     sport = query_params.get('sport', '')
     tag = query_params.get('tag', '')
+    cache_param = query_params.get('cache', '')
     if not sport or not tag:
         return api_response(
             400,
@@ -33,9 +34,9 @@ def lambda_handler(event, _):
 
     # Check cache
     current_time = time.time()
-    if id in cache:
+    if id in cache and cache_param != 'none':
         cached_data, timestamp = cache[id]
-        if current_time - timestamp < CACHE_EXPIRATION:
+        if current_time - timestamp < CACHE_EXPIRATION and cache_param != 'refresh':
             return api_response(
                 200,
                 {'data': cached_data},

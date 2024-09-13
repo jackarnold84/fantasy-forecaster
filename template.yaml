@@ -13,7 +13,7 @@ Resources:
       FunctionName: FantasyForecasterModel
       PackageType: Image
       ImageUri: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/fantasy-forecaster:latest"
-      MemorySize: 1024
+      MemorySize: 1536
       Timeout: 120
       Policies:
         - Statement:
@@ -27,12 +27,81 @@ Resources:
                 - s3:PutObject
               Resource: !Sub "arn:aws:s3:::fantasy-forecaster-data/*"
       Events:
-        ScheduledEvent:
+        # FETCH PLAYERS
+        FetchPlayersFootballMorning:
           Type: 'Schedule'
           Properties:
-            Schedule: 'rate(30 minutes)'  # Adjust the schedule as needed
-            Input: '{}'
-            Enabled: False
+            Schedule: 'cron(0 12 ? * 2-6 *)'  # 6 AM CST (12 PM UTC)
+            Input: '{"action": "fetchPlayers", "sport": "football-2024", "league": "purdue"}'
+        FetchPlayersFootballAfternoon:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(0 22 ? * 2-6 *)'  # 4 PM CST (10 PM UTC)
+            Input: '{"action": "fetchPlayers", "sport": "football-2024", "league": "purdue"}'
+
+        # FETCH LEAGUE
+        PurdueFetchLeagueMorning:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(10 12 ? * 2-6 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "purdue"}'
+        PurdueFetchLeagueAfternoon:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(10 22 ? * 2-6 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "purdue"}'
+        CapitaloneFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(12 12 ? * 2-6 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "capitalone"}'
+        MflFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(14 12 ? * 2-6 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "mfl"}'
+        PonzoFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(16 12 ? * 2-6 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "ponzo"}'
+        DudesFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(18 12 ? * 2-6 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "dudes"}'
+
+        # RUN SIM
+        PurdueSim1:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(30 12 ? * 2-6 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "purdue"}'
+        PurdueSim2:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(30 22 ? * 2-6 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "purdue"}'
+        CapitaloneSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(32 12 ? * 2-6 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "capitalone"}'
+        MflSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(34 12 ? * 2-6 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "mfl"}'
+        PonzoSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(36 12 ? * 2-6 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "ponzo"}'
+        DudesSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(38 12 ? * 2-6 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "dudes"}'
 
   FantasyForecasterApi:
     Type: 'AWS::Serverless::Function'
@@ -40,7 +109,7 @@ Resources:
       FunctionName: FantasyForecasterApi
       Handler: handler.lambda_handler
       Runtime: python3.12
-      MemorySize: 128
+      MemorySize: 256
       Timeout: 5
       CodeUri: api/
       Policies:

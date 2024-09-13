@@ -7,6 +7,18 @@
             "tag": "purdue"
         },
         {
+            "name": "Capital One",
+            "sport": "football",
+            "year": 2024,
+            "tag": "capitalone"
+        },
+        {
+            "name": "MFL",
+            "sport": "football",
+            "year": 2024,
+            "tag": "mfl"
+        },
+        {
             "name": "Practice Squad",
             "sport": "football",
             "year": 2023,
