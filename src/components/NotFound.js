@@ -12,7 +12,6 @@ const NotFound = () => {
       {isReady &&
         <div className="center">
           <h2 className="x3-b16">
-            <i className="bi bi-x-circle x3-r8" />
             Page Not Found
           </h2>
           <Link to="/" className="x3-link">

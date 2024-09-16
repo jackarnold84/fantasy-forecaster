@@ -1,25 +1,24 @@
 import { Link } from "gatsby";
 import * as React from "react";
+import { FaArchive, FaBaseballBall, FaBasketballBall, FaFootballBall } from "react-icons/fa";
 import Layout from "../components/Layout";
 import Container from "../components/elements/Container";
 import config from "../config.json";
-import archive from "../images/sports/archive.png";
-import baseball from "../images/sports/baseball.png";
-import basketball from "../images/sports/basketball.png";
-import football from "../images/sports/football.png";
 import { capitalize } from "../utils/display";
 
+const getIcon = (IconComponent) => <IconComponent size={20} style={{ verticalAlign: 'bottom' }} />;
+
 const iconMap = {
-  baseball,
-  football,
-  basketball,
-  archive,
+  baseball: getIcon(FaBaseballBall),
+  football: getIcon(FaFootballBall),
+  basketball: getIcon(FaBasketballBall),
+  archive: getIcon(FaArchive),
 }
 
 const NavRow = ({ text, sport, path, isExternal }) => {
   const content = (
     <div className="nav-table-row">
-      <img src={iconMap[sport]} alt={sport} height={20} className="nav-table-img" />
+      {iconMap[sport]}
       <span className="x3-l8">{text}</span>
     </div>
   );
