@@ -1,7 +1,8 @@
 # Fantasy Forecaster
-## Version 2
 
-Predict ESPN fantasy league outcomes by simulation
+Predict ESPN fantasy league outcomes by simulation. Fetches player/leauge data from ESPN, uses a model to grade teams, and
+predicts the outcome of the league via simulation. Backend designed to be hosted on AWS for automated updates, and UI
+hosted on github pages.
 
 https://jackarnold84.github.io/fantasy-forecaster/
 
@@ -19,7 +20,7 @@ https://jackarnold84.github.io/fantasy-forecaster/
   - see [gatsby-config.js](gatsby-config.js) for options
 
 ### Configure
-- modify [config.json](src/config.json) to list available leauges
+- modify [config.json](src/config.json) to list available leagues
 - set `API_ENDPOINT` in [league.js](src/pages/league.js)
 
 ## Simulation Model
@@ -38,10 +39,11 @@ The [model](model/) fetches player and league data from ESPN and runs simulation
 - All other necessary resources will be created by the sam template
 - Set up new league
   - ensure league is viewable to public on ESPN (LM setting)
-  - go to ESPN to find leagueID (visable in URL)
+  - go to ESPN to find leagueID (visible in URL)
   - add config information to your [config file](#config-file)
+  - update scheduled events in [template.yaml](template.yaml) under Resources > FantasyForecasterModel > Properties > Events
 - Trigger lambda
-  - actions: fetchDraft --> fetchLeague --> fetchPlayers --> sim
+  - actions order: fetchDraft --> fetchLeague --> fetchPlayers --> sim
   - see [events/](model/events/) for how to trigger these actions
   - add scheduled events to the lambda for automatic updates
 
