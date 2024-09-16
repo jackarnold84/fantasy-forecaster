@@ -1,4 +1,5 @@
-import * as React from "react"
+import * as React from "react";
+import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
 
 const WeekNav = ({ min, max, week, setWeek }) => {
   return (
@@ -8,7 +9,7 @@ const WeekNav = ({ min, max, week, setWeek }) => {
         disabled={week <= min}
         onClick={() => { setWeek(week - 1) }}
       >
-        <i className="bi bi-caret-left-fill" />
+        <BsFillCaretLeftFill />
       </button>
       <span style={{ display: 'inline-block', minWidth: '72px' }}>
         {week === 0 ? 'Preseason' : `Week ${week}`}
@@ -18,7 +19,7 @@ const WeekNav = ({ min, max, week, setWeek }) => {
         disabled={week >= max}
         onClick={() => { setWeek(week + 1) }}
       >
-        <i className="bi bi-caret-right-fill" />
+        <BsFillCaretRightFill />
       </button>
     </div>
   )

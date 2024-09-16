@@ -1,12 +1,12 @@
 import numpy as np
-import pandas as pd
-from model.players.player import Player
-from model.players.utils import z_score, bound
-from model.players.weights import (
-    team_position_weights, position_group_list, stat_list,
-    player_rating_mean, player_rating_sd, team_rating_mean, team_rating_sd,
-    get_stat_weight, get_position_pool_size, get_team_position_weight,
-)
+from db.db import read_s3
+from players.player import Player
+from players.utils import bound, z_score
+from players.weights import (get_position_pool_size, get_stat_weight,
+                             get_team_position_weight, player_rating_mean,
+                             player_rating_sd, position_group_list, stat_list,
+                             team_position_weights, team_rating_mean,
+                             team_rating_sd)
 
 
 class PlayerUniverse:
@@ -20,8 +20,8 @@ class PlayerUniverse:
         # read data
         player_info_path = f'data/{self.sport}-{self.year}/players/info.csv'
         player_stats_path = f'data/{self.sport}-{self.year}/players/stats.csv'
-        info_records = pd.read_csv(player_info_path).to_dict('records')
-        stat_records = pd.read_csv(player_stats_path).to_dict('records')
+        info_records = read_s3(player_info_path).to_dict('records')
+        stat_records = read_s3(player_stats_path).to_dict('records')
 
         stat_records_by_id = {}
         for x in stat_records:

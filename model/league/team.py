@@ -1,6 +1,6 @@
 import numpy as np
-from model.players.universe import PlayerUniverse
-from model.league.utils import get_team_name
+from league.utils import get_team_name
+from players.universe import PlayerUniverse
 
 
 class Team:

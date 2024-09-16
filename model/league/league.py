@@ -1,16 +1,16 @@
 import numpy as np
-import pandas as pd
+from config import leagues
+from db.db import read_s3
+from league.sim import Simulation
+from league.team import Team
+from league.utils import get_mle_projection, get_team_name, z_score
+from players.universe import PlayerUniverse
 from tqdm import tqdm
-from model.players.universe import PlayerUniverse
-from model.league.team import Team
-from model.league.sim import Simulation
-from model.league.utils import get_team_name, z_score, get_mle_projection
-from model.config import leagues
 
 
 class League:
 
-    def __init__(self, sport_tag, league_tag, week):
+    def __init__(self, sport_tag, league_tag, week, iters=None):
         print('--> init league')
         league_config = leagues[sport_tag][league_tag]
         self.sport, self.year = sport_tag.split('-')
@@ -25,7 +25,7 @@ class League:
         self.n_weeks_per_playoff_matchup = league_config['weeks_per_playoff_matchup']
         self.n_regular_season_weeks = league_config['regular_season_weeks']
         self.n_total_weeks = league_config['total_weeks']
-        self.n_iter = league_config['n_iter']
+        self.n_iter = iters or league_config['n_iter']
         self.model_params = league_config['model_params']
         self.player_universe = PlayerUniverse(self.sport_tag, self.week)
 
@@ -36,13 +36,13 @@ class League:
         league_rosters_path = f'{path_prefix}/rosters.csv'
         league_draft_path = f'{path_prefix}/draft.csv'
 
-        member_records = pd.read_csv(league_members_path).to_dict('records')
-        schedule_records = pd.read_csv(league_schedule_path).to_dict('records')
+        member_records = read_s3(league_members_path).to_dict('records')
+        schedule_records = read_s3(league_schedule_path).to_dict('records')
         playoff_schedule_records = [x for x in schedule_records if x['playoff']]
         schedule_records = [x for x in schedule_records if not x['playoff']]
-        roster_records = pd.read_csv(league_rosters_path).to_dict('records')
+        roster_records = read_s3(league_rosters_path).to_dict('records')
         roster_records = [x for x in roster_records if x['week'] <= week]
-        draft_records = pd.read_csv(league_draft_path).to_dict('records')
+        draft_records = read_s3(league_draft_path).to_dict('records')
 
         # set up teams
         print('--> setting up teams')
@@ -95,7 +95,7 @@ class League:
                     self.n_playoff_teams,
                     self.n_weeks_per_playoff_matchup,
                 )
-                for _ in tqdm(range(n_iter), desc='sim ', leave=False)
+                for _ in range(n_iter)
             ]
 
     def get_projections(self, week):

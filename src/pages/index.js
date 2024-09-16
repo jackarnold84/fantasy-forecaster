@@ -1,33 +1,41 @@
-import * as React from "react"
-import leagueArchive from "../../data/leagueArchive.json"
-import output from "../../data/output.json"
-import Layout from "../components/Layout"
-import Container from "../components/elements/Container"
-import archive from "../images/sports/archive.png"
-import baseball from "../images/sports/baseball.png"
-import basketball from "../images/sports/basketball.png"
-import football from "../images/sports/football.png"
-import { capitalize } from "../utils/display"
+import { Link } from "gatsby";
+import * as React from "react";
+import { FaArchive, FaBaseballBall, FaBasketballBall, FaFootballBall } from "react-icons/fa";
+import Layout from "../components/Layout";
+import Container from "../components/elements/Container";
+import config from "../config.json";
+import { capitalize } from "../utils/display";
+
+const getIcon = (IconComponent) => <IconComponent size={20} style={{ verticalAlign: 'bottom' }} />;
 
 const iconMap = {
-  baseball,
-  football,
-  basketball,
-  archive,
+  baseball: getIcon(FaBaseballBall),
+  football: getIcon(FaFootballBall),
+  basketball: getIcon(FaBasketballBall),
+  archive: getIcon(FaArchive),
 }
 
-const NavRow = ({ text, sport, path }) => (
-  <a href={path} className="x3-link-plain">
+const NavRow = ({ text, sport, path, isExternal }) => {
+  const content = (
     <div className="nav-table-row">
-      <img src={iconMap[sport]} alt={sport} height={20} className="nav-table-img" />
+      {iconMap[sport]}
       <span className="x3-l8">{text}</span>
     </div>
-  </a>
-)
+  );
 
-const leagueList = Object.values(output).map(sport => (
-  Object.values(sport).map(league => league.meta)
-)).flat();
+  return isExternal ? (
+    <a href={path} className="x3-link-plain" target="_blank" rel="noopener noreferrer">
+      {content}
+    </a>
+  ) : (
+    <Link to={path} className="x3-link-plain">
+      {content}
+    </Link>
+  );
+}
+
+const leagueList = config.leagues;
+const leagueArchive = config.archivedLeagues;
 
 const IndexPage = () => {
   return (
@@ -43,6 +51,7 @@ const IndexPage = () => {
               sport={league.sport}
               path={`league/?sport=${league.sport}-${league.year}&tag=${league.tag}`}
               key={`${league.sport}-${league.year}-${league.tag}`}
+              isExternal={false}
             />
           ))}
         </div>
@@ -53,17 +62,17 @@ const IndexPage = () => {
           <h4 className="x3-row center nav-table-row">
             Archived Leagues:
           </h4>
-          {leagueArchive.leagues.map(league => (
+          {leagueArchive.map(league => (
             <NavRow
               text={league.name}
               sport="archive"
               path={league.link}
               key={league.name}
+              isExternal={true}
             />
           ))}
         </div>
       </Container>
-
     </Layout>
   )
 }

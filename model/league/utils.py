@@ -1,4 +1,4 @@
-from model.config import aliases
+from config import aliases
 
 
 # get team name from full manager name

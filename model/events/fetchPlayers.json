@@ -1,0 +1,8 @@
+{
+    "detail-type": "Scheduled Event",
+    "detail": {
+        "action": "fetchPlayers",
+        "sport": "football-2024",
+        "league": "purdue"
+    }
+}

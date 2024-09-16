@@ -1,0 +1,142 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: fantasy forecaster service
+
+Resources:
+  FantasyForecasterModel:
+    Type: 'AWS::Serverless::Function'
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: model/
+      DockerTag: latest
+    Properties:
+      FunctionName: FantasyForecasterModel
+      PackageType: Image
+      ImageUri: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/fantasy-forecaster:latest"
+      MemorySize: 1536
+      Timeout: 120
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:PutItem
+              Resource: !GetAtt FantasyForecasterTable.Arn
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:PutObject
+              Resource: !Sub "arn:aws:s3:::fantasy-forecaster-data/*"
+      Events:
+        # FETCH PLAYERS
+        FetchPlayersFootballMorning:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(0 12 ? * 3-7 *)'  # 6 AM CST (12 PM UTC)
+            Input: '{"action": "fetchPlayers", "sport": "football-2024", "league": "purdue"}'
+        FetchPlayersFootballAfternoon:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(0 22 ? * 3-7 *)'  # 4 PM CST (10 PM UTC)
+            Input: '{"action": "fetchPlayers", "sport": "football-2024", "league": "purdue"}'
+
+        # FETCH LEAGUE
+        PurdueFetchLeagueMorning:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(10 12 ? * 3-7 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "purdue"}'
+        PurdueFetchLeagueAfternoon:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(10 22 ? * 3-7 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "purdue"}'
+        CapitaloneFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(12 12 ? * 3-7 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "capitalone"}'
+        MflFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(14 12 ? * 3-7 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "mfl"}'
+        PonzoFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(16 12 ? * 3-7 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "ponzo"}'
+        DudesFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(18 12 ? * 3-7 *)'
+            Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "dudes"}'
+
+        # RUN SIM
+        PurdueSim1:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(30 12 ? * 3-7 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "purdue"}'
+        PurdueSim2:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(30 22 ? * 3-7 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "purdue"}'
+        CapitaloneSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(32 12 ? * 3-7 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "capitalone"}'
+        MflSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(34 12 ? * 3-7 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "mfl"}'
+        PonzoSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(36 12 ? * 3-7 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "ponzo"}'
+        DudesSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(38 12 ? * 3-7 *)'
+            Input: '{"action": "sim", "sport": "football-2024", "league": "dudes"}'
+
+  FantasyForecasterApi:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: FantasyForecasterApi
+      Handler: handler.lambda_handler
+      Runtime: python3.12
+      MemorySize: 256
+      Timeout: 5
+      CodeUri: api/
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:GetItem
+              Resource: !GetAtt FantasyForecasterTable.Arn
+      Events:
+        CatchAll:
+          Type: Api
+          Properties:
+            Path: /fantasy-forecaster/data
+            Method: GET
+
+  FantasyForecasterTable:
+    Type: 'AWS::Serverless::SimpleTable'
+    Properties:
+      TableName: FantasyForecasterTable
+      PrimaryKey:
+        Name: id
+        Type: String
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+
+Outputs:
+  ApiGatewayUrl:
+    Description: "URL of the API Gateway"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/fantasy-forecaster/data"

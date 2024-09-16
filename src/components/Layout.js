@@ -1,8 +1,8 @@
 import { Link } from "gatsby"
 import * as React from "react"
+import { BiLogoGithub } from "react-icons/bi"
 import logoWhite from "../images/iconWhite.png"
 import '../styles/global.css'
-import '../styles/icons.css'
 import { palette } from "../utils/palette"
 import Container from "./elements/Container"
 
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
             href="https://github.com/jackarnold84/fantasy-forecaster"
             className="x3-link-plain-white"
           >
-            <i className="bi-github" />
+            <BiLogoGithub size={16} style={{ verticalAlign: 'bottom' }} />
             <span className="x3-l4">
               Github
             </span>

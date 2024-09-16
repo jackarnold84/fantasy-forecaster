@@ -1,0 +1,83 @@
+{
+    "leagues": [
+        {
+            "name": "Practice Squad",
+            "sport": "football",
+            "year": 2024,
+            "tag": "purdue"
+        },
+        {
+            "name": "Capital One",
+            "sport": "football",
+            "year": 2024,
+            "tag": "capitalone"
+        },
+        {
+            "name": "MFL",
+            "sport": "football",
+            "year": 2024,
+            "tag": "mfl"
+        },
+        {
+            "name": "Practice Squad",
+            "sport": "football",
+            "year": 2023,
+            "tag": "purdue"
+        },
+        {
+            "name": "MFL",
+            "sport": "football",
+            "year": 2023,
+            "tag": "mfl"
+        },
+        {
+            "name": "Demon League",
+            "sport": "basketball",
+            "year": 2024,
+            "tag": "demon"
+        },
+        {
+            "name": "Practice Squad",
+            "sport": "baseball",
+            "year": 2023,
+            "tag": "purdue"
+        }
+    ],
+    "archivedLeagues": [
+        {
+            "name": "Practice Squad Fantasy Football (2022)",
+            "sport": "football",
+            "link": "https://pf-5.github.io/fantasy-forecaster-legacy/reports/purdue-2022/current.html"
+        },
+        {
+            "name": "Capital One Fantasy Basketball (2022)",
+            "sport": "basketball",
+            "link": "https://pf-5.github.io/fantasy-forecaster-legacy/reports/capitalone-basketball-2022/current.html"
+        },
+        {
+            "name": "Capital One Fantasy Football (2022)",
+            "sport": "football",
+            "link": "https://pf-5.github.io/fantasy-forecaster-legacy/reports/capitalone-2022/current.html"
+        },
+        {
+            "name": "Practice Squad Fantasy Baseball (2022)",
+            "sport": "baseball",
+            "link": "https://pf-5.github.io/fantasy-forecaster-legacy/reports/purdue-baseball-2022/current.html"
+        },
+        {
+            "name": "Morton Fantasy Football (2022)",
+            "sport": "football",
+            "link": "https://pf-5.github.io/fantasy-forecaster-legacy/reports/morton-2022/current.html"
+        },
+        {
+            "name": "Practice Squad Fantasy Football (2021)",
+            "sport": "football",
+            "link": "https://pf-5.github.io/fantasy-forecaster-legacy/reports/purdue-2021/current.html"
+        },
+        {
+            "name": "Morton Fantasy Football (2021)",
+            "sport": "football",
+            "link": "https://pf-5.github.io/fantasy-forecaster-legacy/reports/morton-2021/current.html"
+        }
+    ]
+}

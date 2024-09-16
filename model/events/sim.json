@@ -1,0 +1,9 @@
+{
+    "detail-type": "Scheduled Event",
+    "detail": {
+        "action": "sim",
+        "sport": "football-2024",
+        "league": "purdue",
+        "iter": 10000
+    }
+}

@@ -1,18 +1,28 @@
-import * as React from "react"
+import styled from "styled-components";
 
-const Container = ({ size, top, bottom, width, children, style }) => {
-  const defaultPad = size || 8
-  const paddingTop = top || defaultPad
-  const paddingBottom = bottom || defaultPad
-  const padding = { paddingTop: `${paddingTop}px`, paddingBottom: `${paddingBottom}px` }
-  const maxWidth = width ? `${width}px` : '100%'
-  const customStyle = style || {}
+const Container = styled.div.attrs(({
+  size = 8, top, bottom, width, centered = false, flex = false,
+}) => ({
+  size,
+  top: top !== undefined ? top : size,
+  bottom: bottom !== undefined ? bottom : size,
+  width,
+  centered: centered ? "true" : "false",
+  flex: flex ? "true" : "false",
+}))`
+  margin: auto;
+  padding-top: ${props => props.top}px;
+  padding-bottom: ${props => props.bottom}px;
+  ${({ width }) => width && `
+    max-width: ${width}px;
+  `}
+  ${({ centered }) => centered === "true" && `
+    text-align: center;
+    justify-content: center;
+  `}
+  ${({ flex }) => flex === "true" && `
+    display: flex;
+  `}
+`;
 
-  return (
-    <div className="auto" style={{ maxWidth, ...padding, ...customStyle }}>
-      {children}
-    </div>
-  )
-}
-
-export default Container
+export default Container;
