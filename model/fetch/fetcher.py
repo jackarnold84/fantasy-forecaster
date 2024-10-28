@@ -355,7 +355,7 @@ class DataFetcher:
                 total_pts = None
                 avg_pts = None
                 table_entries = points_row.select('.table--cell')
-                if len(table_entries) >= 3:
+                if len(table_entries) >= 3 and self.sport != 'basketball':
                     total_pts = parse_float(table_entries[-3].text, 0)
                     avg_pts = parse_float(table_entries[-2].text, 0)
 

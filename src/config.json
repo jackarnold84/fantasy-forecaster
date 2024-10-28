@@ -19,6 +19,12 @@
             "tag": "mfl"
         },
         {
+            "name": "Demon League",
+            "sport": "basketball",
+            "year": 2025,
+            "tag": "demon"
+        },
+        {
             "name": "Practice Squad",
             "sport": "football",
             "year": 2023,

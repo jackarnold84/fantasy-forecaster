@@ -42,6 +42,11 @@ Resources:
           Properties:
             Schedule: 'cron(0 22 ? * 3-7 *)'  # 4 PM CST (10 PM UTC)
             Input: '{"action": "fetchPlayers", "sport": "football-2024", "league": "purdue"}'
+        FetchPlayersBasketball:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(2 12 ? * * *)'  # 6 AM CST (12 PM UTC)
+            Input: '{"action": "fetchPlayers", "sport": "basketball-2025", "league": "demon"}'
 
         # FETCH LEAGUE
         PurdueFetchLeagueMorning:
@@ -74,6 +79,11 @@ Resources:
           Properties:
             Schedule: 'cron(18 12 ? * 3-7 *)'
             Input: '{"action": "fetchLeague", "sport": "football-2024", "league": "dudes"}'
+        DemonFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(20 12 ? * * *)'
+            Input: '{"action": "fetchLeague", "sport": "basketball-2025", "league": "demon"}'
 
         # RUN SIM
         PurdueSim1:
@@ -106,6 +116,11 @@ Resources:
           Properties:
             Schedule: 'cron(38 12 ? * 3-7 *)'
             Input: '{"action": "sim", "sport": "football-2024", "league": "dudes"}'
+        DemonSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(40 12 ? * * *)'
+            Input: '{"action": "sim", "sport": "basketball-2025", "league": "demon"}'
 
   FantasyForecasterApi:
     Type: 'AWS::Serverless::Function'
