@@ -13,7 +13,7 @@ def get_current_week(sport):
     current_date = datetime.now().date()
     if sport not in week_dates:
         return 0
-    sorted_weeks = sorted(week_dates[sport].items(), reverse=True)
+    sorted_weeks = sorted(week_dates[sport].items(), key=lambda x: int(x[0]), reverse=True)
 
     for week, start_date in sorted_weeks:
         if current_date >= datetime.strptime(start_date, '%Y-%m-%d').date():
