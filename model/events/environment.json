@@ -1,0 +1,6 @@
+{
+    "Parameters": {
+        "DB_READ": "prod",
+        "DB_WRITE": "mock"
+    }
+}

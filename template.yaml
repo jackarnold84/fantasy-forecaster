@@ -15,6 +15,10 @@ Resources:
       ImageUri: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/fantasy-forecaster:latest"
       MemorySize: 1536
       Timeout: 120
+      Environment:
+        Variables:
+          DB_READ: "prod"
+          DB_WRITE: "prod"
       Policies:
         - Statement:
             - Effect: Allow
