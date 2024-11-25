@@ -9,3 +9,5 @@ package-lock.json
 .aws-sam/
 samconfig.toml
 settings.json
+.vscode/
+.pytest_cache/
