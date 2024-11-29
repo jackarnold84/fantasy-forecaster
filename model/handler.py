@@ -36,7 +36,7 @@ def handler(event, _):
         league = League(sport_tag, league_tag, week, iters)
         Processor(league)
 
-    elif action.startswith('fetch'):
+    elif action in ['fetchLeague', 'fetchPlayers', 'fetchDraft']:
         fetcher = DataFetcher(sport_tag, league_tag, week)
         print('--> initialized data fetcher')
 

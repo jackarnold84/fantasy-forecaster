@@ -3,6 +3,7 @@ from config import leagues
 from db.db import read_s3
 from league.sim import Simulation
 from league.team import Team
+from league.trader import Trader
 from league.utils import get_mle_projection, get_team_name, z_score
 from players.universe import PlayerUniverse
 from tqdm import tqdm
@@ -103,6 +104,12 @@ class League:
                 )
                 for _ in range(n_iter)
             ]
+
+        # trade finder
+        print('====== starting trade finder ======')
+        trader = Trader(self.sport, self.week, self.teams, self.player_universe)
+        res = trader.run()
+        print("====== trade finder complete ======")
 
     def get_projections(self, week):
         score_mean = self.model_params['score_mean']
