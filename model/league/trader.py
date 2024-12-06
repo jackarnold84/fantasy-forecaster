@@ -1,4 +1,5 @@
 import itertools
+import random
 from collections import defaultdict
 from functools import lru_cache
 from typing import Iterable, Iterator, List, Tuple, TypeAlias
@@ -10,6 +11,8 @@ from tqdm import tqdm
 
 Package: TypeAlias = Tuple[str, ...]
 Trade: TypeAlias = Tuple[str, str, Package, Package]
+TeamPair: TypeAlias = Tuple[str, str]
+Eval: TypeAlias = Tuple[float, float, float]
 
 position_exclusions = {
     'football': ['K', 'DST'],
@@ -46,80 +49,117 @@ class Trader:
             for t in teams
         }
 
+        self.team_names = {
+            t.id: t.name
+            for t in teams
+        }
+
         # assertions
         for t in self.teams:
             for pid in self.teams[t]:
                 assert self.player_positions[pid] in self.pos_weights
 
-    def run(self):
-        print('running trader')
-        self.get_filtered_trades()
+    def run(self) -> List[List[dict]]:
+        featured_trades = self.filter_and_select_trades()
+        print('featured trades:', featured_trades)
+        return featured_trades
 
-    # TODO: complete filter trades function
-    def get_filtered_trades(self):
-        beneficial_trades = self.get_beneficial_trades()
-        trades = [
+    def filter_and_select_trades(self) -> List[List[dict]]:
+        trades_list = [
             {
-                "score": score,
-                "trade": (tid1, tid2, pkg1, pkg2),
-                "managers": (tid1, tid2),
-                "players": frozenset(pkg1 + pkg2),
-                "positions": (
+                'benefit': benefit,
+                'trade': (tid1, tid2, pkg1, pkg2),
+                'teams': (tid1, tid2),
+                'gains': (t1_gain, t2_gain),
+                'players': frozenset(pkg1 + pkg2),
+                'positions': (
                     tuple(sorted(self.player_positions[pid] for pid in pkg1)),
                     tuple(sorted(self.player_positions[pid] for pid in pkg2))
                 ),
             }
-            for score, (tid1, tid2, pkg1, pkg2) in beneficial_trades
-            if score > 0.1
+            for (benefit, t1_gain, t2_gain), (tid1, tid2, pkg1, pkg2) in self.get_beneficial_trades()
         ]
 
-        trades_by_managers = defaultdict(list)
-        for trade in trades:
-            trades_by_managers[trade['managers']].append(trade)
+        trades_by_teams = defaultdict(list)
+        for trade in trades_list:
+            trades_by_teams[trade['teams']].append(trade)
 
         # remove trades with extra non-benefit players
         keep_trades = []
-        for managers, grouped_trades in trades_by_managers.items():
-            grouped_trades.sort(key=lambda x: (-x['score'], len(x['players'])))
-            for i, trade1 in enumerate(grouped_trades):
+        for trades in trades_by_teams.values():
+            trades.sort(key=lambda x: (-x['benefit'], len(x['players'])))
+            for i, trade1 in enumerate(trades):
                 keep = True
-                for trade2 in grouped_trades[:i]:
+                for trade2 in trades[:i]:
                     if trade2['players'].issubset(trade1['players']):
                         keep = False
                         break
                 if keep:
                     keep_trades.append(trade1)
 
-        print("before", len(trades), "--> after", len(keep_trades))
+        trades_list = keep_trades
 
-        # keep bottom 30% of trades
-        keep_trades.sort(key=lambda x: -x['score'])
-        keep_trades = keep_trades[:int(len(keep_trades) * 0.4)]
+        # keep top 60% of trades
+        trades_list.sort(key=lambda x: -x['benefit'])
+        trades_list = trades_list[:int(len(keep_trades) * 0.6)]
 
-        trades = keep_trades
+        # group trades by team pair and position
+        trades_by_teams_pos = defaultdict(lambda: defaultdict(list))
+        for trade in trades_list:
+            teams = trade['teams']
+            pos = trade['positions']
+            trades_by_teams_pos[teams][pos].append(trade)
 
-        trades_by_managers = defaultdict(list)
-        for trade in trades:
-            trades_by_managers[trade['managers']].append(trade)
+        # random select featured trades
+        n_featured = len(self.teams) // 2 + 1
+        teams_keys = list(trades_by_teams_pos.keys())
+        team_pairs = self.select_team_pairs(teams_keys, n_featured)
 
-        for managers, grouped_trades in trades_by_managers.items():
-            dist_pos = set(x['positions'] for x in grouped_trades)
-            print(managers, len(grouped_trades), "->", len(dist_pos))
+        featured_trades = []
+        for teams in team_pairs:
+            trade_pos = trades_by_teams_pos[teams]
+            trades = random.choice(list(trade_pos.values()))
+            selected = random.choice(trades)
+            featured_trades.append(selected)
 
-        for managers, grouped_trades in trades_by_managers.items():
-            trades_by_pos = defaultdict(list)
-            for trade in grouped_trades:
-                trades_by_pos[trade['positions']].append(trade)
+        # format for output
+        result = [
+            sorted(
+                [
+                    {
+                        'team': self.team_names[t['teams'][0]],
+                        'players': list(t['trade'][2]),
+                        'gain': round(t['gains'][0], 3),
+                    },
+                    {
+                        'team': self.team_names[t['teams'][1]],
+                        'players': list(t['trade'][3]),
+                        'gain': round(t['gains'][1], 3),
+                    },
+                ],
+                key=lambda x: -x['gain']
+            ) for t in featured_trades
+        ]
+        return result
 
-            print("\n\nmanagers", managers)
-            for positions, pos_grouped_trades in trades_by_pos.items():
-                pos_grouped_trades.sort(key=lambda x: -x['score'])
-                print(positions, len(pos_grouped_trades))
+    def select_team_pairs(self, pairings: List[TeamPair], max_len: int) -> List[TeamPair]:
+        to_include = set([item for sublist in pairings for item in sublist])
+        random.shuffle(pairings)
+        counts = defaultdict(int)
+        res = []
+        # attempt to select subset representing all teams
+        for a, b in pairings:
+            if (counts[a] == 0 and counts[b] < 2) or (counts[b] == 0 and counts[a] < 2):
+                res.append((a, b))
+                counts[a] += 1
+                counts[b] += 1
+            if len(counts) >= len(to_include):
+                break
 
-                for trade in pos_grouped_trades:
-                    print(round(trade['score'], 3), trade['trade'])
+        random.shuffle(res)
+        return res[:max_len]
 
-    def get_beneficial_trades(self) -> Iterator[Tuple[float, Trade]]:
+    def get_beneficial_trades(self) -> Iterator[Tuple[Eval, Trade]]:
         initial_team_ratings = {
             tid: self.get_team_rating(self.teams[tid])
             for tid in self.teams
@@ -143,9 +183,10 @@ class Trader:
             rtg2_after = self.get_team_rating(team2)
 
             if rtg1_after > rtg1_before and rtg2_after > rtg2_before:
-                benefit_score = ((rtg1_after - rtg1_before) *
-                                 (rtg2_after - rtg2_before))**0.5
-                yield benefit_score, (tid1, tid2, pkg1, pkg2)
+                t1_gain = rtg1_after - rtg1_before
+                t2_gain = rtg2_after - rtg2_before
+                benefit_score = (t1_gain * t2_gain)**0.5
+                yield (benefit_score, t1_gain, t2_gain), (tid1, tid2, pkg1, pkg2)
 
     def generate_all_trade_combos(self) -> Iterator[Trade]:
         team_combinations = itertools.combinations(
@@ -177,7 +218,7 @@ class Trader:
             ratings.sort(reverse=True)
             team_rating += self.get_pos_group_rating(pos, tuple(ratings))
 
-        return team_rating
+        return float(team_rating)
 
     @lru_cache(maxsize=10_000)
     def get_pos_group_rating(self, pos: str, ratings: Tuple[float, ...]) -> float:
