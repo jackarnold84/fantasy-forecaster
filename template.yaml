@@ -127,7 +127,7 @@ Resources:
     Properties:
       FunctionName: FantasyForecasterApi
       Handler: handler.lambda_handler
-      Runtime: python3.12
+      Runtime: python3.13
       MemorySize: 256
       Timeout: 5
       CodeUri: api/

@@ -16,7 +16,8 @@ class Simulation:
         self.divisions = divisions
         self.use_h2h = use_h2h
         self.playoff_live_scores = playoff_live_scores
-        self.in_playoffs = week > n_regular_season_weeks + 1 and len(playoff_live_scores) > 0
+        self.in_playoffs = week > n_regular_season_weeks + 1 \
+            and len(playoff_live_scores) > 0
         self.n_teams = len(teams)
         self.n_regular_season_weeks = n_regular_season_weeks
         self.n_playoff_teams = n_playoff_teams
@@ -135,7 +136,6 @@ class Simulation:
                 live = self.playoff_live_scores[(home, away)]
                 n -= live['thru']
                 home_score += live['diff']
-                away_score -= live['diff']
             home_score += self.sim_score(home, w, n)
             away_score += self.sim_score(away, w, n)
             return [home, away] if home_score >= away_score else [away, home]

@@ -27,3 +27,7 @@ class TestHandler(unittest.TestCase):
         self.assertEqual(result['action'], event['detail']['action'])
         self.assertEqual(result['sport'], event['detail']['sport'])
         self.assertEqual(result['league'], event['detail']['league'])
+
+
+if __name__ == '__main__':
+    unittest.main()
