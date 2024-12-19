@@ -38,7 +38,9 @@ class League:
 
         member_records = read_s3(league_members_path).to_dict('records')
         schedule_records = read_s3(league_schedule_path).to_dict('records')
-        playoff_schedule_records = [x for x in schedule_records if x['playoff']]
+        playoff_schedule_records = [
+            x for x in schedule_records if x['playoff']
+        ]
         schedule_records = [x for x in schedule_records if not x['playoff']]
         roster_records = read_s3(league_rosters_path).to_dict('records')
         roster_records = [x for x in roster_records if x['week'] <= week]
@@ -72,13 +74,17 @@ class League:
 
         # playoffs
         self.playoff_live_scores = {}
+        playoff_schedule_records.sort(key=lambda x: x['week'])
         if self.week > self.n_regular_season_weeks + 1:
             for x in playoff_schedule_records:
                 home = get_team_name(x['home'])
                 away = get_team_name(x['away'])
                 diff = x['home_score'] - x['away_score']
-                thru = min(self.week - x['week'], self.n_weeks_per_playoff_matchup)
-                self.playoff_live_scores[(home, away)] = {'diff': diff, 'thru': thru}
+                thru = min(self.week - x['week'],
+                           self.n_weeks_per_playoff_matchup)
+                self.playoff_live_scores[(home, away)] = {
+                    'diff': diff, 'thru': thru,
+                }
 
         # run simulations
         print('--> running simulations')
@@ -142,12 +148,16 @@ class League:
                     mixed_proj = 0.5 * (0.8**i) * mle_proj + \
                         0.5 * (0.85**i) * r + \
                         (1 - 0.5*0.8**i - 0.5*0.85**i) * score_mean
-                    projections[t.name][w] = {'mean': mixed_proj, 'sd': score_sd}
+                    projections[t.name][w] = {
+                        'mean': mixed_proj, 'sd': score_sd,
+                    }
             else:
                 for i in range(0, self.n_total_weeks - week + 1):
                     w = week + i
                     mixed_proj = 0.5 * (0.9**i) * mle_proj + \
                         (1 - 0.5*0.9**i) * score_mean
-                    projections[t.name][w] = {'mean': mixed_proj, 'sd': score_sd}
+                    projections[t.name][w] = {
+                        'mean': mixed_proj, 'sd': score_sd,
+                    }
 
         return projections

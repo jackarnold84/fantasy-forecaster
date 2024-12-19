@@ -23,6 +23,9 @@ class DataFetcher:
         self.week = str(week)
         self.league_id = league_config['league_id']
         self.league_tag = league_tag
+        self.n_regular_season_weeks = league_config['regular_season_weeks']
+        self.n_weeks_per_playoff_matchup = league_config['weeks_per_playoff_matchup']
+        self.playoff_start_week = self.n_regular_season_weeks + 1
         self.url = get_urls(self.sport, self.league_id)
         self.path = get_data_paths(self.sport, self.year, self.league_tag)
 
@@ -100,7 +103,7 @@ class DataFetcher:
                 break
             for j, row in enumerate(tbody.select('tr')):
                 entries = row.select('td')
-                schedule_data.append({
+                data = {
                     'week': i + 1,
                     'matchup_idx': j + 1,
                     'playoff': 'playoff' in table_caption.text.lower(),
@@ -108,15 +111,34 @@ class DataFetcher:
                     'home_score': parse_score(entries[3].text),
                     'away': clean_text(entries[1].text),
                     'away_score': parse_score(entries[2].text),
-                })
+                }
+
+                # expand multi week playoff matchups to individual weeks
+                if data['playoff']:
+                    seq = data['week'] - self.playoff_start_week
+                    start = self.playoff_start_week + seq * self.n_weeks_per_playoff_matchup
+                    end = start + self.n_weeks_per_playoff_matchup
+                    active_weeks = list(range(start, end))
+
+                    prev_week = int(self.week) - 1
+                    if prev_week in active_weeks:
+                        data['week'] = prev_week
+                    elif prev_week > active_weeks[-1]:
+                        data['week'] = active_weeks[-1]
+                    else:
+                        continue
+
+                schedule_data.append(data)
 
         path = self.path['schedule']
-        self.write_data(
+        included_weeks = set([int(x['week']) for x in schedule_data])
+        self.update_data(
             schedule_data,
             path,
             sort=lambda x: (
                 x['playoff'], parse_int(x['week']), x['matchup_idx'],
             ),
+            filter=lambda x: int(x['week']) not in included_weeks,
         )
         print('--> schedule written to %s' % path)
 
