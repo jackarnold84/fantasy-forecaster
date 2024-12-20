@@ -43,7 +43,8 @@ class Trader:
         self.teams = {
             t.id: [
                 pid for pid in t.get_roster(week)
-                if self.player_positions[pid] in self.pos_weights
+                if pid in player_universe.players
+                and self.player_positions[pid] in self.pos_weights
                 and player_universe.players[pid].get_status(week) != 'injured'
             ]
             for t in teams
@@ -61,7 +62,6 @@ class Trader:
 
     def run(self) -> List[List[dict]]:
         featured_trades = self.filter_and_select_trades()
-        print('featured trades:', featured_trades)
         return featured_trades
 
     def filter_and_select_trades(self) -> List[List[dict]]:
@@ -80,6 +80,11 @@ class Trader:
             for (benefit, t1_gain, t2_gain), (tid1, tid2, pkg1, pkg2) in self.get_beneficial_trades()
         ]
 
+        # sort functions
+        def rating_sorter(pid): return -self.player_ratings[pid]
+        def benefit_sorter(x): return (-x['benefit'], len(x['players']))
+        def gain_sorter(x): return -x['gain']
+
         trades_by_teams = defaultdict(list)
         for trade in trades_list:
             trades_by_teams[trade['teams']].append(trade)
@@ -87,7 +92,7 @@ class Trader:
         # remove trades with extra non-benefit players
         keep_trades = []
         for trades in trades_by_teams.values():
-            trades.sort(key=lambda x: (-x['benefit'], len(x['players'])))
+            trades.sort(key=benefit_sorter)
             for i, trade1 in enumerate(trades):
                 keep = True
                 for trade2 in trades[:i]:
@@ -100,7 +105,7 @@ class Trader:
         trades_list = keep_trades
 
         # keep top 60% of trades
-        trades_list.sort(key=lambda x: -x['benefit'])
+        trades_list.sort(key=benefit_sorter)
         trades_list = trades_list[:int(len(keep_trades) * 0.6)]
 
         # group trades by team pair and position
@@ -128,16 +133,16 @@ class Trader:
                 [
                     {
                         'team': self.team_names[t['teams'][0]],
-                        'players': list(t['trade'][2]),
+                        'players': sorted(list(t['trade'][2]), key=rating_sorter),
                         'gain': round(t['gains'][0], 3),
                     },
                     {
                         'team': self.team_names[t['teams'][1]],
-                        'players': list(t['trade'][3]),
+                        'players': sorted(list(t['trade'][3]), key=rating_sorter),
                         'gain': round(t['gains'][1], 3),
                     },
                 ],
-                key=lambda x: -x['gain']
+                key=gain_sorter
             ) for t in featured_trades
         ]
         return result

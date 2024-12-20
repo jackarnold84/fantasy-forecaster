@@ -1,5 +1,5 @@
 import numpy as np
-from config import leagues
+from config import Config
 from db.db import read_s3
 from league.sim import Simulation
 from league.team import Team
@@ -13,7 +13,7 @@ class League:
 
     def __init__(self, sport_tag, league_tag, week, iters=None):
         print('--> init league')
-        league_config = leagues[sport_tag][league_tag]
+        league_config = Config().leagues[sport_tag][league_tag]
         self.sport, self.year = sport_tag.split('-')
         self.week = int(week)
         self.sport_tag = sport_tag
@@ -21,6 +21,7 @@ class League:
         self.name = league_config['name']
         self.use_divisions = league_config['divisions']
         self.use_h2h = league_config['tiebreaker'] == 'h2h'
+        self.run_trader = league_config.get('trade_finder', False)
         self.n_teams = league_config['teams']
         self.n_playoff_teams = league_config['playoff_teams']
         self.n_weeks_per_playoff_matchup = league_config['weeks_per_playoff_matchup']
@@ -106,10 +107,12 @@ class League:
             ]
 
         # trade finder
-        print('====== starting trade finder ======')
-        trader = Trader(self.sport, self.week, self.teams, self.player_universe)
-        res = trader.run()
-        print("====== trade finder complete ======")
+        self.trade_finder = []
+        if self.run_trader:
+            print("--> running trade finder")
+            trader = Trader(self.sport, self.week,
+                            self.teams, self.player_universe)
+            self.trade_finder = trader.run()
 
     def get_projections(self, week):
         score_mean = self.model_params['score_mean']

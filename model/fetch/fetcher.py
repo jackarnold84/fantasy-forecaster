@@ -4,7 +4,7 @@ from tempfile import mkdtemp
 
 import pandas as pd
 from bs4 import BeautifulSoup
-from config import leagues
+from config import Config
 from db.db import read_s3, write_s3
 from fetch.utils import (clean_symbol, clean_text, get_data_paths,
                          get_player_id, get_primary_pos, get_urls, parse_float,
@@ -19,7 +19,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 class DataFetcher:
 
     def __init__(self, sport_tag, league_tag, week):
-        league_config = leagues[sport_tag][league_tag]
+        league_config = Config().leagues[sport_tag][league_tag]
         self.sport, self.year = sport_tag.split('-')
         self.week = str(week)
         self.league_id = league_config['league_id']
@@ -147,7 +147,6 @@ class DataFetcher:
             ),
             filter=lambda x: int(x['week']) not in included_weeks,
         )
-        print('--> schedule written to %s' % path)
 
     def fetch_members(self):
         url = self.url['members']
@@ -179,7 +178,6 @@ class DataFetcher:
             path,
             sort=lambda x: x['id'],
         )
-        print('--> members written to %s' % path)
 
     def fetch_rosters(self):
         url = self.url['rosters']
@@ -227,7 +225,6 @@ class DataFetcher:
             ),
             filter=lambda x: str(x['week']) != str(self.week)
         )
-        print('--> rosters written to %s' % path)
 
     def fetch_draft(self):
         url = self.url['draft']
@@ -266,7 +263,6 @@ class DataFetcher:
             path,
             sort=lambda x: x['pick'],
         )
-        print('--> draft written to %s' % path)
 
     # players
     def fetch_players(self):
@@ -424,7 +420,6 @@ class DataFetcher:
             sort=lambda x: x['id'],
             key=lambda x: x['id'],
         )
-        print('--> player info written to %s' % path)
 
         # write player stats
         path = self.path['player_stats']
@@ -434,4 +429,3 @@ class DataFetcher:
             sort=lambda x: (parse_int(x['week'], 0), x['id']),
             filter=lambda x: str(x['week']) != self.week,
         )
-        print('--> player stats written to %s' % path)
