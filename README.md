@@ -60,6 +60,7 @@ Add a file `config.json` to the S3 bucket with the following format:
                 "sport_tag": "football-2024",
                 "league_id": "123456789", // ESPN leagueID
                 "player_metrics": true,
+                "trade_finder": true,
                 "teams": 10,
                 "playoff_teams": 4,
                 "divisions": false,

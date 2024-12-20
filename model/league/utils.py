@@ -1,10 +1,11 @@
-from config import aliases
+from config import Config
 
 
 # get team name from full manager name
 def get_team_name(manager_name, use_alias=True):
-    if use_alias and manager_name in aliases:
-        return aliases[manager_name]
+    cfg = Config()
+    if use_alias and manager_name in cfg.aliases:
+        return cfg.aliases[manager_name]
     first_name = manager_name.split(' ')[0][0:10]
     return first_name.lower().capitalize()
 

@@ -1,4 +1,4 @@
-from config import get_current_week, leagues
+from config import Config
 from fetch.fetcher import DataFetcher
 from league.league import League
 from process.processor import Processor
@@ -18,25 +18,26 @@ def handler(event, _):
     iters = payload.get('iter', None)
 
     # validate
+    cfg = Config()
     if not action or not sport_tag or not league_tag:
         raise Exception('required parameters: action, sport, league')
-    if sport_tag not in leagues or league_tag not in leagues[sport_tag]:
+    if sport_tag not in cfg.leagues or league_tag not in cfg.leagues[sport_tag]:
         raise Exception('provided sport/league not found in config')
-    
+
     if week is None:
-        week = get_current_week(sport_tag)
+        week = cfg.get_current_week(sport_tag)
     else:
         week = int(week)
 
     if iters is not None:
-        iters = int(iters)   
-    
+        iters = int(iters)
+
     # perform action
     if action == 'sim':
         league = League(sport_tag, league_tag, week, iters)
         Processor(league)
 
-    elif action.startswith('fetch'):
+    elif action in ['fetchLeague', 'fetchPlayers', 'fetchDraft']:
         fetcher = DataFetcher(sport_tag, league_tag, week)
         print('--> initialized data fetcher')
 

@@ -47,10 +47,9 @@ class Processor:
             'league': self.league_output,
             'players': self.players_output,
         }
-        
+
         db_id = f'{self.sport_tag}-{self.leauge_tag}'
         write_dynamo(db_id, data)
-        print(f'--> results written to db with key {db_id}')
 
     def get_forecasts(self):
         forecast_options = [
@@ -135,7 +134,10 @@ class Processor:
             for d in self.league.divisions
         }
         self.league_output['standings'] = {}
-        week_div = max(min(self.week - 1, self.league.n_regular_season_weeks), 1)
+        week_div = max(
+            min(self.week - 1, self.league.n_regular_season_weeks),
+            1,
+        )
         self.league_output['standings']['league'] = [
             {
                 'team': t,
@@ -232,6 +234,9 @@ class Processor:
 
         self.teams_output['ratings'] = ratings_by_week
 
+        # add trade finder suggestions
+        self.teams_output['tradeFinder'] = self.league.trade_finder
+
     def get_team_projections(self):
         n_weeks = self.league.n_total_weeks
         projections_by_week = []
@@ -318,7 +323,10 @@ class Processor:
         )
         is_playoffs = self.week > self.league.n_regular_season_weeks
 
-        games_played = min(max(self.week - 1, 1), self.league.n_regular_season_weeks)
+        games_played = min(
+            max(self.week - 1, 1),
+            self.league.n_regular_season_weeks,
+        )
         games_remaining = self.league.n_regular_season_weeks - self.week + 1
         for t in self.teams:
             against[t] = round(against[t] / games_played, 1)

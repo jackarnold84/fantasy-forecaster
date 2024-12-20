@@ -1,3 +1,5 @@
+from typing import Dict
+
 import numpy as np
 from db.db import read_s3
 from players.player import Player
@@ -15,7 +17,7 @@ class PlayerUniverse:
         print('--> init player universe')
         self.sport, self.year = sport_tag.split('-')
         self.week = int(week)
-        self.players = {}
+        self.players: Dict[str, Player] = {}
 
         # read data
         player_info_path = f'data/{self.sport}-{self.year}/players/info.csv'
