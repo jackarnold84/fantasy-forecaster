@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 from tempfile import mkdtemp
 
 import pandas as pd
@@ -26,6 +27,7 @@ class DataFetcher:
         self.n_regular_season_weeks = league_config['regular_season_weeks']
         self.n_weeks_per_playoff_matchup = league_config['weeks_per_playoff_matchup']
         self.playoff_start_week = self.n_regular_season_weeks + 1
+        self.is_playoffs = int(self.week) > self.n_regular_season_weeks
         self.url = get_urls(self.sport, self.league_id)
         self.path = get_data_paths(self.sport, self.year, self.league_tag)
 
@@ -89,6 +91,11 @@ class DataFetcher:
         self.write_data(new_data, path, sort)
 
     def fetch_schedule(self):
+        if self.sport == 'football' and self.is_playoffs \
+                and datetime.today().weekday() in [3, 4, 5, 6, 0]:
+            print('--> skipping schedule fetch for mid-week playoff games')
+            return
+
         url = self.url['schedule']
         print('--> fetching schedule')
         self.driver_get(url, wait=10, wait_query=(By.CLASS_NAME, 'teamName'))

@@ -17,4 +17,4 @@ serve-local: sam
 	sam local start-lambda
 
 deploy: sam
-	sam deploy --guided
+	sam deploy
