@@ -40,7 +40,7 @@ class League:
 
         member_records = read_s3(league_members_path).to_dict('records')
         schedule_records = read_s3(league_schedule_path).to_dict('records')
-        playoff_schedule_records = [
+        self.playoff_schedule_records = [
             x for x in schedule_records if x['playoff']
         ]
         schedule_records = [x for x in schedule_records if not x['playoff']]
@@ -74,31 +74,18 @@ class League:
                 'complete': x['week'] < self.week,
             })
 
-        # playoffs
-        self.playoff_live_scores = {}
-        playoff_schedule_records.sort(key=lambda x: x['week'])
-        if self.week > self.n_regular_season_weeks + 1:
-            for x in playoff_schedule_records:
-                home = get_team_name(x['home'])
-                away = get_team_name(x['away'])
-                diff = x['home_score'] - x['away_score']
-                thru = min(self.week - x['week'],
-                           self.n_weeks_per_playoff_matchup)
-                self.playoff_live_scores[(home, away)] = {
-                    'diff': diff, 'thru': thru,
-                }
-
         # run simulations
         print('--> running simulations')
         self.sims = {}
         for w in tqdm(range(0, self.week + 1), desc='week'):
             n_iter = self.n_iter // 4 if w < self.week else self.n_iter
             proj = self.get_projections(w)
+            playoff_live_scores = self.get_playoff_live_scores(w)
             self.sims[w] = [
                 Simulation(
                     w, self.teams, self.schedule,
                     proj, self.team_divisions, self.divisions,
-                    self.use_h2h, self.playoff_live_scores,
+                    self.use_h2h, playoff_live_scores,
                     self.n_regular_season_weeks,
                     self.n_playoff_teams,
                     self.n_weeks_per_playoff_matchup,
@@ -171,3 +158,23 @@ class League:
                     }
 
         return projections
+
+    def get_playoff_live_scores(self, week):
+        self.playoff_live_scores = {}
+        records = [x for x in self.playoff_schedule_records if x['week'] < week]
+        records.sort(key=lambda x: x['week'])
+        if self.week > self.n_regular_season_weeks + 1:
+            for x in records:
+                home = get_team_name(x['home'])
+                away = get_team_name(x['away'])
+                diff = x['home_score'] - x['away_score']
+                playoff_week = x['week'] - self.n_regular_season_weeks
+                mod = playoff_week % self.n_weeks_per_playoff_matchup
+                thru = self.n_weeks_per_playoff_matchup if mod == 0 else mod
+                self.playoff_live_scores[(home, away)] = {
+                    'diff': diff, 'thru': thru,
+                }
+                self.playoff_live_scores[(away, home)] = {
+                    'diff': -diff, 'thru': thru,
+                }
+        return self.playoff_live_scores
