@@ -4,9 +4,8 @@
 module.exports = {
   siteMetadata: {
     title: `Fantasy Forecaster`,
-    siteUrl: `https://jackarnold84.github.io/fantasy-forecaster/`
+    siteUrl: `https://fantasyforecaster.jarno.site`
   },
-  pathPrefix: "/fantasy-forecaster",
   plugins: [
     "gatsby-plugin-styled-components",
     {
