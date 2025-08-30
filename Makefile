@@ -5,6 +5,7 @@ API_EVENT=api/events/test.json
 default: sam
 
 sam:
+	sam validate --lint
 	sam build
 
 invoke-model: sam

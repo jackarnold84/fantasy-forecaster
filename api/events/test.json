@@ -5,7 +5,7 @@
         "Accept": "application/json"
     },
     "queryStringParameters": {
-        "sport": "football-2024",
+        "sport": "football-2025",
         "tag": "purdue"
     }
 }
