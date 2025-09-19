@@ -11,3 +11,4 @@ samconfig.toml
 settings.json
 .vscode/
 .pytest_cache/
+.DS_Store

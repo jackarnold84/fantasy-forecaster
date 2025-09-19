@@ -2,7 +2,7 @@
     "detail-type": "Scheduled Event",
     "detail": {
         "action": "fetchLeague",
-        "sport": "football-2024",
+        "sport": "football-2025",
         "league": "purdue"
     }
 }

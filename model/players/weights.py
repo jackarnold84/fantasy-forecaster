@@ -18,11 +18,11 @@ stat_list = [
 
 normal_weights = {
     # week               0   1   2   3   4   5   6   7   8   9  10  11
-    'proj':            [ 0, 18, 15, 17, 20, 23, 25, 27, 28, 29, 30, 30],
-    'moving_proj':     [ 0,  0,  5,  8, 10, 12, 15, 16, 16, 17, 18, 18],
-    'total':           [ 0,  0,  5,  5,  5,  7,  7,  9,  9,  9,  9, 10],
-    'avg':             [ 0,  0,  5,  5,  5,  6,  6,  6,  6,  6,  6,  6],
-    'moving_avg':      [ 0,  0,  0,  5, 10, 12, 13, 14, 14, 14, 14, 14],
+    'proj':            [0, 18, 15, 17, 20, 23, 25, 27, 28, 29, 30, 30],
+    'moving_proj':     [0,  0,  5,  8, 10, 12, 15, 16, 16, 17, 18, 18],
+    'total':           [0,  0,  5,  5,  5,  7,  7,  9,  9,  9,  9, 10],
+    'avg':             [0,  0,  5,  5,  5,  6,  6,  6,  6,  6,  6,  6],
+    'moving_avg':      [0,  0,  0,  5, 10, 12, 13, 14, 14, 14, 14, 14],
     'exp_roster':      [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20],
     'preseason_total': [40, 31, 25, 20, 15, 10,  5,  0,  0,  0,  0,  0],
     'preseason_avg':   [40, 31, 25, 20, 15, 10,  9,  8,  7,  5,  3,  2],
@@ -30,11 +30,11 @@ normal_weights = {
 
 sharp_weights = {
     # week               0   1   2   3   4   5   6   7
-    'proj':            [ 0, 25, 27, 32, 42, 52, 55, 57],
-    'moving_proj':     [ 0,  0,  5, 11, 15, 15, 16, 16],
-    'total':           [ 0,  0,  0,  0,  0,  0,  0,  0],
-    'avg':             [ 0,  0,  0,  0,  0,  0,  0,  0],
-    'moving_avg':      [ 0,  0,  3,  6,  8, 10, 12, 12],
+    'proj':            [0, 25, 27, 32, 42, 52, 55, 57],
+    'moving_proj':     [0,  0,  5, 11, 15, 15, 16, 16],
+    'total':           [0,  0,  0,  0,  0,  0,  0,  0],
+    'avg':             [0,  0,  0,  0,  0,  0,  0,  0],
+    'moving_avg':      [0,  0,  3,  6,  8, 10, 12, 12],
     'exp_roster':      [20, 15, 15, 15, 13, 11, 10, 10],
     'preseason_total': [40, 30, 25, 18, 11,  6,  2,  0],
     'preseason_avg':   [40, 30, 25, 18, 11,  6,  5,  5],
@@ -50,14 +50,14 @@ position_group_map = {
     'baseball': {
         'SP': 'SP',
         'RP': 'RP',
-        'default' : 'B',
+        'default': 'B',
     },
     'basketball': {
         'PG': 'G',
         'SG': 'G',
         'SF': 'F',
         'PF': 'F',
-        'C' : 'C',
+        'C': 'C',
     }
 }
 
@@ -85,8 +85,8 @@ position_pool_size = {
 team_position_weights = {
     'football': {
         'QB':   [1.3, 0.3],
-        'RB':   [1.0, 1.0, 0.8, 0.5, 0.2],
-        'WR':   [1.0, 1.0, 0.8, 0.5, 0.2],
+        'RB':   [1.0, 1.0, 0.9, 0.6, 0.4],
+        'WR':   [1.0, 1.0, 0.9, 0.6, 0.4],
         'TE':   [0.7, 0.2],
         'K':    [0.2],
         'DST':  [0.3, 0.1],
@@ -112,16 +112,19 @@ def get_position_group(sport, pos):
         return pos
     return groups.get(pos) or groups.get('default')
 
+
 def get_stat_weight(stat, week, rating_type='normal'):
     weights = sharp_weights if rating_type == 'sharp' else normal_weights
     n_weeks = len(weights[stat])
     idx = -1 if week >= n_weeks else week
     return weights[stat][idx]
 
+
 def get_position_pool_size(position, sport):
     pool_size = position_pool_size[sport].get(position)
     wildcard = position_pool_size[sport].get('*')
     return pool_size or wildcard
+
 
 def get_team_position_weight(idx, position, sport, default=0.05):
     pos_weight = team_position_weights[sport].get(position)

@@ -3,6 +3,12 @@
         {
             "name": "Practice Squad",
             "sport": "football",
+            "year": 2025,
+            "tag": "purdue"
+        },
+        {
+            "name": "Practice Squad",
+            "sport": "football",
             "year": 2024,
             "tag": "purdue"
         },
