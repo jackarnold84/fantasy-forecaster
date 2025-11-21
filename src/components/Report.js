@@ -1,14 +1,15 @@
-import * as React from "react";
+import React from "react";
 import { capitalize, timeSince } from "../utils/display";
 import Betting from "./Betting";
+import Container from "./elements/Container";
+import TeamLabel from "./elements/TeamLabel";
 import Forecasts from "./Forecasts";
 import ScheduleStrength from "./ScheduleStrength";
 import Standings from "./Standings";
 import TeamRatings from "./TeamRatings";
 import TimeForecasts from "./TimeForecasts";
+import TradeFinder from "./TradeFinder";
 import UpcomingGames from "./UpcomingGames";
-import Container from "./elements/Container";
-import TeamLabel from "./elements/TeamLabel";
 
 const Report = ({ leagueData }) => {
   const leagueName = leagueData.meta.name
@@ -16,6 +17,8 @@ const Report = ({ leagueData }) => {
   const year = leagueData.meta.year
   const week = parseInt(leagueData.meta.week)
   const updated = leagueData.meta.updated
+
+  React.useEffect(() => { }, []);
 
   const teamLabels = Object.fromEntries(
     Object.values(leagueData.teams.metadata).map(meta => (
@@ -70,6 +73,14 @@ const Report = ({ leagueData }) => {
         players={leagueData.players}
         week={week}
       />
+
+      {
+        leagueData.teams.tradeFinder?.length > 0 &&
+        <TradeFinder
+          tradeFinder={leagueData.teams.tradeFinder}
+          players={leagueData.players}
+        />
+      }
 
       <Betting
         forecasts={leagueData.league.forecasts}
