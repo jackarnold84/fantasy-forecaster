@@ -91,7 +91,8 @@ const LeaguePage = ({ location }) => {
   let SelectedReport;
   switch ((view || '').toLowerCase()) {
     case 'players':
-      SelectedReport = PlayerReport
+      const hasPlayerData = leagueData.players && Object.keys(leagueData.players).length > 0;
+      SelectedReport = hasPlayerData ? PlayerReport : Report
       break
     case 'games':
       SelectedReport = GameReport

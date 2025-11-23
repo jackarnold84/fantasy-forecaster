@@ -1,5 +1,6 @@
 from config import Config
 from fetch.fetcher import DataFetcher
+from fetch.sleeper import SleeperFetcher
 from league.league import League
 from process.processor import Processor
 
@@ -32,11 +33,26 @@ def handler(event, _):
     if iters is not None:
         iters = int(iters)
 
-    # perform action
+    is_sleeper = cfg.leagues[sport_tag][league_tag]['app'] == 'sleeper'
+
+    # sim action
     if action == 'sim':
         league = League(sport_tag, league_tag, week, iters)
         Processor(league)
 
+    # sleeper actions
+    elif is_sleeper:
+        fetcher = SleeperFetcher(sport_tag, league_tag, week)
+        print('--> initialized sleeper fetcher')
+
+        if action == 'fetchLeague':
+            fetcher.fetch_members()
+            fetcher.fetch_schedule()
+
+        else:
+            raise Exception('invalid action provided for sleeper league')
+
+    # fetch actions
     elif action in ['fetchLeague', 'fetchPlayers', 'fetchDraft']:
         fetcher = DataFetcher(sport_tag, league_tag, week)
         print('--> initialized data fetcher')

@@ -7,6 +7,12 @@
             "tag": "purdue"
         },
         {
+            "name": "Whale Watchers",
+            "sport": "football",
+            "year": 2025,
+            "tag": "whalewatchers"
+        },
+        {
             "name": "Practice Squad",
             "sport": "football",
             "year": 2024,

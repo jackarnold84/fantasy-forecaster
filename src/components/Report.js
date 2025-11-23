@@ -17,6 +17,7 @@ const Report = ({ leagueData }) => {
   const year = leagueData.meta.year
   const week = parseInt(leagueData.meta.week)
   const updated = leagueData.meta.updated
+  const hasPlayerData = leagueData.players && leagueData.teams.ratings && leagueData.teams.roster?.players;
 
   React.useEffect(() => { }, []);
 
@@ -67,12 +68,15 @@ const Report = ({ leagueData }) => {
         week={week}
       />
 
-      <TeamRatings
-        ratings={leagueData.teams.ratings}
-        rosters={leagueData.teams.roster.players}
-        players={leagueData.players}
-        week={week}
-      />
+      {
+        hasPlayerData &&
+        <TeamRatings
+          ratings={leagueData.teams.ratings}
+          rosters={leagueData.teams.roster.players}
+          players={leagueData.players}
+          week={week}
+        />
+      }
 
       {
         leagueData.teams.tradeFinder?.length > 0 &&

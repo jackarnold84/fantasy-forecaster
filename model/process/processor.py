@@ -172,6 +172,10 @@ class Processor:
             }
             for t in self.league.teams
         }
+        self.teams_output['metadata'] = metadata
+
+        if not self.league.player_metrics:
+            return
 
         roster_aquisitions = {
             t.name: t.get_roster_aquisitions(self.week)
@@ -203,12 +207,14 @@ class Processor:
             for w in range(0, self.week + 1)
         ]
 
-        self.teams_output['metadata'] = metadata
         self.teams_output['roster'] = {}
         self.teams_output['roster']['players'] = roster_players
         self.teams_output['roster']['aquisitions'] = roster_aquisitions
 
     def get_team_ratings(self):
+        if not self.league.player_metrics:
+            return
+
         positions = position_group_list[self.league.sport]
         ratings_by_week = []
         for w in range(0, self.week + 1):
@@ -387,6 +393,9 @@ class Processor:
         self.league_output['matchupImportance'] = importance_by_week
 
     def get_player_info(self):
+        if not self.league.player_metrics:
+            return
+
         metadata = {
             p.id: {
                 'id': p.id,
