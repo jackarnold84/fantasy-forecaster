@@ -21,6 +21,7 @@ class League:
         self.name = league_config['name']
         self.use_divisions = league_config['divisions']
         self.use_h2h = league_config['tiebreaker'] == 'h2h'
+        self.player_metrics = league_config.get('player_metrics', False)
         self.run_trader = league_config.get('trade_finder', False)
         self.n_teams = league_config['teams']
         self.n_playoff_teams = league_config['playoff_teams']
@@ -29,14 +30,14 @@ class League:
         self.n_total_weeks = league_config['total_weeks']
         self.n_iter = iters or league_config['n_iter']
         self.model_params = league_config['model_params']
-        self.player_universe = PlayerUniverse(self.sport_tag, self.week)
+        self.player_universe = PlayerUniverse(
+            self.sport_tag, self.week
+        ) if self.player_metrics else None
 
         # read data
         path_prefix = f'data/{self.sport}-{self.year}/leagues/{self.league_tag}'
         league_members_path = f'{path_prefix}/members.csv'
         league_schedule_path = f'{path_prefix}/schedule.csv'
-        league_rosters_path = f'{path_prefix}/rosters.csv'
-        league_draft_path = f'{path_prefix}/draft.csv'
 
         member_records = read_s3(league_members_path).to_dict('records')
         schedule_records = read_s3(league_schedule_path).to_dict('records')
@@ -44,9 +45,17 @@ class League:
             x for x in schedule_records if x['playoff']
         ]
         schedule_records = [x for x in schedule_records if not x['playoff']]
-        roster_records = read_s3(league_rosters_path).to_dict('records')
-        roster_records = [x for x in roster_records if x['week'] <= week]
-        draft_records = read_s3(league_draft_path).to_dict('records')
+
+        # only load roster and draft data if player_metrics is enabled
+        if self.player_metrics:
+            league_rosters_path = f'{path_prefix}/rosters.csv'
+            league_draft_path = f'{path_prefix}/draft.csv'
+            roster_records = read_s3(league_rosters_path).to_dict('records')
+            roster_records = [x for x in roster_records if x['week'] <= week]
+            draft_records = read_s3(league_draft_path).to_dict('records')
+        else:
+            roster_records = []
+            draft_records = []
 
         # set up teams
         print('--> setting up teams')
@@ -95,7 +104,7 @@ class League:
 
         # trade finder
         self.trade_finder = []
-        if self.run_trader:
+        if self.run_trader and self.player_metrics:
             print("--> running trade finder")
             trader = Trader(self.sport, self.week,
                             self.teams, self.player_universe)
@@ -116,7 +125,7 @@ class League:
         sharp_team_ratings = [
             t.get_team_rating(week, rating_type='sharp') for t in self.teams
         ]
-        valid_ratings = np.mean(team_ratings) > 0
+        valid_ratings = self.player_metrics and np.mean(team_ratings) > 0
 
         # compute proj types for each team
         for t in self.teams:

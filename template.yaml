@@ -54,6 +54,11 @@ Resources:
           Properties:
             Schedule: 'cron(10 22 ? * 3-7 *)'  # 4:10 PM CST (10:10 PM UTC)
             Input: '{"action": "fetchLeague", "sport": "football-2025", "league": "purdue"}'
+        WhaleWatchersFetchLeague:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(20 12 ? * 3-7 *)'  # 6:20 AM CST (12:20 PM UTC)
+            Input: '{"action": "fetchLeague", "sport": "football-2025", "league": "whalewatchers"}'
 
         # RUN SIM
         PurdueSim1:
@@ -66,6 +71,11 @@ Resources:
           Properties:
             Schedule: 'cron(30 22 ? * 3-7 *)' # 4:30 PM CST (10:30 PM UTC)
             Input: '{"action": "sim", "sport": "football-2025", "league": "purdue"}'
+        WhaleWatchersSim:
+          Type: 'Schedule'
+          Properties:
+            Schedule: 'cron(40 12 ? * 3-7 *)' # 6:40 AM CST (12:40 PM UTC)
+            Input: '{"action": "sim", "sport": "football-2025", "league": "whalewatchers"}'
 
   FantasyForecasterApi:
     Type: 'AWS::Serverless::Function'
