@@ -48,6 +48,7 @@ def handler(event, _):
         if action == 'fetchLeague':
             fetcher.fetch_members()
             fetcher.fetch_schedule()
+            fetcher.fetch_rosters()
 
         else:
             raise Exception('invalid action provided for sleeper league')
