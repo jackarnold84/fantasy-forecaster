@@ -2,7 +2,8 @@ import pandas as pd
 import requests
 from config import Config
 from db.db import read_s3, write_s3
-from fetch.utils import get_data_paths, parse_float
+from fetch.sleepermap import SleeperPlayerMapper
+from fetch.utils import get_data_paths, parse_float, parse_int
 
 
 class SleeperFetcher:
@@ -19,6 +20,12 @@ class SleeperFetcher:
         df = pd.DataFrame(data)
         write_s3(df, path)
 
+    def update_data(self, data, path, sort, filter):
+        current_data = self.read_data(path)
+        current_data = [x for x in current_data if filter(x)]
+        new_data = current_data + data
+        self.write_data(new_data, path, sort)
+
     def __init__(self, sport_tag, league_tag, week):
         league_config = Config().leagues[sport_tag][league_tag]
         self.sport, self.year = sport_tag.split('-')
@@ -30,6 +37,7 @@ class SleeperFetcher:
         self.playoff_start_week = self.n_regular_season_weeks + 1
         self.is_playoffs = int(self.week) > self.n_regular_season_weeks
         self.path = get_data_paths(self.sport, self.year, self.league_tag)
+        self.player_mapper = SleeperPlayerMapper(sport_tag)
 
     def fetch_members(self):
         url = f"{self.BASE_URL}/league/{self.league_id}/users"
@@ -121,4 +129,45 @@ class SleeperFetcher:
             schedule_data,
             path,
             sort=lambda x: (x['week'], x['matchup_idx']),
+        )
+
+    def fetch_rosters(self):
+        url = f"{self.BASE_URL}/league/{self.league_id}/rosters"
+        print('--> fetching rosters')
+        response = requests.get(url)
+        response.raise_for_status()
+        rosters = response.json()
+
+        roster_data = []
+        for roster in rosters:
+            manager_id = roster.get('roster_id')
+            players = roster.get('players', [])
+
+            for slot_idx, sleeper_player_id in enumerate(players, start=1):
+                # Map sleeper player ID to our internal player ID
+                player_id = self.player_mapper.sleeper_id_to_player_id(
+                    sleeper_player_id
+                )
+
+                if player_id is None:
+                    print(
+                        f'warning: could not map sleeper player id {sleeper_player_id}')
+                    continue
+
+                roster_data.append({
+                    'week': self.week,
+                    'manager_id': manager_id,
+                    'slot_idx': slot_idx,
+                    'player_id': player_id,
+                    'aquired': '',
+                })
+
+        path = self.path['rosters']
+        self.update_data(
+            roster_data,
+            path,
+            sort=lambda x: (
+                parse_int(x['week'], 0), x['manager_id'], x['slot_idx'],
+            ),
+            filter=lambda x: str(x['week']) != str(self.week)
         )
