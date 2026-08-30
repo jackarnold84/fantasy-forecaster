@@ -14,7 +14,7 @@ class TestHandler(unittest.TestCase):
             'detail-type': 'Scheduled Event',
             'detail': {
                 'action': 'sim',
-                'sport': 'football-2024',
+                'sport': 'football-2026',
                 'league': 'purdue',
                 'week': 5,
                 'iter': 100
