@@ -165,6 +165,15 @@ class SleeperFetcher:
                     'aquired': '',
                 })
 
+        # Seed Week 0 for preseason, Week 1 replaces with live data on fetch
+        weeks_to_replace = {self.week}
+        if self.week == '0':
+            week_one_rosters = [
+                {**player, 'week': '1'} for player in roster_data
+            ]
+            roster_data.extend(week_one_rosters)
+            weeks_to_replace.add('1')
+
         path = self.path['rosters']
         self.update_data(
             roster_data,
@@ -172,5 +181,5 @@ class SleeperFetcher:
             sort=lambda x: (
                 parse_int(x['week'], 0), x['manager_id'], x['slot_idx'],
             ),
-            filter=lambda x: str(x['week']) != str(self.week)
+            filter=lambda x: str(x['week']) not in weeks_to_replace
         )
