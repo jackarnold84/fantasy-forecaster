@@ -151,7 +151,10 @@ class SleeperFetcher:
 
                 if player_id is None:
                     print(
-                        f'warning: could not map sleeper player id {sleeper_player_id}')
+                        'warning: could not map Sleeper player '
+                        f'{sleeper_player_id} '
+                        f'({self.player_mapper.describe_sleeper_player(sleeper_player_id)})'
+                    )
                     continue
 
                 roster_data.append({
