@@ -1,5 +1,3 @@
-import os
-
 import numpy as np
 from config import Config
 from db.db import read_s3
@@ -54,8 +52,9 @@ class League:
             league_draft_path = f'{path_prefix}/draft.csv'
             roster_records = read_s3(league_rosters_path).to_dict('records')
             roster_records = [x for x in roster_records if x['week'] <= week]
-            if os.path.exists(league_draft_path):
-                draft_records = read_s3(league_draft_path).to_dict('records')
+            draft_df = read_s3(league_draft_path)
+            if draft_df is not None:
+                draft_records = draft_df.to_dict('records')
             else:
                 print('--> warning: draft data not found, skipping')
                 draft_records = []
