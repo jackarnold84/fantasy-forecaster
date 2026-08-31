@@ -23,6 +23,14 @@ class SleeperPlayerMapper:
         """Convert Sleeper team code to ESPN team code if override exists."""
         return self.TEAM_MAPPING.get(sleeper_team, sleeper_team)
 
+    @staticmethod
+    def clean_player_value(value, case='lower'):
+        """Normalize nullable values returned by Sleeper's player endpoint."""
+        if not isinstance(value, str):
+            return ''
+        value = value.strip()
+        return value.upper() if case == 'upper' else value.lower()
+
     def __init__(self, sport_tag):
         self.sport, self.year = sport_tag.split('-')
 
@@ -38,20 +46,39 @@ class SleeperPlayerMapper:
         response.raise_for_status()
         self.sleeper_players = response.json()
 
+    def describe_sleeper_player(self, sleeper_id):
+        """Return useful context for a roster player that could not be mapped."""
+        sleeper_player = self.sleeper_players.get(str(sleeper_id))
+        if not isinstance(sleeper_player, dict):
+            return 'not present in Sleeper player catalog'
+
+        name = ' '.join(filter(None, [
+            self.clean_player_value(sleeper_player.get('first_name')),
+            self.clean_player_value(sleeper_player.get('last_name')),
+        ]))
+        position = self.clean_player_value(sleeper_player.get('position'), 'upper')
+        team = self.clean_player_value(sleeper_player.get('team'), 'upper')
+        return f'{name or "unnamed"}; pos={position or "missing"}; team={team or "missing"}'
+
     def sleeper_id_to_player_id(self, sleeper_id):
-        # Get sleeper player data
         sleeper_id_str = str(sleeper_id)
-        if sleeper_id_str not in self.sleeper_players:
+        sleeper_player = self.sleeper_players.get(sleeper_id_str)
+        if not isinstance(sleeper_player, dict):
             return None
 
-        sleeper_player = self.sleeper_players[sleeper_id_str]
+        sleeper_pos = self.clean_player_value(
+            sleeper_player.get('position'), 'upper'
+        )
+        sleeper_team = self.normalize_sleeper_team(self.clean_player_value(
+            sleeper_player.get('team'), 'upper'
+        ))
+        sleeper_first = self.clean_player_value(sleeper_player.get('first_name'))
+        sleeper_last = self.clean_player_value(sleeper_player.get('last_name'))
 
-        # Extract relevant fields from sleeper player
-        sleeper_pos = sleeper_player.get('position', '').upper()
-        sleeper_team = self.normalize_sleeper_team(
-            sleeper_player.get('team', '').upper())
-        sleeper_first = sleeper_player.get('first_name', '').lower().strip()
-        sleeper_last = sleeper_player.get('last_name', '').lower().strip()
+        # Free agents, retired players, and incomplete Sleeper records cannot be
+        # matched safely against ESPN's active-player data.
+        if not sleeper_pos or not sleeper_team or not sleeper_last:
+            return None
 
         # Special handling for DEF/DST position
         is_defense = sleeper_pos == 'DEF'
@@ -76,26 +103,31 @@ class SleeperPlayerMapper:
                     continue
                 # Match on name (flexible matching)
                 # Check if both first and last name appear in the player name
-                if sleeper_first in player_name and sleeper_last in player_name:
+                if sleeper_last in player_name and (
+                    not sleeper_first or sleeper_first in player_name
+                ):
                     return player.get('id')
 
         # If no exact match found, try fuzzy matching
         return self.fuzzy_match_player(sleeper_id)
 
     def fuzzy_match_player(self, sleeper_id):
-        # Get sleeper player data
         sleeper_id_str = str(sleeper_id)
-        if sleeper_id_str not in self.sleeper_players:
+        sleeper_player = self.sleeper_players.get(sleeper_id_str)
+        if not isinstance(sleeper_player, dict):
             return None
 
-        sleeper_player = self.sleeper_players[sleeper_id_str]
+        sleeper_pos = self.clean_player_value(
+            sleeper_player.get('position'), 'upper'
+        )
+        sleeper_team = self.normalize_sleeper_team(self.clean_player_value(
+            sleeper_player.get('team'), 'upper'
+        ))
+        sleeper_first = self.clean_player_value(sleeper_player.get('first_name'))
+        sleeper_last = self.clean_player_value(sleeper_player.get('last_name'))
+        if not sleeper_pos or not sleeper_team or not sleeper_last:
+            return None
 
-        # Extract relevant fields from sleeper player
-        sleeper_pos = sleeper_player.get('position', '').upper()
-        sleeper_team = self.normalize_sleeper_team(
-            sleeper_player.get('team', '').upper())
-        sleeper_first = sleeper_player.get('first_name', '').lower().strip()
-        sleeper_last = sleeper_player.get('last_name', '').lower().strip()
         sleeper_full_name = f"{sleeper_first} {sleeper_last}"
 
         # Special handling for DEF/DST position

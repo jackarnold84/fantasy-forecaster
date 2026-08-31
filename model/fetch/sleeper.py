@@ -151,7 +151,10 @@ class SleeperFetcher:
 
                 if player_id is None:
                     print(
-                        f'warning: could not map sleeper player id {sleeper_player_id}')
+                        'warning: could not map Sleeper player '
+                        f'{sleeper_player_id} '
+                        f'({self.player_mapper.describe_sleeper_player(sleeper_player_id)})'
+                    )
                     continue
 
                 roster_data.append({
@@ -162,6 +165,15 @@ class SleeperFetcher:
                     'aquired': '',
                 })
 
+        # Seed Week 0 for preseason, Week 1 replaces with live data on fetch
+        weeks_to_replace = {self.week}
+        if self.week == '0':
+            week_one_rosters = [
+                {**player, 'week': '1'} for player in roster_data
+            ]
+            roster_data.extend(week_one_rosters)
+            weeks_to_replace.add('1')
+
         path = self.path['rosters']
         self.update_data(
             roster_data,
@@ -169,5 +181,5 @@ class SleeperFetcher:
             sort=lambda x: (
                 parse_int(x['week'], 0), x['manager_id'], x['slot_idx'],
             ),
-            filter=lambda x: str(x['week']) != str(self.week)
+            filter=lambda x: str(x['week']) not in weeks_to_replace
         )
