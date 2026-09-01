@@ -3,22 +3,23 @@ Transform: AWS::Serverless-2016-10-31
 Description: fantasy forecaster service
 
 Resources:
-  FantasyForecasterModel:
+  FantasyForecasterModelZip:
     Type: 'AWS::Serverless::Function'
-    Metadata:
-      Dockerfile: Dockerfile
-      DockerContext: model/
-      DockerTag: latest
     Properties:
-      FunctionName: FantasyForecasterModel
-      PackageType: Image
-      ImageUri: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/fantasy-forecaster:latest"
+      FunctionName: FantasyForecasterModelZip
+      Runtime: python3.13
+      Architectures:
+        - x86_64
+      Handler: handler.handler
+      CodeUri: model/
       MemorySize: 1536
       Timeout: 120
       Environment:
         Variables:
           DB_READ: "prod"
           DB_WRITE: "prod"
+          # Lambda code mounts /var/task read-only; mock writes use /tmp locally.
+          MOCK_DB_ROOT: "/tmp/.mock-db"
       Policies:
         - Statement:
             - Effect: Allow
@@ -31,59 +32,28 @@ Resources:
                 - s3:PutObject
               Resource: !Sub "arn:aws:s3:::fantasy-forecaster-data/*"
       Events:
-        # FETCH PLAYERS
-        FetchPlayersFootballMorning:
+        # Default action: fetch league/player data and run the simulation.
+        PurdueUpdateMorning:
           Type: 'Schedule'
           Properties:
+            Name: FantasyForecaster-Purdue-Morning
             Schedule: 'cron(0 12 ? * 3-7 *)'  # 6 AM CST (12 PM UTC)
             Enabled: true
-            Input: '{"action": "fetchPlayers", "sport": "football-2026", "league": "purdue"}'
-        FetchPlayersFootballAfternoon:
+            Input: '{"sport": "football-2026", "league": "purdue"}'
+        PurdueUpdateAfternoon:
           Type: 'Schedule'
           Properties:
+            Name: FantasyForecaster-Purdue-Afternoon
             Schedule: 'cron(0 22 ? * 3-7 *)'  # 4 PM CST (10 PM UTC)
             Enabled: true
-            Input: '{"action": "fetchPlayers", "sport": "football-2026", "league": "purdue"}'
-
-        # FETCH LEAGUE
-        PurdueFetchLeagueMorning:
+            Input: '{"sport": "football-2026", "league": "purdue"}'
+        WhaleWatchersUpdate:
           Type: 'Schedule'
           Properties:
-            Schedule: 'cron(10 12 ? * 3-7 *)'  # 6:10 AM CST (12:10 PM UTC)
+            Name: FantasyForecaster-WhaleWatchers-Morning
+            Schedule: 'cron(0 12 ? * 3-7 *)'  # 6 AM CST (12 PM UTC)
             Enabled: true
-            Input: '{"action": "fetchLeague", "sport": "football-2026", "league": "purdue"}'
-        PurdueFetchLeagueAfternoon:
-          Type: 'Schedule'
-          Properties:
-            Schedule: 'cron(10 22 ? * 3-7 *)'  # 4:10 PM CST (10:10 PM UTC)
-            Enabled: true
-            Input: '{"action": "fetchLeague", "sport": "football-2026", "league": "purdue"}'
-        WhaleWatchersFetchLeague:
-          Type: 'Schedule'
-          Properties:
-            Schedule: 'cron(20 12 ? * 3-7 *)'  # 6:20 AM CST (12:20 PM UTC)
-            Enabled: true
-            Input: '{"action": "fetchLeague", "sport": "football-2026", "league": "whalewatchers"}'
-
-        # RUN SIM
-        PurdueSim1:
-          Type: 'Schedule'
-          Properties:
-            Schedule: 'cron(30 12 ? * 3-7 *)' # 6:30 AM CST (12:30 PM UTC)
-            Enabled: true
-            Input: '{"action": "sim", "sport": "football-2026", "league": "purdue"}'
-        PurdueSim2:
-          Type: 'Schedule'
-          Properties:
-            Schedule: 'cron(30 22 ? * 3-7 *)' # 4:30 PM CST (10:30 PM UTC)
-            Enabled: true
-            Input: '{"action": "sim", "sport": "football-2026", "league": "purdue"}'
-        WhaleWatchersSim:
-          Type: 'Schedule'
-          Properties:
-            Schedule: 'cron(40 12 ? * 3-7 *)' # 6:40 AM CST (12:40 PM UTC)
-            Enabled: true
-            Input: '{"action": "sim", "sport": "football-2026", "league": "whalewatchers"}'
+            Input: '{"sport": "football-2026", "league": "whalewatchers"}'
 
   FantasyForecasterApi:
     Type: 'AWS::Serverless::Function'

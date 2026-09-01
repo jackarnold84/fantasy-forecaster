@@ -1,8 +1,0 @@
-{
-    "detail-type": "Scheduled Event",
-    "detail": {
-        "action": "fetchPlayers",
-        "sport": "football-2026",
-        "league": "purdue"
-    }
-}

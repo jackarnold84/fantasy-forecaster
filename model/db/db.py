@@ -13,12 +13,14 @@ DYNAMODB_TABLE_NAME = "FantasyForecasterTable"
 
 READ_MOCK = os.environ.get('DB_READ', '').lower() != 'prod'
 WRITE_MOCK = os.environ.get('DB_WRITE', '').lower() != 'prod'
+MOCK_DB_ROOT = os.environ.get('MOCK_DB_ROOT', '.mock-db')
 
 
 def write_s3(df, file_key):
     if WRITE_MOCK:
-        os.makedirs(os.path.dirname(f'.mock-db/{file_key}'), exist_ok=True)
-        df.to_csv(f'.mock-db/{file_key}', index=False)
+        file_path = os.path.join(MOCK_DB_ROOT, file_key)
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        df.to_csv(file_path, index=False)
         print('--> written to mock bucket:', file_key)
     else:
         s3 = boto3.client('s3')
@@ -32,7 +34,7 @@ def write_s3(df, file_key):
 def read_s3(file_key):
     if READ_MOCK:
         print('--> reading from mock bucket:', file_key)
-        return pd.read_csv(f'.mock-db/{file_key}')
+        return pd.read_csv(os.path.join(MOCK_DB_ROOT, file_key))
     else:
         s3 = boto3.client('s3')
         try:
@@ -48,7 +50,7 @@ def read_s3(file_key):
 def read_s3_config(file_key='config.json'):
     if READ_MOCK:
         print('--> reading from mock bucket:', file_key)
-        with open(f'.mock-db/{file_key}', 'r') as f:
+        with open(os.path.join(MOCK_DB_ROOT, file_key), 'r') as f:
             config = json.load(f)
         return config
     else:
@@ -66,8 +68,9 @@ def read_s3_config(file_key='config.json'):
 
 def write_dynamo(id, data_dict):
     if WRITE_MOCK:
-        os.makedirs('.mock-db/table/', exist_ok=True)
-        with open(f'.mock-db/table/{id}.json', 'w') as f:
+        table_dir = os.path.join(MOCK_DB_ROOT, 'table')
+        os.makedirs(table_dir, exist_ok=True)
+        with open(os.path.join(table_dir, f'{id}.json'), 'w') as f:
             json.dump(data_dict, f)
         print('--> written to mock db:', id)
     else:

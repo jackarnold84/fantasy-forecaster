@@ -1,9 +1,0 @@
-{
-    "detail-type": "Scheduled Event",
-    "detail": {
-        "action": "fetchDraft",
-        "sport": "football-2026",
-        "league": "purdue",
-        "week": 0
-    }
-}
