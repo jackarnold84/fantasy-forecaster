@@ -1,6 +1,5 @@
 from config import Config
 from fetch.fetcher import DataFetcher
-from fetch.sleeper import SleeperFetcher
 from league.league import League
 from process.processor import Processor
 
@@ -12,7 +11,10 @@ def handler(event, _):
 
     # read payload
     print('--> received payload:', payload)
-    action = payload.get('action', '')
+    # An omitted action is the normal scheduled/manual update: collect current
+    # ESPN data and then run the forecast.  `fetch` and `sim` are useful for
+    # targeted recovery or debugging.
+    action = payload.get('action', 'run')
     sport_tag = payload.get('sport', '')
     league_tag = payload.get('league', '')
     week = payload.get('week', None)
@@ -20,8 +22,8 @@ def handler(event, _):
 
     # validate
     cfg = Config()
-    if not action or not sport_tag or not league_tag:
-        raise Exception('required parameters: action, sport, league')
+    if not sport_tag or not league_tag:
+        raise Exception('required parameters: sport, league')
     if sport_tag not in cfg.leagues or league_tag not in cfg.leagues[sport_tag]:
         raise Exception('provided sport/league not found in config')
 
@@ -33,44 +35,24 @@ def handler(event, _):
     if iters is not None:
         iters = int(iters)
 
-    is_sleeper = cfg.leagues[sport_tag][league_tag]['app'] == 'sleeper'
+    is_sleeper = cfg.leagues[sport_tag][league_tag].get('app', 'espn') == 'sleeper'
 
-    # sim action
-    if action == 'sim':
+    if action not in {'run', 'fetch', 'sim'}:
+        raise Exception('invalid action provided; use run, fetch, or sim')
+
+    # Sleeper projections/players are sourced from the existing shared data,
+    # so its normal update deliberately skips collection.
+    if action in {'run', 'fetch'} and not is_sleeper:
+        fetcher = DataFetcher(sport_tag, league_tag, week)
+        print('--> initialized ESPN API fetcher')
+        fetcher.fetch_league()
+        fetcher.fetch_players()
+    elif action == 'fetch' and is_sleeper:
+        print('--> Sleeper fetch skipped; it uses existing shared player data')
+
+    if action in {'run', 'sim'}:
         league = League(sport_tag, league_tag, week, iters)
         Processor(league)
-
-    # sleeper actions
-    elif is_sleeper:
-        fetcher = SleeperFetcher(sport_tag, league_tag, week)
-        print('--> initialized sleeper fetcher')
-
-        if action == 'fetchLeague':
-            fetcher.fetch_members()
-            fetcher.fetch_schedule()
-            fetcher.fetch_rosters()
-
-        else:
-            raise Exception('invalid action provided for sleeper league')
-
-    # fetch actions
-    elif action in ['fetchLeague', 'fetchPlayers', 'fetchDraft']:
-        fetcher = DataFetcher(sport_tag, league_tag, week)
-        print('--> initialized data fetcher')
-
-        if action == 'fetchLeague':
-            fetcher.fetch_schedule()
-            fetcher.fetch_members()
-            fetcher.fetch_rosters()
-
-        elif action == 'fetchPlayers':
-            fetcher.fetch_players()
-
-        elif action == 'fetchDraft':
-            fetcher.fetch_draft()
-
-    else:
-        raise Exception('invalid action provided')
 
     return {
         'status': 'SUCCESS',

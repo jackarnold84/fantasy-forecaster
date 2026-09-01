@@ -6,10 +6,10 @@ default: sam
 
 sam:
 	sam validate --lint
-	sam build
+	sam build --use-container
 
 invoke-model: sam
-	sam local invoke FantasyForecasterModel --event $(MODEL_EVENT) --env-vars $(MODEL_ENV)
+	sam local invoke FantasyForecasterModelZip --event $(MODEL_EVENT) --env-vars $(MODEL_ENV)
 
 invoke-api: sam
 	sam local invoke FantasyForecasterApi --event $(API_EVENT)

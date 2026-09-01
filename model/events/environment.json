@@ -1,6 +1,7 @@
 {
     "Parameters": {
         "DB_READ": "prod",
-        "DB_WRITE": "mock"
+        "DB_WRITE": "mock",
+        "MOCK_DB_ROOT": "/tmp/.mock-db"
     }
 }

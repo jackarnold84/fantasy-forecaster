@@ -1,16 +1,6 @@
 import re
 
 
-def get_urls(sport, league_id):
-    return {
-        'schedule': f'https://fantasy.espn.com/{sport}/league/schedule?leagueId={league_id}',
-        'members': f'https://fantasy.espn.com/{sport}/tools/leaguemembers?leagueId={league_id}',
-        'rosters': f'https://fantasy.espn.com/{sport}/league/rosters?leagueId={league_id}',
-        'draft': f'https://fantasy.espn.com/{sport}/league/draftrecap?leagueId={league_id}',
-        'players': f'https://fantasy.espn.com/{sport}/players/add?leagueId={league_id}',
-    }
-
-
 def get_data_paths(sport, year, league_tag):
     return {
         'schedule': f'data/{sport}-{year}/leagues/{league_tag}/schedule.csv',
