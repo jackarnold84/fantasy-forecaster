@@ -17,6 +17,7 @@ class Config:
         self.leagues = self.config_data['leagues']
         self.week_dates = self.config_data['weeks']
         self.aliases = self.config_data['aliases']
+        self.profile_images = self.config_data.get('profile_images', {})
 
     def get_current_week(self, sport):
         current_date = datetime.now().date()

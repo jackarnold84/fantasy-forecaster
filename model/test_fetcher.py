@@ -3,7 +3,7 @@ import unittest
 from unittest.mock import patch
 
 from fetch.fetcher import DataFetcher
-from fetch.utils import get_data_paths
+from fetch.utils import get_data_paths, get_profile_image_url
 
 
 def player_entry(
@@ -211,10 +211,30 @@ def make_fetcher(sport='football', week=2, league=None, players=None):
     fetcher._league_data_cache = None
     fetcher._draft_data_cache = None
     fetcher._pro_schedule_cache = None
+    fetcher.profile_images = {}
     return fetcher
 
 
 class DataFetcherContractTest(unittest.TestCase):
+    def test_profile_image_alias_overrides_team_logo(self):
+        fetcher = make_fetcher()
+        fetcher.profile_images = {'Alice ONeil': 'jack.jpeg'}
+
+        members = fetcher._members_records()
+
+        self.assertEqual(
+            members[0]['img'],
+            'https://fantasy-forecaster-data.s3.us-east-2.amazonaws.com/'
+            'profile/jack.jpeg',
+        )
+        self.assertEqual(members[1]['img'], 'beta.png')
+
+    def test_profile_image_alias_falls_back_to_source_image(self):
+        self.assertEqual(
+            get_profile_image_url('Unmapped Manager', {}, 'source-logo.png'),
+            'source-logo.png',
+        )
+
     def test_week_zero_league_update_includes_draft(self):
         fetcher = make_fetcher(week=0)
         with patch.object(fetcher, '_members_records', return_value=[]), \
