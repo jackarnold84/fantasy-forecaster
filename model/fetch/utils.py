@@ -1,4 +1,18 @@
 import re
+from urllib.parse import quote
+
+
+PROFILE_IMAGE_BASE_URL = (
+    'https://fantasy-forecaster-data.s3.us-east-2.amazonaws.com/profile'
+)
+
+
+def get_profile_image_url(manager_name, profile_images, fallback_url=''):
+    """Return a configured profile image URL, or preserve the source image."""
+    filename = profile_images.get(manager_name)
+    if not filename:
+        return fallback_url
+    return f'{PROFILE_IMAGE_BASE_URL}/{quote(filename)}'
 
 
 def get_data_paths(sport, year, league_tag):

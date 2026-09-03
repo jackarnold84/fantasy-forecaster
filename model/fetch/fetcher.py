@@ -8,8 +8,9 @@ from urllib3.util.retry import Retry
 
 from config import Config
 from db.db import read_s3, write_s3
-from fetch.utils import (clean_text, get_data_paths, get_player_id, parse_float,
-                         parse_int, player_pos_mapper)
+from fetch.utils import (clean_text, get_data_paths, get_player_id,
+                         get_profile_image_url, parse_float, parse_int,
+                         player_pos_mapper)
 
 
 SPORT_API_NAMES = {
@@ -166,7 +167,9 @@ class DataFetcher:
     """Collect ESPN fantasy data without rendering fantasy.espn.com pages."""
 
     def __init__(self, sport_tag, league_tag, week, client=None):
-        league_config = Config().leagues[sport_tag][league_tag]
+        config = Config()
+        league_config = config.leagues[sport_tag][league_tag]
+        self.profile_images = config.profile_images
         self.sport, self.year = sport_tag.split('-')
         if self.sport not in SPORT_API_NAMES:
             raise ValueError(f'unsupported ESPN sport: {self.sport}')
@@ -314,13 +317,17 @@ class DataFetcher:
         }
         records = []
         for team in data['teams']:
+            manager = managers[team['id']]
             records.append({
                 'id': team['id'],
-                'manager': managers[team['id']],
+                'manager': manager,
                 'team_name': self._team_name(team),
                 'abbrev': team.get('abbrev', ''),
                 'division': divisions.get(team.get('divisionId'), 'USA'),
-                'img': team.get('logo', ''),
+                'img': get_profile_image_url(
+                    manager, getattr(self, 'profile_images', {}),
+                    team.get('logo', ''),
+                ),
             })
         if not records:
             raise ValueError('ESPN league contains no teams')

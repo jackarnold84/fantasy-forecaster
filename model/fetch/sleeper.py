@@ -3,7 +3,8 @@ import requests
 from config import Config
 from db.db import read_s3, write_s3
 from fetch.sleepermap import SleeperPlayerMapper
-from fetch.utils import get_data_paths, parse_float, parse_int
+from fetch.utils import (get_data_paths, get_profile_image_url, parse_float,
+                         parse_int)
 
 
 class SleeperFetcher:
@@ -27,7 +28,9 @@ class SleeperFetcher:
         self.write_data(new_data, path, sort)
 
     def __init__(self, sport_tag, league_tag, week):
-        league_config = Config().leagues[sport_tag][league_tag]
+        config = Config()
+        league_config = config.leagues[sport_tag][league_tag]
+        self.profile_images = config.profile_images
         self.sport, self.year = sport_tag.split('-')
         self.week = str(week)
         self.league_id = league_config['league_id']
@@ -73,7 +76,9 @@ class SleeperFetcher:
                 'team_name': team_name,
                 'abbrev': team_name[:3].upper() if team_name else '',
                 'division': 'USA',  # temporary fix
-                'img': img_url,
+                'img': get_profile_image_url(
+                    display_name, self.profile_images, img_url,
+                ),
             })
 
         path = self.path['members']
