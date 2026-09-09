@@ -84,7 +84,7 @@ position_pool_size = {
 
 team_position_weights = {
     'football': {
-        'QB':   [1.3, 0.3],
+        'QB':   [1.2, 0.3],
         'RB':   [1.0, 1.0, 0.9, 0.6, 0.4],
         'WR':   [1.0, 1.0, 0.9, 0.6, 0.4],
         'TE':   [0.7, 0.2],
