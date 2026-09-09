@@ -3,6 +3,7 @@ import * as React from "react";
 import { FaArchive, FaBaseballBall, FaBasketballBall, FaFootballBall } from "react-icons/fa";
 import Layout from "../components/Layout";
 import Container from "../components/elements/Container";
+import Card from "../components/elements/Card";
 import config from "../config.json";
 import { capitalize } from "../utils/display";
 
@@ -40,39 +41,43 @@ const leagueArchive = config.archivedLeagues;
 const IndexPage = () => {
   return (
     <Layout>
-      <Container>
-        <div className="auto" style={{ maxWidth: '500px' }}>
-          <h4 className="x3-row center nav-table-row">
-            Select League:
-          </h4>
-          {leagueList.map(league => (
-            <NavRow
-              text={`${league.name} Fantasy ${capitalize(league.sport)} (${league.year})`}
-              sport={league.sport}
-              path={`league/?sport=${league.sport}-${league.year}&tag=${league.tag}`}
-              key={`${league.sport}-${league.year}-${league.tag}`}
-              isExternal={false}
-            />
-          ))}
-        </div>
-      </Container>
+      <Card>
+        <Container>
+          <div className="auto" style={{ maxWidth: '500px' }}>
+            <h4 className="x3-row center nav-table-row">
+              Select League:
+            </h4>
+            {leagueList.map(league => (
+              <NavRow
+                text={`${league.name} Fantasy ${capitalize(league.sport)} (${league.year})`}
+                sport={league.sport}
+                path={`league/?sport=${league.sport}-${league.year}&tag=${league.tag}`}
+                key={`${league.sport}-${league.year}-${league.tag}`}
+                isExternal={false}
+              />
+            ))}
+          </div>
+        </Container>
+      </Card>
 
-      <Container top={56}>
-        <div className="auto" style={{ maxWidth: '500px' }}>
-          <h4 className="x3-row center nav-table-row">
-            Archived Leagues:
-          </h4>
-          {leagueArchive.map(league => (
-            <NavRow
-              text={league.name}
-              sport="archive"
-              path={league.link}
-              key={league.name}
-              isExternal={true}
-            />
-          ))}
-        </div>
-      </Container>
+      <Card>
+        <Container>
+          <div className="auto" style={{ maxWidth: '500px' }}>
+            <h4 className="x3-row center nav-table-row">
+              Archived Leagues:
+            </h4>
+            {leagueArchive.map(league => (
+              <NavRow
+                text={league.name}
+                sport="archive"
+                path={league.link}
+                key={league.name}
+                isExternal={true}
+              />
+            ))}
+          </div>
+        </Container>
+      </Card>
     </Layout>
   )
 }

@@ -1,6 +1,7 @@
 import * as React from "react"
 import UpcomingGames from "./UpcomingGames"
 import Container from "./elements/Container"
+import Card from "./elements/Card"
 import SectionTitle from "./elements/SectionTitle"
 import TeamLabel from "./elements/TeamLabel"
 import WeekNav from "./elements/WeekNav"
@@ -31,13 +32,16 @@ const GameReport = ({ leagueData }) => {
         </Container>
       </div>
 
-      <UpcomingGames
-        matchupImportance={leagueData.league.matchupImportance}
-        teamLabels={teamLabels}
-        week={week}
-      />
+      <Card>
+        <UpcomingGames
+          matchupImportance={leagueData.league.matchupImportance}
+          teamLabels={teamLabels}
+          week={week}
+        />
+      </Card>
 
-      <Container>
+      <Card>
+        <Container>
         <SectionTitle>Team Projections</SectionTitle>
         <Container>
           <WeekNav
@@ -63,7 +67,8 @@ const GameReport = ({ leagueData }) => {
             </tbody>
           </table>
         </Container>
-      </Container>
+        </Container>
+      </Card>
 
     </Container>
   )

@@ -27,11 +27,11 @@ const Layout = ({ children }) => {
         </Link>
       </div>
 
-      <div className="auto" style={{ maxWidth: '600px', minHeight: 'calc(100vh - 112px)' }}>
+      <main className="dashboard-main">
         <Container size={16}>
           {children}
         </Container>
-      </div>
+      </main>
 
       <div className="x3-row center" style={{ backgroundColor: palette.green }}>
         <div className="white-text subtext">
