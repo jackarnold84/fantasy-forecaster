@@ -1,6 +1,7 @@
 import * as React from "react"
 import { capitalize } from "../utils/display"
 import Container from "./elements/Container"
+import Card from "./elements/Card"
 import PlayerImage from "./elements/PlayerImage"
 import TabNav from "./elements/TabNav"
 import WeekNav from "./elements/WeekNav"
@@ -38,43 +39,45 @@ const PlayerReport = ({ leagueData }) => {
         </Container>
       </div>
 
-      <Container>
-        <WeekNav
-          min={0}
-          max={week}
-          week={selectedWeek}
-          setWeek={setSelectedWeek}
-        />
-      </Container>
+      <Card>
+        <Container>
+          <WeekNav
+            min={0}
+            max={week}
+            week={selectedWeek}
+            setWeek={setSelectedWeek}
+          />
+        </Container>
 
-      <Container top="0">
-        <TabNav
-          options={positionOptions}
-          selected={selectedPosition}
-          setSelected={setSelectedPosition}
-        />
-      </Container>
+        <Container top="0">
+          <TabNav
+            options={positionOptions}
+            selected={selectedPosition}
+            setSelected={setSelectedPosition}
+          />
+        </Container>
 
-      <Container>
-        <table className="x3-table x3-tvert tight-table" style={{ maxWidth: '290px', }}>
-          <tbody>
-            {playerList.map((p, i) => (
-              <tr key={p.id}>
-                <td style={{ fontSize: '12px' }}>{i + 1}</td>
-                <td>
-                  <PlayerImage
-                    name={p.name}
-                    pos={p.pos}
-                    img={p.img}
-                  />
-                </td>
-                <td>{p.name}</td>
-                <td>{(p.ratings[selectedWeek] || 0).toFixed(1)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </Container>
+        <Container>
+          <table className="x3-table x3-tvert tight-table" style={{ maxWidth: '290px', }}>
+            <tbody>
+              {playerList.map((p, i) => (
+                <tr key={p.id}>
+                  <td style={{ fontSize: '12px' }}>{i + 1}</td>
+                  <td>
+                    <PlayerImage
+                      name={p.name}
+                      pos={p.pos}
+                      img={p.img}
+                    />
+                  </td>
+                  <td>{p.name}</td>
+                  <td>{(p.ratings[selectedWeek] || 0).toFixed(1)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Container>
+      </Card>
 
     </Container>
   )

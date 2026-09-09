@@ -1,6 +1,7 @@
 import React from "react";
 import { capitalize, timeSince } from "../utils/display";
 import Betting from "./Betting";
+import Card from "./elements/Card";
 import Container from "./elements/Container";
 import TeamLabel from "./elements/TeamLabel";
 import Forecasts from "./Forecasts";
@@ -51,60 +52,76 @@ const Report = ({ leagueData }) => {
 
       </div>
 
-      <Standings
-        standings={leagueData.league.standings}
-        teamLabels={teamLabels}
-        isPreseason={week <= 1}
-      />
+      <Card>
+        <Standings
+          standings={leagueData.league.standings}
+          teamLabels={teamLabels}
+          isPreseason={week <= 1}
+        />
+      </Card>
 
-      <UpcomingGames
-        matchupImportance={leagueData.league.matchupImportance}
-        teamLabels={teamLabels}
-        week={week}
-      />
+      <Card>
+        <UpcomingGames
+          matchupImportance={leagueData.league.matchupImportance}
+          teamLabels={teamLabels}
+          week={week}
+        />
+      </Card>
 
-      <Forecasts
-        forecasts={leagueData.league.forecasts}
-        week={week}
-      />
+      <Card>
+        <Forecasts
+          forecasts={leagueData.league.forecasts}
+          week={week}
+        />
+      </Card>
 
       {
         hasPlayerData &&
-        <TeamRatings
-          ratings={leagueData.teams.ratings}
-          rosters={leagueData.teams.roster.players}
-          players={leagueData.players}
-          week={week}
-        />
+        <Card>
+          <TeamRatings
+            ratings={leagueData.teams.ratings}
+            rosters={leagueData.teams.roster.players}
+            players={leagueData.players}
+            week={week}
+          />
+        </Card>
       }
 
       {
         leagueData.teams.tradeFinder?.length > 0 &&
-        <TradeFinder
-          tradeFinder={leagueData.teams.tradeFinder}
-          players={leagueData.players}
-        />
+        <Card>
+          <TradeFinder
+            tradeFinder={leagueData.teams.tradeFinder}
+            players={leagueData.players}
+          />
+        </Card>
       }
 
-      <Betting
-        forecasts={leagueData.league.forecasts}
-        week={week}
-        teamLabels={teamLabels}
-      />
+      <Card>
+        <Betting
+          forecasts={leagueData.league.forecasts}
+          week={week}
+          teamLabels={teamLabels}
+        />
+      </Card>
 
-      <ScheduleStrength
-        expectedWins={leagueData.league.expectedWins}
-        sos={leagueData.league.sos}
-        teamLabels={teamLabels}
-        isPreseason={week <= 1}
-      />
+      <Card>
+        <ScheduleStrength
+          expectedWins={leagueData.league.expectedWins}
+          sos={leagueData.league.sos}
+          teamLabels={teamLabels}
+          isPreseason={week <= 1}
+        />
+      </Card>
 
       {
         week > 1 &&
-        <TimeForecasts
-          forecasts={leagueData.league.forecasts}
-          teamLabels={teamLabels}
-        />
+        <Card>
+          <TimeForecasts
+            forecasts={leagueData.league.forecasts}
+            teamLabels={teamLabels}
+          />
+        </Card>
       }
 
     </Container>

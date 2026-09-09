@@ -18,6 +18,13 @@ const titleMap = {
   punishment: 'League Punishment',
 }
 
+const formatPercent = (value) => {
+  if (value === 0) return '0%'
+  if (value === 100) return '100%'
+  if (value >= 99 || value < 10) return `${value.toFixed(1)}%`
+  return `${value.toFixed(0)}%`
+}
+
 const Forecasts = ({ forecasts, week }) => {
   const [selectedWeek, setSelectedWeek] = React.useState(week)
   const [selectedForecast, setSelectedForecast] = React.useState('playoffs')
@@ -25,6 +32,8 @@ const Forecasts = ({ forecasts, week }) => {
   const x = forecasts[selectedForecast][selectedWeek].map(x => x.prob * 100).reverse()
   const y = forecasts[selectedForecast][selectedWeek].map(y => y.team).reverse()
   const xMax = Math.max(...x)
+  const text = x.map(formatPercent)
+  const textposition = x.map(value => value < xMax * 0.16 ? 'outside' : 'inside')
 
   return (
     <Container size={24}>
@@ -56,7 +65,7 @@ const Forecasts = ({ forecasts, week }) => {
 
         <Barplot
           data={{
-            x, y,
+            x, y, text, textposition,
             marker: { color: colorMap[selectedForecast] },
             hovertemplate: '%{y}<br> %{x:.1f}%',
           }}

@@ -43,7 +43,7 @@ const UpcomingGames = ({ matchupImportance, teamLabels, week }) => {
                 <th aria-label="away">Matchup</th>
                 <th aria-label="vs" width="40px" />
                 <th aria-label="home" />
-                <th width="80px">Importance</th>
+                <th width="64px">Importance</th>
               </tr>
               {
                 matchupImportance[selectedWeek].map(x => (

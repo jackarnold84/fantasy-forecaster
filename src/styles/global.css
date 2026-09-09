@@ -12,6 +12,11 @@ h6 {
   margin: 0;
 }
 
+body {
+  background-color: #f1f3f2;
+  color: #202522;
+}
+
 h1,
 h2,
 h3,
@@ -59,7 +64,7 @@ th {
 }
 
 .th-border {
-  border-bottom: 2px solid #0066CC !important;
+  border-bottom: 2px solid #0D830F !important;
 }
 
 .tight-table td {
@@ -75,8 +80,8 @@ th {
   margin: auto;
   display: inline-block;
   border: 1px solid #999;
-  border-radius: 4px;
-  background-color: #F8F8F8;
+  border-radius: 6px;
+  background-color: #f7f8f7;
 }
 
 .tab-btn {
@@ -88,7 +93,7 @@ th {
   padding: 10px 12px;
   margin: 2px 2px;
   min-width: 50px;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   background-color: #F8F8F8
 }
@@ -214,6 +219,28 @@ th {
 /* X3 STYLE CLASSES */
 
 /* containment */
+.dashboard-main {
+  box-sizing: border-box;
+  max-width: 600px;
+  min-height: calc(100vh - 112px);
+  margin: auto;
+}
+
+.dashboard-card {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 0 16px;
+  background-color: #ffffff;
+  border: 1px solid #e4e8e5;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(25, 42, 30, 0.08);
+}
+
+.dashboard-card:last-child {
+  margin-bottom: 0;
+}
+
 .x3-container {
   padding: 24px;
 }
@@ -239,7 +266,7 @@ th {
 
 .x3-input:focus,
 .x3-input:hover {
-  box-shadow: 0 0 0 2px #4b4b4b;
+  box-shadow: 0 0 0 2px #0D830F;
 }
 
 .x3-label {
@@ -255,7 +282,7 @@ th {
   font-size: 16px;
   padding: 8px 32px;
   margin: 2px 4px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -279,7 +306,16 @@ th {
 
 .x3-select:focus,
 .x3-select:hover {
-  outline: 1px solid #4b4b4b;
+  outline: 1px solid #0D830F;
+}
+
+button:focus-visible,
+.x3-input:focus-visible,
+.x3-select:focus-visible,
+.x3-check:focus-visible,
+.x3-radio:focus-visible {
+  outline: 3px solid rgba(13, 131, 15, 0.35);
+  outline-offset: 2px;
 }
 
 .x3-check,
@@ -290,10 +326,11 @@ th {
   top: 6px;
   border-radius: 4px;
   margin: 4px 0;
+  accent-color: #0D830F;
 }
 
 .x3-check-label,
-x3-radio-label {
+.x3-radio-label {
   font-size: 16px;
   padding-left: 6px;
   padding-right: 8px;
@@ -442,11 +479,11 @@ x3-radio-label {
 
 .x3-green-btn {
   color: white;
-  background-color: #93A661;
+  background-color: #0D830F;
 }
 
 .x3-green-btn:hover {
-  background-color: #6F7E47;
+  background-color: #096b0b;
 }
 
 .x3-red-btn {
@@ -529,7 +566,7 @@ x3-radio-label {
 .loader {
   width: 32px;
   height: 32px;
-  border: 4px solid #0066CC;
+  border: 4px solid #0D830F;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
@@ -556,6 +593,18 @@ x3-radio-label {
   position: relative;
   display: inline-flex;
   justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .dashboard-main {
+    padding: 0 12px;
+  }
+
+  .dashboard-card {
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 8px;
+  }
 }
 
 /* Tooltip text */

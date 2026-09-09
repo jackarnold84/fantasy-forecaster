@@ -21,11 +21,11 @@ const StyledSpinner = styled(ImSpinner2)`
 `;
 
 const HomeLink = styled(Link)`
-  color: #0066cc;
+  color: #0D830F;
   text-decoration: underline;
   font-size: 16px;
   &:hover {
-    color: #0073e6;
+    color: #096b0b;
   }
 `;
 
