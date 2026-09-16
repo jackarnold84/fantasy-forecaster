@@ -3,15 +3,13 @@ from collections import defaultdict
 
 import pandas as pd
 import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
-
 from config import Config
 from db.db import read_s3, write_s3
 from fetch.utils import (clean_text, get_data_paths, get_player_id,
                          get_profile_image_url, parse_float, parse_int,
                          player_pos_mapper)
-
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 SPORT_API_NAMES = {
     'football': 'nfl',
@@ -211,17 +209,20 @@ class DataFetcher:
     def _league_data(self):
         if self._league_data_cache is None:
             data = self.client.get_league()
-            self._require(data, 'teams', 'members', 'schedule', 'settings', 'status')
-            scoring_type = data['settings'].get('scoringSettings', {}).get(
-                'scoringType', 'H2H_POINTS'
-            )
-            if scoring_type == 'ROTO':
-                raise ValueError(
-                    'ESPN roto leagues are unsupported: the forecaster requires '
-                    'head-to-head matchups'
-                )
+            self._require(data, 'teams', 'members',
+                          'schedule', 'settings', 'status')
             self._league_data_cache = data
-        return self._league_data_cache
+
+        data = self._league_data_cache
+        self.scoring_type = data['settings'].get('scoringSettings', {}).get(
+            'scoringType', 'H2H_POINTS'
+        )
+        if self.scoring_type == 'ROTO':
+            raise ValueError(
+                'ESPN roto leagues are unsupported: the forecaster requires '
+                'head-to-head matchups'
+            )
+        return data
 
     def _draft_data(self):
         if self._draft_data_cache is None:
@@ -241,7 +242,8 @@ class DataFetcher:
     def _require(data, *keys):
         missing = [key for key in keys if key not in data]
         if missing:
-            raise ValueError(f'ESPN response is missing required keys: {missing}')
+            raise ValueError(
+                f'ESPN response is missing required keys: {missing}')
 
     @staticmethod
     def _player_payload(entry):
@@ -333,18 +335,21 @@ class DataFetcher:
             raise ValueError('ESPN league contains no teams')
         return records
 
-    @staticmethod
-    def _category_score(team):
+    def _category_score(self, team):
+        if self.scoring_type != 'H2H_CATEGORY':
+            return None
         score = team.get('cumulativeScore', {})
         if not score.get('scoreByStat'):
             return None
         return parse_float(score.get('wins'), 0) + \
             0.5 * parse_float(score.get('ties'), 0)
 
-    def _team_score(self, team):
+    def _team_score(self, team, matchup_complete=False):
         category_score = self._category_score(team)
         if category_score is not None:
             return category_score
+        if matchup_complete:
+            return parse_float(team.get('totalPoints'), 0)
         if 'totalPointsLive' in team:
             return parse_float(team.get('totalPointsLive'), 0)
         return parse_float(team.get('totalPoints'), 0)
@@ -372,6 +377,7 @@ class DataFetcher:
             if period <= 0:
                 continue
             period_indices[period] += 1
+            matchup_complete = matchup.get('winner') in {'HOME', 'AWAY', 'TIE'}
             playoff_type = matchup.get('playoffTierType')
             playoff = period > self.n_regular_season_weeks or (
                 playoff_type not in (None, '', 'NONE')
@@ -392,9 +398,9 @@ class DataFetcher:
                     'matchup_idx': period_indices[period],
                     'playoff': True,
                     'home': managers[home_id],
-                    'home_score': self._team_score(home),
+                    'home_score': self._team_score(home, matchup_complete),
                     'away': managers[away_id],
-                    'away_score': self._team_score(away),
+                    'away_score': self._team_score(away, matchup_complete),
                 })
             else:
                 records.append({
@@ -402,9 +408,9 @@ class DataFetcher:
                     'matchup_idx': period_indices[period],
                     'playoff': playoff,
                     'home': managers[home_id],
-                    'home_score': self._team_score(home),
+                    'home_score': self._team_score(home, matchup_complete),
                     'away': managers[away_id],
-                    'away_score': self._team_score(away),
+                    'away_score': self._team_score(away, matchup_complete),
                 })
 
         if not records:
@@ -612,12 +618,15 @@ class DataFetcher:
                 if int(self.week) == 0:
                     season = self._stat_entry(player, 0, 1)
                 else:
-                    projection_stat = self._stat_entry(player, int(self.week), 1)
+                    projection_stat = self._stat_entry(
+                        player, int(self.week), 1)
                     previous_stat = self._stat_entry(
                         player, max(int(self.week) - 1, 0), 0
                     )
-                    projection = parse_float(projection_stat.get('appliedTotal'))
-                    previous_score = parse_float(previous_stat.get('appliedTotal'))
+                    projection = parse_float(
+                        projection_stat.get('appliedTotal'))
+                    previous_score = parse_float(
+                        previous_stat.get('appliedTotal'))
                     season = self._stat_entry(player, 0, 0)
                 total_points = parse_float(season.get('appliedTotal'), 0)
                 average_points = parse_float(season.get('appliedAverage'), 0)
@@ -668,7 +677,8 @@ class DataFetcher:
             records,
             self.path['members'],
             sort=lambda x: x['id'],
-            columns=['id', 'manager', 'team_name', 'abbrev', 'division', 'img'],
+            columns=['id', 'manager', 'team_name',
+                     'abbrev', 'division', 'img'],
         )
 
     def _write_rosters(self, records):

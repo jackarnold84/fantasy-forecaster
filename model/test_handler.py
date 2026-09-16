@@ -42,7 +42,7 @@ class TestHandler(unittest.TestCase):
         self.assertEqual(result['sport'], event['detail']['sport'])
         self.assertEqual(result['league'], event['detail']['league'])
 
-    def test_sleeper_run_only_simulates(self):
+    def test_sleeper_run_refreshes_league_data_then_simulates(self):
         event = {'sport': 'football-2026', 'league': 'purdue', 'week': 5}
         config = Mock()
         config.leagues = {
@@ -51,11 +51,18 @@ class TestHandler(unittest.TestCase):
 
         with patch('handler.Config', return_value=config), \
                 patch('handler.DataFetcher') as fetcher_class, \
+                patch('handler.SleeperFetcher') as sleeper_fetcher_class, \
                 patch('handler.League') as league_class, \
                 patch('handler.Processor') as processor_class:
             handler(event, None)
 
         fetcher_class.assert_not_called()
+        sleeper_fetcher_class.assert_called_once_with(
+            'football-2026', 'purdue', 5,
+        )
+        sleeper_fetcher_class.return_value.fetch_members.assert_called_once_with()
+        sleeper_fetcher_class.return_value.fetch_schedule.assert_called_once_with()
+        sleeper_fetcher_class.return_value.fetch_rosters.assert_called_once_with()
         processor_class.assert_called_once_with(league_class.return_value)
 
 

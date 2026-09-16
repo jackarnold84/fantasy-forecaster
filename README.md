@@ -39,8 +39,8 @@ existing paths and schemas. ESPN requests have timeouts, retries, and response
 validation, but ESPN's endpoints are unofficial—enable S3 versioning so a
 known-good dataset can be recovered if ESPN changes a response.
 
-Sleeper leagues are different: they use existing shared player data, so their
-default update skips collection and only runs the simulation.
+Sleeper leagues use the shared ESPN player data, but each default update still
+refreshes their members, schedule, and rosters before running the simulation.
 
 ### Invocation payload
 

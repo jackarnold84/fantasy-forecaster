@@ -1,5 +1,6 @@
 from config import Config
 from fetch.fetcher import DataFetcher
+from fetch.sleeper import SleeperFetcher
 from league.league import League
 from process.processor import Processor
 
@@ -40,15 +41,20 @@ def handler(event, _):
     if action not in {'run', 'fetch', 'sim'}:
         raise Exception('invalid action provided; use run, fetch, or sim')
 
-    # Sleeper projections/players are sourced from the existing shared data,
-    # so its normal update deliberately skips collection.
-    if action in {'run', 'fetch'} and not is_sleeper:
-        fetcher = DataFetcher(sport_tag, league_tag, week)
-        print('--> initialized ESPN API fetcher')
-        fetcher.fetch_league()
-        fetcher.fetch_players()
-    elif action == 'fetch' and is_sleeper:
-        print('--> Sleeper fetch skipped; it uses existing shared player data')
+    if action in {'run', 'fetch'}:
+        if is_sleeper:
+            # Sleeper shares the ESPN player pool, but its league members,
+            # matchups, and rosters must still be refreshed every run.
+            fetcher = SleeperFetcher(sport_tag, league_tag, week)
+            print('--> initialized Sleeper API fetcher')
+            fetcher.fetch_members()
+            fetcher.fetch_schedule()
+            fetcher.fetch_rosters()
+        else:
+            fetcher = DataFetcher(sport_tag, league_tag, week)
+            print('--> initialized ESPN API fetcher')
+            fetcher.fetch_league()
+            fetcher.fetch_players()
 
     if action in {'run', 'sim'}:
         league = League(sport_tag, league_tag, week, iters)

@@ -275,6 +275,32 @@ class DataFetcherContractTest(unittest.TestCase):
         self.assertEqual(draft[0]['manager_id'], 2)
         self.assertEqual(draft[0]['player_id'], 'testrunner-RB')
 
+    def test_completed_matchup_uses_final_score_not_reset_live_score(self):
+        """ESPN retains a zero totalPointsLive field after a week finishes."""
+        league = league_fixture()
+        league['schedule'][0]['home']['totalPointsLive'] = 0
+        league['schedule'][0]['away']['totalPointsLive'] = 0
+
+        schedule = make_fetcher(week=2, league=league)._schedule_records()
+
+        self.assertEqual(schedule[0]['home_score'], 110.5)
+        self.assertEqual(schedule[0]['away_score'], 99.25)
+
+    def test_points_leagues_ignore_category_style_cumulative_scores(self):
+        """ESPN includes scoreByStat for points leagues, too."""
+        league = league_fixture('H2H_POINTS')
+        for side in ('home', 'away'):
+            league['schedule'][0][side]['cumulativeScore'] = {
+                'wins': 0,
+                'ties': 0,
+                'scoreByStat': {'3': {'score': 164}},
+            }
+
+        schedule = make_fetcher(week=2, league=league)._schedule_records()
+
+        self.assertEqual(schedule[0]['home_score'], 110.5)
+        self.assertEqual(schedule[0]['away_score'], 99.25)
+
     def test_football_player_contract(self):
         fetcher = make_fetcher()
         self.assertEqual(fetcher._player_position({
